@@ -1,5 +1,16 @@
 
 body {
-	background: #888;
+	background: #ccc;
 }
 
+/* = Links = */
+a:link,
+a:visited {
+	color: #414141;
+	text-decoration: none;
+}
+a:hover,
+a:focus,
+a:active {
+	text-decoration: underline;
+}
