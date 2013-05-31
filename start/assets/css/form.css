@@ -33,6 +33,7 @@ input[type="submit"] {
 	overflow: visible; /* Corrects inner spacing displayed oddly in IE7 */
 }
 
+form { margin: 0; }
 fieldset { padding: 1em; }
 legend { margin-left: 1em; }
 select { font-size: 1em; vertical-align: middle; }
