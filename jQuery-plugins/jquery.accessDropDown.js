@@ -63,7 +63,7 @@
 				.removeAttr('data-add-active')
 				.hide()
 				.prev()
-					.removeClass('active');
+					.removeClass('focus');
 
 			plugin.settings.onHide();
 		}
@@ -128,16 +128,20 @@
 					try { clearTimeout(timeoutID); }
 					catch(e) {}
 
+					$(this).addClass('focus');
+
 					plugin.settings.$activeSubmenu = $(this).next();
 					plugin.settings.$activeSubmenu
-						.attr('data-add-active', 1)
-						.prev()
-							.addClass('active');
+						.attr('data-add-active', 1);
 
 					show();
 					position();
 
 				}).bind('mouseleave', function() {
+
+					// Désactiver le menu au mouseleave
+					if( ! plugin.settings.$activeSubmenu.length )
+						$(this).removeClass('focus');
 
 					// Masquer si la souris ne survole pas
 					if( ! plugin.settings.$menu.data('flag') )
@@ -184,7 +188,7 @@
  		{
  			axsddActiveSubmenu.hide()
  			.prev()
-				.removeClass('active');;
+				.removeClass('focus');;
 		}
  	}
 
