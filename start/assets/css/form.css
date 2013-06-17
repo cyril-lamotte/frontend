@@ -14,6 +14,7 @@ textarea {
 	font-family: inherit;
 	background: #fff;
 }
+input[type="image"] { vertical-align: middle; }
 input[type="search"] { -webkit-appearance: textfield; }
 
 input[type="checkbox"],
