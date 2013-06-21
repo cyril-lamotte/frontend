@@ -29,7 +29,6 @@
 			plugin.settings.$trigger = $element;
 			plugin.settings.$target  = $('#'+ $element.data('pop-target'));
 
-
 			// Masquer le pop à l'initialisation
 			hide();
 			setFlag(false);
@@ -57,7 +56,7 @@
 		var hideWithTimeout = function() {
 
 			var id = plugin.settings.$target.attr('id');
-			var timeoutID = window.setTimeout('$.fn.popHide("'+ id +'")', plugin.settings.delay);
+			window.timeoutID = window.setTimeout('$.fn.popHide("'+ id +'")', plugin.settings.delay);
 
 		}
 
@@ -79,6 +78,11 @@
 			plugin.settings.$target.data('flag', flag);
 		}
 
+		// Remplir le pop
+		var setContent = function() {
+			plugin.settings.$target.find('[data-pop-text-wrapper]').text( plugin.settings.$trigger.attr('data-pop-text') );
+		}
+
 		var setEvents = function() {
 
 
@@ -96,8 +100,12 @@
 			// Afficher / Masquer au survol du trigger
 			plugin.settings.$trigger.hover(function() {
 
+				setContent();
 				show();
 				position();
+
+					try { clearTimeout(timeoutID); }
+					catch(e) {}
 
 			}, function() {
 
