@@ -78,7 +78,7 @@
 		}
 
 
-		// Positionner le pop
+		// Positionnement du pop
 		var position = function() {
 
 			var $activeSubmenu = plugin.settings.$menu.find( plugin.settings.submenuClass +'[data-add-active=1]');
@@ -86,7 +86,8 @@
 			if( ! $activeSubmenu.length )
 				return;
 
-			plugin.settings.position.of = $activeSubmenu.prev();
+			if( ! plugin.settings.position.of )
+				plugin.settings.position.of = $activeSubmenu.prev();
 
 			$activeSubmenu
 				.position( plugin.settings.position );

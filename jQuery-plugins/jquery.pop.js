@@ -1,14 +1,16 @@
-
 (function( $ ){
 
-
+	/**
+	* Plugin jQuery pop v1.1.0
+	*
+	*/
 	$.pop = function(element, options) {
 
 		// Options par défaut
 		var defaults = {
 			delay: 0,
 			positionMy: 'center top',
-			positionAt: 'center bottom+20',
+			positionAt: 'center bottom',
 			onShow: function() {},
 			onHide: function() {}
 		};
