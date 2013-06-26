@@ -9,8 +9,11 @@
 		// Options par défaut
 		var defaults = {
 			delay: 0,
-			positionMy: 'center top',
-			positionAt: 'center bottom',
+			position: {
+				my: 'left top',
+				at: 'left bottom'
+			},
+			orientation: 'bottom',
 			onShow: function() {},
 			onHide: function() {}
 		};
@@ -32,7 +35,7 @@
 			plugin.settings.$target  = $('#'+ $element.data('pop-target'));
 
 			// Masquer le pop à l'initialisation
-			hide();
+			plugin.hide();
 			setFlag(false);
 
 			// Définir les évènements
@@ -43,34 +46,44 @@
 
 		// Afficher le pop
 		var show = function() {
-			plugin.settings.$target.show();
+
+			// Appliquer une classe selon l'orientation
+			plugin.settings.$target
+
+			plugin.settings.$target
+				.addClass( 'pop-orientation-'+ plugin.settings.orientation )
+				.show();
+
 			plugin.settings.onShow();
 		}
 
 
 		// Masquer le pop
-		var hide = function() {
-			plugin.settings.$target.hide();
+		plugin.hide = function() {
+
+			// Ne pas masquer si la souris survole
+			if( plugin.settings.$target.data('flag') )
+				return;
+
+			plugin.settings.$target
+				.removeClass( 'pop-orientation-'+ plugin.settings.orientation )
+				.hide();
 			plugin.settings.onHide();
 		}
 
 		// Masquer le pop avec temporisation
 		var hideWithTimeout = function() {
-
-			var id = plugin.settings.$target.attr('id');
-			window.timeoutID = window.setTimeout('$.fn.popHide("'+ id +'")', plugin.settings.delay);
-
+			window.timeoutID = window.setTimeout('$("'+ plugin.settings.selector +'").data("pop").hide()', plugin.settings.delay);
 		}
 
 		// Positionner le pop
 		var position = function() {
 
+			if( ! plugin.settings.position.of )
+				plugin.settings.position.of = plugin.settings.$trigger;
+
 			plugin.settings.$target
-				.position({
-					of: plugin.settings.$trigger,
-					my: plugin.settings.positionMy,
-					at: plugin.settings.positionAt
-				});
+				.position( plugin.settings.position );
 
 		}
 
@@ -87,13 +100,21 @@
 
 		var setEvents = function() {
 
+			// Le pop suit la position de la souris
+			if( plugin.settings.mousePosition )
+			{
+				plugin.settings.$trigger.mousemove(function( event ) {
+					plugin.settings.position.of = event;
+					position();
+				});
+			}
 
 			// Placer un flag au survol du pop
 			plugin.settings.$target.hover(function() {
 				setFlag(true);
 			}, function() {
-				setFlag(false);
 
+				setFlag(false);
 				hideWithTimeout();
 
 			});
@@ -110,13 +131,7 @@
 					catch(e) {}
 
 			}, function() {
-
-				// Masquer si la souris ne survole pas
-				if( ! plugin.settings.$target.data('flag') )
-				{
 					hideWithTimeout();
-				}
-
 			});
 
 
@@ -131,6 +146,8 @@
 
   $.fn.pop = function(options) {
 
+		options.selector = this.selector;
+
 		return this.each(function() {
 
 			if (undefined == $(this).data('pop')) {
@@ -143,14 +160,6 @@
 		});
 
  	};
-
-
- 	$.fn.popHide = function(id) {
-
- 		if( ! $('#'+ id).data('flag') )
- 			$('#'+ id).hide();
- 	}
-
 
 
 
