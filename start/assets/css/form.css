@@ -30,12 +30,14 @@ input[type="reset"],
 input[type="submit"] {
 	-webkit-appearance: button; /* clickable input types in iOS */
 	overflow: visible; /* Corrects inner spacing displayed oddly in IE7 */
+	vertical-align: middle;
 }
 
 form { margin: 0; }
 fieldset { padding: 1em; }
 legend { margin-left: 1em; }
 select { font-size: 1em; vertical-align: middle; }
+.ie8 select:focus { width: auto; position: relative; }
 label {	vertical-align: middle; }
 
 textarea {
