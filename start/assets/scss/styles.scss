@@ -1,0 +1,28 @@
+
+body {
+	font: 0.75em/normal Arial, Helvetica, sans-serif;
+	background: #ccc;
+}
+
+
+// Mixins
+// Syntaxe : @include mixin-name;
+
+@mixin no-pad-no-margin {
+	padding: 0;
+	margin: 0;
+}
+
+// Variables
+$brand: #770000;
+
+
+/* = Links = */
+a {
+	color: $brand;
+	text-decoration: none;
+
+	&:hover,
+	&:focus,
+	&:active { text-decoration: underline; }
+}

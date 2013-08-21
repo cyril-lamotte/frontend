@@ -61,3 +61,10 @@ input[type='submit']::-moz-focus-inner {
 	border: 0;
 	padding: 0;
 }
+
+
+/**
+ * Coloured highlighting!
+ */
+::selection         { background-color: #000; color:#fff; }
+::-moz-selection    { background-color: #000; color:#fff; }

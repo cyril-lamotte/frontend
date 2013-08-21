@@ -2,9 +2,9 @@
 
 ---
 
-## Traductions
+## Source
 
-* [English](https://github.com/csswizardry/CSS-Guidelines)
+Ce guide est un fork d'une traduction de [CSS-Guidelines](https://github.com/csswizardry/CSS-Guidelines)
 
 ---
 
@@ -18,7 +18,7 @@ Il existe plusieurs techniques que nous devons employer pour satisfaire ces obje
 
 La première partie de ce document traitera de la syntaxe, du formatage et de la taxonomie CSS.
 La deuxième partie traitera de l'approche, l'état d'esprit et l'attitude à avoir pour écrire et architecturer du CSS.
-Passionnant, hein?
+
 
 ## Contenu
 
@@ -68,14 +68,14 @@ Cela signifie une cohérence des commentaires, de la syntaxe et des règles de n
 
 Limitez vos feuilles de style avec un maximum de 80 caractères de longueur lorsque cela est possible. Des exceptions peuvent être la syntaxe des dégradés ainsi que les URL dans les commentaires. Il n'y a rien que nous puissions faire à ce sujet.
 
-Concernant l'indentation je préfère 2 espaces au lieu des tabulations et écrire
-sur plusieurs lignes CSS.
+Concernant l'indentation je préfère 1 tabulation au lieu des espaces et écrire des CSS multilignes.
 
 ### Un seul fichier ou plusieurs fichiers ?
 
 Certaines personnes préfèrent travailler avec de simples fichiers volumineux.
 Cela fonctionne très bien pour les petits projets mais avec les directives suivantes vous aller très vite rencontrer des problèmes.
-Depuis l'arrivée de sass, j'ai commencé à séparer mes feuilles de styles en petits fichiers. Cette méthode est aussi très bonne. Quelle que soit la méthode que vous choisissez, les règles suivantes et les lignes directrices s'appliquent. La seule différence notable est en ce qui concerne notre table des matières et nos titres de section. Lisez la suite pour plus d'explications...
+Depuis l'arrivée de sass, j'ai commencé à séparer mes feuilles de styles en petits fichiers.
+Cette méthode est aussi très bonne. Quelle que soit la méthode que vous choisissez, les règles suivantes et les lignes directrices s'appliquent. La seule différence notable est en ce qui concerne notre table des matières et nos titres de section. Lisez la suite pour plus d'explications...
 
 ### Table des matières
 

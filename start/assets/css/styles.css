@@ -1,17 +1,13 @@
-
 body {
-	font-family: Arial, Helvetica, sans-serif;
-	background: #ccc;
+  font: 0.75em/normal Arial, Helvetica, sans-serif;
+  background: #ccc;
 }
 
 /* = Links = */
-a:link,
-a:visited {
-	color: #414141;
-	text-decoration: none;
+a {
+  color: #770000;
+  text-decoration: none;
 }
-a:hover,
-a:focus,
-a:active {
-	text-decoration: underline;
+a:hover, a:focus, a:active {
+  text-decoration: underline;
 }
