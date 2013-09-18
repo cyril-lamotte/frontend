@@ -1,0 +1,1069 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bs3",
+				"bs3-col	bs3-col"
+			],
+			[
+				"op",
+				"op	opacity"
+			],
+			[
+				"border",
+				"border-top"
+			],
+			[
+				"box",
+				"box-sizing	Box-sizing"
+			],
+			[
+				"border-c",
+				"border-color"
+			],
+			[
+				"bxs",
+				"bxsh-ra	box-shadow: ${1:inset }${2:h} ${3:v} ${4:blur} ${5:spread }rgba(${6:0}, ${7:0}, ${8:0}, .${9:5});"
+			],
+			[
+				"i",
+				"italic"
+			],
+			[
+				"o",
+				"overflow	IE6 : overflow: visible + height:1%"
+			],
+			[
+				"ff",
+				"ff-a	font-family: Arial, \"Helvetica Neue\", Helvetica, sans-serif;"
+			],
+			[
+				"w",
+				"w	width"
+			],
+			[
+				"opa",
+				"opacity	opacity: [for Safari, FF & IE]"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"border-",
+				"border-left"
+			],
+			[
+				"displa",
+				"display"
+			],
+			[
+				"p",
+				"padding"
+			],
+			[
+				"bn",
+				"bd-n	border: none;"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"inlin",
+				"inline"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"tt",
+				"tt-n	text-transform: none;"
+			],
+			[
+				"tal",
+				"ta-l	text-align: left;"
+			],
+			[
+				"ta",
+				"ta-l	text-align: left;"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"z",
+				"z	z-index"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"bord",
+				"border-top"
+			],
+			[
+				"opac",
+				"opacity"
+			],
+			[
+				"d-",
+				"d-b	display: block;"
+			],
+			[
+				"po",
+				"pos	position: ${1:relative};"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"d",
+				"d-n	display: none;"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"le",
+				"letter-spacing"
+			],
+			[
+				"displ",
+				"display-block	display: block"
+			],
+			[
+				"over",
+				"overflow	overflow: hidden + height:1%"
+			],
+			[
+				"posi",
+				"position	position: relative"
+			],
+			[
+				"flo",
+				"float-left	float: left"
+			],
+			[
+				"colo",
+				"color	color: #000"
+			],
+			[
+				"li",
+				"line-height"
+			],
+			[
+				"prev",
+				"preventDefault"
+			],
+			[
+				"under",
+				"underline	text-decoration (none)"
+			],
+			[
+				"dis",
+				"display-block	display: block"
+			],
+			[
+				"he",
+				"height	@height"
+			],
+			[
+				"bor",
+				"border	border: 1px solid #couleur"
+			],
+			[
+				"list",
+				"list-style	list-style none"
+			],
+			[
+				"font-f",
+				"font-family	font-family (Arial...)"
+			],
+			[
+				"color",
+				"color	color: #000"
+			],
+			[
+				"pad",
+				"padding	padding: all"
+			],
+			[
+				"back",
+				"background	background: image repeat position #couleur"
+			],
+			[
+				"col",
+				"color	color: #fff"
+			],
+			[
+				"un",
+				"underline	text-decoration (none)"
+			],
+			[
+				"lis",
+				"lis	list-style"
+			],
+			[
+				"disp",
+				"display-block	display: block"
+			],
+			[
+				"v",
+				"visibility	visibility: type"
+			],
+			[
+				"overf",
+				"overflow	overflow: hidden"
+			],
+			[
+				"bg",
+				"background	background: #couleur"
+			],
+			[
+				"di",
+				"display-inline	display: inline"
+			],
+			[
+				"font-s",
+				"font-size	font-size"
+			],
+			[
+				"ma",
+				"margin	margin"
+			],
+			[
+				"min",
+				"min-height	zen:css_properties"
+			],
+			[
+				"min-",
+				"min-height	min-height"
+			],
+			[
+				"min-h",
+				"min-height	min-height"
+			],
+			[
+				"disl",
+				"display-none	display: none"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"floa",
+				"float-none	float: none"
+			],
+			[
+				"ver",
+				"vertical	vertical-align: middle"
+			],
+			[
+				"marg",
+				"margin	margin"
+			],
+			[
+				"url",
+				"url(image-url.gif)"
+			],
+			[
+				"c",
+				"clear	clear"
+			],
+			[
+				"float",
+				"float-right	float: right"
+			],
+			[
+				"mar",
+				"margin	margin"
+			],
+			[
+				"u",
+				"url()"
+			],
+			[
+				"b",
+				"background	background: image repeat position #couleur"
+			],
+			[
+				"first",
+				"first-child"
+			],
+			[
+				"bo",
+				"border	border: 1px solid #couleur"
+			],
+			[
+				"ds",
+				"display-inline	display: inline"
+			],
+			[
+				"lin",
+				"link"
+			],
+			[
+				"Arial",
+				"Arial, Helvetica, sans-serif"
+			],
+			[
+				"fl",
+				"float-left	float: left"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"ba",
+				"background	Background-image"
+			],
+			[
+				"no",
+				"normal	Font-weight (normal)"
+			],
+			[
+				"bot",
+				"border-top	Border top (1px solid)"
+			],
+			[
+				"clear",
+				"clear-both"
+			],
+			[
+				"coo",
+				"color	color: #fff"
+			],
+			[
+				"padt",
+				"padding-top	padding-top: length"
+			],
+			[
+				"padding-",
+				"padding-top	padding-top: length"
+			],
+			[
+				"repea",
+				"repeat-y"
+			],
+			[
+				"font-",
+				"font-size	font-size"
+			],
+			[
+				"din",
+				"display-inline	display: inline"
+			],
+			[
+				"line",
+				"line-height	line-height"
+			],
+			[
+				"margin",
+				"margin	margin"
+			],
+			[
+				"db",
+				"display-block	display: block"
+			],
+			[
+				"display",
+				"display-block	display: block"
+			],
+			[
+				"mat",
+				"margin-top	margin-top"
+			],
+			[
+				"pa",
+				"padding	padding: all"
+			],
+			[
+				"none",
+				"none	float: none"
+			],
+			[
+				"f",
+				"font	font-size 13px"
+			],
+			[
+				"co",
+				"color	color: #hex"
+			],
+			[
+				"input",
+				"input-text	input text"
+			],
+			[
+				"ov",
+				"overflow	overflow: hidden + height:1%"
+			],
+			[
+				"btop",
+				"border-top	Border top (1px solid)"
+			],
+			[
+				"be",
+				"behavior	pie.htc"
+			],
+			[
+				"center",
+				"center	text-align (center)"
+			],
+			[
+				"left",
+				"left	float:left"
+			],
+			[
+				"posit",
+				"position	position: relative"
+			],
+			[
+				"emp",
+				"empty-button"
+			],
+			[
+				"text",
+				"text-transform uppercase	text-transform: capitalize/upper/lower"
+			],
+			[
+				"te",
+				"text	text-indent: length"
+			],
+			[
+				"px",
+				"px14	font-size 14px"
+			],
+			[
+				"h",
+				"hidden	(h)"
+			],
+			[
+				"re",
+				"relative"
+			],
+			[
+				"off",
+				"offset_x"
+			],
+			[
+				"visi",
+				"visible"
+			],
+			[
+				"rep",
+				"repeat-x"
+			],
+			[
+				"im",
+				"important"
+			],
+			[
+				"Ar",
+				"Arial, Helvetica, sans-serif"
+			],
+			[
+				"let",
+				"letter	letter-spacing: px"
+			],
+			[
+				"background",
+				"background	background-repeat: r/r-x/r-y/n-r"
+			],
+			[
+				"hello",
+				"Hello"
+			],
+			[
+				"if",
+				"ife	if … else"
+			],
+			[
+				"de",
+				"decoration"
+			],
+			[
+				"size",
+				"size"
+			],
+			[
+				"bold",
+				"bold"
+			],
+			[
+				"we",
+				"weight"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 58.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"pac",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"fna",
+				"Open File Navigator"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"openInBr",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"Snippet: ",
+				"Snippet: test"
+			],
+			[
+				"Snippet: 	",
+				"Snippet: <?php echo htmlentities(…) ?>"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Add Repository"
+			],
+			[
+				"",
+				"About"
+			],
+			[
+				"html",
+				"Snippet: html"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 258.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/E/Documents and Settings/clamotte/Application Data/Sublime Text 2/Packages/SublimeLinter/README.md",
+		"/L/L141_maquettage/Integration/_github/frontend/start/index.html",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_rh/index.html",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_rh/accueil.html",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_rh/widget-20-mes-abonnements.html",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/widget-20-mes-abonnements.html",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/Editeur_el/css/accueil/widgets/mesAbos.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/l-appel-expert.html",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/index.html",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/Common/css/accueil/widgets/thematique.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/accueil.html",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/Common/css/accueil/widgets/feature-carousel.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/Editeur_el/css/accueil/widget.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/Common/css/accueil/widgets/feature-carousel.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/Editeur_el/css/accueil/home.css",
+		"/E/Documents and Settings/clamotte/Application Data/Sublime Text 2/Packages/Bootstrap 3 Snippets/grid/bs3-col-1.sublime-snippet",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/1-layout-recherche.html",
+		"/E/Documents and Settings/clamotte/Application Data/Sublime Text 2/Packages/Bootstrap 3 Snippets/grid/bs3-container.sublime-snippet",
+		"/E/Documents and Settings/clamotte/Application Data/Sublime Text 2/Packages/Bootstrap 3 Snippets/panels/bs3-panel.sublime-snippet",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/Common/css/accueil/widgets/veille-permanente.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/CE/css/accueil/widget.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/Editeur_el/css/accueil/widget.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/accueil.html",
+		"/E/Documents and Settings/clamotte/Mes documents/Implantation/intrajouve_implantationv2.html",
+		"/E/Documents and Settings/clamotte/Mes documents/Implantation/intrajouve_ImplantationSitev2.html",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_rh/Content/RH/css/accueil/thematique.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_rh/Content/RH/css/thematique.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/widgets-l-appel-expert.html",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquette-rh/accueil.html",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_el/accueil.html",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_el/Content/EL/css/accueil/layout.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_el/Content/EL/css/accueil/typo.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_el/widgets-l-appel-expert.html",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_el/Content/Common/css/accueil/widgets/l-appel-expert.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/Common/css/accueil/widgets/l-appel-expert.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_el/index.html",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/mfi/Content/css/layout.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/mfi/Content/css/typo.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_dalloz/Content/Dalloz/css/recherche/main.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/Editeur_el/css/recherche/typo.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/Editeur_el/css/accueil/typo.css",
+		"/L/L141_maquettage/Integration/2013/Lextenso/www/listes-ouvrages-etudiants/livre.html",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/Common/js/accueil/widgets/l-appel-expert.js",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_dalloz/Content/Dalloz/css/accueil/main.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_el/Content/Editeur_el/css/recherche/form.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_el/Content/Editeur_el/css/recherche/common-layout.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/CE/css/skin-portail.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/EC/css/skin-portail.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/1-layout-recherche.html",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/Common/js/accueil/jQuery/jquery.accessTabs.js",
+		"/L/L141_maquettage/Integration/_github/accessTabs/accessTabs.css",
+		"/L/L141_maquettage/Integration/_github/accessTabs/README.md",
+		"/L/L141_maquettage/Integration/_github/frontend/start/assets/css/form.css",
+		"/E/Documents and Settings/clamotte/Application Data/Sublime Text 2/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/E/Documents and Settings/clamotte/Application Data/Sublime Text 2/Settings/SideBarEnhancements.json",
+		"/E/Documents and Settings/clamotte/Application Data/Sublime Text 2/Packages/User/snippets/css/box-sizing.sublime-snippet",
+		"/E/Documents and Settings/clamotte/Application Data/Sublime Text 2/Packages/User/snippets/css/opacity-[for-Safari-FF-and-IE]-(opacity).sublime-snippet",
+		"/E/Documents and Settings/clamotte/Mes documents/bootstrap-3.0.0/js/tab.js",
+		"/L/L141_maquettage/Integration/_github/frontend/jQuery-plugins/jquery.accesstabs.js",
+		"/L/L141_maquettage/Integration/_github/accessTabs/Copie de README.md",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/Common/css/accueil/widgets/elearning.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_dalloz/Content/Editeur_dalloz/css/colorbox.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_dalloz/Content/Dalloz/css/colorbox.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_dalloz/accueil.html",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_dalloz/Content/Dalloz/css/accueil/widgets/formations.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_dalloz/Content/Dalloz/css/accueil/widget.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/Documentation/_workspace/hulk.sublime-workspace",
+		"/L/L141_maquettage/Integration/2013/Hulk/Documentation/_workspace/hulk.sublime-project",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/CE/js/accueil/carousel.js",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/Common/css/accueil/widgets/top10.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_rh/Content/RH/css/accueil/widget.css",
+		"/L/L141_maquettage/Integration/2013/Mairie-conseils/www/maquette/newsletter_mairie_conseils.html",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/Common/css/accueil/widgets/appelExpert.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/Common/css/accueil/widgets/codes-dz.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/CE/css/styles.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/CE/js/recherche/script.js",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/CE/js/accueil/home.js",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/EC/js/accueil/home.js",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/EC/js/recherche/script.js",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/EC/js/recherche/jQuery/jquery.dropdown-menu.js",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/EC/css/accueil/widget.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/EC/js/accueil/functions.js",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/EC/css/accueil/home.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/EC/css/accueil/panel.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/CE/css/accueil/panel.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_el/Content/EL/js/accueil/test/qunit-1.10.0.js",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/Common/js/accueil/widgets/widgetMaximise.js",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_el/Content/EL/js/accueil/functions.js",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_el/Content/EL/js/accueil/home.js",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/EC/js/accueil/carousel.js",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/Common/css/accueil/widgets/codes-dz.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/Common/css/accueil/widgets/com-cabinet.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/Common/css/accueil/widgets/indemnites.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/Common/js/accueil/widgets/indemnites.js",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/Common/css/accueil/widgets/idemnites.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/Common/css/accueil/widgets/actuel.css",
+		"/L/L141_maquettage/Integration/2013/Lexis-Nexis/www/maquette/plugin/assets/css/plugin.css",
+		"/L/L141_maquettage/Integration/2013/Lexis-Nexis/www/maquette/plugin/assets/js/script.js",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/Common/css/accueil/widgets/rupture.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/CE/css/accueil/home.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/EC/css/plugins/slider.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/Common/css/accueil/widgets/actuel.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/CE/css/plugins/slider.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/Common/css/accueil/widgets/actuel-ce.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/Common/js/accueil/widgets/actuel-ce.js",
+		"/E/Documents and Settings/clamotte/Mes documents/featurecarousel/jQuery-Feature-Carousel/index.html",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquette-rh/js/jquery.featureCarousel.js",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquette-rh/js/home.js",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquette-rh/js/script.js",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquette-rh/js/widgets.js",
+		"/E/Documents and Settings/clamotte/Application Data/Sublime Text 2/Packages/User/perso/css/liste-de-liens.sublime-snippet",
+		"/E/Documents and Settings/clamotte/Mes documents/bootstrap/css/bootstrap.css",
+		"/E/Documents and Settings/clamotte/Application Data/Sublime Text 2/Packages/User/perso/css/opacity-[for-Safari-FF-and-IE]-(opacity).sublime-snippet",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/Common/css/accueil/widgets/e-formations.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_el/Content/Common/css/accueil/widgets/e-formations.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_el/Content/Editeur_el/css/recherche/jQuery/jquery.explorer.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_el/3-PopupPersonnalSpaceFolderInsertion.html",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_el/Content/Editeur_el/css/recherche/pages.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_el/3-PopupEcrireALaRedaction.html",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_el/Content/Editeur_el/css/recherche/jQuery/colorbox.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_el/3-PopupPersonnalSpaceDocumentResource.html",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_el/Content/Editeur_el/js/recherche/popup.js",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_avocats/Content/Common/js/jQuery/jquery.explorer.js",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_el/Content/EL/css/recherche/layout.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquette-el/maquette-el-recherche-avant-maj-CSS/popin_ecrire-redaction.html",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquette-rh/popin_conventions-collectives-activite.html",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_dalloz/Content/Dalloz/css/accueil/home.css",
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_el/accueil-widgets.html"
+	],
+	"find":
+	{
+		"height": 78.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"*.css",
+			"L:\\L141_maquettage\\Integration\\2013\\Hulk\\www\\maquettes\\portail_dalloz\\Content",
+			"L:\\L141_maquettage\\Integration\\2013\\Hulk\\www\\maquettes\\portail_ce",
+			"",
+			"L:\\L141_maquettage\\Integration\\2013\\Hulk\\www\\maquettes\\portail_ce",
+			"L:\\L141_maquettage\\Integration\\2013\\Hulk\\www\\maquettes\\portail_avocats",
+			"L:\\L141_maquettage\\Integration\\2013\\Hulk\\www\\maquettes\\portail_dalloz",
+			"L:\\L141_maquettage\\Integration\\2013\\Hulk\\www\\maquette-el\\maquette-el",
+			"*.js",
+			"L:\\L141_maquettage\\Integration\\2013\\Hulk\\www\\maquette\\*.js",
+			"L:\\L141_maquettage\\Integration\\2013\\Hulk\\www\\maquette",
+			"L:\\L141_maquettage\\Integration\\2013\\Hulk\\www\\maquette-el",
+			"L:\\L141_maquettage\\Integration\\2013\\Hulk\\www\\maquette\\portail_dalloz\\Content\\Dalloz\\css",
+			"L:\\L141_maquettage\\Integration\\2013\\Hulk\\www\\maquette\\portail_avocats",
+			"L:\\L141_maquettage\\Integration\\2013\\Hulk\\www\\maquette\\portail_avocats\\Content\\Avoc\\js",
+			"L:\\L141_maquettage\\Integration\\2013\\Hulk\\www\\maquette\\portail_avocats",
+			"L:\\L141_maquettage\\Integration\\2013\\Hulk\\www\\dev-recherche",
+			"L:\\L141_maquettage\\Integration\\2013\\Hulk\\www\\maquette\\portail_avocats\\Content",
+			"L:\\L141_maquettage\\Integration\\2013\\Hulk\\www\\maquette\\portail_avocats",
+			"L:\\L141_maquettage\\Integration\\2013\\Hulk\\www\\maquette-el",
+			"",
+			"L:\\L141_maquettage\\Integration\\2013\\Hulk\\www\\Accueil\\EL",
+			"<project>",
+			"L:\\L141_maquettage\\2012\\Hulk\\www\\maquette\\portail_avocats",
+			"",
+			"L:\\L141_maquettage\\2012\\Hulk\\www\\Accueil\\Avocat\\Avocat\\css",
+			"L:\\L141_maquettage\\2012\\Bercy-colloc\\www\\trunk",
+			"L:\\L141_maquettage\\2012\\Hulk\\www\\Accueil\\EL\\trunk",
+			"L:\\L141_maquettage\\2012\\Dalloz\\www\\Accueil\\EL\\dev\\Scripts",
+			"L:\\L141_maquettage\\2012\\Dalloz\\www\\EL\\trunk\\css",
+			"L:\\L141_maquettage\\2012\\Dalloz\\www\\EL\\trunk",
+			"L:\\L141_maquettage\\2012\\Dalloz\\www\\DZ",
+			"L:\\L141_maquettage\\2012\\Dalloz\\www\\EL\\trunk",
+			"L:\\L141_maquettage\\2012\\Dalloz\\www\\EL",
+			"L:\\L141_maquettage\\2012\\Dalloz\\www\\DZ\\dalloz-v5\\js",
+			"L:\\L141_maquettage\\2012\\Dalloz\\www\\DZ\\dalloz-v5\\js\\jQuery",
+			"L:\\L141_maquettage\\2012\\Dalloz\\www\\DZ\\dalloz-v5",
+			"L:\\L141_maquettage\\2012\\Dalloz\\www\\DZ",
+			"L:\\L141_maquettage\\2012\\Dalloz\\www\\EL\\trunk",
+			"<open files>",
+			"<open folders>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"veille-permanente/",
+			"thema",
+			"ul.mes-abonnements-liste",
+			"pres_coll_guide_header",
+			"veille perm",
+			".btn-pagi",
+			"/home/widgets/",
+			"/home/",
+			"lettre d",
+			"lettre d'",
+			"dictionna",
+			"sélectionnez",
+			"selectionnez",
+			"rensei",
+			"l-appel",
+			".w-l-appel-expert-tabs",
+			".w-l-appel-expert-form-control",
+			".w-l-appel-expert-abo",
+			"nseignement juridique par télépho",
+			"panel-active",
+			"w-l-appel-expert-tel-title",
+			"seignement juridique par télépho",
+			"\"column",
+			"column",
+			"seignement juridique par télé",
+			"L’appel expert répond à toutes vos quesitons de droit.",
+			".aside-right .block-1-content ul li",
+			".popin-content .accordion input",
+			"btn-search",
+			"menu-sear",
+			"menu",
+			"menu-sea",
+			"btn-search",
+			"panel",
+			"col-50",
+			"ind",
+			"l-appel-expert.css",
+			".w-com-cabinet",
+			"w-com-cabinet",
+			"prenom",
+			"aex-nom",
+			"champ",
+			" }",
+			".w-l-appel-expert ",
+			".form-control",
+			"999999",
+			"option",
+			"Option",
+			"liste",
+			"w-l-appel-expert-abo",
+			"content",
+			".w-l-appel-expert-question",
+			"unique-id",
+			"$panneaux",
+			"data-accesstabs=\"panel\"",
+			" data-accesstabs=\"panel\"",
+			"data-accesstabs=\"panel\"",
+			" class=\"w-l-appel-expert-tabpanel\"",
+			"* ---",
+			"w-l-appel-expert-abo",
+			"w-indemnites",
+			"elearning",
+			"w-elearning",
+			"10",
+			"service",
+			"service ",
+			"grad-grey-2-b",
+			".w-formations-liste ",
+			"more",
+			"date",
+			"test",
+			"Lien rechercher",
+			"menu-centered",
+			"loading.gif",
+			"#nav ",
+			"widget-theme-no-header",
+			"../../img/home/widgets/",
+			"../../../img/home/widgets/",
+			"appel",
+			"Codes du t",
+			"codes du t",
+			"codes dal",
+			"sub-menu",
+			"sub-menu-title",
+			"sub-menu",
+			"drop",
+			"/EC/",
+			"person",
+			"\"img/home/panel/",
+			"img/home/panel/widget-icons/",
+			"img/home/panel/widget-preview/",
+			"img/home/panel/",
+			"information",
+			"informat",
+			"GestionWidgetMaximise",
+			"AfficherMasquerEl",
+			"Content/RH/img/home/panel/",
+			"Image/Get/",
+			"alt=''",
+			"picto_rechercher.png",
+			"picto_rechercher.png ",
+			"w-codes-dz-form-cell-",
+			"}",
+			"search-keywords",
+			"code_dalloz",
+			"code-dz-header",
+			"widget-actions",
+			"../img/home/widgets/theme-",
+			"service",
+			"$('#sectionMotif')",
+			"liste",
+			"choix-cc",
+			"com-cabinet",
+			"com-cabinet/",
+			"w-com-cabinet",
+			"ir-2b",
+			"\\",
+			"ir-1",
+			"w-indemnites-search",
+			"search",
+			"home-search",
+			"clear-input-search",
+			"idemnites",
+			"</li>\n									<li>",
+			"cc-search-alpha-list",
+			"cc-search",
+			"../img/",
+			"rupture"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"<span class=\"maquette\">[Maquetté]</span>",
+			"Content/Common/css/jQuery/jquery-ui.css",
+			"Content/Common/js/jQuery/jquery-ui.min.js",
+			"Avoc",
+			"<script src=\"assets/js/jQuery/jquery.collapse.js\"></script>\n<script src=\"assets/js/script.js\"></script>",
+			"<img src=\"assets/img/contents/collectivites-locales.png\" title=\"collectivites-locales.gouv.fr, Le portail de l’Etat au service des collectivités, retour à l'accueil\" alt=\"collectivites-locales.gouv.fr, Le portail de l’Etat au service des collectivités, retour à l'accueil\" />",
+			"<img src=\"assets/img/contents/mariane.jpg\" title=\"Liberté, Égalité, Fraternité, République Française, retour à l'accueil\" alt=\"Liberté, Égalité, Fraternité, République Française, retour à l'accueil\" />",
+			"",
+			"background-position: 2px 2px;",
+			"<span class=\"widget-description\" title=\"Lorem ipsum dolor sit amet elias ipsum dolor sit amet elias Lorem ipsum dolor sit amet elias ipsum dolor sit amet elias\">Lorem ipsum dolor sit amet elias ipsum (&hellip;)</span>",
+			"<img src=\"Pages/Dalloz/imgs/home/panel/widget-preview/168x111.gif\" width=\"168\" height=\"111\" alt=\"Aperçu\" class=\"widget-preview-img\" />",
+			"<img src=\"Pages/Dalloz/imgs/home/panel/widget-installed.png\" width=\"14\" height=\"10\" alt=\"Installé\" title=\"Installé\" />",
+			"js/jquery.dropdown-menu.js",
+			"Pages/Dalloz/imgs/",
+			"imgs/",
+			"../imgs/",
+			"/img/",
+			"/imgs/",
+			"	<script type=\"text/javascript\" src=\"js/jQuery/jquery.hoverIntent.minified.js\"></script>\n	<script type=\"text/javascript\" src=\"js/modernizr.custom.17030.js\"></script>",
+			"	<script type=\"text/javascript\" src=\"js/jQuery/jquery.accordion.js\"></script>	\n	<script type=\"text/javascript\" src=\"js/jQuery/jquery.hoverIntent.minified.js\"></script>"
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 317.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"drop",
+				"portail_ec/Content/EC/js/recherche/jQuery/jquery.dropdown-menu.js"
+			],
+			[
+				"sli",
+				"maquette-el/css/slider.css"
+			],
+			[
+				"wid",
+				"EL/trunk/css/widget.css"
+			],
+			[
+				"home.css",
+				"DZ/dalloz-v5/Pages/Dalloz/styles/home.css"
+			],
+			[
+				"widget",
+				"DZ/dalloz-v5/Pages/Dalloz/styles/widget.css"
+			],
+			[
+				"func",
+				"DZ/dalloz-v5/js/functions.js"
+			],
+			[
+				"home.cs",
+				"DZ/dalloz-v5/Pages/Dalloz/styles/home.css"
+			],
+			[
+				"hom",
+				"EL/trunk/css/home.css"
+			],
+			[
+				"l",
+				"trunk/css/layout.css"
+			],
+			[
+				"page",
+				"trunk/css/pages.css"
+			],
+			[
+				"home",
+				"trunk/css/home.css"
+			],
+			[
+				"photo",
+				"/E/Documents and Settings/clamotte/Mes documents/Les questions-réponses_files/jquery.photo-gallery.js"
+			],
+			[
+				"",
+				"css/ie7.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/L/L141_maquettage/2012/_projets/lextenso.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 294.0,
+	"status_bar_visible": true
+}

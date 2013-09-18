@@ -2,6 +2,8 @@
 (function( $ ){
 
 
+	/* Infos : https://github.com/cyril-lamotte/accessTabs */
+
 	$.accessTabs = function(element, options) {
 
 		// Options par défaut
@@ -21,8 +23,8 @@
 			// Ecrasement avec les options utilisateur
 			plugin.settings = $.extend({}, defaults, options);
 
-			$panneaux = $('div.tabpanel');
-
+			$panneaux = $('div[data-accesstabs="panel"]');
+console.log('test');
 			// Masquer les panneaux et placer les rôles ARIA
 			$panneaux.attr({
 				'role':			'tabpanel',
