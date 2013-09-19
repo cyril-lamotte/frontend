@@ -1,0 +1,101 @@
+
+
+/* = Browser = */
+
+
+/* Sélection */
+::selection         { background-color: #000; color: #fff; }
+::-moz-selection    { background-color: #000; color: #fff; }
+
+
+/* Couleur du focus au tap */
+html { -webkit-tap-highlight-color: rgba(201, 224, 253, 0.8); }
+.no-highlight { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-button  {	display: none; }
+::-webkit-scrollbar-thumb {	background: #888; }
+::-webkit-scrollbar-thumb:window-inactive {	background: #aaa; }
+::-webkit-scrollbar-track-piece {	background: #f0f0f0; }
+::-webkit-scrollbar-corner { background: #f0f0f0; }
+
+
+
+
+/* = Layout = */
+
+
+/* media-list */
+
+
+
+
+/* media */
+
+.media {
+	margin: 1em 0 1em 0;
+	overflow: hidden;
+	clear: both;
+}
+.media-list .media {
+	border-top: 1px solid #dedad5;
+	padding: 1em 0 0 0;
+}
+.media-list .media:first-child {
+	border-top: none;
+}
+
+
+/* media-pict */
+.media-pict {
+	float: left;
+	margin: 0 15px 0 0;
+	width: 100px;
+	text-align: center;
+}
+.media-pict a {
+	display: block;
+}
+.media-pict img {
+	display: block;
+	margin: 0 auto;
+}
+.media-source {
+	text-align: right;
+	font-style: italic;
+}
+.media-legend {
+	text-align: left;
+	font-weight: bold;
+}
+
+
+/* media-text */
+.media-text {
+	margin: 0 0.5em 0 0;
+	overflow: hidden;
+}
+.media-title {
+	margin: 0 0 0.5em;
+	font-weight: bold;
+}
+
+
+
+
+
+
+/* = Responsive = */
+
+
+/* Responsive image */
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+

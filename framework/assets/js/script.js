@@ -3,14 +3,35 @@
 /* Code exécuté au chargement de la page */
 $(document).ready(function() {
 
+	getHTMLCode();
+	prettyPrint();
 
 	// Gérer les Polyfills
 	managePolyfills()
 
 
-
-
 }); // /ready
+
+
+
+// Convertir le code en chaine de caractère non-interprétée
+var getHTMLCode = function () {
+
+	$('section').each(function(i, el) {
+
+		var $section = $(el);
+		var htmlCode = html( $section.html() );
+		$section.next().html(htmlCode);
+
+	});
+
+}
+
+var html = function (s) {
+ return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+
 
 
 
@@ -34,20 +55,6 @@ var managePolyfills = function () {
 	});
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
