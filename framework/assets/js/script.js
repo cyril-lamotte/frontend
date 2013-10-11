@@ -10,6 +10,9 @@ $(document).ready(function() {
 	managePolyfills()
 
 
+	card();
+
+
 }); // /ready
 
 
@@ -36,9 +39,6 @@ var html = function (s) {
 
 
 
-
-
-
 // Chargement des scripts fallback uniquement en cas de besoin
 var managePolyfills = function () {
 
@@ -57,6 +57,18 @@ var managePolyfills = function () {
 }
 
 
+
+var card = function() {
+
+	$('button[data-card-trigger]').click(function() {
+
+		var cardId = $(this).attr('data-card-trigger');
+
+		$('#'+ cardId).toggleClass('card-flip');
+
+	});
+
+}
 
 
 })(jQuery);
