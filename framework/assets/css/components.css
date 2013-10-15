@@ -89,9 +89,10 @@ html { -webkit-tap-highlight-color: rgba(201, 224, 253, 0.8); }
 /*http://thewebrocks.com/demos/3D-css-tester/*/
 .card-wrapper {
 	-webkit-perspective: 500;
-	-webkit-perspective-origin-x: 50%;
+	-webkit-perspective-origin-x: 0%;
 	-webkit-perspective-origin-y: 50%;
 }
+
 .card {
 	position: relative;
 	width: 200px;
@@ -106,12 +107,14 @@ html { -webkit-tap-highlight-color: rgba(201, 224, 253, 0.8); }
 	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 }
+
 .card-flip {
 	-webkit-transform: rotateY(180deg);
 	-moz-transform: rotateY(180deg);
 	-mz-transform: rotateY(180deg);
 	transform: rotateY(180deg);
 }
+
 .card-face {
 	position: absolute;
 	top: 0;
@@ -128,6 +131,7 @@ html { -webkit-tap-highlight-color: rgba(201, 224, 253, 0.8); }
 	background: lightblue;
 	z-index: 1;
 }
+
 .card-back {
 	background: lightgreen;
 	-webkit-transform: rotateY(180deg);
@@ -135,6 +139,14 @@ html { -webkit-tap-highlight-color: rgba(201, 224, 253, 0.8); }
 	-mz-transform: rotateY(180deg);
 	transform: rotateY(180deg);
 }
+
+.card-inner {
+	padding: 1em;
+}
+
+
+
+
 
 
 /* = Responsive = */

@@ -519,7 +519,7 @@
 			"file": "framework/assets/css/components.css",
 			"settings":
 			{
-				"buffer_size": 2555,
+				"buffer_size": 2594,
 				"line_ending": "Windows"
 			}
 		},
@@ -527,7 +527,7 @@
 			"file": "framework/index.html",
 			"settings":
 			{
-				"buffer_size": 3188,
+				"buffer_size": 3351,
 				"line_ending": "Windows"
 			}
 		},
@@ -624,6 +624,7 @@
 	},
 	"file_history":
 	[
+		"/L/L141_maquettage/Integration/_github/frontend/start/index.html",
 		"/L/L141_maquettage/Integration/_github/frontend/start/layout.html",
 		"/L/L141_maquettage/Integration/_github/frontend/framework/assets/css/styles.css",
 		"/L/L141_maquettage/Integration/_github/frontend/framework/assets/js/script.js",
@@ -637,7 +638,6 @@
 		"/L/L141_maquettage/Integration/_github/frontend/framework/assets/css/layout.css",
 		"/L/L141_maquettage/Integration/_github/frontend/framework/README.txt",
 		"/E/Documents and Settings/clamotte/Application Data/Sublime Text 2/Packages/SublimeLinter/README.md",
-		"/L/L141_maquettage/Integration/_github/frontend/start/index.html",
 		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_rh/index.html",
 		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_rh/accueil.html",
 		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_rh/widget-20-mes-abonnements.html",
@@ -983,15 +983,15 @@
 					"file": "framework/assets/css/components.css",
 					"settings":
 					{
-						"buffer_size": 2555,
+						"buffer_size": 2594,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1805,
-								1805
+								1563,
+								1563
 							]
 						],
 						"settings":
@@ -1089,7 +1089,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 793.0,
+						"translation.y": 1157.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1097,7 +1097,7 @@
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -1105,15 +1105,15 @@
 					"file": "framework/index.html",
 					"settings":
 					{
-						"buffer_size": 3188,
+						"buffer_size": 3351,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2635,
-								2647
+								3035,
+								3034
 							]
 						],
 						"settings":
@@ -1211,7 +1211,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 975.0,
+						"translation.y": 947.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
