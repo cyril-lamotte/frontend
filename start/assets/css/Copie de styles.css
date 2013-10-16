@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "CP850";
 /* Couleur de la sélection */
 ::selection {
   background-color: #000;
@@ -19,20 +19,6 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-/*
-	_prefix.scss
-	-------------
-
-
-
-*/
-/*
-	_base.scss
-	----------
-
-
-
-*/
 body {
   font: 0.75em/1.5 Arial, Helvetica, sans-serif;
   background: #fff;
@@ -45,12 +31,4 @@ a {
 }
 a:hover, a:focus, a:active {
   text-decoration: underline;
-}
-
-.box {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  border-radius: 10px;
 }

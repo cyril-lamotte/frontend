@@ -1,0 +1,25 @@
+/*
+	_base.scss
+	----------
+
+
+
+*/
+
+
+body {
+  font: 0.75em/1.5 Arial, Helvetica, sans-serif;
+  background: #fff;
+}
+
+
+
+/* Links */
+a {
+	color: $brand;
+	text-decoration: none;
+
+	&:hover,
+	&:focus,
+	&:active { text-decoration: underline; }
+}

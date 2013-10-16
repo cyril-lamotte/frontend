@@ -1,8 +1,13 @@
+@charset "UTF-8";
 
-body {
-	font: 0.75em/normal Arial, Helvetica, sans-serif;
-	background: #ccc;
-}
+/* Couleur de la sélection */
+::selection         { background-color: #000; color:#fff; }
+::-moz-selection    { background-color: #000; color:#fff; }
+
+/* Couleur du focus au tap */
+html { -webkit-tap-highlight-color: rgba(201, 224, 253, 0.8); }
+.no-highlight { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
 
 
 // Mixins
@@ -17,12 +22,12 @@ body {
 $brand: #770000;
 
 
-/* = Links = */
-a {
-	color: $brand;
-	text-decoration: none;
+@import '_prefix';
+@import '_base';
 
-	&:hover,
-	&:focus,
-	&:active { text-decoration: underline; }
-}
+
+
+
+
+// Exemples :
+.box { @include border-radius(10px); }
