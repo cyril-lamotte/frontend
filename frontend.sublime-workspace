@@ -516,18 +516,10 @@
 	"buffers":
 	[
 		{
-			"file": "start/assets/css/styles.css",
+			"file": "framework/assets/css/components.css",
 			"settings":
 			{
-				"buffer_size": 697,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "start/assets/scss/styles.scss",
-			"settings":
-			{
-				"buffer_size": 538,
+				"buffer_size": 2594,
 				"line_ending": "Windows"
 			}
 		}
@@ -616,15 +608,28 @@
 	},
 	"file_history":
 	[
-		"/L/L141_maquettage/Integration/_github/frontend/start/assets/scss/_prefix.scss",
+		"/E/Documents and Settings/clamotte/Mes documents/md.md",
+		"/L/L141_maquettage/Integration/_github/frontend/framework/share.html",
+		"/L/L141_maquettage/Integration/_github/frontend/framework/assets/js/share.js",
+		"/L/L141_maquettage/Integration/_github/frontend/framework/assets/css/plugins/share.css",
+		"/L/L141_maquettage/Integration/_github/frontend/framework/assets/js/plugins/jquery.sharrre.js",
+		"/L/L141_maquettage/Integration/_github/frontend/framework/index.html",
+		"/L/L141_maquettage/Integration/_github/frontend/start/index.html",
+		"/L/L141_maquettage/Integration/_github/frontend/start/assets/js/share.js",
+		"/L/L141_maquettage/Integration/_github/frontend/start/assets/css/plugins/share.css",
+		"/L/L141_maquettage/Integration/_github/frontend/start/share.html",
+		"/L/L141_maquettage/Integration/_github/frontend/start/assets/css/Copie de styles.css",
+		"/L/L141_maquettage/Integration/_github/frontend/start/assets/css/Copie de _base.css",
+		"/L/L141_maquettage/Integration/_github/frontend/start/assets/js/script.js",
+		"/L/L141_maquettage/Integration/_github/frontend/start/assets/js/lib/jquery.min.js",
+		"/L/L141_maquettage/Integration/_github/frontend/start/assets/css/styles.css",
 		"/L/L141_maquettage/Integration/_github/frontend/start/assets/scss/_base.scss",
+		"/L/L141_maquettage/Integration/_github/frontend/start/assets/scss/_prefix.scss",
+		"/L/L141_maquettage/Integration/_github/frontend/start/assets/scss/styles.scss",
 		"/L/L141_maquettage/Integration/_github/frontend/start/assets/scss/config.rb",
 		"/L/L141_maquettage/Integration/_github/frontend/start/layout.html",
-		"/L/L141_maquettage/Integration/_github/frontend/start/index.html",
 		"/L/L141_maquettage/Integration/_github/frontend/start/assets/css/layout.css",
-		"/L/L141_maquettage/Integration/_github/frontend/start/assets/css/styles.css",
 		"/L/L141_maquettage/Integration/_github/frontend/framework/assets/css/components.css",
-		"/L/L141_maquettage/Integration/_github/frontend/framework/index.html",
 		"/L/L141_maquettage/Integration/_github/frontend/framework/assets/js/script.js",
 		"/L/L141_maquettage/Integration/_github/frontend/framework/assets/css/styles.css",
 		"/L/L141_maquettage/Integration/_github/frontend/framework/assets/css/rwd.css",
@@ -730,20 +735,7 @@
 		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/Common/css/accueil/widgets/indemnites.css",
 		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/Common/js/accueil/widgets/indemnites.js",
 		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/Common/css/accueil/widgets/idemnites.css",
-		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/Common/css/accueil/widgets/actuel.css",
-		"/L/L141_maquettage/Integration/2013/Lexis-Nexis/www/maquette/plugin/assets/css/plugin.css",
-		"/L/L141_maquettage/Integration/2013/Lexis-Nexis/www/maquette/plugin/assets/js/script.js",
-		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/Common/css/accueil/widgets/rupture.css",
-		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/CE/css/accueil/home.css",
-		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/EC/css/plugins/slider.css",
-		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/Common/css/accueil/widgets/actuel.css",
-		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/CE/css/plugins/slider.css",
-		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/Common/css/accueil/widgets/actuel-ce.css",
-		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/Common/js/accueil/widgets/actuel-ce.js",
-		"/E/Documents and Settings/clamotte/Mes documents/featurecarousel/jQuery-Feature-Carousel/index.html",
-		"/L/L141_maquettage/Integration/2013/Hulk/www/maquette-rh/js/jquery.featureCarousel.js",
-		"/L/L141_maquettage/Integration/2013/Hulk/www/maquette-rh/js/home.js",
-		"/L/L141_maquettage/Integration/2013/Hulk/www/maquette-rh/js/script.js"
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/Common/css/accueil/widgets/actuel.css"
 	],
 	"find":
 	{
@@ -802,6 +794,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"    *",
+			"  *",
+			"\":",
+			"* \"",
+			"**",
+			"***",
+			"**",
 			"body > div",
 			"veille-permanente/",
 			"thema",
@@ -922,14 +921,7 @@
 			"\\",
 			"ir-1",
 			"w-indemnites-search",
-			"search",
-			"home-search",
-			"clear-input-search",
-			"idemnites",
-			"</li>\n									<li>",
-			"cc-search-alpha-list",
-			"cc-search",
-			"../img/"
+			"search"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -967,57 +959,32 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "start/assets/css/styles.css",
+					"file": "framework/assets/css/components.css",
 					"settings":
 					{
-						"buffer_size": 697,
+						"buffer_size": 2594,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								332,
-								332
+								714,
+								714
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "start/assets/scss/styles.scss",
-					"settings":
-					{
-						"buffer_size": 538,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								397,
-								397
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sublime-CSS3/CSS3.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 196.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1068,6 +1035,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.csslint_result_view":
+	{
+		"height": 94.0
+	},
 	"replace":
 	{
 		"height": 317.0
