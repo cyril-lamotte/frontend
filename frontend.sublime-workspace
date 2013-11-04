@@ -515,14 +515,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "framework/assets/css/components.css",
-			"settings":
-			{
-				"buffer_size": 2594,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -608,29 +600,38 @@
 	},
 	"file_history":
 	[
-		"/E/Documents and Settings/clamotte/Mes documents/md.md",
+		"/L/L141_maquettage/Integration/_github/frontend/guidelines-css.md",
+		"/L/L141_maquettage/Integration/_github/frontend/framework/assets/js/script.js",
+		"/L/L141_maquettage/Integration/_github/frontend/framework/sharrre.php",
 		"/L/L141_maquettage/Integration/_github/frontend/framework/share.html",
+		"/L/L141_maquettage/Integration/_github/frontend/framework/index.html",
+		"/L/L141_maquettage/Integration/_github/frontend/start/layout.html",
+		"/L/L141_maquettage/Integration/_github/frontend/start/assets/css/styles.css",
+		"/L/L141_maquettage/Integration/_github/frontend/start/assets/css/components.css",
+		"/L/L141_maquettage/Integration/_github/frontend/start/assets/css/layout.css",
+		"/L/L141_maquettage/Integration/_github/frontend/start/assets/js/script.js",
+		"/L/L141_maquettage/Integration/_github/frontend/start/assets/js/components.js",
+		"/L/L141_maquettage/Integration/_github/frontend/start/assets/css/rwd.css",
+		"/L/L141_maquettage/Integration/_github/frontend/start/assets/css/form.css",
+		"/L/L141_maquettage/Integration/_github/frontend/start/assets/css/normalize.css",
+		"/L/L141_maquettage/Integration/_github/frontend/framework/assets/css/components.css",
+		"/L/L141_maquettage/Integration/_github/frontend/start/index.html",
+		"/L/L141_maquettage/Integration/_github/frontend/jQuery-plugins/jquery.placeholder.js",
+		"/L/L141_maquettage/Integration/_github/frontend/start/assets/js/lib/jquery.min.js",
+		"/L/L141_maquettage/Integration/_github/frontend/start/assets/js/lib/modernizr.js",
+		"/E/Documents and Settings/clamotte/Mes documents/md.md",
 		"/L/L141_maquettage/Integration/_github/frontend/framework/assets/js/share.js",
 		"/L/L141_maquettage/Integration/_github/frontend/framework/assets/css/plugins/share.css",
 		"/L/L141_maquettage/Integration/_github/frontend/framework/assets/js/plugins/jquery.sharrre.js",
-		"/L/L141_maquettage/Integration/_github/frontend/framework/index.html",
-		"/L/L141_maquettage/Integration/_github/frontend/start/index.html",
 		"/L/L141_maquettage/Integration/_github/frontend/start/assets/js/share.js",
 		"/L/L141_maquettage/Integration/_github/frontend/start/assets/css/plugins/share.css",
 		"/L/L141_maquettage/Integration/_github/frontend/start/share.html",
 		"/L/L141_maquettage/Integration/_github/frontend/start/assets/css/Copie de styles.css",
 		"/L/L141_maquettage/Integration/_github/frontend/start/assets/css/Copie de _base.css",
-		"/L/L141_maquettage/Integration/_github/frontend/start/assets/js/script.js",
-		"/L/L141_maquettage/Integration/_github/frontend/start/assets/js/lib/jquery.min.js",
-		"/L/L141_maquettage/Integration/_github/frontend/start/assets/css/styles.css",
 		"/L/L141_maquettage/Integration/_github/frontend/start/assets/scss/_base.scss",
 		"/L/L141_maquettage/Integration/_github/frontend/start/assets/scss/_prefix.scss",
 		"/L/L141_maquettage/Integration/_github/frontend/start/assets/scss/styles.scss",
 		"/L/L141_maquettage/Integration/_github/frontend/start/assets/scss/config.rb",
-		"/L/L141_maquettage/Integration/_github/frontend/start/layout.html",
-		"/L/L141_maquettage/Integration/_github/frontend/start/assets/css/layout.css",
-		"/L/L141_maquettage/Integration/_github/frontend/framework/assets/css/components.css",
-		"/L/L141_maquettage/Integration/_github/frontend/framework/assets/js/script.js",
 		"/L/L141_maquettage/Integration/_github/frontend/framework/assets/css/styles.css",
 		"/L/L141_maquettage/Integration/_github/frontend/framework/assets/css/rwd.css",
 		"/L/L141_maquettage/Integration/_github/frontend/framework/assets/css/plugins/prettify.css",
@@ -692,7 +693,6 @@
 		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/Common/js/accueil/jQuery/jquery.accessTabs.js",
 		"/L/L141_maquettage/Integration/_github/accessTabs/accessTabs.css",
 		"/L/L141_maquettage/Integration/_github/accessTabs/README.md",
-		"/L/L141_maquettage/Integration/_github/frontend/start/assets/css/form.css",
 		"/E/Documents and Settings/clamotte/Application Data/Sublime Text 2/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
 		"/E/Documents and Settings/clamotte/Application Data/Sublime Text 2/Settings/SideBarEnhancements.json",
 		"/E/Documents and Settings/clamotte/Application Data/Sublime Text 2/Packages/User/snippets/css/box-sizing.sublime-snippet",
@@ -727,15 +727,7 @@
 		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ce/Content/CE/css/accueil/panel.css",
 		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_el/Content/EL/js/accueil/test/qunit-1.10.0.js",
 		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/Common/js/accueil/widgets/widgetMaximise.js",
-		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_el/Content/EL/js/accueil/functions.js",
-		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_el/Content/EL/js/accueil/home.js",
-		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/EC/js/accueil/carousel.js",
-		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/Common/css/accueil/widgets/codes-dz.css",
-		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/Common/css/accueil/widgets/com-cabinet.css",
-		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/Common/css/accueil/widgets/indemnites.css",
-		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/Common/js/accueil/widgets/indemnites.js",
-		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/Common/css/accueil/widgets/idemnites.css",
-		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_ec/Content/Common/css/accueil/widgets/actuel.css"
+		"/L/L141_maquettage/Integration/2013/Hulk/www/maquettes/portail_el/Content/EL/js/accueil/functions.js"
 	],
 	"find":
 	{
@@ -794,6 +786,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"acc-links",
 			"    *",
 			"  *",
 			"\":",
@@ -920,8 +913,7 @@
 			"ir-2b",
 			"\\",
 			"ir-1",
-			"w-indemnites-search",
-			"search"
+			"w-indemnites-search"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -959,36 +951,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "framework/assets/css/components.css",
-					"settings":
-					{
-						"buffer_size": 2594,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								714,
-								714
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 196.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		},
 		{
@@ -1025,7 +989,7 @@
 		"cols":
 		[
 			0.0,
-			0.89975399754,
+			0.452029520295,
 			1.0
 		],
 		"rows":

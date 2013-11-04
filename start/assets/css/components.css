@@ -1,0 +1,338 @@
+/*
+* COMPONENTS
+* ----------
+*
+* Browser
+*	Typo
+* Clearfix
+* Grid
+* Forms
+* Responsive
+* Components
+*/
+
+
+
+
+/* Browser
+------------ */
+
+
+/* Selection */
+::selection         { background-color: #000; color: #fff; }
+::-moz-selection    { background-color: #000; color: #fff; }
+
+
+/* Couleur du focus au tap */
+html { -webkit-tap-highlight-color: rgba(201, 224, 253, 0.8); }
+.no-highlight { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+
+
+
+/* Typo
+--------- */
+
+.center    { margin-left: auto; margin-right: auto; }
+.txtleft   { text-align: left; }
+.txtright  { text-align: right; }
+.txtcenter { text-align: center; }
+
+.valign-top    { vertical-align: top !important; }
+.valign-middle { vertical-align: middle !important; }
+.valign-bottom { vertical-align: bottom !important; }
+
+.pull-left  { float: left; }
+.pull-right { float: right; }
+
+.display-none { display: none; }
+.is-hidden    { position: absolute; left: -9999px; top: 0; }
+
+
+
+
+
+
+
+
+/* Clearfix
+------------- */
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+
+
+
+
+
+
+
+
+/* Grid
+--------- */
+
+
+.row {
+	clear: both;
+}
+.cell {
+  float: left;
+}
+.cell-remains {
+	overflow: hidden;
+	float: none;
+}
+
+.grid-2 {
+	width: 50%;
+}
+.grid-3 {
+	width: 33.33%;
+}
+.grid-2-3 {
+  width: 66.66%;
+}
+
+
+/* - Goutières - */
+.cell-inner {
+  margin-left: 1em;
+}
+.cell:first-child .cell-inner {
+  margin-left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Forms
+---------- */
+
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	border: 1px solid #CFD0D2;
+	padding: 2px 2px;
+	margin: 0;
+	font-size: 1em;
+	vertical-align: middle;
+	font-family: inherit;
+	background: #fff;
+}
+input[type="image"] { vertical-align: middle; }
+input[type="search"] { -webkit-appearance: textfield; }
+
+input[type="checkbox"],
+input[type="radio"] {
+	vertical-align: middle;
+	padding: 0;
+	width: 13px;
+	height: 13px;
+}
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button; /* clickable input types in iOS */
+	overflow: visible; /* Corrects inner spacing displayed oddly in IE7 */
+	vertical-align: middle;
+}
+
+form { margin: 0; }
+fieldset { padding: 1em; }
+legend { margin-left: 1em; }
+select { font-size: 1em; vertical-align: middle; }
+.ie8 select:focus { width: auto; position: relative; }
+label {	vertical-align: middle; }
+
+textarea {
+	overflow: auto; /* Removes default vertical scrollbar on empty textarea in IE6/7/8/9 */
+	vertical-align: top;
+	resize: vertical;
+}
+textarea:-moz-placeholder {}
+
+/* Placeholder */
+input::-webkit-input-placeholder {}
+input::-moz-placeholder { opacity: 1; }
+.placeholder {}
+
+
+/* Removes inner padding and border in FF3+ */
+button::-moz-focus-inner,
+input[type='button']::-moz-focus-inner,
+input[type='reset']::-moz-focus-inner,
+input[type='submit']::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+
+
+
+
+
+
+/* Responsive
+--------------- */
+
+/* Responsive images */
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Responsive classes */
+
+@media print {
+	.visible-print { display: inherit !important; }
+	.hidden-print { display: none !important; }
+}
+.visible-phone { display: none !important; }
+.visible-tablet { display: none !important; }
+.hidden-desktop { display: none !important; }
+.visible-desktop { display: inherit !important; }
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .hidden-desktop { display: inherit !important; }
+  .visible-desktop { display: none !important ; }
+  .visible-tablet { display: inherit !important; }
+  .hidden-tablet { display: none !important; }
+}
+@media (max-width: 767px) {
+  .hidden-desktop { display: inherit !important; }
+  .visible-desktop { display: none !important; }
+  .visible-phone { display: inherit !important; }
+  .hidden-phone { display: none !important; }
+}
+.visible-print { display: none !important; }
+
+
+
+
+
+
+
+/* Components
+--------------- */
+
+
+/* Menu d'accès rapide */
+
+#skip-links { margin: 0; padding: 0; position: absolute; top: 0;	left: 0; }
+#skip-links li { display: inline; background: none; padding: 0; margin-right: 0.5em; }
+#skip-links a:link,
+#skip-links a:visited {
+	position: absolute; top: 0; left: -9999em;
+	background-color: #fff;
+	padding: 0.5em;
+}
+
+#skip-links a:focus,
+#skip-links a:active {
+	left: 0;
+}
+
+.target { outline: 2px dashed red; overflow: hidden; }
+
+
+
+
+
+
+
+/* Media */
+
+
+/* media */
+
+.media {
+	margin: 1em 0 1em 0;
+	overflow: hidden;
+	clear: both;
+}
+.media-list .media {
+	border-top: 1px solid #dedad5;
+	padding: 1em 0 0 0;
+}
+.media-list .media:first-child {
+	border-top: none;
+}
+
+
+/* media-pict */
+.media-pict {
+	float: left;
+	margin: 0 15px 0 0;
+	width: 100px;
+	text-align: center;
+}
+.media-pict a {
+	display: block;
+}
+.media-pict img {
+	display: block;
+	margin: 0 auto;
+}
+.media-source {
+	text-align: right;
+	font-style: italic;
+}
+.media-legend {
+	text-align: left;
+	font-weight: bold;
+}
+
+
+/* media-text */
+.media-text {
+	margin: 0 0.5em 0 0;
+	overflow: hidden;
+}
+.media-title {
+	margin: 0 0 0.5em;
+	font-weight: bold;
+}
+
+
