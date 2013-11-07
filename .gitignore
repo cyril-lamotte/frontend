@@ -1,6 +1,6 @@
 
 .DS_Store
 .sass-cache
-.sublime-project
+frontend.sublime-project
+frontend.sublime-workspace
 config.rb
-.sublime-workspace
