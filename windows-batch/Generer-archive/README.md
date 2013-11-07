@@ -1,4 +1,3 @@
-
 # Générer une archive d'un dossier
 
 ## Objectif
@@ -15,6 +14,6 @@ Faire un clic droit sur le dossier à zipper, cliquer sur l'option "Générer un
 
 * Nécessite d'avoir installé 7zip ( http://www.7-zip.org/ )
 * 7z doit être défini en variable d'environnement PATH
-* Le script doit être placé dans le dossier _D:\Batch\menu-generer-archive.bat_
+* Le script doit être placé dans le dossier _D:\Batch\menu-generer-archive.bat_ (modifiable dans le ".reg")
 * Exécuter menu-generer-archive.reg pour créer le menu contextuel
 
