@@ -1,19 +1,27 @@
+/* ----------------------------------------------------------------------------
+   $Responsive
+---------------------------------------------------------------------------- */
+
+/*
+  Smartphones : < 768px
+  Tablette : < 979px
+*/
 
 
-/* = Tablette / Résolutions moyennes = */
+/* Tablette - Résolutions moyennes */
 @media (min-width: 768px) and (max-width: 979px) {
 
 
 
 
-} /* /@media*/
+} /* /Tablette - Résolutions moyennes */
 
 
 
-/* = Smartphone / Petites résolutions = */
+/* Smartphones - Petites résolutions */
 @media (max-width: 767px) {
 
 
 
 
-} /* /@media*/
+} /* /Smartphones / Petites résolutions */
