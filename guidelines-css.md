@@ -1,4 +1,4 @@
-# Guide des feuilles de styles CSS, conseils et bonnes pratiques
+# Guide CSS, conseils et bonnes pratiques
 
 ---
 
