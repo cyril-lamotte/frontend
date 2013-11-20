@@ -11,22 +11,21 @@
 		body { background: #f6f4f4; color: #888; font: 0.8em/1.3 "Trebuchet MS", Arial, Helvetica, sans-serif; margin: 0; padding: 0; }
 		.wrapper { margin: 2em 4%; background-color: #fff; padding: 1.5em 1em; text-align: left; border-radius: 7px; }
 		.wrapper > div { border: 1px solid #F6F4F4; padding: 0.2em; margin-bottom: 1em; border-radius: 0 0 5px 5px; }
-		.wrapper > div > div { display: inline-block; vertical-align: top; min-width: 200px; }
+		.wrapper > div > div { display: inline-block; vertical-align: top; min-width: 250px; }
 		h1 { font-size: 1.2em; color: #888; padding: 0.5em 1em; margin: 0; font-weight: normal; letter-spacing: 2px; font-variant: small-caps; background: #F6F4F4; border-radius: 3px 3px 0 0px; }
 		h2 { font-size: 1em; color: #F77F00; padding: 0.5em 1em; margin: 1em 0 0em; font-weight: normal; border-radius: 5px; }
 		ul { margin: 0 0 1em 0; list-style: inside circle; padding: 0; }
-		ul li { margin-left: 2em; }
-		a:link, a:visited { text-decoration: none; color: #888; }
-		a:visited { text-decoration: none; color: #555; }
-		a:hover { text-decoration: underline; }
+		ul li { margin: 0 0 0.5em; }
+		a:link, a:visited { display: block; text-decoration: none; color: #888; border: 1px solid #F6F4F4; padding: 0.5em; border-radius: 5px; }
+		a:visited { background: #fafafa; }
+		a:hover, a:focus, a:active { text-decoration: none; background: #efefef; }
 
 		@media handheld and (max-device-width: 992px), screen and (max-width: 992px) {
 			.wrapper > div { border: none; }
 			.wrapper > div > div { display: block; min-width: 0; }
-			ul li {border: 1px solid #F6F4F4; margin: 0 0 0.5em; padding: 0.5em; border-radius: 5px; }
-			ul li a { display: block; }
 		}
 	</style>
+
 
 
 </head>
