@@ -1,0 +1,20 @@
+{
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"detect_slow_plugins": false,
+	"font_size": 10.0,
+	"ignored_packages":
+	[
+		"SCSS",
+		"Vintage",
+		"Goto-CSS-Declaration",
+		"WordHighlight",
+		"Alignment"
+	],
+	"rulers":
+	[
+		80
+	],
+	"tab_size": 2,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": false
+}

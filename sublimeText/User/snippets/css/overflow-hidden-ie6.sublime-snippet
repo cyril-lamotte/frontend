@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[overflow: visible; height: 1%;]]></content>
+    <tabTrigger>overflow</tabTrigger>
+    <scope>source.css</scope>
+    <description>IE6 : overflow: visible + height:1%</description>
+</snippet>

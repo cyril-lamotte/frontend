@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[-webkit-transform: $0;]]></content>
+    <tabTrigger>transform</tabTrigger>
+    <scope>source.css</scope>
+    <description>transform</description>
+</snippet>

@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[behavior: url('js/PIE.htc'); -pie-png-fix:true;]]></content>
+		<tabTrigger>behavior</tabTrigger>
+    <scope>source.css</scope>
+    <description>pie.htc</description>
+</snippet>

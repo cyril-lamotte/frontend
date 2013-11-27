@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[-webkit-transform-origin: ${1:50%} ${2:50%};]]></content>
+    <tabTrigger>origin</tabTrigger>
+    <scope>source.css</scope>
+    <description>transform-origin</description>
+</snippet>

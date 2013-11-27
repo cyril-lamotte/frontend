@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[rotateZ(${1:0}deg)]]></content>
+    <tabTrigger>rotateZ</tabTrigger>
+    <scope>source.css</scope>
+    <description>rotateZ(deg)</description>
+</snippet>
