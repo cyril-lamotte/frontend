@@ -1,0 +1,23 @@
+
+# Option winscp
+option batch abort
+option confirm off
+
+# Connexion au serveur
+open %1%
+
+# Forcer le mode binaire
+option transfer binary
+
+# Aller au dossier cible
+cd %2%
+
+# Aller au dossier source
+lcd %3%
+
+# Transferer
+put -filemask=*|.svn/;*.bat *
+
+# Terminer la connexion
+close
+exit
