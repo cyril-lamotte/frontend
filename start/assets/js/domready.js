@@ -8,7 +8,8 @@ $(document).ready(function() {
 	skipLinks();
 
 	// Gérer les Polyfills
-	managePolyfills()
+	managePolyfills();
+
 
 }); // /ready
 

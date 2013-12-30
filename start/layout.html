@@ -26,16 +26,17 @@
 
 
 <!-- Menu d'accès rapide -->
-<ul id="skip-links">
-	<li><a href="#a_nav">Menu</a></li>
-	<li><a href="#a_content">Contenu</a></li>
-	<li><a href="#a_search">Recherche</a></li>
-</ul>
+<nav id="skip-links" role="navigation">
+	<ul>
+		<li><a href="#a_nav">Menu</a></li>
+		<li><a href="#a_content">Contenu</a></li>
+		<li><a href="#a_search">Recherche</a></li>
+	</ul>
+</nav>
 
 <div class="wrapper">
 
 	<header role="banner">
-	<div class="header" role="banner">
 
 		<h1 class="is-hidden">Titre du site</h1>
 
@@ -43,35 +44,37 @@
 			<!--a href="index.html" class="logo" title="Site, retour à l'accueil"><img src="assets/img/Site.png" alt="Site" /></a-->
 		</div>
 
-	</div><!--/header-->
 	</header>
+
+	<nav id="a_nav" role="navigation">
+		<ul>
+			<li><a href="#">Accueil</a></li>
+		</ul>
+	</nav>
 
 
 	<div class="page">
 
-		<div class="sidebar">
+		<main id="a_content" role="main">
+
+			// Content
+
+		</main>
+
+
+		<div class="sidebar" role="complementary">
 
 			// Sidebar
 
 		</div><!-- /sidebar-->
 
-		<main role="main">
-		<div class="main" id="a_content">
-
-			// Content
-
-		</div><!--/main-->
-		</main>
-
 	</div><!--/page-->
 
 
 	<footer role="contentinfo">
-	<div class="footer">
 
 		// Footer
 
-	</div><!--/footer-->
 	</footer>
 
 </div><!--/wrapper-->
@@ -79,7 +82,7 @@
 <!-- Scripts : Placés en fin de page pour de meilleures performances -->
 <script src="assets/js/lib/jquery.min.js"></script>
 <script src="assets/js/components.js"></script>
-<script src="assets/js/script.js"></script>
+<script src="assets/js/domready.js"></script>
 
 </body>
 </html>
