@@ -1,6 +1,5 @@
 <snippet>
     <content><![CDATA[
-
   -webkit-box-shadow: ${1:0}px ${2:1}px ${3:3}px #${4:ccc};
      -moz-box-shadow: ${1:0}px ${2:1}px ${3:3}px #${4:ccc};
           box-shadow: ${1:0}px ${2:1}px ${3:3}px #${4:ccc};

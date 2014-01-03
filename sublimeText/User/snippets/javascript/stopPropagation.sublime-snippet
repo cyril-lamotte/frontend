@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[event.stopPropagation();]]></content>
+    <tabTrigger>stopPropagation</tabTrigger>
+    <scope>source.js</scope>
+    <description>stopPropagation()</description>
+</snippet>
