@@ -18,7 +18,8 @@ façon unifiée dans le but de :
 entourées de guillemets doubles.
 * Utiliser la tabulation pour indenter le code.
 
-```html<!--Header-->
+```html
+<!--Header-->
 <div class="header">
   […]
 </div><!--/header-->
@@ -66,7 +67,7 @@ De plus, éviter d’utiliser des hacks CSS (ex : « _margin : » ou « html * �
 -layout
 -title
 -more
-```css
+```
 
 
 
