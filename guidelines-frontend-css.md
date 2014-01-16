@@ -24,29 +24,31 @@ Les clés de voûte étant les principes KISS & DRY.
 
 * Éviter les CSS > 2000 lignes (Avec un préprocesseur SASS par exemple)
 * Éviter Les sélecteurs interminables (Ex : `#site .menu #foo #bar .active {...}`)
+> Un long sélecteur implique des problèmes de performances coté navigateur client.
 
-> Celà implique des problèmes de performances coté navigateur client.
 > Celà rend le code difficilement maintenable et réutilisable.
-> C'est trop compliqué
+
+> C'est trop compliqué !
 
 * Éviter les `!important` & ne pas appliquer un style sur un id (`#foo {...}`)
 > La spécificité des #id et des important est trop importante, ce qui les rend
 > difficiles à surcharger (difficulté de maintenance) et oblige à étendre les
 > sélecteurs ce qui n'est pas bon pour les performances (voir question précédente).
 
-* Toujours mettre des polices de secours dans `font-family`
+* Toujours mettre des polices de secours dans `font-family`.
 * Utiliser `box-sizing` quand le périmètre navigateur le permet (>= IE8)
-* Pas d'unité pour la propriété `line-height: 1.4`
-* Toujours utiliser les unité relative (em ou rem) pour les polices (voir même les marges / breakpoints)
-* Utiliser les sélecteurs CSS3 &mdash; http://www.w3.org/Style/css3-selectors-updates/WD-css3-selectors-20010126.fr.html#selectors
+* Pas d'unité pour la propriété _line-height_ `line-height: 1.4`
+* Toujours utiliser les unités relatives (em ou rem) pour les polices
+(voir même pour les marges / breakpoints)
+* Utiliser les sélecteurs CSS3 &mdash; [W3C : les sélecteurs](http://www.w3.org/TR/css3-selectors/#selectors)
 
 
 
 ## Convention d'écriture
 
 * Identation avec des espaces
-* Des commentaire sont insérés pour chaque groupe de règle
-* Les enfants sont indentés
+* Des commentaires sont insérés pour chaque groupe de règles
+* Les règles-enfants sont indentés
 * Formatage d'une règle :
  - 1 espace entre le sélecteur et l'accolade
  - Sélecteurs d'attribut entre guillemets
