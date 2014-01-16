@@ -121,6 +121,32 @@ reprenant l’intitulé, le format, le poids et l’indication de nouvelle fenê
 * Les ensembles de cases à cocher / boutons radio sont rassemblés dans une balise _fieldset_ (accompagnée de la balise _legend_).
 * Si un picto est utilisé comme bouton de validation, l'input type image doit être utilisé (ou button type="submit" avec une balise image à l'intérieur)
 
+
+## Drupal
+
+### Prévoir les onglets d'admin
+
+### Page active
+Dans un menu de navigation, utiliser la classe « active » pour les liens indiquant la page courante.
+
+### Pair / Impair
+Pour appliquer un style une fois sur deux, utiliser les classes « odd » / « even » (Ex : Alternance de couleur sur les lignes d’un tableau)
+
+### Ne pas utiliser
+Certains noms de classe sont déjà utilisés par Drupal, il ne faut donc pas les utiliser dans les intégrations.
+
+Liste non exhaustive par ordre alphabétique :
+
+```html
+home
+logged-in
+menu
+```
+
+
+
+
+
 ## Outils
 
 * [Validateur W3C](http://validator.w3.org/)
