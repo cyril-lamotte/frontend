@@ -1,20 +1,22 @@
 # Guide de développement frontend &mdash; JavaScript & jQuery
 
-## Introduction
 
-### Objectifs
 
-En travaillant sur des projets d'envergure, il est important de travailler de
-façon unifiée dans le but de :
+## Convention d'écriture
 
-* Garder les feuilles de style maintenables & extensibles
-* Garder le code lisible
+* Les fichiers de script devront limiter la portée de leurs variables en utilisant un _module pattern_, nous utilisons les "bonnes pratiques recommandées par Drupal":http://drupal.org/node/756722#using-jquery :
 
-Pour satisfaire ces objectifs, on essayera d'appliquer une syntaxe et un
-formatage cohérent, et de cadrer l'attitude à avoir pour écrire et architecturer
-le CSS.
+```js
+(function ($) {
+/* Code exécuté au chargement de la page */
+$(document).ready(function() {
+  // Code
+});
 
-Les clés de voûte étant les principes KISS & DRY.
+// Code
+
+})(jQuery);
+```
 
 
 
@@ -22,34 +24,16 @@ Les clés de voûte étant les principes KISS & DRY.
 
 ## Recommandations
 
+### Maintenabilité & évolutivité
 
+* Nous utilisons la bibliothèque "jQuery":http://jquery.com/ pour ajouter des comportements sur les pages.
+* Si possible tout de même, utiliser du [Vanilla JS](http://vanilla-js.com/).
 
+### Qualité & performances
 
-## Convention d'écriture
+### Accessibilité
 
-
-
-
-```js
-/* -----------------------------------------------------------------------------
-   Exemple
------------------------------------------------------------------------------ */
-
-.footer-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-  .footer-list > li {
-    display: inline;
-    padding: 0 8px;
-    border-left: 1px solid #017a97;
-  }
-
-  .footer-list input[type="text"] {
-    border: 1px solid #000;
-  }
-```
-
-
+* Les éléments non-fonctionnel quand JavaScript est désactivé ne doivent pas être
+affichés (Ex : Bouton de défilement « Suivant » / « Précédent » d’une galerie photo).
+* Chaque script est utilisable au clavier et à la souris
+* Chaque script générant un mouvement peut être stoppé et relancé.
