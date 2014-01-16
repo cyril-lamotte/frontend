@@ -25,9 +25,7 @@ Les clés de voûte étant les principes KISS & DRY.
 * Éviter les CSS > 2000 lignes (Avec un préprocesseur SASS par exemple)
 * Éviter Les sélecteurs interminables (Ex : `#site .menu #foo #bar .active {...}`)
 > Un long sélecteur implique des problèmes de performances coté navigateur client.
-
 > Celà rend le code difficilement maintenable et réutilisable.
-
 > C'est trop compliqué !
 
 * Éviter les `!important` & ne pas appliquer un style sur un id (`#foo {...}`)
