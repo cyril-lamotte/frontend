@@ -1,4 +1,4 @@
-# Guide de développement frontend
+# Guide de développement frontend &mdash; CSS
 
 ## Introduction
 
