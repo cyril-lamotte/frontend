@@ -1,10 +1,17 @@
 # SASS
 
-## Installation
+## Documentation
 
-* Installer Ruby en le téléchargeant sur http://rubyinstaller.org/
-* Ouvrir une command Windows et tapper 'ruby -v' pour vérifier le numéro de la version de ruby installée.
+* http://sass-lang.com
 
+
+## Installation de Ruby
+
+* Installer Ruby en le téléchargeant sur http://rubyinstaller.org
+* Ouvrir un terminal Windows et tapper 'ruby -v' pour vérifier le numéro de version installée.
+
+
+## Nouvelle installation de SASS / Compass
 
 ```
 gem install sass
@@ -13,6 +20,21 @@ gem install sass
 ```
 gem install compass
 ```
+
+
+## Mise à jour
+
+```
+gem update sass
+```
+
+```
+gem update compass
+```
+
+
+
+
 
 ## Utilisation
 
