@@ -38,7 +38,7 @@ gem update compass
 
 ## Utilisation
 
-"Écouter" un dossier
+### Écouter & compiler les changements
 
 ```
 cd projet/
@@ -57,3 +57,27 @@ Style "compressé" de la sortie CSS
 ```
 sass --style compressed --watch scss:css
 ```
+
+Avec debug
+
+```
+sass --style expanded --watch scss:css --debug-info
+```
+
+
+## Avec Compass
+
+### Créer le fichier de configuration
+
+```
+compass create sdu --bare --sass-dir "sass" --css-dir "css" --javascripts-dir "js" --images-dir "img"
+```
+
+### Écouter & compiler les changements
+
+Se positionner dans le dossier, puis
+
+```
+compass watch .
+```
+
