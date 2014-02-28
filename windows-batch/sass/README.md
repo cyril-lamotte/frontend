@@ -11,7 +11,7 @@
 * Ouvrir un terminal Windows et tapper 'ruby -v' pour vérifier le numéro de version installée.
 
 
-## Nouvelle installation de SASS / Compass
+## Nouvelle installation de SASS / Compass & plugins
 
 ```
 gem install sass
@@ -20,6 +20,11 @@ gem install sass
 ```
 gem install compass
 ```
+
+```
+gem install sass-globbing
+```
+
 
 
 ## Mise à jour
