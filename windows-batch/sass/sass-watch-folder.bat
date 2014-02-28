@@ -1,17 +1,16 @@
 @echo off
 
 echo.
-echo  SASS : Ecoute du dossier
-echo  ========================
+echo  SASS/Compass : Ecoute du dossier
+echo  ================================
 echo.
 
 echo  Dossier : %1
-echo    Cible : %1 /scss vers /css
 
 
-:: Lancement de sass
+:: Lancement de sass/compass
 cd %1
 echo %cd%
-sass --style expanded --watch scss:css
+compass watch .
 
 pause
