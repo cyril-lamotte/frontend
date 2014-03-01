@@ -7,7 +7,7 @@ performance, de l’évolutivité, de l’interopérabilité matérielle et logi
 et de l’accessibilité.
 
 
-bq. Steve Souders, ingénieur chez Google, anciennement chez Yahoo, et spécialiste
+> Steve Souders, ingénieur chez Google, anciennement chez Yahoo, et spécialiste
 en performance web, démontre que 80 à 90% du temps de réponse subit par
 l’utilisateur final dépend du « frontend », c'est-à-dire de la couche de
 présentation (HTML / CSS / JavaScript notamment).
@@ -22,4 +22,4 @@ _Ce document n’est pas figé, il sera mis à jour au fil des expériences ou d
 * [Guide CSS](https://github.com/cyril-lamotte/frontend/blob/master/guidelines-frontend-css.md)
 * [Guide HTML](https://github.com/cyril-lamotte/frontend/blob/master/guidelines-frontend-html.md)
 * [Guide JavaScript](https://github.com/cyril-lamotte/frontend/blob/master/guidelines-frontend-js.md)
-* [Consulter le wiki](https://github.com/cyril-lamotte/frontend/wiki)
+* [Consulter le wiki](https://github.com/cyril-lamotte/framework/wiki)
