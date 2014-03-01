@@ -1,40 +1,38 @@
-# Guide de développement frontend &mdash; CSS
+# Guide CSS
 
 ## Introduction
 
 ### Objectifs
 
 En travaillant sur des projets d'envergure, il est important de travailler de
-façon unifiée dans le but de :
-
-* Garder les feuilles de style maintenables & extensibles
-* Garder le code lisible
+façon unifiée dans le but de garder les feuilles de style lisibles, maintenables & extensibles.
 
 Pour satisfaire ces objectifs, on essayera d'appliquer une syntaxe et un
 formatage cohérent, et de cadrer l'attitude à avoir pour écrire et architecturer
 le CSS.
 
 
-## Convention d'écriture
+## Conventions d'écriture
 
-* Indentation avec des espaces
-* Des commentaires sont insérés pour chaque groupe de règles
+* Un commentaire pour chaque groupe de règles
 * Les règles-enfants sont indentés
+* Indentation avec 2 espaces
+* Utiliser `-` pour délimiter les noms de classe
+
 * Formatage d'une règle :
- - Mettre un espace aprés le sélecteur, avant et aprés les accolades, et aprés les ":".
- - Sélecteurs d'attribut entre guillemets
+ - Un espace aprés le sélecteur, avant et aprés les accolades, et aprés les ":".
  - Retour à la ligne après l'accolade
  - Retour à la ligne après chaque propriété (exception possible si moins de 3 propriétés)
  - 1 point virgule aprés chaque propriété (Charge au minifieur d'optimiser)
  - Les propriétés sont indentées
  - 1 saut de ligne entre deux règles
  - Ne pas insérer les unités lorsque c'est inutile (`margin: 0`)
-* Utiliser `-` pour délimiter les noms de classe
+ - Sélecteurs d'attribut entre guillemets
+
 * Assurez-vous de toujours nommer vos classes judicieusement ; garder un nom
 aussi court que possible, mais aussi long que nécessaire. S'assurer que les
 objets ou les abstractions sont très vaguement nommés (par exemple `.ui-list`,
-`.media`) pour permettre une meilleure réutilisation. Les extensions des objets
-devraient être nommées beaucoup plus explicitement (par exemple `.user-avatar-link`).
+`.media`) pour permettre une meilleure réutilisation.
 
 ```css
 /* -----------------------------------------------------------------------------
