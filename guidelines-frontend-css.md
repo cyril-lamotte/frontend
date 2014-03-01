@@ -17,7 +17,7 @@ le CSS.
 
 ## Convention d'écriture
 
-* Identation avec des espaces
+* Indentation avec des espaces
 * Des commentaires sont insérés pour chaque groupe de règles
 * Les règles-enfants sont indentés
 * Formatage d'une règle :
