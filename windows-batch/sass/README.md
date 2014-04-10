@@ -74,6 +74,10 @@ Un fichier Gemfile.lock sera créé, *ne pas le supprimer*
 bundler install
 ```
 
+```
+bundler update
+```
+
 
 
 
