@@ -58,7 +58,7 @@ bundler init
 
 Editer le fichier avec les dépendances :
 
-```gem
+```
 # A sample Gemfile
 source "https://rubygems.org"
 
