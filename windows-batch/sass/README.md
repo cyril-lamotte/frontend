@@ -1,43 +1,56 @@
 # SASS
 
-## Documentation
+## Installations / Mises à jour
 
-* http://sass-lang.com
+### Ruby
 
-
-## Installation de Ruby
-
-* Installer Ruby en le téléchargeant sur http://rubyinstaller.org
+* Télécharger Ruby sur http://rubyinstaller.org
 * Ouvrir un terminal Windows et tapper 'ruby -v' pour vérifier le numéro de version installée.
 
-
-## Nouvelle installation de SASS / Compass & plugins
+### SASS
 
 ```
 gem install sass
 ```
 
 ```
-gem install compass
-```
-
-```
-gem install sass-globbing
-```
-
-
-
-## Mise à jour
-
-```
 gem update sass
+```
+
+Documentation : http://sass-lang.com
+
+
+### Compass
+
+```
+gem install compass
 ```
 
 ```
 gem update compass
 ```
 
+Documentation : http://compass-style.org/reference/compass/
 
+
+### Globbing
+Permet d'importer un dossier en un seul '@import'.
+
+```
+gem install sass-globbing
+```
+
+Documentation : https://github.com/chriseppstein/sass-globbing
+
+
+### Bundler
+Gestion des dépendances
+
+```
+gem install bundler
+```
+
+Documentation : http://bundler.io/ 
 
 
 
