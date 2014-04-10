@@ -33,6 +33,7 @@ gem update compass
 
 ### Globbing
 Permet d'importer un dossier en un seul '@import'.
+
 Documentation : https://github.com/chriseppstein/sass-globbing
 
 ```
@@ -42,6 +43,7 @@ gem install sass-globbing
 
 ### Bundler
 Gestion des dépendances
+
 Documentation : http://bundler.io/
 
 ```
