@@ -8,6 +8,7 @@
 * Ouvrir un terminal Windows et tapper 'ruby -v' pour vérifier le numéro de version installée.
 
 ### SASS
+Documentation : http://sass-lang.com
 
 ```
 gem install sass
@@ -17,10 +18,9 @@ gem install sass
 gem update sass
 ```
 
-Documentation : http://sass-lang.com
-
 
 ### Compass
+Documentation : http://compass-style.org/reference/compass/
 
 ```
 gem install compass
@@ -30,27 +30,24 @@ gem install compass
 gem update compass
 ```
 
-Documentation : http://compass-style.org/reference/compass/
-
 
 ### Globbing
 Permet d'importer un dossier en un seul '@import'.
+Documentation : https://github.com/chriseppstein/sass-globbing
 
 ```
 gem install sass-globbing
 ```
 
-Documentation : https://github.com/chriseppstein/sass-globbing
-
 
 ### Bundler
 Gestion des dépendances
+Documentation : http://bundler.io/
 
 ```
 gem install bundler
 ```
 
-Documentation : http://bundler.io/ 
 Utilisation : Se placer dans le dossier du projet, et créer le fichier de dépendance "Gemfile" avec :
 
 ```
@@ -58,7 +55,8 @@ bundler init
 ```
 
 Editer le fichier avec les dépendances :
-```
+
+```gem
 # A sample Gemfile
 source "https://rubygems.org"
 
@@ -67,12 +65,13 @@ gem "compass", "~> 0.12.2" # 0.12.X
 gem "sass-globbing"
 ```
 
-Installer les versions correspondants au projet avec cette commande (Plusieurs version de gem peuvent cohabiter) :
+Installer les versions correspondants au projet avec la commande suivante (Plusieurs version de gem peuvent cohabiter).
+Un fichier Gemfile.lock sera créé, *ne pas le supprimer*
+
 ```
 bundler install
 ```
 
-Un fichier Gemfile.lock sera créé, *ne pas le supprimer*
 
 
 
