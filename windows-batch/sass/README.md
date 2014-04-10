@@ -51,6 +51,28 @@ gem install bundler
 ```
 
 Documentation : http://bundler.io/ 
+Utilisation : Se placer dans le dossier du projet, et créer le fichier de dépendance "Gemfile" avec :
+
+```
+bundler init
+```
+
+Editer le fichier avec les dépendances :
+```
+# A sample Gemfile
+source "https://rubygems.org"
+
+gem "sass", "~> 3.2.14" # 3.2.X
+gem "compass", "~> 0.12.2" # 0.12.X
+gem "sass-globbing"
+```
+
+Installer les versions correspondants au projet avec cette commande (Plusieurs version de gem peuvent cohabiter) :
+```
+bundler install
+```
+
+Un fichier Gemfile.lock sera créé, *ne pas le supprimer*
 
 
 
