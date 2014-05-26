@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+// CSS configuration
+@import "partials/theme";
+@import "partials/base";
+
+
+// Import partials
+@import "partials/helpers/*.*";
+@import "partials/general/*.*";
+
+
+// Interface / Navigation
+@import "partials/ui/*.*";
+
+// Sprites
+//@import "sprites/main/*.png";
+//@include all-main-sprites;
+
+// Pages / modules
+@import "partials/pages/header";
+@import "partials/pages/footer";
+@import "partials/pages/modules";
+@import "partials/pages/home";
+@import "partials/pages/search";
+@import "partials/pages/article";
+@import "partials/pages/sitemap";
+

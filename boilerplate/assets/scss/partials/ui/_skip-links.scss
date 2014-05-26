@@ -1,0 +1,30 @@
+/* =============================================================================
+   Skip links
+============================================================================= */
+
+#skip-links {
+  float: left;
+  margin-top: 3px;
+
+  ul {
+    @include reset-list;
+    display: inline;
+
+    li {
+      display: inline;
+
+      &:first-child {
+        border-right: 1px solid $theme-color-1;
+        padding-right: 8px;
+        margin-right: 8px;
+      }
+    }
+  }
+
+}
+
+// Highlight skiplinks destinations
+.target {
+  outline: 2px dashed $brand;
+  overflow: hidden;
+}

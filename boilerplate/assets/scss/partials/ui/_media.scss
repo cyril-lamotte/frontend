@@ -1,0 +1,65 @@
+/* =============================================================================
+   Media
+============================================================================= */
+
+.media {
+  @extend .cf;
+  margin: 1em 0;
+  clear: both;
+}
+
+.media-wrapper {
+  margin: 0 0 1em;
+
+  > .media:first-child {
+    margin-top: 0;
+  }
+}
+
+
+
+/* media-pict : Image & infos */
+
+.media-pict {
+  float: left;
+  margin: 0 23px 5px 0;
+  width: 100px;
+
+  @include mq-until( $breakpoint-sm ) {
+    float: none;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    width: auto;
+  }
+}
+
+  .media-pict a {
+    display: block;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    figcaption {
+      text-align: left;
+      font-weight: bold;
+    }
+  }
+
+.media-source {}
+
+/* media-content : Description */
+
+.media-content {
+  overflow: hidden;
+}
+
+  .media-title {}
+  .media-date {}
+  .media-text {
+
+    p:first-child {
+      margin-top: 0;
+    }
+  }

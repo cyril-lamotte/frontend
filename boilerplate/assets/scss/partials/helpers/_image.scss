@@ -1,0 +1,65 @@
+/* =============================================================================
+   Images
+============================================================================= */
+
+/**
+ * 1. Fluid images for responsive purposes.
+ * 2. Offset `alt` text from surrounding copy.
+ */
+img {
+  max-width: 100%; /* [1] */
+  font-style: italic; /* [2] */
+}
+
+
+/**
+ * If a `width` and/or `height` attribute have been explicitly defined, let’s
+ * not make the image fluid.
+ */
+img[width],
+img[height] {
+  max-width: none;
+}
+
+
+/* Responsives images */
+.img-responsive,
+%img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* -----------------------------------------------------------------------------
+   Overlay
+----------------------------------------------------------------------------- */
+
+.img-overlay {
+  position: relative;
+
+  a {
+    display: block;
+  }
+
+  img {
+    display: block;
+  }
+}
+
+  %overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(#000, 0.80);
+    color: #fff;
+    padding: 1em 2em;
+
+    .no-rgba & {
+      background: transparent;
+      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000,endColorstr=#F228343C)"; // IE8
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000,endColorstr=#F228343C); // IE6 & 7
+            zoom: 1;
+    }
+  }

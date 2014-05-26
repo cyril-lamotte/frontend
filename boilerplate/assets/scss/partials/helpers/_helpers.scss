@@ -1,0 +1,76 @@
+/* =============================================================================
+   Helpers
+============================================================================= */
+
+.center    { margin-left: auto; margin-right: auto; }
+.txtleft   { text-align: left; }
+.txtright  { text-align: right; }
+.txtcenter { text-align: center; }
+
+.valign-top    { vertical-align: top !important; }
+.valign-middle { vertical-align: middle !important; }
+.valign-bottom { vertical-align: bottom !important; }
+
+.pull-left  { float: left; }
+.pull-right { float: right; }
+
+.display-none { display: none; }
+.is-hidden    { position: absolute; left: -9999px; top: 0; }
+
+.clearer {
+  clear: both;
+  height: 0.01em;
+  font-size: 0.01em;
+  padding: 0;
+  line-height: 0;
+}
+
+
+/* -----------------------------------------------------------------------------
+   Spacer
+----------------------------------------------------------------------------- */
+
+.spacer-1-line { margin-bottom: 1em !important; }
+.spacer-2-line { margin-bottom: 2em !important; }
+.spacer-3-line { margin-bottom: 3em !important; }
+
+
+
+/* -----------------------------------------------------------------------------
+   Box-sizing
+----------------------------------------------------------------------------- */
+
+// Apply a natural box layout model to all elements
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+ }
+
+
+/* -----------------------------------------------------------------------------
+   Flex helpers
+----------------------------------------------------------------------------- */
+
+// Usage :
+// <div class="flex-wrapper">
+//   <div data-flexbox-pos-xs="2"></div>
+//   <div data-flexbox-pos-xs="1"></div>
+// </div><!--/flex-wrapper-->
+
+
+@include mq-until( $breakpoint-sm ) {
+
+  .flex-wrapper {
+    @include flexbox-wrapper;
+  }
+
+  @for $i from 1 through 5 {
+
+    div[data-flexbox-pos-xs="#{$i}"] {
+      @include flexbox-order($i);
+    }
+
+  }
+
+}
