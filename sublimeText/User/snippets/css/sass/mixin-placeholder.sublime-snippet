@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[@include input-placeholder {
+	$0
+}
+]]></content>
+    <tabTrigger>placeholder</tabTrigger>
+		<scope>source.sass</scope>
+    <description>Mixin placeholder</description>
+</snippet>

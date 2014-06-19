@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[@include reset-list;]]></content>
+    <tabTrigger>reset-list</tabTrigger>
+		<scope>source.sass</scope>
+    <description>Mixin reset-list</description>
+</snippet>

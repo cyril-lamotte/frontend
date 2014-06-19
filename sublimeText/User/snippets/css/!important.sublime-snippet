@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[${1:important}]]></content>
     <tabTrigger>important</tabTrigger>
-    <scope>source.css</scope>
+    <scope>source.css, source.sass</scope>
     <description>!important</description>
 </snippet>

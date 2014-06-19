@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[@include hover {
+	$0
+}
+]]></content>
+    <tabTrigger>hover</tabTrigger>
+		<scope>source.sass</scope>
+    <description>Mixin hover</description>
+</snippet>

@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[<div class="${1:class}"">
+    <content><![CDATA[<div class="${1:class}">
 
 	$0
 

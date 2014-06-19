@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[@include border-radius(${1:5}px);]]></content>
+    <tabTrigger>border-radius</tabTrigger>
+		<scope>source.sass</scope>
+    <description>Mixin border-radius()</description>
+</snippet>
