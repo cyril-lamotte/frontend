@@ -1,4 +1,4 @@
-Configuration SublimeText 3
+Configuration SublimeText 2
 ===
 
 ## Emplacement des fichiers de configuration
@@ -19,9 +19,10 @@ Faire un clic droit dans la barre latérale, Project / Edit Preview URLs
 
 ## Raccourcis Emmet
 
-* CTRL + J : Aller à la balise fermante/ouvrante
-* CTRL + SHIFT + G : Wrapper avec une expression
-* CTRL + / & CTRL + SHIFT + / : Commenter la ligne / la balise courante
-* CTRL + SHIFT + Y : Calculer une expression mathématique
-* CTRL + R : Répercuter les valeurs CSS sur les préfixes vendeur
-
+Raccourcis | Actions
+-----------|--------
+CTRL + J | Aller à la balise fermante/ouvrante
+CTRL + SHIFT + G | Wrapper avec une expression
+CTRL + / & CTRL + SHIFT + / | Commenter la ligne / la balise courante
+CTRL + SHIFT + Y | Calculer une expression mathématique
+CTRL + R | Répercuter les valeurs CSS sur les préfixes vendeur
