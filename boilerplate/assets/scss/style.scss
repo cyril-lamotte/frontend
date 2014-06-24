@@ -2,7 +2,14 @@
 
 // CSS configuration
 @import "partials/theme";
-@import "partials/base";
+
+// Load compass's mixins
+@import "compass/utilities";
+@import "compass/css3";
+
+// Load project's mixins
+@import "partials/vendors/jouve";
+
 
 
 // Import partials
