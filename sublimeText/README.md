@@ -2,6 +2,19 @@
 
 Menu Prefrences / Browse Packages...
 
+### Packages Sublime Text
+
+* [Package Control](http://wbond.net/sublime_packages/package_control/installation) - Gestion des packages
+* [Open-Include](https://github.com/SublimeText/Open-Include) - Ouvrir un fichier depuis l'HTML avec `ALT+D`
+* _SideBar Enhancement_ - Ajout de fonctionnalités dans la barre latérale
+* _Emmet_ - Écriture raccourcie
+ * [Documentation](http://docs.emmet.io/)
+ * [Cheat-sheet](http://docs.emmet.io/cheat-sheet/)
+* [Livestyle](http://livestyle.emmet.io/) - Styler en direct dans le navigateur
+* [CSS Format](https://sublime.wbond.net/packages/CSS%20Format) - Formater le code CSS
+
+
+
 ## Ouvrir les pages dans Chrome avec F12
 
 Faire un clic droit dans la barre latérale, Project / Edit Preview URLs
