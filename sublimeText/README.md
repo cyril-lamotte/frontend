@@ -1,6 +1,3 @@
-Configuration SublimeText 2
-===
-
 ## Emplacement des fichiers de configuration
 
 Menu Prefrences / Browse Packages...
@@ -16,6 +13,14 @@ Faire un clic droit dans la barre latérale, Project / Edit Preview URLs
     }
 }
 ```
+
+
+## Augmenter le nombre de projets récents
+
+1. Aller dans `Packages/Default/Main.sublime-menu`
+2. Vers la ligne 715, ajouter les ligne  `{ "command": "open_recent_project", "args": {"index": 10 } }`
+
+Source : http://stackoverflow.com/questions/15769156/increase-number-of-recent-projects-in-sublime-text-2
 
 ## Raccourcis Emmet
 
