@@ -1,11 +1,11 @@
 
 # [Projet]
 
-## Périmètre
+## PÃ©rimÃ¨tre
 
 Volume :
-Compatibilité :
-Accessibilité :
+CompatibilitÃ© :
+AccessibilitÃ© :
 
 
 
@@ -13,13 +13,11 @@ Accessibilité :
 
 Chef de projet :
 Graphisme :
+Ergo :
 
 
+## SpÃ©cificitÃ©s techniques
 
-## Spécificités techniques
-
-
-* RGAA
 * Graceful degredation
 * Responsive Design
 
