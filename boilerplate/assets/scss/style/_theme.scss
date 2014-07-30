@@ -6,15 +6,15 @@
 // Fonts
 $font: Arial, Helvetica, sans-serif;
 $font-alt: Georgia, Times, "Times New Roman", serif;
-$base-font-size: 12px;
+$base-font-size: 12px; // If 12px then 1em = 12px
 $base-line-height: 1.5;
 
 
 // Colors
-$brand: #f00;
+$brand: #f00; // Brand's color
 $brand-highlight: lighten($brand, 20%);
 $second-color: #00f;
-$text-color: #333;
+$base-color: #333;
 
 
 // Based on Bootstrap reference
@@ -23,6 +23,10 @@ $breakpoint-xs: 480px;  // Small phones
 $breakpoint-sm: 768px;  // Small devices / Tablets
 $breakpoint-md: 992px;  // Medium devices / Desktops
 $breakpoint-lg: 1170px; // Large devices / Large desktops
+
+
+// Misc
+$gutter: 20px;
 
 
 // Compass Cross-Browser Support Configuration

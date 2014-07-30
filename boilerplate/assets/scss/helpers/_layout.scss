@@ -2,28 +2,93 @@
    Layout helpers
 ============================================================================= */
 
-.center    { margin-left: auto; margin-right: auto; }
-.txtleft   { text-align: left; }
-.txtright  { text-align: right; }
-.txtcenter { text-align: center; }
+// -----------------------------------------------------------------------------
+// Media Queries
+// -----------------------------------------------------------------------------
+
+// Until
+@mixin mq-until($width) {
+  @media only screen and (max-width: $width - 1) {
+    @content;
+  }
+}
+
+// At least
+// Éviter de l'utliser sous peine de voir les styles ne pas s'appliquer sur les
+// navigateurs ne gérants pas les media queries
+@mixin mq-at-least($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// Flexbox
+// -----------------------------------------------------------------------------
+
+@mixin flexbox-order($order) {
+  -moz-box-ordinal-group: $order;
+  -webkit-box-ordinal-group: $order;
+  -ms-flex-order: $order;
+  -webkit-order: $order;
+  order: $order;
+}
+
+
+@mixin flexbox-wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -moz-box-orient:vertical; // Establishes the direction of reordering - we want the y-axis
+  -webkit-box-orient:vertical;
+  -ms-box-orient: vertical;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+
+
+/* -----------------------------------------------------------------------------
+   Alignments
+----------------------------------------------------------------------------- */
+
+.align-left   { text-align: left; }
+.align-right  { text-align: right; }
+.align-center { text-align: center; }
 
 .valign-top    { vertical-align: top !important; }
 .valign-middle { vertical-align: middle !important; }
 .valign-bottom { vertical-align: bottom !important; }
 
-.pull-left  { float: left; }
-.pull-right { float: right; }
+.align-start { float: left; }
+.align-end   { float: right; }
+.align-clear { clear: both; }
 
-.display-none { display: none; }
-.is-hidden    { position: absolute; left: -9999px; top: 0; }
+.block-clear { clear: both; height: 0.01em; font-size: 0.01em; padding: 0; line-height: 0; }
 
-.clearer {
-  clear: both;
-  height: 0.01em;
-  font-size: 0.01em;
-  padding: 0;
-  line-height: 0;
+
+
+/* -----------------------------------------------------------------------------
+   Display
+----------------------------------------------------------------------------- */
+
+.is-hidden { display: none; }
+
+// Hidden except for screen-readers - Yahoo! method : https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); // IE6, IE7
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
+
 
 
 /* -----------------------------------------------------------------------------

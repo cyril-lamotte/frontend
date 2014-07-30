@@ -1,0 +1,160 @@
+/* =============================================================================
+   Forms
+============================================================================= */
+
+
+/* -----------------------------------------------------------------------------
+   Basics
+----------------------------------------------------------------------------- */
+
+form,
+fieldset {
+  margin: 0;
+}
+
+input,
+button,
+select,
+label,
+.btn {
+  vertical-align: middle;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+legend {
+  margin-left: 1em;
+  border: 0;
+  white-space: normal;
+}
+
+label {
+  cursor: pointer;
+}
+
+textarea {
+  min-height: 5em;
+  overflow: auto; // Removes default vertical scrollbar on empty textarea in IE6/7/8/9
+  vertical-align: top;
+  font-family: inherit;
+  font-size: inherit;
+  resize: vertical;
+}
+
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; // Clickable input types in iOS
+  overflow: visible; // Corrects inner spacing displayed oddly in IE7
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+// 'x' appears on right of search input when text is entered. This removes it
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+input[type="text"],
+input[type="search"] {
+  padding: 0;
+  margin: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  width: 13px;
+  height: 13px;
+}
+
+
+
+/* -----------------------------------------------------------------------------
+   Placeholder
+----------------------------------------------------------------------------- */
+
+@mixin input-placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+input,
+textarea {
+  @include input-placeholder {
+    opacity: 1;
+    font-style: italic;
+    color: $text-color;
+  }
+}
+
+
+
+/* -----------------------------------------------------------------------------
+   Helpers
+----------------------------------------------------------------------------- */
+
+@mixin label-block {
+  display: block;
+  float: none;
+  text-align: left;
+  width: auto;
+}
+
+@mixin label-start {
+  float: left;
+  width: 150px;
+  margin-right: 1em;
+  text-align: right;
+}
+
+@mixin label-inline {
+  float: none;
+  width: auto;
+  margin-right: 1em;
+  text-align: left;
+}
+
+
+.label-inline { @include label-inline; }
+.label-block { @include label-block; }
+.label-start { @include label-start; }
+
+
+
+
+/* -----------------------------------------------------------------------------
+   Responsive
+----------------------------------------------------------------------------- */
+
+@include mq-until( $breakpoint-lg ) {
+  .label-block-md { @include label-block; }
+  .label-start-md { @include label-start; }
+  .label-inline-md { @include label-inline; }
+}
+
+@include mq-until( $breakpoint-md ) {
+  .label-block-sm { @include label-block; }
+  .label-start-sm { @include label-start; }
+  .label-inline-sm { @include label-inline; }
+}
+
+@include mq-until( $breakpoint-sm ) {
+  .label-block-xs { @include label-block; }
+  .label-start-xs { @include label-start; }
+  .label-inline-xs { @include label-inline; }
+}
+
+

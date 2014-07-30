@@ -11,18 +11,7 @@ img {
   font-style: italic; /* [2] */
 }
 
-
-/**
- * If a `width` and/or `height` attribute have been explicitly defined, let’s
- * not make the image fluid.
- */
-img[width],
-img[height] {
-  max-width: none;
-}
-
-
-/* Responsives images */
+// Responsives images
 .img-responsive,
 %img-responsive {
   display: block;
@@ -31,35 +20,3 @@ img[height] {
 }
 
 
-/* -----------------------------------------------------------------------------
-   Overlay
------------------------------------------------------------------------------ */
-
-.img-overlay {
-  position: relative;
-
-  a {
-    display: block;
-  }
-
-  img {
-    display: block;
-  }
-}
-
-  %overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(#000, 0.80);
-    color: #fff;
-    padding: 1em 2em;
-
-    .no-rgba & {
-      background: transparent;
-      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000,endColorstr=#F228343C)"; // IE8
-          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000,endColorstr=#F228343C); // IE6 & 7
-            zoom: 1;
-    }
-  }

@@ -2,93 +2,6 @@
    Forms
 ============================================================================= */
 
-
-/* -----------------------------------------------------------------------------
-   Basics
------------------------------------------------------------------------------ */
-
-input[type="text"],
-input[type="search"] {
-  padding: 0;
-  margin: 0;
-  vertical-align: middle;
-  @include border-radius(0);
-}
-
-input[type="image"] { vertical-align: middle; }
-input[type="search"] { -webkit-appearance: textfield; }
-
-input[type="checkbox"],
-input[type="radio"] {
-  vertical-align: middle;
-  margin: 0;
-  padding: 0;
-  width: 13px;
-  height: 13px;
-}
-
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button; /* clickable input types in iOS */
-  overflow: visible; /* Corrects inner spacing displayed oddly in IE7 */
-  vertical-align: middle;
-  @include border-radius(0);
-}
-
-
-
-// Avoid unwanted spaces IE
-form { margin: 0; }
-
-fieldset { padding: 1em; }
-legend { margin-left: 1em; }
-select { font-size: 1em; vertical-align: middle; }
-/*.ie8 select:focus { width: auto; position: relative; }*/
-label { vertical-align: middle; }
-
-textarea {
-  overflow: auto; // Removes default vertical scrollbar on empty textarea in IE6/7/8/9
-  vertical-align: top;
-  resize: vertical;
-}
-
-/* Placeholder */
-input {
-  @include input-placeholder {
-    opacity: 1;
-    font-style: italic;
-    color: $text-color;
-  }
-}
-
-
-%reset {
-  @include reset-box-model;
-}
-
-
-
-/* -----------------------------------------------------------------------------
-   Inputs styles
------------------------------------------------------------------------------ */
-
-.form-input {
-  margin: 0;
-  font-size: 1em;
-  vertical-align: middle;
-  font-family: inherit;
-  width: 94%;
-  color: $text-color;
-
-  border: 1px solid #bebebe;
-  padding: 4px 3%;
-  @include border-radius(3px);
-  @include single-box-shadow(#9f9f9f, 0, 2px, 1px, 0, inset);
-}
-
-
-
 /* -----------------------------------------------------------------------------
    Specifics formats
 ----------------------------------------------------------------------------- */
@@ -99,48 +12,29 @@ input {
 .format-date { width: 80px !important; }
 
 
+
 /* -----------------------------------------------------------------------------
-   Form layout
+   Form's components style
 ----------------------------------------------------------------------------- */
 
-
-
-.label-block {
-  display: block;
+.form-row {
+  clear: left;
 }
-
-
-.form-horizontal {
-
-  .form-row {
-    clear: left;
-  }
 
   label {
-    float: left;
-    margin-right: 2%;
-    margin-bottom: 20px;
-    text-align: right;
-    font-size: em(18px);
-    line-height: 1.5;
-    font-weight: 600;
-    width: 22%;
 
-    // Horizontal layout becomes vertical on small screens
-    @include mq-until( $breakpoint-sm ) {
-      float: none;
-      display: block;
-      width: auto;
-      text-align: left;
-      margin-bottom: 3px;
-      font-size: em(14px);
-    }
   }
 
-  .form-control {
+  .form-input {
+    margin: 0;
+    font-size: 1em;
+    vertical-align: middle;
+    font-family: inherit;
     width: 100%;
+    color: $text-color;
+
+    border: 1px solid #bebebe;
+    padding: 4px 3%;
+    @include border-radius(3px);
+    @include single-box-shadow(#9f9f9f, 0, 2px, 1px, 0, inset);
   }
-
-}
-
-
