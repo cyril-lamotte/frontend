@@ -1,35 +1,31 @@
 @charset "UTF-8";
 
 // CSS configuration
-@import "partials/theme";
+@import "helpers/*.*";
+@import "style/*.*";
 
 // Load compass's mixins
 @import "compass/utilities";
 @import "compass/css3";
 
-// Load project's mixins
-@import "partials/vendors/jouve";
 
 
 
-// Import partials
-@import "partials/helpers/*.*";
-@import "partials/general/*.*";
-
-
+/*
 // Interface / Navigation
-@import "partials/ui/*.*";
+@import "style/ui/*.*";
 
 // Sprites
 //@import "sprites/main/*.png";
 //@include all-main-sprites;
 
 // Pages / modules
-@import "partials/pages/header";
-@import "partials/pages/footer";
-@import "partials/pages/modules";
-@import "partials/pages/home";
-@import "partials/pages/search";
-@import "partials/pages/article";
-@import "partials/pages/sitemap";
+@import "style/pages/header";
+@import "style/pages/footer";
+@import "style/pages/modules";
+@import "style/pages/home";
+@import "style/pages/search";
+@import "style/pages/article";
+@import "style/pages/sitemap";
 
+*/
