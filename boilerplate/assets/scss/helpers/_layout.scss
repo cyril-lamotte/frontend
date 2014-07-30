@@ -1,5 +1,5 @@
 /* =============================================================================
-   Helpers
+   Layout helpers
 ============================================================================= */
 
 .center    { margin-left: auto; margin-right: auto; }
@@ -34,18 +34,6 @@
 .spacer-2-line { margin-bottom: 2em !important; }
 .spacer-3-line { margin-bottom: 3em !important; }
 
-
-
-/* -----------------------------------------------------------------------------
-   Box-sizing
------------------------------------------------------------------------------ */
-
-// Apply a natural box layout model to all elements
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
- }
 
 
 /* -----------------------------------------------------------------------------

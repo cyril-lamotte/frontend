@@ -63,8 +63,7 @@ input {
 }
 
 
-%reset,
-.fieldset-reset {
+%reset {
   @include reset-box-model;
 }
 
@@ -74,9 +73,7 @@ input {
    Inputs styles
 ----------------------------------------------------------------------------- */
 
-.form-control,
-input.form-control,
-textarea.form-control {
+.form-input {
   margin: 0;
   font-size: 1em;
   vertical-align: middle;
@@ -106,10 +103,16 @@ textarea.form-control {
    Form layout
 ----------------------------------------------------------------------------- */
 
+
+
+.label-block {
+  display: block;
+}
+
+
 .form-horizontal {
 
   .form-row {
-    margin-bottom: 20px;
     clear: left;
   }
 
