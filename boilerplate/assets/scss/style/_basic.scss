@@ -4,11 +4,24 @@
 
 body {
   font: #{em(12px, 16px)}/$base-line-height $font;
-  color: $text-color;
+  color: $base-color;
   background: #fff;
   margin: 0;
 }
 
+
+
+/* -----------------------------------------------------------------------------
+   Interactions
+----------------------------------------------------------------------------- */
+
+/* Selection */
+::selection         { background-color: $brand; color: #fff; }
+::-moz-selection    { background-color: $brand; color: #fff; }
+
+
+/* Tap focus color */
+html { -webkit-tap-highlight-color: rgba($brand, 0.5); }
 
 
 

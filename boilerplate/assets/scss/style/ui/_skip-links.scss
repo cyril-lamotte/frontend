@@ -3,24 +3,33 @@
 ============================================================================= */
 
 #skip-links {
-  float: left;
-  margin-top: 3px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  height: 0;
 
-  ul {
-    @include reset-list;
-    display: inline;
-
-    li {
-      display: inline;
-
-      &:first-child {
-        border-right: 1px solid $brand;
-        padding-right: 8px;
-        margin-right: 8px;
-      }
-    }
+  @include mq-until( $breakpoint-sm ) {
+    display: none;
   }
 
+  li {
+     display: inline;
+     background: none;
+     padding: 0;
+     margin-right: 0.5em;
+  }
+
+    a {
+      position: absolute; top: 0; left: -9999em;
+      background-color: #fff;
+      padding: 0.5em;
+      white-space: nowrap;
+
+      @include focus {
+        left: 0;
+      }
+    }
 }
 
 // Highlight skiplinks destinations

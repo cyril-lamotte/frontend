@@ -1,12 +1,21 @@
 @charset "UTF-8";
 
-// CSS configuration
-@import "helpers/*.*";
-@import "style/*.*";
-
 // Load compass's mixins
 @import "compass/utilities";
 @import "compass/css3";
+
+
+@import "style/theme";
+
+// CSS configuration
+@import "helpers/layout";
+@import "helpers/browser";
+@import "helpers/clearfix";
+@import "helpers/form-helpers";
+@import "helpers/grid";
+@import "helpers/image";
+
+@import "style/*.*";
 
 
 

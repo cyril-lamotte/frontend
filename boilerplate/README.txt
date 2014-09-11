@@ -18,7 +18,7 @@ Ergo :
 
 ## Spécificités techniques
 
-* Graceful degredation
+* Graceful degradation
 * Responsive Design
 
 

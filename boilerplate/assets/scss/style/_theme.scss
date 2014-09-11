@@ -25,15 +25,8 @@ $breakpoint-md: 992px;  // Medium devices / Desktops
 $breakpoint-lg: 1170px; // Large devices / Large desktops
 
 
-// Misc
-$gutter: 20px;
-
-
-// Compass Cross-Browser Support Configuration
-$legacy-support-for-ie6:  false;
-$legacy-support-for-ie7:  false;
-$legacy-support-for-ie8:  true;
-
+// Minimum browsers support
+//$browser-minimum-versions: (ie: '8');
 
 // Sprite map config
 $main-sprite-base-class: '.sp';

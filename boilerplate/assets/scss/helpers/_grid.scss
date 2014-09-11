@@ -206,25 +206,3 @@ $grid-half-margin: $grid-margin/2;
   .hidden-xs { display: none !important; }
 }
 
-
-
-
-
-
-/* -----------------------------------------------------------------------------
-   IE7
------------------------------------------------------------------------------ */
-
-@if $legacy-support-for-ie7 {
-
-  // Pour une compatibilité IE7 (qui ne connait pas border-box) :
-  // - Supprimer tous les padding et border des box
-  // - et ajouter des div à l'intérieur de chaque box pour les appliquer
-
-  // IE7 support
-  .ie7 .box-1of2 { width: 49.43%; }
-  .ie7 .box-1of3 { width: 32.5%; }
-  .ie7 .box-2of3 { width: 66.332%; }
-  .ie7 .box-1of4 { width: 20%; }
-
-}
