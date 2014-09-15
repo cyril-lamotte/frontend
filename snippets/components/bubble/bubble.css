@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+/* -----------------------------------------------------------------------------
+   Bubble
+----------------------------------------------------------------------------- */
+
+.bubble {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 200px;
+  color: #fff;
+  margin: 1em;
+  background: #770000;
+
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+}
+
+.ie7 .bubble {
+  zoom: 1;
+  display: inline;
+}
+
+.bubble-pointer {
+  position: absolute;
+  top: 15px;
+  left: -7px;
+  background: url('bubble-pointer.png') 0 0 no-repeat;
+  display: block;
+  width: 7px;
+  height: 14px;
+  margin: 0 auto;
+}
+.bubble-top .bubble-pointer {
+  top: -7px;
+  left: 0;
+  right: 0;
+  width: auto;
+  height: 7px;
+  background-position: 50% 0%;
+}
+.bubble-left .bubble-pointer {
+  top: 0;
+  bottom: 0;
+  left: -7px;
+  height: auto;
+  background-position: 0 50%;
+}
+.bubble-bottom .bubble-pointer {
+  top: auto;
+  bottom: -7px;
+  left: 0;
+  right: 0;
+  width: auto;
+  height: 7px;
+  background-position: 50% 100%;
+}
+
+
+.bubble-body {
+  padding: 1em;
+}
+.bubble-body :first-child {
+  margin-top: 0;
+}
+

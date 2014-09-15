@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+/* -----------------------------------------------------------------------------
+   Grid
+----------------------------------------------------------------------------- */
+
+/*
+	Pour une compatibilité IE7 (qui ne connait pas border-box) :;
+	- Supprimer tous les padding et border des box
+	- et ajouter des div à l'intérieur de chaque box pour les appliquer
+*/
+
+
+
+.spacer-1-line { margin-bottom: 1em; }
+
+.box-wrapper {
+	width: 100%;
+	float: none;
+	clear: both;
+	overflow: hidden;
+}
+
+	.box {
+		float: left;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	.box-last {
+
+	}
+
+	.box-inner {
+
+	}
+
+
+	/* Margins */
+	.box {
+		margin-left: 1%;
+	}
+	.box:first-child,
+	.box-break,
+	.box-full {
+		margin-left: 0;
+	}
+
+
+
+	.box-full { width: 100%; float: none; }
+
+	/* Width */
+	.box-1of2 { width: 49.5%; } /* (100 - margin) / 2 */
+	.box-1of3 { width: 32.666%; } /* (100 - 2 x margins) / 3 */
+	.box-2of3 { width: 66.332%; } /* ((100 - 2 x margins) / 3) + margin */
+	.box-1of4 { width: 24.25%; } /* (100 - 3 x margins) / 4 */
+
+
+
+	/* IE7 support */
+	.ie7 .box-1of2 { width: 49.43%; }
+	.ie7 .box-1of3 { width: 32.5%; }
+	.ie7 .box-2of3 { width: 66.332%; }
+	.ie7 .box-1of4 { width: 24.12%; }
+
+
+
+

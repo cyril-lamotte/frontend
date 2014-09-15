@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+/* -----------------------------------------------------------------------------
+   Toggle menu
+----------------------------------------------------------------------------- */
+
+.toggle-menu {}
+
+	.toggle-menu-trigger {
+		display: none;
+	}
+
+	.js .toggle-menu-trigger {
+		display: inline-block;
+	}
+
+	.toggle-menu-panel {
+		display: inline;
+	}
+
+	.js .toggle-menu-panel {
+		display: none;
+	}
+
+	.toggle-menu-active .toggle-menu-panel {
+		display: block;
+	}
+
+		.toggle-menu-panel ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: inline;
+		}
+
+		.toggle-menu-panel li {
+			display: inline;
+		}
+
+		.js .toggle-menu-panel li {
+			display: block;
+		}
+

@@ -21,20 +21,17 @@
 
 
 /*
-// Interface / Navigation
-@import "style/ui/*.*";
-
 // Sprites
 //@import "sprites/main/*.png";
 //@include all-main-sprites;
 
 // Pages / modules
-@import "style/pages/header";
-@import "style/pages/footer";
-@import "style/pages/modules";
-@import "style/pages/home";
-@import "style/pages/search";
-@import "style/pages/article";
-@import "style/pages/sitemap";
+@import "style/modules/common/header";
+@import "style/modules/common/footer";
+@import "style/modules/common";
+@import "style/modules/home";
+@import "style/modules/search";
+@import "style/modules/article";
+@import "style/modules/sitemap";
 
 */

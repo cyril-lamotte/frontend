@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+/* -----------------------------------------------------------------------------
+   Responsive nav
+----------------------------------------------------------------------------- */
+
+/* Trigger */
+.responsive-nav-toggle {
+	display: none;
+}
+
+
+/* Wrapper */
+.wrapper {
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.wrapper-slide-in {
+	-webkit-transform: translate3d(200px, 0, 0);
+	-webkit-animation: wrapperSlideIn 500ms ease-in-out;
+
+	-moz-transform: translate3d(200px, 0, 0);
+	-moz-animation: wrapperSlideIn 500ms ease-in-out;
+
+	transform: translate3d(200px, 0, 0);
+	animation: wrapperSlideIn 500ms ease-in-out;
+}
+
+.wrapper-slide-out {
+	-webkit-animation: wrapperSlideOut 500ms ease-in-out;
+	-moz-animation: wrapperSlideOut 500ms ease-in-out;
+	animation: wrapperSlideOut 500ms ease-in-out;
+}
+
+
+/* Mobile */
+@media (max-width: 767px) {
+
+.responsive-nav-toggle {
+	display: block;
+}
+
+.responsive-nav {
+	position: absolute;
+	top: 0;
+	left: -200px;
+	width: 200px;
+	height: 100%;
+}
+
+}
+/*/media*/
+
+
+
+
+/* Animation */
+@-webkit-keyframes wrapperSlideIn {
+	0% { -webkit-transform: translate3d(0, 0, 0); }
+	100% { -webkit-transform: translate3d(200px, 0, 0); }
+}
+
+@-moz-keyframes wrapperSlideIn {
+	0% { -moz-transform: translate3d(0, 0, 0); }
+	100% { -moz-transform: translate3d(200px, 0, 0); }
+}
+
+@keyframes wrapperSlideIn {
+	0% { transform: translate3d(0, 0, 0); }
+	100% { transform: translate3d(200px, 0, 0); }
+}
+
+
+@-webkit-keyframes wrapperSlideOut {
+	0% { -webkit-transform: translate3d(200px, 0, 0); }
+	100% { -webkit-transform: translate3d(0, 0, 0); }
+}
+
+@-moz-keyframes wrapperSlideOut {
+	0% { -moz-transform: translate3d(200px, 0, 0); }
+	100% { -moz-transform: translate3d(0, 0, 0); }
+}
+
+@keyframes wrapperSlideOut {
+	0% { transform: translate3d(200px, 0, 0); }
+	100% { transform: translate3d(0, 0, 0); }
+}
+
+
+/* Demo */
+.wrapper {
+	background: lightyellow;
+	min-height: 200px;
+	padding: 1em;
+}
+
+.responsive-nav {
+	background: papayawhip;
+}

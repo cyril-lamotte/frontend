@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<!--[if lte IE 7]><html lang="fr" class="ie7 oldies"><![endif]-->
+<!--[if IE 8]><html lang="fr" class="ie8 oldies"><![endif]-->
+<!--[if IE 9]><html lang="fr" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="fr"><!--<![endif]-->
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+
+	<title>Menu d'accès rapide</title>
+
+	<style>
+
+/* -----------------------------------------------------------------------------
+   Skip links
+----------------------------------------------------------------------------- */
+
+#skip-links { margin: 0; padding: 0; position: absolute; top: 0;  left: 0; }
+#skip-links li { display: inline; background: none; padding: 0; margin-right: 0.5em; }
+#skip-links a:link,
+#skip-links a:visited {
+	position: absolute; top: 0; left: -9999em;
+	background-color: #fff;
+	padding: 0.5em;
+}
+
+#skip-links a:focus,
+#skip-links a:active {
+	left: 0;
+}
+
+.target { outline: 2px dashed red; overflow: hidden; }
+
+
+	</style>
+
+</head>
+
+<body>
+
+<h2>Liens d'évitement</h2>
+<p>Appuyer sur TAB pour afficher le menu.</p>
+
+<div class="exemple">
+<!-- Menu d'accès rapide -->
+<nav id="skip-links" role="navigation">
+	<ul>
+		<li><a href="#a_nav">Menu</a></li>
+		<li><a href="#a_content">Contenu</a></li>
+		<li><a href="#a_search">Recherche</a></li>
+	</ul>
+</nav>
+
+<div id="a_nav">
+  Navigation
+</div>
+
+<div id="a_content">
+  Contenu
+</div>
+
+<div id="a_search">
+  Recherche
+</div>
+
+</div><!--/exemple-->
+
+
+<!-- Scripts : Placés en fin de page pour de meilleures performances -->
+<script src="../../assets/js/lib/jquery.min.js"></script>
+<script src="nav-skip-links.js"></script>
+
+</body>
+</html>

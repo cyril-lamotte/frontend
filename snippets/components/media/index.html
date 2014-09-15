@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0">
+
+	<title>Media</title>
+
+	<style>
+/* -----------------------------------------------------------------------------
+   Media
+----------------------------------------------------------------------------- */
+
+.media {
+	margin: 1em 0 1em 0;
+	overflow: hidden;
+	clear: both;
+}
+
+.media-list .media {
+	border-top: 1px solid #dedad5;
+	padding: 1em 0 0 0;
+}
+
+.media-list .media:first-child {
+	border-top: none;
+	padding-top: 0;
+	margin-top: 0;
+}
+
+
+/* media-pict */
+.media-pict {
+	float: left;
+	margin: 0 15px 0 0;
+	width: 100px;
+	text-align: center;
+}
+.media-pict a {
+	display: block;
+}
+.media-pict img {
+	display: block;
+	margin: 0 auto;
+}
+.media-source {
+	text-align: right;
+	font-style: italic;
+}
+.media-legend {
+	text-align: left;
+	font-weight: bold;
+}
+
+
+/* media-text */
+.media-content {
+	margin: 0 0.5em 0 0;
+	overflow: hidden;
+}
+.media-text {
+}
+.media-title {
+	margin: 0 0 0.5em;
+	font-weight: bold;
+}
+
+	</style>
+
+</head>
+
+<body>
+
+<h2>Media</h2>
+
+<div class="media-wrapper media-theme">
+	<div class="media">
+
+		<figure class="media-pict">
+			<a href="#"><img src="http://placehold.it/100x100/CCCCCC.png" alt="Titre de l'article" class="img-responsive"></a>
+			<figcaption>Légende lorem ipsum dolor sit amet</figcaption>
+		</figure>
+
+		<div class="media-content">
+
+			<h3 class="media-title"><a href="#">Bloc média avec illustration</a></h3>
+			<div class="media-date">01/01/2020</div>
+			<div class="media-text">
+				<p>Vivamus hendrerit arcu sed erat molestie vehicula.<br />Sed auctor neque Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br />Doloribus, nobis</p>
+			</div>
+
+		</div><!--/media-content-->
+
+	</div><!--/media-->
+
+</div><!--/media-wrapper-->
+
+</body>
+</html>
