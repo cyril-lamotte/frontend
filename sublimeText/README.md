@@ -1,6 +1,6 @@
 ## Emplacement des fichiers de configuration
 
-Menu Prefrences / Browse Packages...
+Menu Preferences / Browse Packages...
 
 ### Packages Sublime Text
 
@@ -12,6 +12,7 @@ Menu Prefrences / Browse Packages...
  * [Cheat-sheet](http://docs.emmet.io/cheat-sheet/)
 * [Livestyle](http://livestyle.emmet.io/) - Styler en direct dans le navigateur
 * [CSS Format](https://sublime.wbond.net/packages/CSS%20Format) - Formater le code CSS
+* [Modific](https://sublime.wbond.net/packages/Modific) - Répérer les modification par rapport au dépot SVN/Git
 
 
 
