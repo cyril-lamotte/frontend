@@ -46,7 +46,7 @@ Menu project/Edit project
 	"folders":
 	[
 		{
-			"path": "/D/www/monaco/www/website/drupal/sites/all/themes/custom/monaco",
+			"path": "path-to-project-folder",
 			"folder_exclude_patterns": [".sass-cache"],
 			"binary_file_patterns": ["*.bat"]
 		}
