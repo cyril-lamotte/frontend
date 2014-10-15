@@ -29,11 +29,11 @@ var imagesToPreload = [
 
 $('body').preload({
   'files' : imagesToPreload,
-  'logs' : false
+  'logs'  : false
 });
 ```
 
-### 5. Options
+### 3. Options
 
 Options | Type  | Description                    | Default
 --------|-------|--------------------------------|--------
