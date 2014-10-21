@@ -14,5 +14,7 @@
 	],
 	"tab_size": 2,
 	"trim_trailing_white_space_on_save": true,
-	"word_wrap": false
+	"bold_folder_labels": true,
+	"word_wrap": false,
+	"highlight_line": true
 }
