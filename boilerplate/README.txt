@@ -1,36 +1,25 @@
 
-# [Projet]
+# [Nom du projet]
 
 ## Périmètre
 
-Volume :
-Compatibilité :
-Accessibilité :
+Volume            :
+Tests navigateurs :
+Accessibilité     :
 
 
+## Contacts
 
-## Projet
+Chef de projet    :
+Graphisme         :
+Ergonome          :
 
-Chef de projet :
-Graphisme :
-Ergo :
 
 
 ## Spécificités techniques
 
-* Graceful degradation
-* Responsive Design
+//* Responsive Design
+//* SASS (3.4) /Compass (1.0)
+//* Susy (2.1.3) http://susydocs.oddbird.net/en/latest/
 
 
-
-## Compilation
-
-* SASS 3.2.14
-* Compass 0.12.2
-* sass-globbing
-
-
-
-## Documentation
-
-https://github.com/cyril-lamotte/frontend/wiki/

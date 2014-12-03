@@ -16,7 +16,7 @@ cd %2%
 lcd %3%
 
 # Transferer
-put -filemask=*|.svn/;*.bat *
+put -filemask=*|.svn/;*.bat;node_modules/;*.less;*.scss; *
 
 # Terminer la connexion
 close
