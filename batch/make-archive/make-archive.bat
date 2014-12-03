@@ -15,7 +15,7 @@ echo    Cible : %cd%\%fichier%.zip
 :: Génération du zip
 :: - Exclusion des répertoires ".svn"
 
-7z a -tZip "%cd%\%fichier%.zip" "%1/*" -xr!.svn
+7z a -tZip "%cd%\%fichier%.zip" "%1/*" -xr!.svn -xr!node_modules -xr!*.bat -xr!Gruntfile.js -xr!package.json
 
 echo.
 echo %cd%\%fichier%.zip est cree

@@ -16,5 +16,12 @@
 	"trim_trailing_white_space_on_save": true,
 	"bold_folder_labels": true,
 	"word_wrap": false,
-	"highlight_line": true
+	"highlight_line": true,
+	"bold_folder_labels": true,
+  "folder_exclude_patterns": [".svn", ".git", ".sass-cache", "node_modules"],
+  "binary_file_patterns": ["*.jpg", "*.jpeg", "*.png", "*.gif", "*.ttf", "*.ico", "*.eot", "*.pdf", "*.swf", "*.jar", "*.zip"],
+  "file_exclude_patterns": ["*.bat", "*.css.map"],
+  "ensure_newline_at_eof_on_save": true,
+  "save_on_focus_lost": true,
+  "draw_minimap_border": true
 }
