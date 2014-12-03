@@ -47,8 +47,8 @@ Menu project/Edit project
 	[
 		{
 			"path": "path-to-project-folder",
-			"folder_exclude_patterns": [".sass-cache"],
-			"binary_file_patterns": ["*.bat"]
+			"folder_exclude_patterns": [".svn", ".git", ".sass-cache", "node_modules"],
+			"file_exclude_patterns": ["*.bat", "*.css.map"],
 		}
 	]
 }
@@ -60,7 +60,7 @@ Menu project/Edit project
 
 Raccourcis | Actions
 -----------|--------
-CTRL + J | Aller à la balise fermante/ouvrante
+CTRL + J   | Aller à la balise fermante/ouvrante
 CTRL + SHIFT + G | Wrapper avec une expression
 CTRL + / & CTRL + SHIFT + / | Commenter la ligne / la balise courante
 CTRL + SHIFT + Y | Calculer une expression mathématique
