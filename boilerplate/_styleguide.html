@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0" />
+	<title>Styleguide</title>
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+
+	<link rel="stylesheet" href="assets/css/normalize.css" />
+	<link rel="stylesheet" href="assets/css/style.css" />
+
+	<style>
+
+		.sg-wrapper {
+			max-width: 1000px;
+			margin: 0 auto;
+			padding-bottom: 1em;
+		}
+
+		body {
+			font-size: 0.75em;
+		}
+
+		h1.sg-title {
+			font-weight: normal;
+		}
+
+		h2.sg-title {
+			font-family: Georgia, serif;
+			font-size: 2.5em;
+			text-align: center;
+			font-weight: normal;
+		}
+
+		/* Colors */
+
+		.sg-colors {
+			font-family: "Courier New", Courier, monospace;
+		}
+
+		.sg-colors li {
+			display: inline-block;
+			border: 1px solid #ccc;
+			padding: 5px;
+		}
+		.sg-color {
+			display: block;
+			width: 150px;
+			height: 150px;
+			margin-bottom: 10px;
+		}
+		.sg-color-code {
+			display: block;
+			background: #fafafa;
+			color: #D01A00;
+			text-align: center;
+			margin-bottom: 5px;
+		}
+		.sg-color-name {
+			display: block;
+			text-align: center;
+		}
+
+
+		/* Tables */
+		.sg-table {
+			border: 1px solid #ccc;
+			width: 100%;
+			border-collapse: collapse;
+		}
+
+		.sg-table th {
+			width: 20%;
+			font-family: "Courier New", Courier, monospace;
+			vertical-align: top;
+		}
+
+		.sg-table th,
+		.sg-table td {
+			text-align: left;
+			border: 1px solid #ccc;
+			padding: 5px;
+		}
+
+	</style>
+
+
+
+</head>
+<body>
+
+<div class="sg-wrapper">
+	<h1 class="sg-title">Style<b>guide</b></h1>
+
+
+	<h2 class="sg-title">Couleurs</h2>
+
+	<ul class="sg-colors">
+		<li>
+			<span class="sg-color" style="background: #7696D0;"></span>
+			<span class="sg-color-code">#7696D0</span>
+			<span class="sg-color-name">$brand</span>
+		</li>
+
+		<li>
+			<span class="sg-color" style="background: #9FBFF9;"></span>
+			<span class="sg-color-code">#9FBFF9</span>
+			<span class="sg-color-name">$brand-highlight</span>
+		</li>
+
+		<li>
+			<span class="sg-color" style="background: #FFDD00;"></span>
+			<span class="sg-color-code">#FFDD00</span>
+			<span class="sg-color-name">$second-color</span>
+		</li>
+
+		<li>
+			<span class="sg-color" style="background: #555;"></span>
+			<span class="sg-color-code">#555</span>
+			<span class="sg-color-name">$text-color</span>
+		</li>
+
+	</ul>
+
+
+
+
+
+
+
+
+
+	<h2 class="sg-title">Styles de textes</h2>
+
+	<table class="sg-table">
+		<tr>
+			<th>.brand</th>
+			<td><span class="brand">Lorem ipsum dolor sit amet</span></td>
+		</tr>
+
+		<tr>
+			<th>.txt-error</th>
+			<td><span class="txt-error">Lorem ipsum dolor sit amet</span></td>
+		</tr>
+
+		<tr>
+			<th>h1.page-title</th>
+			<td><h1 class="page-title">Lorem ipsum dolor sit amet</h1></td>
+		</tr>
+
+		<tr>
+			<th>.article h2</th>
+			<td><div class="article"><h2>Lorem ipsum dolor sit amet</h2></div></td>
+		</tr>
+
+		<tr>
+			<th>.article h3</th>
+			<td><div class="article"><h3>Lorem ipsum dolor sit amet</h3></div></td>
+		</tr>
+
+		<tr>
+			<th>.article h4</th>
+			<td><div class="article"><h4>Lorem ipsum dolor sit amet</h4></div></td>
+		</tr>
+
+		<tr>
+			<th>.article h5</th>
+			<td><div class="article"><h5>Lorem ipsum dolor sit amet</h5></div></td>
+		</tr>
+
+		<tr>
+			<th>.article h6</th>
+			<td><div class="article"><h6>Lorem ipsum dolor sit amet</h6></div></td>
+		</tr>
+
+		<tr>
+			<th>.article ul</th>
+			<td>
+				<div class="article">
+					<ul>
+						<li>Lorem ipsum dolor sit amet.</li>
+						<li>Quo esse tenetur culpa sapiente.</li>
+						<li>
+							<ul>
+								<li>Lorem ipsum dolor sit amet.</li>
+								<li>Quo esse tenetur culpa sapiente.</li>
+								<li>Est laboriosam, odit impedit magnam!</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<th>.article ol</th>
+			<td>
+				<div class="article">
+					<ol>
+						<li>Lorem ipsum dolor sit amet.</li>
+						<li>Quo esse tenetur culpa sapiente.</li>
+						<li>Est laboriosam, odit impedit magnam!</li>
+					</ol>
+				</div>
+			</td>
+		</tr>
+
+	</table>
+
+
+
+
+
+	<h2 class="sg-title">Liens</h2>
+
+	<table class="sg-table">
+		<tr>
+			<th>a</th>
+			<td><a href="#">Lorem ipsum dolor sit amet</a></td>
+		</tr>
+
+	</table>
+
+
+
+
+	<h2 class="sg-title">Boutons</h2>
+
+	<table class="sg-table">
+		<tr>
+			<th>.btn</th>
+			<td><a href="#" class="btn">Bouton</a></td>
+		</tr>
+		<tr>
+			<th>.btn.btn-small</th>
+			<td><a href="#" class="btn btn-small">Bouton</a></td>
+		</tr>
+	</table>
+
+
+
+</div><!--/wrapper-->
+
+</body>
+</html>
