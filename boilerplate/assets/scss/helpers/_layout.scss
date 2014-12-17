@@ -56,15 +56,6 @@
 
 }
 
-@mixin flexbox-order($order) {
-  -moz-box-ordinal-group: $order;
-  -webkit-box-ordinal-group: $order;
-  -ms-flex-order: $order;
-  -webkit-order: $order;
-  order: $order;
-}
-
-
 @mixin flex-order($order) {
 
   @include flexbox((
