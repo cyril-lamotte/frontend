@@ -27,6 +27,35 @@
 // Flexbox
 // -----------------------------------------------------------------------------
 
+
+@mixin flex-col {
+
+  // Flexbox 3 versions
+  // > http://caniuse.com/#feat=flexbox
+  // > Not working on IE9 (but there is no mobile device on IE9 right ?)
+
+  // Version 1 : Firefox <= 21, Safari <= 6, Safari iOS <= 6.1, Android Browser <= 4.3
+  @include flexbox((
+    display: box,
+    box-orient: vertical
+  ), $version: 1);
+
+
+  // Version 2 : IE10
+  @include flexbox((
+    display: flexbox,
+    flex-direction: column
+  ), $version: 2);
+
+
+  // Version 3 : IE11, Chrome, FF, Safari 6.1, Safari iOS 7.1, Android Browser 4.4
+  @include flexbox((
+    display: flex,
+    flex-direction: column
+  ));
+
+}
+
 @mixin flexbox-order($order) {
   -moz-box-ordinal-group: $order;
   -webkit-box-ordinal-group: $order;
@@ -36,18 +65,22 @@
 }
 
 
-@mixin flexbox-wrapper {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -moz-box-orient:vertical; // Establishes the direction of reordering - we want the y-axis
-  -webkit-box-orient:vertical;
-  -ms-box-orient: vertical;
-  -webkit-flex-direction: column;
-  flex-direction: column;
+@mixin flex-order($order) {
+
+  @include flexbox((
+    box-ordinal-group: $order
+  ), $version: 1);
+
+  @include flexbox((
+    flex-order: $order
+  ), $version: 2);
+
+  @include flexbox((
+    order: $order
+  ), $version: 3);
+
 }
+
 
 
 
@@ -115,13 +148,13 @@
 @include mq-until( $breakpoint-sm ) {
 
   .flex-wrapper {
-    @include flexbox-wrapper;
+    @include flex-col;
   }
 
   @for $i from 1 through 5 {
 
     div[data-flexbox-pos-xs="#{$i}"] {
-      @include flexbox-order($i);
+      @include flex-order($i);
     }
 
   }
