@@ -4,7 +4,7 @@
 
 
 /* -----------------------------------------------------------------------------
-   Basics
+   Form reset
 ----------------------------------------------------------------------------- */
 
 form,
@@ -64,7 +64,6 @@ input[type="search"]::-webkit-search-results-decoration {
 
 input[type="text"],
 input[type="search"] {
-  padding: 0;
   margin: 0;
 }
 
@@ -120,6 +119,7 @@ textarea {
 }
 
 @mixin label-inline {
+  display: inline;
   float: none;
   width: auto;
   margin-right: 1em;

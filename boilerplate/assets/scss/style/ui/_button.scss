@@ -2,3 +2,51 @@
    Button
 ============================================================================= */
 
+.btn {
+  @include reset-box-model;
+  position: relative;
+  display: inline-block;
+  //@include border-image(image-url('btn-sprite.png') 2 2 2 2 fill round);
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+.btn-style-2 {
+}
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+   Helpers
+----------------------------------------------------------------------------- */
+
+.btn-wide {
+  width: 100%;
+}
+
+.btn-large {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-bigger {
+  padding: 15px 20px;
+}
+
+.btn-small {
+  padding: 2px 5px;
+  font-size: 12px;
+}
+
+.btn-wrapper {
+  position: relative;
+}
+

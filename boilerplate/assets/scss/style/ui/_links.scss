@@ -8,7 +8,7 @@
 ----------------------------------------------------------------------------- */
 
 a {
-  color: $text-color;
+  color: $base-color;
   @include underlineOnHover;
 
   &:focus img {

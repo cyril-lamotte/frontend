@@ -13,6 +13,8 @@
 article,
 .article {
 
+
+  // Headings
   h1 {
     font-size: em(16px);
     font-weight: bold;
@@ -56,6 +58,7 @@ article,
   }
 
 
+  // Text
   p:first-child,
   h1 + p,
   h2 + p,
@@ -66,13 +69,39 @@ article,
     margin-top: 0;
   }
 
+
+  // Links
+  a {
+    @include underline;
+  }
+
+
+  // Lists
   ul {
     @include reset-list;
 
     li {
-      background: image-url('bullet.png') 0 8px no-repeat;
-      padding-left: 14px;
+      padding-left: 12px;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 6px;
+        left: 0;
+        width: 5px;
+        height: 5px;
+        background: $brand;
+      }
+
+      // Sublist
+      li:before {
+        top: 8px;
+        height: 2px;
+      }
+
     }
   }
+
 
 }

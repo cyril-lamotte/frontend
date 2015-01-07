@@ -2,14 +2,15 @@
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "css"
-sass_dir = "scss"
-images_dir = "img"
-javascripts_dir = "js"
-fonts_dir = "fonts"
+css_dir = "assets/css"
+sass_dir = "assets/scss"
+images_dir = "assets/img"
+javascripts_dir = "assets/js"
+fonts_dir = "assets/fonts"
 
 # You can select your preferred output style here (can be overridden via the command line):
-output_style = :nested
+#output_style = :nested
+output_style = :compressed
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
 relative_assets = true
@@ -20,9 +21,5 @@ relative_assets = true
 # Generate sourcemap
 sass_options = {:sourcemap => true}
 
-# If you prefer the indented syntax, you might want to regenerate this
-# project again passing --syntax sass, or you can uncomment this:
-# preferred_syntax = :sass
-# and then run:
-# sass-convert -R --from scss --to sass scss scss && rm -rf sass && mv scss sass
-
+# Plugins
+#require 'susy';

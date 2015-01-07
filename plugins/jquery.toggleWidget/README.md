@@ -16,6 +16,14 @@ Plugin jQuery - Afficher un élément aprés un évènement sur un autre éléme
 <script src="assets/js/plugins/jquery.toggleWidget.js"></script>
 ```
 
+```html
+<div class="my-account-wrapper">
+  <a href="#" role="button" class="my-account toggle-widget-trigger" data-toggle-widget-id="my-account-pop"><span class="sp sprites-icon-user"></span>Mon compte</a>
+  <div id="my-account-pop" class="my-account-pop toggle-widget-panel">
+  </div>
+</div>
+```
+
 ### 2. JavaScript
 
 ```js
@@ -25,7 +33,7 @@ $('button').toggleWidget({
   connect: true,
   connectRelationClass: '.header',
   'onShow' : function() {
-		console.log('Show');
+    console.log('Show');
   }
 });
 

@@ -18,10 +18,9 @@
 
     var plugin = this;
 
-    plugin.settings = {}
+    plugin.settings = {};
 
-    var $element = $(element),
-        element = element;
+    var $element = $(element);
 
     plugin.init = function() {
 
@@ -37,7 +36,7 @@
       // Listen events
       setEvents();
 
-    }
+    };
 
 
     // set ARIA rôles
@@ -48,7 +47,7 @@
         'aria-hidden' : 'true'
       });
 
-    }
+    };
 
     // Listen widget events
     var setEvents = function() {
@@ -75,7 +74,7 @@
 
       });
 
-    }
+    };
 
 
     // Expand panel on click
@@ -86,7 +85,7 @@
       else
         hide();
 
-    }
+    };
 
 
     // Show panel
@@ -113,7 +112,7 @@
 
       plugin.settings.onShow();
 
-    }
+    };
 
 
 
@@ -135,7 +134,7 @@
 
       plugin.settings.onHide();
 
-    }
+    };
 
 
 
@@ -150,15 +149,15 @@
         var id = $(this).attr('id');
         $('[data-toggle-widget-id='+ id +']')
           .removeClass('toggle-widget-trigger-active')
-          .attr('aria-expanded', false)
+          .attr('aria-expanded', false);
 
       });
 
-    }
+    };
 
     plugin.init();
 
-  }
+  };
 
 
 
@@ -166,7 +165,7 @@
 
     return this.each(function() {
 
-      if (undefined == $(this).data('toggleWidget')) {
+      if (undefined === $(this).data('toggleWidget')) {
 
         var plugin = new $.toggleWidget(this, options);
         $(this).data('toggleWidget', plugin);

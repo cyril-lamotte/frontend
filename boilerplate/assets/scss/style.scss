@@ -15,15 +15,18 @@
 @import "helpers/grid";
 @import "helpers/image";
 
-@import "style/*.*";
+@import "style/basic";
+@import "style/form";
+@import "style/layout";
+@import "style/theme";
+
+@import "style/ui/block";
+@import "style/ui/button";
+@import "style/ui/links";
+@import "style/ui/media";
+@import "style/ui/nav";
 
 
-
-
-/*
-// Sprites
-//@import "sprites/main/*.png";
-//@include all-main-sprites;
 
 // Pages / modules
 @import "style/modules/common/header";
@@ -34,4 +37,7 @@
 @import "style/modules/article";
 @import "style/modules/sitemap";
 
-*/
+
+// Sprites
+//@import "sprites/main/*.png";
+//@include all-main-sprites;

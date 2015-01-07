@@ -36,5 +36,5 @@
     border: 1px solid #bebebe;
     padding: 4px 3%;
     @include border-radius(3px);
-    @include single-box-shadow(#9f9f9f, 0, 2px, 1px, 0, inset);
+    @include single-box-shadow(0, 2px, 1px, 0, #9f9f9f, inset);
   }
