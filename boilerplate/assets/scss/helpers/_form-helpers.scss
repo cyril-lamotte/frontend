@@ -104,6 +104,7 @@ textarea {
    Helpers
 ----------------------------------------------------------------------------- */
 
+// Position : above
 @mixin label-block {
   display: block;
   float: none;
@@ -111,6 +112,7 @@ textarea {
   width: auto;
 }
 
+// Position : Left
 @mixin label-start {
   float: left;
   width: 150px;
@@ -118,6 +120,7 @@ textarea {
   text-align: right;
 }
 
+// Position : nearby
 @mixin label-inline {
   display: inline;
   float: none;

@@ -1,0 +1,27 @@
+/* =============================================================================
+   Breadcrumb
+============================================================================= */
+
+.breadcrumb {
+  @include reset-list;
+  margin: 0;
+
+  li {
+    display: inline;
+
+    + li:before {
+      display: inline;
+      content: ' / ';
+      font-weight: normal;
+    }
+  }
+
+  a {
+    @include underline;
+  }
+}
+
+  .breadcrumb-current {
+    font-weight: bold;
+  }
+

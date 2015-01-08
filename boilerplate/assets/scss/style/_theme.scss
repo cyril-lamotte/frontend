@@ -10,12 +10,22 @@ $base-font-size: 12px; // If 12px then 1em = 12px
 $base-line-height: 1.5;
 
 
-// Colors
+/* -----------------------------------------------------------------------------
+   Colors
+----------------------------------------------------------------------------- */
+
 $brand: #f00; // Brand's color
 $brand-highlight: lighten($brand, 20%);
-$second-color: #00f;
 $base-color: #333;
 
+$second-color: #00f;
+$error-color: #f00;
+
+
+
+/* -----------------------------------------------------------------------------
+   Breakpoints
+----------------------------------------------------------------------------- */
 
 // Based on Bootstrap reference
 // http://getbootstrap.com/css/#responsive-utilities
@@ -25,11 +35,16 @@ $breakpoint-md: 992px;  // Medium devices / Desktops
 $breakpoint-lg: 1170px; // Large devices / Large desktops
 
 
+
+/* -----------------------------------------------------------------------------
+   Compass config
+----------------------------------------------------------------------------- */
+
 // Minimum browsers support
 //$browser-minimum-versions: (ie: '8');
 
 // Sprite map config
-$main-sprite-base-class: '.sp';
-$main-sprite-dimensions: true;
-$main-layout: smart;
+//$sprites-sprite-base-class: '.sp';
+//$sprites-sprite-dimensions: true;
+//$sprites-layout: smart;
 

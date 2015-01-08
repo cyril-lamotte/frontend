@@ -6,7 +6,6 @@
   @include reset-box-model;
   position: relative;
   display: inline-block;
-  //@include border-image(image-url('btn-sprite.png') 2 2 2 2 fill round);
 
   &:hover,
   &:focus,

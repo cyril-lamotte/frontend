@@ -4,6 +4,12 @@
 $(document).ready(function() {
 
 
+  //warningCNIL();
+
+  //managePopins();
+
+  //managePolyfills();
+
 }); // /ready
 
 

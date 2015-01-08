@@ -3,41 +3,47 @@
 // Load compass's mixins
 @import "compass/utilities";
 @import "compass/css3";
+// @import "susy"; // Grid system
 
 
+// Theme
 @import "style/theme";
 
-// CSS configuration
+// Helpers
 @import "helpers/layout";
-@import "helpers/browser";
-@import "helpers/clearfix";
-@import "helpers/form-helpers";
 @import "helpers/grid";
+@import "helpers/browser";
+@import "helpers/form-helpers";
 @import "helpers/image";
 
-@import "style/basic";
-@import "style/form";
-@import "style/layout";
-@import "style/theme";
+// Common
+@import "style/common/common";
+@import "style/common/form";
+@import "style/common/layout";
+@import "style/common/header";
+@import "style/common/footer";
 
+
+// UI components
 @import "style/ui/block";
 @import "style/ui/button";
 @import "style/ui/links";
-@import "style/ui/media";
 @import "style/ui/nav";
-
+//@import "style/ui/skip-links";
+//@import "style/ui/media";
+//@import "style/ui/breadcrumb";
+//@import "style/ui/pagination";
+//@import "style/ui/colorbox";
 
 
 // Pages / modules
-@import "style/modules/common/header";
-@import "style/modules/common/footer";
-@import "style/modules/common";
 @import "style/modules/home";
-@import "style/modules/search";
 @import "style/modules/article";
-@import "style/modules/sitemap";
-
+//@import "style/modules/cnil-cookies";
+//@import "style/modules/search";
+//@import "style/modules/search-results";
+//@import "style/modules/sitemap";
 
 // Sprites
-//@import "sprites/main/*.png";
-//@include all-main-sprites;
+//@import "sprites/*.png";
+//@include all-sprites-sprites;

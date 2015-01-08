@@ -3,13 +3,15 @@
 ============================================================================= */
 
 /* -----------------------------------------------------------------------------
-   Specifics formats
+   Formats
 ----------------------------------------------------------------------------- */
 
 .format-x { width: 30px !important; }
 .format-xx { width: 40px !important; }
 .format-xxxx { width: 60px !important; }
 .format-date { width: 80px !important; }
+
+%format-full { width: 100%; }
 
 
 
@@ -22,7 +24,15 @@
 }
 
   label {
+    // @include label-block;
+    // @include label-start;
+    // @include label-inline;
 
+
+    input[type="checkbox"] + &,
+    input[type="radio"] + & {
+      @include label-inline;
+    }
   }
 
   .form-input {
@@ -35,6 +45,4 @@
 
     border: 1px solid #bebebe;
     padding: 4px 3%;
-    @include border-radius(3px);
-    @include single-box-shadow(0, 2px, 1px, 0, #9f9f9f, inset);
   }

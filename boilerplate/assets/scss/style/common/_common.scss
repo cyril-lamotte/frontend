@@ -1,6 +1,19 @@
 /* =============================================================================
-   Basic
+   Common
 ============================================================================= */
+
+/* -----------------------------------------------------------------------------
+   Fonts
+----------------------------------------------------------------------------- */
+
+//@include font-face("Arvo", font-files("Arvo/arvo-regular-webfont.woff2", "Arvo/arvo-regular-webfont.woff", "Arvo/arvo-regular-webfont.ttf"), "Arvo/arvo-regular-webfont.eot", normal, normal);
+//@include font-face("Arvo", font-files("Arvo/arvo-bold-webfont.woff2", "Arvo/arvo-bold-webfont.woff", "Arvo/arvo-bold-webfont.ttf"), "Arvo/arvo-bold-webfont.eot", bold, normal);
+
+
+
+/* -----------------------------------------------------------------------------
+   Body
+----------------------------------------------------------------------------- */
 
 body {
   font: #{em(12px, 16px)}/$base-line-height $font;
@@ -31,9 +44,13 @@ html { -webkit-tap-highlight-color: rgba($brand, 0.5); }
 
 %brand { color: $brand; }
 
-%title-2 {
+.brand { @extend %brand; }
+.txt-error { color: $error-color; }
+
+
+%title-style-1 {
   /*
-  font-family: "Arvo", Arial, Helvetica, sans-serif;
+  font-family: $font;
   font-size: 24px;
   line-height: 1.2;
   font-weight: normal;
@@ -41,10 +58,6 @@ html { -webkit-tap-highlight-color: rgba($brand, 0.5); }
   color: $brand;
   */
 }
-
-.brand { @extend %brand; }
-.txt-error { color: $error-color; }
-
 
 // %placeholder {}
 

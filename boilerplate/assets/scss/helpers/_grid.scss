@@ -2,178 +2,28 @@
    Grid
 ============================================================================= */
 
+
+
+
+$susy: (
+  columns: 12,
+  global-box-sizing: border-box,
+  gutters: 1,
+  last-flow: from
+);
+
+// @include span(7 of 12 last);
+// @include container;
+
 /* Usage :
 ----------
 
-<div class="box-wrapper box-gutter">
-  <div class="box box-1of2 box-xs-full">1of2</div><!--/box-->
-  <div class="box box-1of2 box-xs-full">1of2</div><!--/box-->
-</div><!--/box-wrapper-->
+<div class="x-wrapper">
+  <div class="y">1of2</div>
+  <div class="y">1of2</div>
+</div><!--/x-wrapper-->
 
 */
-
-
-.box-wrapper {
-  @extend .cf;
-
-  width: auto;
-  float: none;
-  clear: both;
-
-  .box {
-    float: left;
-  }
-
-}
-
-
-/* -----------------------------------------------------------------------------
-   Gutters
------------------------------------------------------------------------------ */
-
-$grid-margin: 16px !default;
-$grid-half-margin: $grid-margin/2;
-
-.box-gutter {
-  margin-left: -$grid-half-margin;
-  margin-right: -$grid-half-margin;
-
-  @include mq-until( $breakpoint-sm ) {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  > .box {
-    padding: 0 $grid-half-margin;
-
-    @include mq-until( $breakpoint-sm ) {
-      padding: 0;
-    }
-  }
-}
-
-
-
-/* -----------------------------------------------------------------------------
-   Box-grid
------------------------------------------------------------------------------ */
-
-.box-break { clear: both; }
-
-
-// Break every X boxes including first
-.box-grid-break-4 .box:nth-child(4n+1) { clear: both; }
-.box-grid-break-3 .box:nth-child(3n+1) { clear: both; }
-.box-grid-break-2 .box:nth-child(2n+1) { clear: both; }
-
-// Break every X boxes excluding first
-.box-grid-break-4n .box:nth-child(4n) { clear: both; }
-.box-grid-break-3n .box:nth-child(3n) { clear: both; }
-.box-grid-break-2n .box:nth-child(2n) { clear: both; }
-
-
-
-@include mq-until( $breakpoint-lg ) {
-
-  // Cancel desktop breaks
-  .box-grid-break-4 .box:nth-child(4n+1) { clear: none; }
-  .box-grid-break-3 .box:nth-child(3n+1) { clear: none; }
-  .box-grid-break-2 .box:nth-child(2n+1) { clear: none; }
-
-  .box-grid-break-4n .box:nth-child(4n) { clear: none; }
-  .box-grid-break-3n .box:nth-child(3n) { clear: none; }
-  .box-grid-break-2n .box:nth-child(2n) { clear: none; }
-
-
-
-  //
-  .box-grid-break-md-4n .box:nth-child(4n) { clear: both !important; }
-  .box-grid-break-md-3n .box:nth-child(3n) { clear: both !important; }
-  .box-grid-break-md-2n .box:nth-child(2n) { clear: both !important; }
-  .box-grid-break-md-1n .box:nth-child(1n) { clear: both !important; }
-
-  .box-break-md { clear: both; }
-}
-
-
-
-@include mq-until( $breakpoint-md ) {
-
-  // Break every X boxes
-  .box-grid-break-sm-2 .box:nth-child(2n+1) { clear: both !important; }
-  .box-grid-break-sm-1 .box:nth-child(1n+1) { clear: both !important; }
-
-  .box-grid-break-sm-4n .box:nth-child(4n) { clear: both !important; }
-  .box-grid-break-sm-3n .box:nth-child(3n) { clear: both !important; }
-  .box-grid-break-sm-2n .box:nth-child(2n) { clear: both !important; }
-  .box-grid-break-sm-1n .box:nth-child(1n) { clear: both !important; }
-
-  .box-break-sm { clear: both; }
-}
-
-
-@include mq-until( $breakpoint-sm ) {
-
-  // Break every X boxes
-  .box-grid-break-xs-2 .box:nth-child(2n+1) { clear: both !important; }
-  .box-grid-break-xs-1 .box:nth-child(1n+1) { clear: both !important; }
-
-  .box-break-xs { clear: both; }
-}
-
-
-
-
-/* -----------------------------------------------------------------------------
-   Box-width
------------------------------------------------------------------------------ */
-
-.box-full {
-  width: auto !important;
-  float: none !important;
-  clear: both;
-}
-
-.box-1of2 { width: 50%; }
-.box-1of3 { width: (100%/3); }
-.box-2of3 { width: (100%*2/3); }
-.box-1of4 { width: 25%; }
-.box-1of5 { width: 20%; }
-
-
-@include mq-until( $breakpoint-lg ) {
-  .box-md-full { width: auto !important; float: none !important; }
-  .box-md-1of2 { width: 50% !important; }
-  .box-md-1of3 { width: (100%/3) !important; }
-  .box-md-2of3 { width: (100%*2/3) !important; }
-  .box-md-1of4 { width: 25% !important; }
-  .box-md-1of5 { width: 20% !important; }
-}
-
-@include mq-until( $breakpoint-md ) {
-  .box-sm-full { width: auto !important; float: none !important; }
-  .box-sm-1of2 { width: 50% !important; }
-  .box-sm-1of3 { width: (100%/3) !important; }
-  .box-sm-2of3 { width: (100%*2/3) !important; }
-  .box-sm-1of4 { width: 25% !important; }
-  .box-sm-1of5 { width: 20% !important; }
-}
-
-@include mq-until( $breakpoint-sm ) {
-  .box-xs-full {
-    width: auto !important;
-    float: none !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-  .box-xs-1of2 { width: 50% !important; }
-  .box-xs-1of3 { width: (100%/3) !important; }
-  .box-xs-2of3 { width: (100%*2/3) !important; }
-  .box-xs-1of4 { width: 25% !important; }
-  .box-xs-1of5 { width: 20% !important }
-}
-
-
 
 
 
@@ -181,12 +31,6 @@ $grid-half-margin: $grid-margin/2;
    Responsive helpers
 ----------------------------------------------------------------------------- */
 
-
-@media print {
-  .visible-print { display: inherit !important; }
-  .hidden-print { display: none !important; }
-}
-.visible-print { display: none !important; }
 .visible-xs { display: none !important; }
 .visible-sm { display: none !important; }
 .hidden-md { display: none !important; }

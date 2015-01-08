@@ -1,0 +1,51 @@
+/* =============================================================================
+   Pagination
+============================================================================= */
+
+.pagination {
+  clear: both;
+  margin: 1em 0 0;
+  padding: 0.5em 0;
+
+  ul {
+    @include reset-list;
+    text-align: center;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+  a:link,
+  a:visited {
+    display: block;
+
+    @include hover {
+      text-decoration: none;
+      @extend %pagination-active;
+    }
+
+    &.active {
+      @extend %pagination-active;
+    }
+  }
+
+
+  %pagination-active {
+    color: $brand;
+  }
+
+  a.pagination-prev,
+  a.pagination-next {
+    @include hide-text;
+  }
+
+  .pagination-prev {
+  }
+
+  .pagination-next {
+  }
+
+}
+
