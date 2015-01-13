@@ -6,8 +6,9 @@
    Fonts
 ----------------------------------------------------------------------------- */
 
-//@include font-face("Arvo", font-files("Arvo/arvo-regular-webfont.woff2", "Arvo/arvo-regular-webfont.woff", "Arvo/arvo-regular-webfont.ttf"), "Arvo/arvo-regular-webfont.eot", normal, normal);
-//@include font-face("Arvo", font-files("Arvo/arvo-bold-webfont.woff2", "Arvo/arvo-bold-webfont.woff", "Arvo/arvo-bold-webfont.ttf"), "Arvo/arvo-bold-webfont.eot", bold, normal);
+//@include font-face("Open Sans", font-files("OpenSans/opensans-regular-webfont.woff2", "OpenSans/opensans-regular-webfont.woff", "OpenSans/opensans-regular-webfont.ttf"), "OpenSans/opensans-regular-webfont.eot", normal, normal);
+//@include font-face("Open Sans", font-files("OpenSans/opensans-bold-webfont.woff2", "OpenSans/opensans-bold-webfont.woff", "OpenSans/opensans-bold-webfont.ttf"), "OpenSans/opensans-bold-webfont.eot", bold, normal);
+//@include font-face("Open Sans", font-files("OpenSans/opensans-semibold-webfont.woff2", "OpenSans/opensans-semibold-webfont.woff", "OpenSans/opensans-semibold-webfont.ttf"), "OpenSans/opensans-semibold-webfont.eot", 600, normal);
 
 
 
@@ -68,9 +69,7 @@ html { -webkit-tap-highlight-color: rgba($brand, 0.5); }
 ----------------------------------------------------------------------------- */
 
 .page-title {}
-.page-subtitle {}
-
-.section-title {}
-.subsection-title {}
-
-.block-title {}
+//.page-subtitle {}
+//.section-title {}
+//.subsection-title {}
+//.block-title {}
