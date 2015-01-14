@@ -30,6 +30,8 @@
 
       // Ecrasement avec les options utilisateur
       plugin.settings = $.extend({}, defaults, options);
+
+      // Merge position object
       plugin.settings.position = $.extend({}, defaults.position, options.position);
 
       plugin.settings.$menu = window.axsddMenu = $element;
@@ -61,7 +63,7 @@
         .removeAttr('data-'+ plugin.settings.prefix +'active')
         .hide()
         .prev()
-          .removeClass('focus');
+          .removeClass(plugin.settings.prefix +'active');
 
       plugin.settings.onHide();
     };
@@ -128,7 +130,7 @@
           try { clearTimeout(timeoutID); }
           catch(e) {}
 
-          $(this).addClass('focus');
+          $(this).addClass(plugin.settings.prefix +'active');
 
           plugin.settings.$activeSubmenu = $(this).next();
           plugin.settings.$activeSubmenu
@@ -141,7 +143,7 @@
 
           // Désactiver le menu au mouseleave
           if( ! plugin.settings.$activeSubmenu.length )
-            $(this).removeClass('focus');
+            $(this).removeClass(plugin.settings.prefix +'active');
 
           // Masquer si la souris ne survole pas
           if( ! plugin.settings.$menu.data('flag') )
@@ -193,7 +195,8 @@
     {
       axsddActiveSubmenu.hide()
       .prev()
-        .removeClass('focus');
+        .removeClass('sdd-'+'active');
+
     }
   };
 
