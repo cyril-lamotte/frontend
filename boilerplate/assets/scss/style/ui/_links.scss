@@ -28,6 +28,18 @@ a {
 
 
 
+/* -----------------------------------------------------------------------------
+   External link
+----------------------------------------------------------------------------- */
+
+a[target="_blank"],
+.external-link {
+  /*padding-left: 18px;
+  background-image: image-url('external-link.png');
+  background-repeat: no-repeat;
+  background-position: 0 center;*/
+}
+
 
 
 /* -----------------------------------------------------------------------------
