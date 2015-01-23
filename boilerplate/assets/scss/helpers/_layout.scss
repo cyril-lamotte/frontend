@@ -2,6 +2,18 @@
    Layout helpers
 ============================================================================= */
 
+
+/* -----------------------------------------------------------------------------
+   Box-sizing
+----------------------------------------------------------------------------- */
+
+// Apply a natural box layout model to all elements
+*, *:before, *:after {
+  @include box-sizing(border-box);
+}
+
+
+
 // -----------------------------------------------------------------------------
 // Media Queries
 // -----------------------------------------------------------------------------
@@ -21,6 +33,81 @@
     @content;
   }
 }
+
+
+
+/* -----------------------------------------------------------------------------
+   Alignments
+----------------------------------------------------------------------------- */
+
+.align-left   { text-align: left; }
+.align-right  { text-align: right; }
+.align-center { text-align: center; }
+
+.valign-top    { vertical-align: top !important; }
+.valign-middle { vertical-align: middle !important; }
+.valign-bottom { vertical-align: bottom !important; }
+
+.align-start { float: left; }
+.align-end   { float: right; }
+.align-clear { clear: both; }
+
+.block-clear { clear: both; height: 0.01em; font-size: 0.01em; padding: 0; line-height: 0; }
+
+
+
+
+/* -----------------------------------------------------------------------------
+   Display helpers
+----------------------------------------------------------------------------- */
+
+.is-hidden { display: none; }
+
+// Hidden except for screen-readers - Yahoo! method : https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); // IE6, IE7
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.visible-xs { display: none !important; }
+.visible-sm { display: none !important; }
+.hidden-md { display: none !important; }
+.visible-md { display: inherit !important; }
+
+
+@media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+  .hidden-md { display: inherit !important; }
+  .visible-md { display: none !important ; }
+  .visible-tablet { display: inherit !important; }
+  .hidden-sm { display: none !important; }
+}
+@media (max-width: $breakpoint-sm - 1) {
+  .hidden-md { display: inherit !important; }
+  .visible-md { display: none !important; }
+  .visible-xs { display: inherit !important; }
+  .hidden-xs { display: none !important; }
+}
+
+
+
+/* -----------------------------------------------------------------------------
+   Spacer
+----------------------------------------------------------------------------- */
+
+.spacer-1-line { margin-bottom: 1em !important; }
+.spacer-2-line { margin-bottom: 2em !important; }
+.spacer-3-line { margin-bottom: 3em !important; }
+
+
+
+
+
 
 
 // -----------------------------------------------------------------------------
@@ -72,59 +159,6 @@
 
 }
 
-
-
-
-/* -----------------------------------------------------------------------------
-   Alignments
------------------------------------------------------------------------------ */
-
-.align-left   { text-align: left; }
-.align-right  { text-align: right; }
-.align-center { text-align: center; }
-
-.valign-top    { vertical-align: top !important; }
-.valign-middle { vertical-align: middle !important; }
-.valign-bottom { vertical-align: bottom !important; }
-
-.align-start { float: left; }
-.align-end   { float: right; }
-.align-clear { clear: both; }
-
-.block-clear { clear: both; height: 0.01em; font-size: 0.01em; padding: 0; line-height: 0; }
-
-
-
-/* -----------------------------------------------------------------------------
-   Display
------------------------------------------------------------------------------ */
-
-.is-hidden { display: none; }
-
-// Hidden except for screen-readers - Yahoo! method : https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html
-.visually-hidden {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px); // IE6, IE7
-  clip: rect(1px, 1px, 1px, 1px);
-  padding:0 !important;
-  border:0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
-}
-
-
-
-/* -----------------------------------------------------------------------------
-   Spacer
------------------------------------------------------------------------------ */
-
-.spacer-1-line { margin-bottom: 1em !important; }
-.spacer-2-line { margin-bottom: 2em !important; }
-.spacer-3-line { margin-bottom: 3em !important; }
-
-
-
 /* -----------------------------------------------------------------------------
    Flex helpers
 ----------------------------------------------------------------------------- */
@@ -151,3 +185,4 @@
   }
 
 }
+

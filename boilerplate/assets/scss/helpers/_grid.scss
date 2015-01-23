@@ -9,44 +9,80 @@ $susy: (
   columns: 12,
   global-box-sizing: border-box,
   gutters: 1,
-  last-flow: from
+  last-flow: to
 );
 
+//$susy-second-map: (
+//  gutters: 1/4
+//);
+
+// @include layout($susy-second-map);
+// @include span(5 of 12);
 // @include span(7 of 12 last);
-// @include container;
 
-/* Usage :
-----------
 
-<div class="x-wrapper">
-  <div class="y">1of2</div>
-  <div class="y">1of2</div>
-</div><!--/x-wrapper-->
-
-*/
+.row {
+  @include container;
+}
 
 
 
 /* -----------------------------------------------------------------------------
-   Responsive helpers
+   Grid 2 col
+   item | item
 ----------------------------------------------------------------------------- */
 
-.visible-xs { display: none !important; }
-.visible-sm { display: none !important; }
-.hidden-md { display: none !important; }
-.visible-md { display: inherit !important; }
+.container-2-col {
+  @include container;
+
+  .grid-item {
+    @include span(6 of 12);
+
+    &:nth-child(2n) {
+      @include span(6 of 12 last);
+    }
+
+    // IE8
+    &:first-child {
+      + .grid-item,
+      + .grid-item + .grid-item + .grid-item,
+      + .grid-item + .grid-item + .grid-item  + .grid-item  + .grid-item {
+        @include span(6 of 12 last);
+      }
+    }
+
+  }
+}
 
 
-@media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
-  .hidden-md { display: inherit !important; }
-  .visible-md { display: none !important ; }
-  .visible-tablet { display: inherit !important; }
-  .hidden-sm { display: none !important; }
+
+/* -----------------------------------------------------------------------------
+   Grid 3 col
+   item | item | item
+----------------------------------------------------------------------------- */
+
+.container-3-col {
+  @include container;
+
+  .grid-item {
+    @include span(4 of 12);
+
+    &:nth-child(3n) {
+      @include span(4 of 12 last);
+    }
+
+    // IE8
+    &:first-child {
+      + .grid-item + .grid-item,
+      + .grid-item + .grid-item + .grid-item + .grid-item + .grid-item,
+      + .grid-item + .grid-item + .grid-item + .grid-item + .grid-item + .grid-item + .grid-item  + .grid-item {
+        @include span(4 of 12 last);
+      }
+    }
+
+  }
 }
-@media (max-width: $breakpoint-sm - 1) {
-  .hidden-md { display: inherit !important; }
-  .visible-md { display: none !important; }
-  .visible-xs { display: inherit !important; }
-  .hidden-xs { display: none !important; }
-}
+
+
+
 
