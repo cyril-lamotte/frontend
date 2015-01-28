@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]><html lang="fr" class="ie7 lte-ie8"><![endif]-->
+<!--[if IE 8]><html lang="fr" class="ie8 lte-ie8"><![endif]-->
+<!--[if IE 9]><html lang="fr" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="fr"><!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+
+  <title>Liste</title>
+
+  <!-- CSS : En production, regrouper & compresser les CSS -->
+
+  <link rel="stylesheet" href="assets/css/normalize.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/print.css" media="print" />
+
+  <!-- Modernizr http://modernizr.com/docs/#installing -->
+  <script src="assets/js/lib/modernizr.js"></script>
+
+</head>
+
+<body>
+<h1 class="title-style-1"><span>Drupal webform</span></h1>
+
+<div class="content-web-form">
+
+    <div class="region region-content">
+
+        <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+            <div class="field-items">
+                <div class="field-item even">
+                    <p>Voici le texte de <strong>présentation </strong>du webform Drupal tapé dans CKeditor.</p>
+                </div>
+            </div>
+        </div>
+        <form class="webform-client-form" enctype="multipart/form-data" action="./webform_files/webform.html" method="post" id="webform-client-form-86599" accept-charset="UTF-8">
+            <div>
+                <div class="form-item webform-component webform-component-textfield" id="webform-component-texte1">
+                    <label for="edit-submitted-texte1">Texte1 étiquette au-dessus <span class="form-required" title="Ce champ est obligatoire.">*</span>
+                    </label>
+                    <input type="text" id="edit-submitted-texte1" name="submitted[texte1]" value="" size="60" maxlength="128" class="form-text required">
+                </div>
+                <div class="form-item webform-component webform-component-textfield webform-container-inline" id="webform-component-texte2-etiquette">
+                    <label for="edit-submitted-texte2-etiquette">Texte2 étiquette sur la même ligne </label>
+                    <input type="text" id="edit-submitted-texte2-etiquette" name="submitted[texte2_etiquette]" value="" size="60" maxlength="128" class="form-text">
+                </div>
+                <div class="form-item webform-component webform-component-textarea" id="webform-component-zone-de-texte-etiquette-au-dessus">
+                    <label for="edit-submitted-zone-de-texte-etiquette-au-dessus">Zone de texte étiquette </label>
+                    <div class="form-textarea-wrapper">
+                        <textarea id="edit-submitted-zone-de-texte-etiquette-au-dessus" name="submitted[zone_de_texte_etiquette_au_dessus]" cols="60" rows="5" class="form-textarea"></textarea>
+                    </div>
+                </div>
+                <div class="form-item webform-component webform-component-date" id="webform-component-champ-date">
+                    <label for="edit-submitted-champ-date">Champ date étiquette dessus </label>
+                    <div class="webform-container-inline webform-datepicker">
+                        <div class="form-item form-type-select form-item-submitted-champ-date-day">
+                            <label class="element-invisible" for="edit-submitted-champ-date-day">Jour </label>
+                            <select class="day form-select" id="edit-submitted-champ-date-day" name="submitted[champ_date][day]">
+                                <option value="" selected="selected">Jour</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
+                        </div>
+                        <div class="form-item form-type-select form-item-submitted-champ-date-month">
+                            <label class="element-invisible" for="edit-submitted-champ-date-month">Mois </label>
+                            <select class="month form-select" id="edit-submitted-champ-date-month" name="submitted[champ_date][month]">
+                                <option value="" selected="selected">Mois</option>
+                                <option value="1">janv.</option>
+                                <option value="2">févr.</option>
+                                <option value="3">mars</option>
+                                <option value="4">avr.</option>
+                                <option value="5">Mai</option>
+                                <option value="6">juin</option>
+                                <option value="7">juill.</option>
+                                <option value="8">août</option>
+                                <option value="9">sept.</option>
+                                <option value="10">oct.</option>
+                                <option value="11">nov.</option>
+                                <option value="12">déc.</option>
+                            </select>
+                        </div>
+                        <div class="form-item form-type-select form-item-submitted-champ-date-year">
+                            <label class="element-invisible" for="edit-submitted-champ-date-year">Année </label>
+                            <select class="year form-select" id="edit-submitted-champ-date-year" name="submitted[champ_date][year]">
+                                <option value="" selected="selected">Année</option>
+                                <option value="2013">2013</option>
+                                <option value="2014">2014</option>
+                                <option value="2015">2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                            </select>
+                        </div>
+                        <input type="image" src="assets/img/calendar.png" class="webform-calendar webform-calendar-start-2013-01-26 webform-calendar-end-2017-01-26 webform-calendar-day-1 hasDatepicker" alt="Ouvrir la popup de calendrier" title="Ouvrir la popup de calendrier" id="dp1422265776874">
+                    </div>
+                </div>
+                <div class="form-item webform-component webform-component-date webform-container-inline" id="webform-component-champ-date-etiquette-meme-ligne">
+                    <label for="edit-submitted-champ-date-etiquette-meme-ligne">Champ date etiquette meme ligne </label>
+                    <div class="webform-container-inline webform-datepicker">
+                        <div class="form-item form-type-select form-item-submitted-champ-date-etiquette-meme-ligne-day">
+                            <label class="element-invisible" for="edit-submitted-champ-date-etiquette-meme-ligne-day">Jour </label>
+                            <select class="day form-select" id="edit-submitted-champ-date-etiquette-meme-ligne-day" name="submitted[champ_date_etiquette_meme_ligne][day]">
+                                <option value="" selected="selected">Jour</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
+                        </div>
+                        <div class="form-item form-type-select form-item-submitted-champ-date-etiquette-meme-ligne-month">
+                            <label class="element-invisible" for="edit-submitted-champ-date-etiquette-meme-ligne-month">Mois </label>
+                            <select class="month form-select" id="edit-submitted-champ-date-etiquette-meme-ligne-month" name="submitted[champ_date_etiquette_meme_ligne][month]">
+                                <option value="" selected="selected">Mois</option>
+                                <option value="1">janv.</option>
+                                <option value="2">févr.</option>
+                                <option value="3">mars</option>
+                                <option value="4">avr.</option>
+                                <option value="5">Mai</option>
+                                <option value="6">juin</option>
+                                <option value="7">juill.</option>
+                                <option value="8">août</option>
+                                <option value="9">sept.</option>
+                                <option value="10">oct.</option>
+                                <option value="11">nov.</option>
+                                <option value="12">déc.</option>
+                            </select>
+                        </div>
+                        <div class="form-item form-type-select form-item-submitted-champ-date-etiquette-meme-ligne-year">
+                            <label class="element-invisible" for="edit-submitted-champ-date-etiquette-meme-ligne-year">Année </label>
+                            <select class="year form-select" id="edit-submitted-champ-date-etiquette-meme-ligne-year" name="submitted[champ_date_etiquette_meme_ligne][year]">
+                                <option value="" selected="selected">Année</option>
+                                <option value="2013">2013</option>
+                                <option value="2014">2014</option>
+                                <option value="2015">2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                            </select>
+                        </div>
+                        <input type="image" src="assets/img/calendar.png" class="webform-calendar webform-calendar-start-2013-01-26 webform-calendar-end-2017-01-26 webform-calendar-day-1 hasDatepicker" alt="Ouvrir la popup de calendrier" title="Ouvrir la popup de calendrier" id="dp1422265776875">
+                    </div>
+                </div>
+                <div id="edit-submitted-fichiers-ajax-wrapper">
+                    <div class="form-item webform-component webform-component-managed_file" id="webform-component-fichiers">
+                        <label for="edit-submitted-fichiers">Fichiers étiquette dessus </label>
+                        <div id="edit-submitted-fichiers" class="form-managed-file">
+                            <input type="file" id="edit-submitted-fichiers-upload" name="files[submitted_fichiers]" size="22" class="form-file">
+                            <input type="submit" id="edit-submitted-fichiers-upload-button" name="submitted_fichiers_upload_button" value="Transfert de fichiers" class="form-submit ajax-processed">
+                            <input type="hidden" name="submitted[fichiers][fid]" value="0">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-item webform-component webform-component-radios webform-container-inline" id="webform-component-liste-1bbb">
+                    <label for="edit-submitted-liste-1bbb">Radio 1 étiquette meme ligne </label>
+                    <div id="edit-submitted-liste-1bbb" class="form-radios">
+                        <div class="form-item form-type-radio form-item-submitted-liste-1bbb">
+                            <input type="radio" id="edit-submitted-liste-1bbb-1" name="submitted[liste_1bbb]" value="1" class="form-radio">
+                            <label class="option" for="edit-submitted-liste-1bbb-1">111 </label>
+
+                        </div>
+                        <div class="form-item form-type-radio form-item-submitted-liste-1bbb">
+                            <input type="radio" id="edit-submitted-liste-1bbb-2" name="submitted[liste_1bbb]" value="2" class="form-radio">
+                            <label class="option" for="edit-submitted-liste-1bbb-2">222 </label>
+
+                        </div>
+                        <div class="form-item form-type-radio form-item-submitted-liste-1bbb">
+                            <input type="radio" id="edit-submitted-liste-1bbb-3" name="submitted[liste_1bbb]" value="3" class="form-radio">
+                            <label class="option" for="edit-submitted-liste-1bbb-3">333 </label>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-item webform-component webform-component-checkboxes webform-container-inline" id="webform-component-liste-1bbbccc">
+                    <label for="edit-submitted-liste-1bbbccc">Checkbox 1 étiquette meme ligne </label>
+                    <div id="edit-submitted-liste-1bbbccc" class="form-checkboxes">
+                        <div class="form-item form-type-checkbox form-item-submitted-liste-1bbbccc-1">
+                            <input type="checkbox" id="edit-submitted-liste-1bbbccc-1" name="submitted[liste_1bbbccc][1]" value="1" class="form-checkbox">
+                            <label class="option" for="edit-submitted-liste-1bbbccc-1">111 </label>
+
+                        </div>
+                        <div class="form-item form-type-checkbox form-item-submitted-liste-1bbbccc-2">
+                            <input type="checkbox" id="edit-submitted-liste-1bbbccc-2" name="submitted[liste_1bbbccc][2]" value="2" class="form-checkbox">
+                            <label class="option" for="edit-submitted-liste-1bbbccc-2">222 </label>
+
+                        </div>
+                        <div class="form-item form-type-checkbox form-item-submitted-liste-1bbbccc-3">
+                            <input type="checkbox" id="edit-submitted-liste-1bbbccc-3" name="submitted[liste_1bbbccc][3]" value="3" class="form-checkbox">
+                            <label class="option" for="edit-submitted-liste-1bbbccc-3">333 </label>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-item webform-component webform-component-select" id="webform-component-liste-1">
+                    <label for="edit-submitted-liste-1">Liste 1 étquiette au dessus </label>
+                    <select id="edit-submitted-liste-1" name="submitted[liste_1]" class="form-select">
+                        <option value="" selected="selected">- Aucun -</option>
+                        <option value="1">111</option>
+                        <option value="2">222</option>
+                        <option value="3">333</option>
+                    </select>
+                </div>
+                <div class="form-item webform-component webform-component-select webform-container-inline" id="webform-component-liste-1aaaa">
+                    <label for="edit-submitted-liste-1aaaa">Liste 1 étiquette meme ligne </label>
+                    <select id="edit-submitted-liste-1aaaa" name="submitted[liste_1aaaa]" class="form-select">
+                        <option value="" selected="selected">- Aucun -</option>
+                        <option value="1">111</option>
+                        <option value="2">222</option>
+                        <option value="3">333</option>
+                    </select>
+                </div>
+                <div class="form-item webform-component webform-component-email" id="webform-component-email">
+                    <label for="edit-submitted-email">Email <span class="form-required" title="Ce champ est obligatoire.">*</span>
+                    </label>
+                    <input class="email form-text form-email required" type="email" id="edit-submitted-email" name="submitted[email]" size="60">
+                </div>
+                <fieldset class="webform-component-fieldset collapsible form-wrapper collapse-processed" id="webform-component-groupe-de-champ-1">
+                    <legend><span class="fieldset-legend"><a class="fieldset-title" href="http://fpd7.localhost/formulaires/webform-drupal-de-test-pour-maquette#"><span class="fieldset-legend-prefix element-invisible">Masquer</span> Groupe de champ 1</a><span class="summary"></span></span>
+                    </legend>
+                    <div class="fieldset-wrapper">
+                        <div class="form-item webform-component webform-component-textfield" id="webform-component-groupe-de-champ-1--texte-dans-groupe">
+                            <label for="edit-submitted-groupe-de-champ-1-texte-dans-groupe">Texte dans groupe </label>
+                            <input type="text" id="edit-submitted-groupe-de-champ-1-texte-dans-groupe" name="submitted[groupe_de_champ_1][texte_dans_groupe]" value="" size="60" maxlength="128" class="form-text">
+                        </div>
+                        <div class="form-item webform-component webform-component-email" id="webform-component-groupe-de-champ-1--email-dans-groupe">
+                            <label for="edit-submitted-groupe-de-champ-1-email-dans-groupe">Email dans groupe </label>
+                            <input class="email form-text form-email" type="email" id="edit-submitted-groupe-de-champ-1-email-dans-groupe" name="submitted[groupe_de_champ_1][email_dans_groupe]" size="60">
+                        </div>
+                    </div>
+                </fieldset>
+                <input type="hidden" name="details[sid]">
+                <input type="hidden" name="details[page_num]" value="1">
+                <input type="hidden" name="details[page_count]" value="1">
+                <input type="hidden" name="details[finished]" value="0">
+                <input type="hidden" name="form_build_id" value="form-I4x0SOlX8JX1tPWN1Cg66WA7lsWIaQ0AzM0sgE5Gm0E">
+                <input type="hidden" name="form_id" value="webform_client_form_86599">
+                <div class="form-actions form-wrapper" id="edit-actions">
+                    <input type="submit" id="edit-submit" name="op" value="Soumettre" class="form-submit">
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+</body>
+</html>
