@@ -7,7 +7,7 @@
 
 	$.pluginName = function(element, options) {
 
-		// Options par défaut
+		// Defaults options
 		var defaults = {
 			myOption: 500,
 			onShow: function() {},
@@ -24,7 +24,7 @@
 
 		plugin.init = function() {
 
-			// Ecrasement avec les options utilisateur
+			// Merge user's options
 			plugin.settings = $.extend({}, defaults, options);
 
 			// Accéder à l'élément jQuery :			$element
