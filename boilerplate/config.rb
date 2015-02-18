@@ -22,4 +22,4 @@ relative_assets = true
 sass_options = {:sourcemap => true}
 
 # Plugins
-#require 'susy';
+require 'susy';

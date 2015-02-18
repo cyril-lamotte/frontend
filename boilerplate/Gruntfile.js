@@ -2,13 +2,19 @@ module.exports = function (grunt) {
 
   // Use notation : "<%= pkg.name %>"" to include package's informations
 
+  var autoprefixer = require('autoprefixer-core');
+
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    compass: {
-      options: {
-        config: 'assets/config.rb'
-      }
+    postcss: {
+        options: {
+          map: true,
+          processors: [
+            autoprefixer({ browsers: ['> 1% in FR, Android >= 2.3, last 2 Chrome versions, Firefox >= 5, ie 8'].postcss})
+          ]
+        },
+        dist: { src: 'assets/css/*.css' }
     },
 
     htmllint: {
@@ -31,6 +37,13 @@ module.exports = function (grunt) {
         tasks: ['jshint'],
         options: { spawn: false }
       },
+      postcss: {
+        files: 'assets/css/*',
+        tasks: 'postcss',
+        options: {
+           nospawn: true
+        }
+       },
       options: {
         livereload: true
       }
@@ -41,12 +54,12 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-html');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-postcss');
 
 
   // Default task(s).
-  grunt.registerTask('test', ['htmllint', 'jshint', 'compass']);
-  //grunt.registerTask('default', ['watch']);
+  //grunt.registerTask('test', ['htmllint', 'jshint']);
+  grunt.registerTask('default', ['watch']);
 
   // Launch
   // grunt | grunt watch

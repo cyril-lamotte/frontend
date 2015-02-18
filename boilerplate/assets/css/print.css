@@ -1,2 +1,49 @@
-@media print{*{background:transparent !important;box-shadow:none !important;text-shadow:none !important}body{width:auto !important;margin:auto !important;font-family:serif;font-size:12pt;background-color:#fff !important}.print{display:block}.no-print{display:none}p,blockquote{orphans:3;widows:3}h1,h2,h3,caption{page-break-after:avoid}blockquote,ul,ol{page-break-inside:avoid}a{color:#000 !important;text-decoration:underline !important}}
+/* quick print reset */
+@media print {
+  /* line 4, ../scss/print.scss */
+  * {
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  /* line 10, ../scss/print.scss */
+  body {
+    width: auto !important;
+    margin: auto !important;
+    font-family: serif;
+    font-size: 12pt;
+    background-color: #fff !important; }
+
+  /* line 19, ../scss/print.scss */
+  .print {
+    display: block; }
+
+  /* line 23, ../scss/print.scss */
+  .no-print {
+    display: none; }
+
+  /* no orphans, no widows */
+  /* line 28, ../scss/print.scss */
+  p,
+  blockquote {
+    orphans: 3;
+    widows: 3; }
+
+  /* line 34, ../scss/print.scss */
+  h1,
+  h2,
+  h3,
+  caption {
+    page-break-after: avoid; }
+
+  /* line 41, ../scss/print.scss */
+  blockquote,
+  ul,
+  ol {
+    page-break-inside: avoid; }
+
+  /* line 47, ../scss/print.scss */
+  a {
+    color: #000 !important;
+    text-decoration: underline !important; } }
 /*# sourceMappingURL=print.css.map */
