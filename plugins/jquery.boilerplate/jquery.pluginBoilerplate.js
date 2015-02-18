@@ -1,81 +1,80 @@
 (function( $ ){
 
-	/**
-	* Plugin jQuery [pluginName] v1.0.0 (06/2013)
-	*
-	*/
+  /**
+  * Plugin jQuery [pluginName] v1.0.0 (06/2013)
+  *
+  */
 
-	$.pluginName = function(element, options) {
+  $.pluginName = function(element, options) {
 
-		// Defaults options
-		var defaults = {
-			myOption: 500,
-			onShow: function() {},
-			onHide: function() {}
-		};
+    // Defaults options
+    var defaults = {
+      myOption: 500,
+      onShow: function() {},
+      onHide: function() {}
+    };
 
-		var plugin = this,
-				$element = $(element),
-				element = element;
+    var plugin = this,
+        $element = $(element);
 
-		plugin.settings = {}
-
+    plugin.settings = {};
 
 
-		plugin.init = function() {
 
-			// Merge user's options
-			plugin.settings = $.extend({}, defaults, options);
+    plugin.init = function() {
 
-			// Accéder à l'élément jQuery :			$element
-			// Accéder à l'élément DOM :				element
-			// Accéder aux options :						plugin.settings.myOption
+      // Merge user's options
+      plugin.settings = $.extend({}, defaults, options);
 
-			// Exécuter une fonction interne		myFonction()
-			// Exécuter une fonction plublique	plugin.myFonction()
+      // Accéder à l'élément jQuery :     $element
+      // Accéder à l'élément DOM :        element
+      // Accéder aux options :            plugin.settings.myOption
 
-			// Lancer une temporisation					window.setTimeout('$(".element").data("pluginName").myFonction()', 1000);
+      // Exécuter une fonction interne    myFonction()
+      // Exécuter une fonction plublique  plugin.myFonction()
 
-
-			// Attacher les évènements
-			// setEvents();
-
-		}
+      // Lancer une temporisation         window.setTimeout('$(".element").data("pluginName").myFonction()', 1000);
 
 
-		// Attacher les évènements
-		var setEvents = function() {
+      // Attacher les évènements
+      // setEvents();
 
-		}
-
-
-		// Fonction publique
-		// Appel : $('.element').data('pluginName').myFonction()
-		plugin.myFonction = function() {
-
-		}
+    };
 
 
-		plugin.init();
+    // Attacher les évènements
+    var setEvents = function() {
 
-	}
+    };
+
+
+    // Fonction publique
+    // Appel : $('.element').data('pluginName').myFonction()
+    plugin.myFonction = function() {
+
+    };
+
+
+    plugin.init();
+
+  };
 
 
 
   $.fn.pluginName = function(options) {
 
-		return this.each(function() {
+    return this.each(function() {
 
-			if (undefined == $(this).data('pluginName')) {
+      if (undefined === $(this).data('pluginName')) {
 
-				var plugin = new $.pluginName(this, options);
-				$(this).data('pluginName', plugin);
+        var plugin = new $.pluginName(this, options);
+        $(this).data('pluginName', plugin);
 
-			}
+      }
 
-		});
+    });
 
- 	};
+  };
 
 
 })( jQuery );
