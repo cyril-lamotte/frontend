@@ -9,9 +9,10 @@ module.exports = function (grunt) {
 
     postcss: {
         options: {
-          map: true,
+          remove: false, // Do not remove prefixes
+          map: true, // Alter css maps too
           processors: [
-            autoprefixer({ browsers: ['> 1% in FR, Android >= 2.3, last 2 Chrome versions, Firefox >= 5, ie 8'].postcss})
+            autoprefixer({ browsers: ['> 1% in FR, Android >= 2.3, Firefox >= 5, ie 8']}).postcss
           ]
         },
         dist: { src: 'assets/css/*.css' }
@@ -38,10 +39,10 @@ module.exports = function (grunt) {
         options: { spawn: false }
       },
       postcss: {
-        files: 'assets/css/*',
+        files: '<%= postcss.dis.src %>',
         tasks: 'postcss',
         options: {
-           nospawn: true
+           spawn: false
         }
        },
       options: {
@@ -63,6 +64,5 @@ module.exports = function (grunt) {
 
   // Launch
   // grunt | grunt watch
-  // grunt test
 
 };
