@@ -1,0 +1,38 @@
+/* =============================================================================
+   Admin tabs
+============================================================================= */
+
+ul.tabs {
+  margin: 1em 0 2em;
+
+  ul {
+    margin: 0;
+  }
+
+  li {
+    display: inline;
+    margin: 0 0.1em 0 0;
+    padding: 0;
+    background: none;
+  }
+
+  a:link,
+  a:visited {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 0.2em 0.8em;
+    color: #888;
+    text-decoration: none;
+    border-radius: 3px;
+    box-shadow: 0px 0px 3px #888;
+
+    @include hover {
+      background: $brand;
+      border-color: $brand;
+      color: #fff;
+      text-decoration: none;
+      box-shadow: 0px 0px 3px #024582;
+    }
+  }
+}
+
