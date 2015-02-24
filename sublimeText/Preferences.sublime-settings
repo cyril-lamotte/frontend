@@ -1,27 +1,59 @@
-// Settings in here override those in "Default/Preferences.sublime-settings", and
-// are overridden in turn by file type specific settings.
 {
+	"binary_file_patterns":
+	[
+		"*.jpg",
+		"*.jpeg",
+		"*.png",
+		"*.gif",
+		"*.ttf",
+		"*.ico",
+		"*.eot",
+		"*.pdf",
+		"*.swf",
+		"*.jar",
+		"*.zip",
+		".woff",
+		".woff2",
+		".ttf",
+		".eot"
+	],
+	"bold_folder_labels": true,
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"detect_slow_plugins": false,
-	"font_size": 10.0,
+	"draw_minimap_border": true,
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		"*.bat",
+		"*.css.map",
+		"*.eot",
+		"*.otf",
+		"*.woff",
+		"*.woff2",
+		"*.svg"
+	],
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".sass-cache",
+		"node_modules"
+	],
+	"font_size": 9,
+	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintage",
+		"Goto-CSS-Declaration",
+		"WordHighlight",
+		"Alignment"
 	],
 	"rulers":
 	[
 		80
 	],
+	"save_on_focus_lost": true,
 	"tab_size": 2,
 	"trim_trailing_white_space_on_save": true,
-	"bold_folder_labels": true,
-	"word_wrap": false,
-	"highlight_line": true,
-	"bold_folder_labels": true,
-  "folder_exclude_patterns": [".svn", ".git", ".sass-cache", "node_modules"],
-  "binary_file_patterns": ["*.jpg", "*.jpeg", "*.png", "*.gif", "*.ttf", "*.ico", "*.eot", "*.pdf", "*.swf", "*.jar", "*.zip"],
-  "file_exclude_patterns": ["*.bat", "*.css.map"],
-  "ensure_newline_at_eof_on_save": true,
-  "save_on_focus_lost": true,
-  "draw_minimap_border": true
+	"word_wrap": false
 }
