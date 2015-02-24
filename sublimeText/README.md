@@ -24,6 +24,9 @@ Faire un clic droit dans la barre latérale, Project / Edit Preview URLs
 {
     "L:/":{
         "url_testing":"http://url"
+    },
+    "D:/www/mockups.local/":{
+        "url_testing":"http://mockups.local/"
     }
 }
 ```
