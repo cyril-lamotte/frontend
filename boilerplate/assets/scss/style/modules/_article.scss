@@ -9,6 +9,18 @@
 
 .article {
 
+/*doc
+---
+title: H1
+name: 1-title
+category: Styles
+---
+```html_example
+<div class="article">
+  <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</h1>
+</div>
+```
+*/
 
   // Headings
   h1 {
@@ -21,11 +33,41 @@
     }
   }
 
+
+
+/*doc
+---
+title: H2
+name: 2-title
+category: Styles
+---
+```html_example
+<div class="article">
+  <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</h2>
+</div>
+```
+*/
+
   h2 {
     font-size: em(14px);
     font-weight: bold;
     margin: 1em 0 0.5em;
   }
+
+
+
+/*doc
+---
+title: H3
+name: 3-title
+category: Styles
+---
+```html_example
+<div class="article">
+  <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</h3>
+</div>
+```
+*/
 
   h3 {
     font-size: em(13px);
@@ -33,11 +75,41 @@
     margin: 1em 0 0.5em;
   }
 
+
+
+/*doc
+---
+title: H4
+name: 4-title
+category: Styles
+---
+```html_example
+<div class="article">
+  <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</h4>
+</div>
+```
+*/
+
   h4 {
     font-size: em(12px);
     font-weight: normal;
     margin: 1em 0 0.5em;
   }
+
+
+
+/*doc
+---
+title: H5
+name: 5-title
+category: Styles
+---
+```html_example
+<div class="article">
+  <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</h5>
+</div>
+```
+*/
 
   h5 {
     font-size: em(12px);
@@ -46,12 +118,43 @@
     margin: 1em 0 0.5em;
   }
 
+
+
+
+/*doc
+---
+title: H6
+name: 6-title
+category: Styles
+---
+```html_example
+<div class="article">
+  <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</h6>
+</div>
+```
+*/
+
   h6 {
     font-size: em(11px);
     text-transform: uppercase;
     font-weight: normal;
     margin: 1em 0 0.5em;
   }
+
+
+
+/*doc
+---
+title: Paragraphe
+name: 7-p
+category: Styles
+---
+```html_example
+<div class="article">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</p>
+</div>
+```
+*/
 
   // Text
   p {}
@@ -100,6 +203,20 @@
     }
   }
 
+
+
+/*doc
+---
+title: Chapeau
+name: 8-chapeau
+category: Styles
+---
+```html_example
+<div class="article">
+  <div class="chapeau">Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</div>
+</div>
+```
+*/
 
   .chapeau {
     font-weight: bold;

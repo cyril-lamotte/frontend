@@ -1,0 +1,14 @@
+<table class="sg-table">
+  <tbody>
+    <% examples.each do |example| %>
+      <tr>
+        <th>
+          <pre><%= example.code_example %></pre>
+        </th>
+        <td>
+          <%= example.rendered_example %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -35,6 +35,20 @@
     }
   }
 
+
+
+/*doc
+---
+title: Zone de saisie
+name: form-text
+category: Formulaires
+---
+```html_example
+<label for="text">Label</label>
+<input type="text" id="text" value="" class="form-input">
+```
+*/
+
   .form-input {
     margin: 0;
     font-size: 1em;
@@ -46,3 +60,52 @@
     border: 1px solid #bebebe;
     padding: 4px 3%;
   }
+
+
+
+
+/* -----------------------------------------------------------------------------
+   Checkox
+----------------------------------------------------------------------------- */
+
+/*doc
+---
+title: Checkbox
+name: form-checkbox
+category: Formulaires
+---
+```html_example
+<input type="checkbox" id="cb-1" name="cb-1" value="1">
+<label for="cb-1">Option 1</label>
+
+<input type="checkbox" id="cb-2" name="cb-2" value="2" checked>
+<label for="cb-2">Option 2</label>
+
+<input type="checkbox" id="cb-3" name="cb-3" value="3">
+<label for="cb-3"><span class="visually-hidden">Label masqué</span></label>
+```
+*/
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+   Radio
+----------------------------------------------------------------------------- */
+
+
+/*doc
+---
+title: Radio
+name: form-radio
+category: Formulaires
+---
+```html_example
+<input type="radio" id="rad-1" name="rad" value="">
+<label for="rad-1">Option 1</label>
+
+<input type="radio" id="rad-2" name="rad" value="" checked>
+<label for="rad-2">Option 2</label>
+```
+*/

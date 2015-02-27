@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]><html lang="fr" class="ie7 lte-ie8"><![endif]-->
+<!--[if IE 8]><html lang="fr" class="ie8 lte-ie8"><![endif]-->
+<!--[if IE 9]><html lang="fr" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="fr"><!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+
+  <title>Styleguide </title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/print.css" media="print" />
+
+  <!--Styleguide CSS-->
+  <link rel="stylesheet" href="styleguide.css" />
+
+  <!-- Modernizr http://modernizr.com/docs/#installing -->
+  <script src="../assets/js/lib/modernizr.js"></script>
+
+  <!-- Modernizr http://modernizr.com/docs/#installing -->
+  <script src="../assets/js/lib/modernizr.js"></script>
+
+</head>
+<body>
+
+<div class="sg-wrapper">
+
+  <a href="../index.html" class="sg-btn sg-btn-back">&lt;&nbsp;Index</a>
+
+  <h1 class="sg-title">Style<b>guide</b></h1>
+
+    <nav class="sg-nav">
+      <ul>
+      
+        <li><a href="boutons.html">Boutons</a></li>
+      
+        <li><a href="styles.html">Styles</a></li>
+      
+        <li><a href="blocs.html">Blocs</a></li>
+      
+        <li><a href="couleurs.html">Couleurs</a></li>
+      
+        <li><a href="fonts.html">Fonts</a></li>
+      
+        <li><a href="formulaires.html">Formulaires</a></li>
+      
+        <li><a href="navigation.html">Navigation</a></li>
+      
+      </ul>
+    </nav>
+
+    <h2 class="sg-title"></h2>
+
+    <section class="sg-content">
+      <nav class="sg-nav-2">
+        <ul>
+        
+        </ul>
+      </nav>
+<h1>Spécificités</h1>
+<table class="styleguide"> <tr>
+<th>Spécificités</th>
+<th>Description</th>
+</tr>
+ <tr>
+<td>Périmètre de test navigateurs</td>
+<td>Navigateurs modernes, IE8+</td>
+</tr>
+<tr>
+<td>Accessibilité</td>
+<td>Oui RGAA</td>
+</tr>
+<tr>
+<td>Responsive Design</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>Framework</td>
+<td><a class="styleguide" href="http://getbootstrap.com/css/" title="http://getbootstrap.com/css/">Bootstrap 3.2</a></td>
+</tr>
+ </table>
+<h1>Développement</h1>
+<table class="styleguide"> <tr>
+<th>Spécificités</th>
+<th>Description</th>
+</tr>
+ <tr>
+<td>Dépôt SVN</td>
+<td>https://serv-sources.jouve-hdi.com/jouve/maquettes_studio/jouve/2015/cnfpt/trunk</td>
+</tr>
+ </table><table class="styleguide"> <tr>
+<th>Fichier ou dossier</th>
+<th>Description</th>
+</tr>
+ <tr>
+<td>style.scss</td>
+<td>Génère la css principale <code class="styleguide">style.css</code>, importe toutes les bibliothèque (ex: Compass)</td>
+</tr>
+<tr>
+<td>print.scss</td>
+<td>Génère la css d&#39;impression <code class="styleguide">print.css</code></td>
+</tr>
+<tr>
+<td>helpers/</td>
+<td>Styles génériques et réutilisables (alignements, formulaires...)</td>
+</tr>
+<tr>
+<td>style/</td>
+<td>Styles spécifiques au projet</td>
+</tr>
+<tr>
+<td>style/_theme.scss</td>
+<td>Variables du site (couleurs / polices / breakpoints...)</td>
+</tr>
+<tr>
+<td>style/common/</td>
+<td>Styles globaux du projets (layout / formulaires / header / footer)</td>
+</tr>
+<tr>
+<td>style/modules/</td>
+<td>Styles spécifiques à une pages ou un modules</td>
+</tr>
+<tr>
+<td>style/ui/</td>
+<td>Éléments d&#39;interface récurrents (Boutons, blocs, navigation, lightbox...)</td>
+</tr>
+ </table>  </section>
+
+</div><!--/sg-wrapper-->
+
+<!-- Scripts at the bottom for better performances -->
+<script src="../assets/js/lib/jquery.min.js"></script>
+<script src="../assets/js/functions.js"></script>
+<script src="../assets/js/domready.js"></script>
+<script>
+
+(function ($) {
+
+/* Execute code when the DOM is fully loaded */
+$(document).ready(function() {
+
+  $('.codeBlock').before('<button type="button" class="sg-btn" arial-label="Show code" title="Show code"><span>Show code</span></button>');
+
+  $('.codeExample button.sg-btn').click(function (event) {
+
+    $(this).next().slideToggle('fast');
+
+  });
+
+}); // /ready
+
+})(jQuery);
+
+</script>
+
+
+
+</body>
+</html>

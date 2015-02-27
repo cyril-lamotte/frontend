@@ -1,4 +1,24 @@
 
+# Spécificités
+
+
+Spécificités                  | Description
+------------------------------|-------------------------------------------------------------
+Périmètre de test navigateurs | Navigateurs modernes, IE8+
+Accessibilité                 | Oui RGAA
+Responsive Design             | Non
+Framework                     | [Bootstrap 3.2](http://getbootstrap.com/css/)
+
+
+
+# Développement
+
+Spécificités                  | Description
+------------------------------|-------------------------------------------------------------
+Dépôt SVN                     | https://serv-sources.jouve-hdi.com/jouve/maquettes_studio/jouve/2015/cnfpt/trunk
+
+
+
 Fichier ou dossier     | Description
 -----------------------|------------
 style.scss             | Génère la css principale `style.css`, importe toutes les bibliothèque (ex: Compass)

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]><html lang="fr" class="ie7 lte-ie8"><![endif]-->
+<!--[if IE 8]><html lang="fr" class="ie8 lte-ie8"><![endif]-->
+<!--[if IE 9]><html lang="fr" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="fr"><!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+
+  <title>Styleguide Couleurs</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/print.css" media="print" />
+
+  <!--Styleguide CSS-->
+  <link rel="stylesheet" href="styleguide.css" />
+
+  <!-- Modernizr http://modernizr.com/docs/#installing -->
+  <script src="../assets/js/lib/modernizr.js"></script>
+
+  <!-- Modernizr http://modernizr.com/docs/#installing -->
+  <script src="../assets/js/lib/modernizr.js"></script>
+
+</head>
+<body>
+
+<div class="sg-wrapper">
+
+  <a href="../index.html" class="sg-btn sg-btn-back">&lt;&nbsp;Index</a>
+
+  <h1 class="sg-title">Style<b>guide</b></h1>
+
+    <nav class="sg-nav">
+      <ul>
+      
+        <li><a href="boutons.html">Boutons</a></li>
+      
+        <li><a href="styles.html">Styles</a></li>
+      
+        <li><a href="blocs.html">Blocs</a></li>
+      
+        <li><a href="couleurs.html">Couleurs</a></li>
+      
+        <li><a href="fonts.html">Fonts</a></li>
+      
+        <li><a href="formulaires.html">Formulaires</a></li>
+      
+        <li><a href="navigation.html">Navigation</a></li>
+      
+      </ul>
+    </nav>
+
+    <h2 class="sg-title">Couleurs</h2>
+
+    <section class="sg-content">
+      <nav class="sg-nav-2">
+        <ul>
+        
+          <li><a href="#colors">Couleurs</a></li>
+        
+          <li><a href="#gris">Gris</a></li>
+        
+        </ul>
+      </nav>
+<h1 id="colors" class="styleguide">Couleurs</h1>
+
+<div class="sg-color-wrapper">
+  <span class="sg-color" style="background: #f00
+;"></span>
+  <span class="sg-color-code">#f00
+</span>
+  <span class="sg-color-name"></span>
+</div>
+
+<h1 id="gris" class="styleguide">Gris</h1>
+
+<div class="sg-color-wrapper">
+  <span class="sg-color" style="background: #333
+;"></span>
+  <span class="sg-color-code">#333
+</span>
+  <span class="sg-color-name"></span>
+</div>
+  </section>
+
+</div><!--/sg-wrapper-->
+
+<!-- Scripts at the bottom for better performances -->
+<script src="../assets/js/lib/jquery.min.js"></script>
+<script src="../assets/js/functions.js"></script>
+<script src="../assets/js/domready.js"></script>
+<script>
+
+(function ($) {
+
+/* Execute code when the DOM is fully loaded */
+$(document).ready(function() {
+
+  $('.codeBlock').before('<button type="button" class="sg-btn" arial-label="Show code" title="Show code"><span>Show code</span></button>');
+
+  $('.codeExample button.sg-btn').click(function (event) {
+
+    $(this).next().slideToggle('fast');
+
+  });
+
+}); // /ready
+
+})(jQuery);
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+  </section>
+
+</div><!--/sg-wrapper-->
+
+<!-- Scripts at the bottom for better performances -->
+<script src="../assets/js/lib/jquery.min.js"></script>
+<script src="../assets/js/functions.js"></script>
+<script src="../assets/js/domready.js"></script>
+<script>
+
+(function ($) {
+
+/* Execute code when the DOM is fully loaded */
+$(document).ready(function() {
+
+  $('.codeBlock').before('<button type="button" class="sg-btn" arial-label="Show code" title="Show code"><span>Show code</span></button>');
+
+  $('.codeExample button.sg-btn').click(function (event) {
+
+    $(this).next().slideToggle('fast');
+
+  });
+
+}); // /ready
+
+})(jQuery);
+
+</script>
+
+
+
+</body>
+</html>

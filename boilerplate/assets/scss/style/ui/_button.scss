@@ -2,6 +2,17 @@
    Button
 ============================================================================= */
 
+/*doc
+---
+title: Par defaut
+name: 1-btn-default
+category: Boutons
+---
+```html_example
+<a href="#" class="btn">Large button</a>
+```
+*/
+
 .btn {
   @include reset-box-model;
   position: relative;
@@ -14,6 +25,19 @@
   }
 }
 
+
+
+/*doc
+---
+title: Style 2
+name: 2-btn-style-2
+category: Boutons
+---
+```html_example
+<a href="#" class="btn-style-2">Button</a>
+```
+*/
+
 .btn-style-2 {
 }
 
@@ -25,9 +49,33 @@
    Helpers
 ----------------------------------------------------------------------------- */
 
+/*doc
+---
+title: Pleine largeur
+name: 3-btn-wide
+category: Boutons
+---
+```html_example
+<a href="#" class="btn btn-wide">Button</a>
+```
+*/
+
 .btn-wide {
   width: 100%;
 }
+
+
+
+/*doc
+---
+title: Large
+name: 4-btn-large
+category: Boutons
+---
+```html_example
+<a href="#" class="btn btn-large">Button</a>
+```
+*/
 
 .btn-large {
   width: 80%;
@@ -36,14 +84,46 @@
   margin-right: auto;
 }
 
+
+
+/*doc
+---
+title: Big
+name: 5-btn-big
+category: Boutons
+---
+```html_example
+<a href="#" class="btn btn-big">Button</a>
+```
+*/
+
 .btn-bigger {
   padding: 15px 20px;
 }
+
+
+
+/*doc
+---
+title: Small
+name: 6-btn-small
+category: Boutons
+---
+```html_example
+<a href="#" class="btn btn-small">Button</a>
+```
+*/
 
 .btn-small {
   padding: 2px 5px;
   font-size: 12px;
 }
+
+
+
+/* -----------------------------------------------------------------------------
+   Wrapper
+----------------------------------------------------------------------------- */
 
 .btn-wrapper {
   position: relative;
