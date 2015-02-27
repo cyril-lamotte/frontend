@@ -9,7 +9,10 @@ $susy: (
   columns: 12,
   global-box-sizing: border-box,
   gutters: 1,
-  last-flow: to
+  last-flow: to,
+  use-custom: (
+    box-sizing: false
+  )
 );
 
 //$susy-second-map: (
