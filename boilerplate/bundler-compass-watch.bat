@@ -8,6 +8,6 @@ echo.
 :: Lancement de sass/compass
 echo %cd%
 
-compass watch .
+bundler exec compass watch .
 
 pause
