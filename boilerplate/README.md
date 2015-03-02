@@ -5,7 +5,7 @@
 ## Périmètre
 
 Volume            :
-Tests navigateurs :         (Infos : https://github.com/cyril-lamotte/frontend/wiki/Support-navigateurs)
+Tests navigateurs :
 Accessibilité     :
 Responsive Design :
 
