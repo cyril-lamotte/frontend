@@ -1,8 +1,8 @@
 @echo off
 
 echo.
-echo  SASS/Compass : Watch
-echo  ====================
+echo  Compass watch task via bundler
+echo  ==============================
 echo.
 
 :: Lancement de sass/compass

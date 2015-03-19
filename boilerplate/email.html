@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<meta name="format-detection" content="telephone=no">
-	<base href="assets-email/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="format-detection" content="telephone=no">
+  <base href="assets-email/">
 
-	<title>Emailling</title>
+  <title>Emailling</title>
 
-	<style type="text/css">
-		/* /\/\/\/\/\/\/\/\/ RESET STYLES /\/\/\/\/\/\/\/\/ */
-		body { margin: 0; padding: 0; }
-		img { border: 0 none; height: auto; line-height: 100%; outline: none; text-decoration: none; }
-		a img { border: 0 none; }
-		.imageFix { display: block; }
-		table, td { border-collapse: collapse; border-spacing: 0; }
-		#bodyTable { height: 100% !important; margin: 0; padding: 0; width: 100% !important; }
-		/* Email Client Specific Overrides */
-		.ExternalClass { width: 100%; }
-		.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div { line-height: 100%; }
-		#outlook a { padding: 0; }
-		table { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
-		img { -ms-interpolation-mode: bicubic; }
-		body { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-		/* Media Query Fix for iOS */
-		@media only screen and (min-device-width:541px), screen and (min-width:541px) {
-			.content { width: 540px !important; }
-		}
-		@media only screen and (max-width:700px) {
-			table[width="700"] { width: auto !important; }
-			.responsive-image { width: 100%; }
-		}
-	</style>
+  <style type="text/css">
+    /* /\/\/\/\/\/\/\/\/ RESET STYLES /\/\/\/\/\/\/\/\/ */
+    body { margin: 0; padding: 0; }
+    img { border: 0 none; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+    a img { border: 0 none; }
+    .imageFix { display: block; }
+    table, td { border-collapse: collapse; border-spacing: 0; }
+    #bodyTable { height: 100% !important; margin: 0; padding: 0; width: 100% !important; }
+    /* Email Client Specific Overrides */
+    .ExternalClass { width: 100%; }
+    .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div { line-height: 100%; }
+    #outlook a { padding: 0; }
+    table { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { -ms-interpolation-mode: bicubic; }
+    body { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    /* Media Query Fix for iOS */
+    @media only screen and (min-device-width:541px), screen and (min-width:541px) {
+      .content { width: 540px !important; }
+    }
+    @media only screen and (max-width:700px) {
+      table[width="700"] { width: auto !important; }
+      .responsive-image { width: 100%; }
+    }
+  </style>
 
 </head>
 
@@ -41,34 +41,40 @@
 
 <!--Tableau global :: Couleur de fond-->
 <table border="0" cellpadding="0" cellspacing="0" width="100%" id="bodyTable" bgcolor="#eeeeee">
-	<tr>
-		<td align="center" valign="top" class="bodyCell">
+  <tr>
+    <td align="center" valign="top" class="bodyCell">
 
-			<!--Message-->
-			<p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 15px; font-weight: normal; color: #848484; text-align: center; margin: 10px 0;">
-				Si ce message ne s’affiche pas correctement, <a href="#" style="color: #848484;"><span style="color: #848484;">cliquez ici</span></a></p>
-
-
-			<!--Tableau de base-->
-			<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
-				<tr>
-					<td align="left" valign="top">
-
-					</td>
-				</tr>
-			</table>
+      <!--Message-->
+      <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 15px; font-weight: normal; color: #848484; text-align: center; margin: 10px 0;">
+        Si ce message ne s’affiche pas correctement, <a href="#" style="color: #848484;"><span style="color: #848484;">cliquez ici</span></a></p>
 
 
-			<!--Image-->
-			<img src="img/image.jpg" width="536" height="100" alt="" style="display: block;" />
+      <!--Tableau de base-->
+      <!--table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td align="left" valign="top">
 
-			<!--Lien
-			Indiquer 2 fois la couleur dans un span supplémentaire
-			-->
-			<a href="#" style="color: #ff000"><span style="color: #ff000">Texte du lien</span></a>
+          </td>
+        </tr>
+      </table-->
 
-		</td>
-	</tr>
+
+      <!--Image-->
+      <!--img src="img/image.jpg" width="536" height="100" alt="" style="display: block;" /-->
+
+      <!--Lien - Indiquer 2 fois la couleur dans un span supplémentaire -->
+      <!--a href="#" style="color: #ff000"><span style="color: #ff000">Texte du lien</span></a-->
+
+
+      <!--Unsubscribe-->
+      <p style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: normal; color: #666666; line-height: 15px; text-align: center; margin: 10px 0;">
+        Pour vous d&eacute;sinscrire,
+        <a href="#" style="text-decoration: underline; color: #666666; font-size: 13px;"><span style="color: #666666;">cliquez ici</span></a>.
+      </p>
+
+
+    </td>
+  </tr>
 </table>
 </span>
 
