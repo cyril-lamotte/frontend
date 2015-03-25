@@ -2,7 +2,27 @@
    Custom select
 ============================================================================= */
 
-$select-height: 52px;
+/*doc
+---
+title: Select
+name: form-select
+category: Formulaires
+---
+```html_example
+<select class="custom">
+  <option>Option 1</option>
+  <option>Option 2</option>
+  <option>Option 3</option>
+</select>
+```
+*/
+
+/* -----------------------------------------------------------------------------
+   Core
+----------------------------------------------------------------------------- */
+
+$select-height: 41px;
+$select-arrow-width: 48px;
 
 .custom-select-container {
   position: relative;
@@ -20,7 +40,6 @@ select.replaced {
   filter: alpha(opacity=0); /* Move to IE-specific CSS file if you want to. */
   opacity: 0;
   padding: 0;
-  border: 1px solid #fff;
 }
 
 span.custom-select {
@@ -34,34 +53,74 @@ span.custom-select {
   cursor: default;
 }
 
+.custom-select {
 
-.custom-select > span {
-  display:block;
-  padding: 0 48px 0 0;
-  border-bottom: 2px solid $grey-light-1;
-  border-radius: 3px;
-  background: $brand;
-  @include transition(all 300ms);
-  line-height: $select-height;
-  color: #323a45;
-  font-size: em(16px);
-  overflow: hidden;
+  > .custom-select-content {
+    display: block;
+    overflow: hidden;
+
+    > span {
+      display: block;
+      height: $select-height;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
 }
 
-.custom-select span span {
-  display: block;
-  height: $select-height;
-  overflow:hidden;
-  text-overflow:ellipsis;
-  white-space:nowrap;
-  background: #fff;
-  padding-left: 10px;
-}
 
-.custom-select.active span span {
-  background: #fafafa;
-}
+/* -----------------------------------------------------------------------------
+   Theme
+----------------------------------------------------------------------------- */
 
-.custom-select.active > span {
-  background-color: $brand-highlight;
+.custom-select {
+
+  > .custom-select-arrow {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: -1px;
+    width: $select-arrow-width;
+    background: $brand;
+    text-align: center;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: calc(50% - 8px);
+      top: calc(50% - 4px);
+      border: solid transparent;
+      height: 0;
+      width: 0;
+      border-top-color: #fff;
+      border-width: 8px;
+    }
+
+  }
+
+  &.active > .custom-select-arrow {
+    background-color: $brand-highlight;
+  }
+
+
+  > .custom-select-content {
+    padding: 0 $select-arrow-width+5 0 0;
+    border: 1px solid #ebe2da;
+    border-radius: 3px;
+    line-height: $select-height;
+    font-size: em(14px);
+    background: #fff;
+    @include transition(all 300ms);
+
+    > span {
+      padding-left: 10px;
+    }
+  }
+
+  &.active > .custom-select-content {
+    background: #eee;
+  }
+
 }
