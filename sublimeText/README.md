@@ -40,23 +40,6 @@ Faire un clic droit dans la barre latérale, Project / Edit Preview URLs
 Source : http://stackoverflow.com/questions/15769156/increase-number-of-recent-projects-in-sublime-text-2
 
 
-## Exclure un dossier ou des fichiers du projet
-
-Menu project/Edit project
-
-```js
-{
-	"folders":
-	[
-		{
-			"path": "path-to-project-folder",
-			"folder_exclude_patterns": [".svn", ".git", ".sass-cache", "node_modules"],
-			"file_exclude_patterns": ["*.bat", "*.css.map"],
-		}
-	]
-}
-```
-
 
 
 ## Raccourcis Emmet
