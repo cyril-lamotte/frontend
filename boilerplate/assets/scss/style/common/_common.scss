@@ -3,21 +3,11 @@
 ============================================================================= */
 
 /* -----------------------------------------------------------------------------
-   Fonts
------------------------------------------------------------------------------ */
-
-//@include font-face("Open Sans", font-files("OpenSans/opensans-regular-webfont.woff2", "OpenSans/opensans-regular-webfont.woff", "OpenSans/opensans-regular-webfont.ttf"), "OpenSans/opensans-regular-webfont.eot", normal, normal);
-//@include font-face("Open Sans", font-files("OpenSans/opensans-bold-webfont.woff2", "OpenSans/opensans-bold-webfont.woff", "OpenSans/opensans-bold-webfont.ttf"), "OpenSans/opensans-bold-webfont.eot", bold, normal);
-//@include font-face("Open Sans", font-files("OpenSans/opensans-semibold-webfont.woff2", "OpenSans/opensans-semibold-webfont.woff", "OpenSans/opensans-semibold-webfont.ttf"), "OpenSans/opensans-semibold-webfont.eot", 600, normal);
-
-
-
-/* -----------------------------------------------------------------------------
    Body
 ----------------------------------------------------------------------------- */
 
 body {
-  font: #{em(12px, 16px)}/$base-line-height $font;
+  font: #{em($base-font-size, 16px)}/$base-line-height $font;
   color: $base-color;
   background: #fff;
   margin: 0;

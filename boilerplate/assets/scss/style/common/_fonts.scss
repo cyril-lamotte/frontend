@@ -1,0 +1,55 @@
+// =============================================================================
+// Fonts
+// =============================================================================
+
+/* -----------------------------------------------------------------------------
+   @Font-face
+----------------------------------------------------------------------------- */
+
+@include font-face("Open Sans", font-files("OpenSans/opensans-regular-webfont.woff2", "OpenSans/opensans-regular-webfont.woff", "OpenSans/opensans-regular-webfont.ttf"), "OpenSans/opensans-regular-webfont.eot", normal, normal);
+@include font-face("Open Sans", font-files("OpenSans/opensans-bold-webfont.woff2", "OpenSans/opensans-bold-webfont.woff", "OpenSans/opensans-bold-webfont.ttf"), "OpenSans/opensans-bold-webfont.eot", bold, normal);
+@include font-face("Open Sans", font-files("OpenSans/opensans-semibold-webfont.woff2", "OpenSans/opensans-semibold-webfont.woff", "OpenSans/opensans-semibold-webfont.ttf"), "OpenSans/opensans-semibold-webfont.eot", 600, normal);
+
+
+// -----------------------------------------------------------------------------
+// Fonts variables
+// -----------------------------------------------------------------------------
+
+$font: 'Lato', Arial, Helvetica, sans-serif;
+$font-alt: 'Open sans', Arial, Helvetica, sans-serif;
+$base-font-size: 12px; // If 12px then 1em = 12px
+$base-line-height: 1.5;
+
+
+
+
+
+
+
+/*doc
+---
+title: Lato
+name: font-1
+category: Fonts
+---
+```font_example
+  <span class="font-lato">font-family: 'Lato', Helvetica, sans-serif</span>
+```
+*/
+
+.font-lato { font-family: $font; }
+
+
+
+/*doc
+---
+title: Georgia
+name: font-2
+category: Fonts
+---
+```font_example
+  <span class="font-open-sans">font-family: 'Open sans', Arial, Helvetica, sans-serif</span>
+```
+*/
+
+.font-open-sans { font-family: $font-alt; }

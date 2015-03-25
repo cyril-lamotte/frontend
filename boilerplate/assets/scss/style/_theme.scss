@@ -1,93 +1,15 @@
-// -----------------------------------------------------------------------------
+// =============================================================================
 // Theme
-// -----------------------------------------------------------------------------
+// =============================================================================
 
-// -----------------------------------------------------------------------------
-// Fonts
-// -----------------------------------------------------------------------------
-
-// Fonts
-$font: Arial, Helvetica, sans-serif;
-$font-alt: Georgia, Times, "Times New Roman", serif;
-$base-font-size: 12px; // If 12px then 1em = 12px
-$base-line-height: 1.5;
-
-
-/*doc
----
-title: Arial
-name: font-1
-category: Fonts
----
-```font_example
-  <span class="font-arial">font-family: Arial, Helvetica, sans-serif;</span>
-```
-*/
-
-.font-arial { font-family: $font; }
-
-
-
-/*doc
----
-title: Georgia
-name: font-2
-category: Fonts
----
-```font_example
-  <span class="font-georgia">font-family: Georgia, Times, "Times New Roman", serif</span>
-```
-*/
-
-.font-georgia { font-family: $font-alt; }
-
-
-// -----------------------------------------------------------------------------
-//   Colors
-//------------------------------------------------------------------------------
-
-/*doc
----
-title: Couleurs
-name: colors
-category: Couleurs
----
-
-```color_example
-#f00
-```
-
-*/
-
-
-$brand: #f00; // Brand's color
-$brand-highlight: lighten($brand, 20%);
-$base-color: #333;
-
-$second-color: #00f;
-$error-color: #f00;
-
-
-/*doc
----
-title: Gris
-name: gris
-category: Couleurs
----
-
-```color_example
-#333
-```
-
-*/
-
-
+@import "style/common/fonts";
+@import "style/common/colors";
 
 
 
 // -----------------------------------------------------------------------------
 //   Breakpoints
-//------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 
 // Based on Bootstrap reference
 // http://getbootstrap.com/css/#responsive-utilities
@@ -100,10 +22,7 @@ $breakpoint-lg: 1170px; // Large devices / Large desktops
 
 // -----------------------------------------------------------------------------
 //   Compass config
-//------------------------------------------------------------------------------
-
-// Minimum browsers support
-//$browser-minimum-versions: (ie: '8');
+// -----------------------------------------------------------------------------
 
 // Sprite map config
 //$sprites-sprite-base-class: '.sp';

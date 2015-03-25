@@ -28,11 +28,12 @@ name: 1-btn-style-1
 category: Boutons
 ---
 ```html_example
-<a href="#" class="btn">Large button</a>
+<a href="#" class="btn">Button</a>
 ```
 */
 
 .btn {
+  //@extend %btn-default;
 
   @include hover {
 

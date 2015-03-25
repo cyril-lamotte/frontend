@@ -12,7 +12,7 @@ a {
   @include underlineOnHover;
 
   &:focus img {
-    outline: 2px dashed $brand;
+    outline: 1px dashed $brand;
   }
 }
 

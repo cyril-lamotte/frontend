@@ -128,6 +128,7 @@ h2.sg-title {
   position: relative;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 1.5em;
+  font-weight: normal;
   padding: 0 0 10px 0;
   margin: 20px 0 20px;
   clear: both;
@@ -142,12 +143,6 @@ h2.sg-title {
   height: 1px;
   background: #000;
 }
-
-.sg-content h2 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 1.5em;
-}
-
 
 
 /* =============================================================================
@@ -265,7 +260,7 @@ table.styleguide td:first-child {
 
 .codeExample {
   position: relative;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 .sg-btn {
@@ -304,4 +299,9 @@ table.styleguide td:first-child {
   display: none;
   overflow: hidden;
   clear: both;
+}
+
+pre {
+  margin: 0;
+  padding: 10px;
 }

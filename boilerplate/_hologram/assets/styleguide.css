@@ -176,9 +176,16 @@ h2.sg-title {
   text-align: center;
   margin-bottom: 5px;
 }
+
 .sg-color-name {
   display: block;
   text-align: center;
+}
+
+.sg-colorname {
+  display: block;
+  text-align: center;
+  width: 120px;
 }
 
 

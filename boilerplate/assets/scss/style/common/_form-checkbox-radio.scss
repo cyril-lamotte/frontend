@@ -69,7 +69,7 @@ input[type="checkbox"]:checked {
       width: $cb-box-size;
       height: $cb-box-size;
       border: 1px solid $cb-box-border;
-      background: $cb-box-bg;
+      background: $cb-box-background;
     }
 
     // Hover
@@ -203,7 +203,7 @@ input[type="radio"]:checked {
       width: $cb-box-size;
       height: $cb-box-size;
       border: 1px solid $cb-box-border;
-      background: $cb-box-bg;
+      background: $cb-box-background;
       border-radius: 50%;
     }
 
