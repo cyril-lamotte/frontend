@@ -37,7 +37,7 @@
 			 * aria-hidden is used to hide it.
 			 */
 			// Three nested spans? The only way I could get text-overflow:ellipsis to work in IE7.
-			var span = $('<span class="' + config.customSelectClass + '" aria-hidden="true"><span><span>' + $('option:selected', this).text() + '</span></span></span>');
+			var span = $('<span class="' + config.customSelectClass + '" aria-hidden="true"><span class="'+ config.customSelectClass +'-arrow"></span><span class="'+ config.customSelectClass +'-content"><span>' + $('option:selected', this).text() + '</span></span></span>');
 			select.after(span);
 			// Change class names to enable styling of hover/focus states
 			select.bind({
