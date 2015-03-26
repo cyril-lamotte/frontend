@@ -339,6 +339,7 @@ var popPanel = function(options) {
 
       o.pop
         .addClass( o.prefix +'-is-closed' )
+        .removeClass( o.prefix +'-is-opened')
         .attr('aria-hidden', 'true');
     }
     else {
@@ -347,10 +348,10 @@ var popPanel = function(options) {
         .addClass( o.prefix +'-is-active' )
         .attr('aria-expanded', true);
 
-
       // Move focus
       o.pop
         .removeClass( o.prefix +'-is-closed')
+        .addClass( o.prefix +'-is-opened')
         .position(o.position)
         .attr('aria-hidden', 'false')
         .attr('tabindex', '0')
@@ -372,6 +373,7 @@ var popPanel = function(options) {
 
       o.pop
         .addClass( o.prefix +'-is-closed' )
+        .removeClass( o.prefix +'-is-opened')
         .attr('aria-hidden', 'true');
 
     }
@@ -392,6 +394,7 @@ var popPanel = function(options) {
 
       o.pop
         .addClass( o.prefix +'-is-closed' )
+        .removeClass( o.prefix +'-is-opened')
         .attr('aria-hidden', 'true');
 
     }
@@ -418,11 +421,13 @@ var popPanel = function(options) {
 
     o.pop
       .addClass( o.prefix +'-is-closed' )
+      .removeClass( o.prefix +'-is-opened')
       .attr('aria-hidden', 'true');
 
   });
 
 };
+
 */
 
 
