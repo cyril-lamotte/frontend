@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]>    <html lang="fr" class="ie7 lte-ie8"><![endif]-->
+<!--[if IE 8]>        <html lang="fr" class="ie8 lte-ie8"><![endif]-->
+<!--[if IE 9]>        <html lang="fr" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="fr"><!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+
+  <title>Canvas</title>
+
+  <style>
+    .canvas-wrapper {
+      position: relative;
+      text-align: center;
+      width: 200px;
+    }
+
+    .canvas-wrapper span {
+      position: absolute;
+      top: 45%;
+      left: 0;
+      right: 0;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .canvas-wrapper canvas {
+      display: block;
+    }
+
+  </style>
+
+
+</head>
+
+<body>
+
+  <div class="canvas-wrapper">
+    <span>84%</span>
+    <canvas id="arc" width="200" height="200"></canvas>
+  </div>
+
+
+
+  <script>
+
+  window.requestAnimationFrame(draw);
+
+  canvasWidth = 200;
+  canvasHeight = 200;
+
+  function draw() {
+
+    var ctx = document.getElementById('arc').getContext('2d');
+    ctx.clearRect(0, 0, canvasWidth, canvasHeight); // Clear canvas
+
+    // Angle calculation
+    var percent = 84;
+    var angleDeg = 360/100*percent;
+    var angleRad = Math.PI * angleDeg / 180 - Math.PI*0.5;
+
+    // Draw arc
+    ctx.beginPath();
+    ctx.lineWidth = 20;
+    ctx.lineCap  = 'round';
+    ctx.strokeStyle = '#ff6600';
+    ctx.fillStyle = '#ff6600';
+
+    // Draw circle
+    ctx.arc(100, 100, 90, -Math.PI*0.5, angleRad);
+    ctx.stroke();
+
+    // Move registration point to the center of the canvas
+    ctx.translate(canvasWidth/2, canvasWidth/2);
+
+    // Draw rectangle
+    //ctx.save();
+    ctx.rotate(Math.PI * 1 / 180);
+    ctx.fillRect(-50, -50, 100, 100);
+    //ctx.restore();
+
+    // Move registration point back to the top left corner of canvas
+    ctx.translate(canvasWidth/2, canvasWidth/2);
+
+    //window.requestAnimationFrame(draw);
+
+  }
+
+
+  </script>
+
+</body>
+</html>
