@@ -28,18 +28,29 @@ Plugin jQuery - Afficher un élément aprés un évènement sur un autre éléme
 
 ```js
 // Display/Hide panels
-$('button').toggleWidget({
-  activePanelClass: 'nav-touch-panel-active',
-  connect: true,
-  connectRelationClass: '.header',
-  'onShow' : function() {
-    console.log('Show');
+$('button.result-trigger').toggleWidget({
+  slideMode: 'slide',
+  connect: false,
+  connectRelationClass: '.crud-results',
+  onShow: function(settings) {
+      settings.$trigger.text('-').attr('title', 'Replier');
+  },
+  onHide: function(settings) {
+      settings.$trigger.text('+').attr('title', 'Déplier');
   }
 });
-
 ```
 
-### 3. Options
+### 3. CSS
+
+```css
+.toggle-widget--is-closed {
+  display: none;
+}
+```
+
+
+### 4. Options
 
 Options              | Type   | Description                                 | Default
 ---------------------|--------|---------------------------------------------|--------
