@@ -4,3 +4,4 @@ source "https://rubygems.org"
 gem "sass", "~> 3.4" # 3.4.X
 gem "compass", "~> 1" # 1.X
 gem "susy", "~> 2" # 2.X
+gem "hologram", "~> 1" # 1.X
