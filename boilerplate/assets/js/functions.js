@@ -14,6 +14,40 @@ var warningCNIL = function() {
 */
 
 
+
+/* -----------------------------------------------------------------------------
+   Text size
+----------------------------------------------------------------------------- */
+/*
+var textTools = function(target) {
+
+  var $target = $(target);
+  var step = 2;
+  var minSize = 10;
+  var maxSize = 24;
+
+  $('button.js-text-plus').click(function (event) {
+
+    var currentSize = parseInt($target.css('fontSize'), 10);
+
+    if(currentSize < maxSize)
+    $target.css('fontSize', currentSize + step);
+
+  });
+
+  $('button.js-text-minus').click(function (event) {
+
+    var currentSize = parseInt($target.css('fontSize'), 10);
+
+    if(currentSize > minSize)
+      $target.css('fontSize', currentSize - step);
+
+  });
+
+};
+*/
+
+
 /* -----------------------------------------------------------------------------
    Polyfills
 ----------------------------------------------------------------------------- */
@@ -505,4 +539,50 @@ var faq = function(options) {
 
 
 };
+*/
+
+
+/* -----------------------------------------------------------------------------
+   Equalize
+----------------------------------------------------------------------------- */
+/*
+$.fn.equalize = function() {
+
+  var minHeight = 0;
+  var arrayLines = [];
+
+  $(this).each(function(i, el) {
+
+    var offsetTop = $(el).offset().top;
+    var offsetLabel = 'offset-'+ offsetTop;
+
+    //console.log('offset:', offsetTop);
+
+    // Create table
+    if( ! arrayLines[offsetLabel] ) {
+      arrayLines[offsetLabel] = Array();
+      arrayLines[offsetLabel].push(el);
+    }
+    else {
+      arrayLines[offsetLabel].push(el);
+      var length = arrayLines[offsetLabel].length;
+
+      //console.log(arrayLines[offsetLabel]);
+      //console.log(arrayLines[offsetLabel][0].offsetHeight, this.offsetHeight);
+      minHeight = Math.max(arrayLines[offsetLabel][0].offsetHeight, this.offsetHeight);
+
+      //console.log(minHeight);
+
+      // Apply minHeight
+      $.each(arrayLines[offsetLabel], function(i, el) {
+        $(el).css("minHeight", minHeight+1);
+      });
+    }
+
+  });
+
+  return $(this);
+
+};
+
 */

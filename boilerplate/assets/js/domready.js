@@ -10,6 +10,12 @@ $(document).ready(function() {
 
   //managePolyfills();
 
+  // Text resizing
+  //textTools('main');
+
+  // Equalize columns
+  //$('div.article-item').equalize();
+
 /*
   // Sliding Panel
   slidingPanel({
