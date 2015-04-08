@@ -1,23 +1,15 @@
 <?php
 
-/* -----------------------------------------------------------------------------
-   Head
------------------------------------------------------------------------------ */
-
-function drupaldemo_html_head_alter(&$head_elements) {
-
-  // HTML5 Metatags syntax
-  $head_elements['system_meta_content_type']['#attributes'] = array(
-    'charset' => 'utf-8'
-  );
-
-  // Remove meta tag "generator"
-  unset($head_elements['system_meta_generator']);
-
-}
+/**
+ * Include common functions used through out theme.
+ */
+include_once dirname(__FILE__) . '/theme/common.inc';
 
 
-function drupaldemo_preprocess_html(&$vars) {
+
+
+
+function mytheme_preprocess_html(&$vars) {
 
   // Add viewport metatag
   $viewport = array(
@@ -49,28 +41,10 @@ function drupaldemo_preprocess_html(&$vars) {
 }
 
 
-function drupaldemo_css_alter(&$css) {
-
-  // Remove Drupal's default css
-  //if (isset($css['modules/node/node.css'])) {
-    //unset($css['modules/node/node.css']);
-  //}
-
-}
-
-
-
-/* -----------------------------------------------------------------------------
-   HTML tags
------------------------------------------------------------------------------ */
-
-function drupaldemo_process_html_tag(&$vars) {
-  $el = &$vars['element'];
-
-  // HTML5 : Removes "type" attributes
-  unset($el['#attributes']['type'], $el['#value_prefix'], $el['#value_suffix']);
-
-}
-
-
-
+/**
+ * Declare various hook_*_alter() hooks.
+ *
+ * hook_*_alter() implementations must live (via include) inside this file so
+ * they are properly detected when drupal_alter() is invoked.
+ */
+mytheme_include('mytheme', 'theme/alter.inc');
