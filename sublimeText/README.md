@@ -16,6 +16,8 @@ _Emmet_                                                     | Écriture raccourc
 [CSS Format](https://sublime.wbond.net/packages/CSS%20Format) | Formater le code CSS
 [Modific](https://sublime.wbond.net/packages/Modific)       | Répérer les modification par rapport au dépot SVN/Git
 SASS                                                        | Coloration syntaxique
+SublimeLinter-jshint                                        | Nécessite npm jshint
+SublimeLinter-csslint                                       | Nécessite npm csslint
 
 
 
