@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]>    <html lang="fr" class="ie7 lte-ie8"><![endif]-->
+<!--[if IE 8]>        <html lang="fr" class="ie8 lte-ie8"><![endif]-->
+<!--[if IE 9]>        <html lang="fr" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="fr"><!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+
+  <title>Picturefill</title>
+
+  <!-- Modernizr http://modernizr.com/docs/#installing -->
+  <script src="modernizr.js"></script>
+
+</head>
+
+<body>
+
+  <h1>Picturefill test</h1>
+
+  <a href="http://scottjehl.github.io/picturefill/">http://scottjehl.github.io/picturefill/</a>
+  <br>
+
+  <p>Balise img&nbsp;:</p>
+  <img src="300.jpg" alt="Un chat">
+
+
+  <p>Balise picture&nbsp;:</p>
+  <picture>
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source srcset="1000.jpg" media="(min-width: 1000px)">
+    <source srcset="800.jpg" media="(min-width: 800px)">
+    <source srcset="470.jpg" media="(min-width: 480px)">
+    <!--[if IE 9]></video><![endif]-->
+
+    <!--[if lt IE 9]>
+      <img src="300.jpg" alt="Un chat pour IE8">
+    <![endif]-->
+
+    <!--[if !lt IE 9]><!-->
+      <img srcset="300.jpg" alt="Un chat">
+    <!--[endif]-->
+  </picture>
+
+  <script src="picturefill.min.js" async></script>
+
+</body>
+</html>

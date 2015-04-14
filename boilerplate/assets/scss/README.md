@@ -15,7 +15,7 @@ Framework                     | [Bootstrap 3.2](http://getbootstrap.com/css/)
 
 Spécificités                  | Description
 ------------------------------|-------------------------------------------------------------
-Dépôt SVN                     | https://serv-sources.jouve-hdi.com/jouve/maquettes_studio/jouve/2015/cnfpt/trunk
+Dépôt SVN                     | https://serv-sources.jouve-hdi.com/jouve/maquettes_studio/jouve/2015/FCD/trunk
 
 
 

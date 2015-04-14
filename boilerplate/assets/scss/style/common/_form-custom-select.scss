@@ -2,6 +2,8 @@
    Custom select
 ============================================================================= */
 
+// Usage : https://github.com/cyril-lamotte/frontend/wiki/Custom-select
+
 /*doc
 ---
 title: Select
@@ -9,11 +11,21 @@ name: form-select
 category: Formulaires
 ---
 ```html_example
-<select class="custom">
-  <option>Option 1</option>
-  <option>Option 2</option>
-  <option>Option 3</option>
-</select>
+<div class="form-row">
+  <select class="custom">
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option>Option 3</option>
+  </select>
+</div>
+
+<div class="form-row">
+  <select class="custom" disabled>
+    <option>Disabled</option>
+    <option>Option 2</option>
+    <option>Option 3</option>
+  </select>
+</div>
 ```
 */
 
@@ -87,6 +99,7 @@ span.custom-select {
     text-align: center;
 
     &:after {
+      // CSS Triangle
       content: '';
       position: absolute;
       left: calc(50% - 8px);
