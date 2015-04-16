@@ -44,7 +44,7 @@ Faire un clic droit dans la barre latérale, Project / Edit Preview URLs
 1. Aller dans `Packages/Default/Main.sublime-menu`
 2. Vers la ligne 715, ajouter des lignes  `{ "command": "open_recent_project", "args": {"index": 10 } }`
 
-Source : http://stackoverflow.com/questions/15769156/increase-number-of-recent-projects-in-sublime-text-2
+Source : http://stackoverflow.com/questions/20540492/how-to-increase-number-of-recent-files-in-sublime-text-3
 
 
 
