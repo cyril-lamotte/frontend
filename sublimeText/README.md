@@ -14,7 +14,6 @@ _SideBar Enhancement_                                       | Ajout de fonctionn
 _Emmet_                                                     | Écriture raccourcie ([Documentation](http://docs.emmet.io/), [Cheat-sheet](http://docs.emmet.io/cheat-sheet/))
 [Livestyle](http://livestyle.emmet.io/) | Styler en direct dans le navigateur
 [CSS Format](https://sublime.wbond.net/packages/CSS%20Format) | Formater le code CSS
-[Modific](https://sublime.wbond.net/packages/Modific)       | Répérer les modification par rapport au dépot SVN/Git
 SCSS                                                        | Coloration syntaxique
 SublimeLinter-jshint                                        | Nécessite npm jshint
 SublimeLinter-csslint                                       | Nécessite npm csslint
