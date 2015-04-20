@@ -17,6 +17,7 @@ _Emmet_                                                     | Écriture raccourc
 SCSS                                                        | Coloration syntaxique
 SublimeLinter-jshint                                        | Nécessite npm jshint
 SublimeLinter-csslint                                       | Nécessite npm csslint
+SublimeLinter-html-tidy                                     | Nécessite tidy.exe http://tidybatchfiles.info/  (+ dans le PATH Windows)
 
 
 
