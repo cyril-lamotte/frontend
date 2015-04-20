@@ -1,0 +1,78 @@
+/* =============================================================================
+   Lists
+============================================================================= */
+
+
+// Cancel list's default styles
+@mixin reset-list {
+  list-style: none;
+  @include reset-box-model;
+}
+
+
+
+
+// -----------------------------------------------------------------------------
+// Default list
+// -----------------------------------------------------------------------------
+
+@mixin list {
+  margin: 1em 0;
+  padding: 0;
+  list-style: none;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+}
+
+
+/* -----------------------------------------------------------------------------
+   Lists
+----------------------------------------------------------------------------- */
+
+/*doc
+---
+title: Liste - flèches
+name: style-list-1
+category: Textes
+---
+```html_example
+<ul class="list-arrows">
+  <li>Lorem ipsum</li>
+  <li>Lorem ipsum</li>
+  <li>Lorem ipsum</li>
+</ul>
+```
+*/
+
+.list-arrows {
+  @include list;
+  /*clear: both;
+  font-size: em(14px);
+  line-height: 1.3;
+
+  li {
+    position: relative;
+    padding-left: 12px;
+    color: #000;
+
+    &:before {
+      content: '>';
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }*/
+}
+
+
+
+
+
+

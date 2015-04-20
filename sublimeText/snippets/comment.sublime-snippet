@@ -4,6 +4,6 @@
    $0
 ----------------------------------------------------------------------------- */]]></content>
     <tabTrigger>comment</tabTrigger>
-    <scope>source.css, source.sass, source.js</scope>
+    <scope>source.css, source.scss, source.js</scope>
     <description>Commentaires (-)</description>
 </snippet>

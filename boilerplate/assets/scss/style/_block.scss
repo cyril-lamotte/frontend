@@ -4,17 +4,22 @@
 
 /*doc
 ---
-title: Bloc fond grisé
-name: bloc-grey
+title: Bloc blanc
+name: block-default
 category: Blocs
 ---
 ```html_example
-<div class="block-style-1">
+<div class="block-default">
   Lorem ipsum
-</div><!--/block-style-1-->
+</div><!--/block-default-->
 ```
 */
 
-.block-style-1 {
+%block-default {
+	margin: 0;
+}
 
+
+.block-default {
+	@extend %block-default;
 }

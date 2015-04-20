@@ -1,54 +1,60 @@
 @charset "UTF-8";
 
-// Load compass's mixins
+// Load compass's mixins & sass plugins
 @import "compass/utilities";
 @import "compass/css3";
 @import "susy"; // Grid system
 
 
 // Theme
-@import "style/theme";
+@import "theme/theme";
+
 
 // Helpers
-@import "helpers/layout";
+@import "helpers/responsive-design";
 @import "helpers/grid";
-@import "helpers/styles";
-@import "helpers/form-helpers";
+@import "helpers/form";
 @import "helpers/image";
+@import "helpers/alignments";
+//@import "helpers/flexbox";
+//@import "helpers/ie"; // If IE7
 
-// Common
-@import "style/common/common";
-@import "style/common/form";
-@import "style/common/form-checkbox-radio";
-@import "style/common/form-custom-select.scss";
-@import "style/common/layout";
-@import "style/common/header";
-@import "style/common/footer";
+
+// Base styles
+@import "style/layout";
+@import "style/form/form";
+@import "style/texts";
+@import "style/links";
+@import "style/block";
+@import "style/lists";
+@import "style/button";
+@import "style/tables";
 
 
 // UI components
-@import "style/ui/block";
-@import "style/ui/button";
-@import "style/ui/links";
-@import "style/ui/nav";
-//@import "style/ui/skip-links";
-//@import "style/ui/media";
-//@import "style/ui/breadcrumb";
-//@import "style/ui/pagination";
-//@import "style/ui/colorbox";
-//@import "style/ui/drupal/webform";
-//@import "style/ui/drupal/admin-tabs";
-//@import "style/ui/drupal/drupal-overrides";
-//@import "style/ui/drupal/theming";
+@import "style/components/nav";
+//@import "style/components/media";
+//@import "style/breadcrumb";
+//@import "style/skip-links";
+//@import "style/pagination";
+
+// Plugins
+//@import "style/plugins/colorbox";
+//@import "style/plugins/pop-panel";
+//@import "style/plugins/flexslider";
+
+// Drupal
+//@import "style/drupal/webform";
+//@import "style/drupal/tabs";
+//@import "style/drupal/theming";
+
 
 // Pages / modules
-@import "style/modules/home";
-@import "style/modules/article";
-//@import "style/modules/cnil-cookies";
-//@import "style/modules/search";
-//@import "style/modules/search-results";
-//@import "style/modules/sitemap";
-
-// Sprites
-//@import "sprites/*.png";
-//@include all-sprites-sprites;
+@import "modules/header";
+@import "modules/footer";
+@import "modules/home";
+@import "modules/article";
+//@import "modules/cnil-cookies";
+//@import "modules/search";
+//@import "modules/search-results";
+//@import "modules/sitemap";

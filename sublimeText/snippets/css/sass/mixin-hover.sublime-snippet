@@ -4,6 +4,6 @@
 }
 ]]></content>
     <tabTrigger>hover</tabTrigger>
-		<scope>source.sass</scope>
+		<scope>source.scss</scope>
     <description>Mixin hover</description>
 </snippet>

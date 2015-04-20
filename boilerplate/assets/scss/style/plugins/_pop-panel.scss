@@ -1,0 +1,17 @@
+/* =============================================================================
+   Pop panel
+============================================================================= */
+
+.pop-panel {
+  position: absolute;
+  display: none;
+  z-index: 9;
+}
+
+.pop-panel--is-closed {
+  display: none;
+}
+
+.pop-panel--is-opened {
+	display: block;
+}

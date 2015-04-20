@@ -1,0 +1,137 @@
+// =============================================================================
+// Colors
+// =============================================================================
+
+/*doc
+---
+title: Couleurs
+name: 1-colors
+category: Couleurs
+---
+
+
+```color_example
+#0066ff
+```
+```colorname_example
+$brand
+```
+
+
+```color_example
+#0088ff
+```
+```colorname_example
+$brand-highlight
+```
+
+*/
+
+$brand: #0066ff; // Brand's color
+$brand-highlight: lighten($brand, 20%);
+
+//$blue: #0000ff;
+//$blue-dark: lighten($blue, 20%);
+//$blue-light: darken($blue, 20%);
+//$green: #00ff00;
+//$orange: #ff6600;
+
+
+
+
+
+
+
+
+
+/*doc
+---
+title: Texte courant
+name: 1b-colors
+category: Couleurs
+---
+
+```color_example
+#333
+```
+```colorname_example
+$base-color
+```
+
+*/
+
+$base-color: #333;
+
+
+
+
+
+
+
+
+
+/*doc
+---
+title: Gris
+name: 2-colors-greys
+category: Couleurs
+---
+
+```color_example
+#eee
+```
+```colorname_example
+$grey-1
+```
+
+
+```color_example
+#aaa
+```
+```colorname_example
+$grey-1
+```
+
+```color_example
+#555
+```
+```colorname_example
+$grey-3
+```
+
+*/
+
+$grey-1: #ccc;
+$grey-2: #aaa;
+$grey-3: #aaa;
+$grey-4: #eee;
+
+
+
+
+
+
+
+
+
+
+
+
+/*doc
+---
+title: Erreur
+name: 3-colors-error
+category: Couleurs
+---
+
+```color_example
+#ff4444
+```
+```colorname_example
+$error-color
+```
+
+*/
+
+$error-color: #ff4444;
+

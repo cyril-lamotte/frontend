@@ -1,0 +1,69 @@
+/* =============================================================================
+   Responsive Design
+============================================================================= */
+
+// -----------------------------------------------------------------------------
+// Media Queries
+// -----------------------------------------------------------------------------
+
+// Until
+@mixin mq-until($width) {
+  @media only screen and (max-width: $width - 1) {
+    @content;
+  }
+}
+
+// At least
+@mixin mq-at-least($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}
+
+
+
+/* -----------------------------------------------------------------------------
+   Display helpers
+----------------------------------------------------------------------------- */
+
+.is-hidden { display: none; }
+
+// Hidden except for screen-readers
+// Yahoo! method : https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); // IE6, IE7
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+
+
+
+/* -----------------------------------------------------------------------------
+   Visibility classes
+----------------------------------------------------------------------------- */
+
+.visible-xs { display: none !important; }
+.visible-sm { display: none !important; }
+.hidden-md { display: none !important; }
+.visible-md { display: inherit !important; }
+
+
+@media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+  .hidden-md { display: inherit !important; }
+  .visible-md { display: none !important ; }
+  .visible-tablet { display: inherit !important; }
+  .hidden-sm { display: none !important; }
+}
+
+@media (max-width: $breakpoint-sm - 1) {
+  .hidden-md { display: inherit !important; }
+  .visible-md { display: none !important; }
+  .visible-xs { display: inherit !important; }
+  .hidden-xs { display: none !important; }
+}

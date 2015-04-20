@@ -40,13 +40,15 @@
       </ul>
     </nav>
 
-    <h2 class="sg-title"><%= title %></h2>
+    <div class="sg-main">
 
-    <section class="sg-content">
-      <nav class="sg-nav-2">
-        <ul>
-        <% @blocks.each do |b| %>
-          <li><a href="#<%= b[:name] %>"><%= b[:title] %></a></li>
-        <% end %>
-        </ul>
-      </nav>
+      <h2 class="sg-title"><%= title %></h2>
+
+      <section class="sg-content">
+        <nav class="sg-nav-2">
+          <ul>
+          <% @blocks.each do |b| %>
+            <li><a href="#<%= b[:name] %>"><%= b[:title] %></a></li>
+          <% end %>
+          </ul>
+        </nav>

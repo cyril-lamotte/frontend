@@ -6,6 +6,23 @@
   clear: both;
 }
 
+.page {
+  @include pie-clearfix;
+}
+
+  .sidebar {
+    width: 280px;
+    float: left;
+    margin-left: 1em;
+
+    @include mq-until( $breakpoint-sm ) {
+      clear: both;
+      float: none;
+      width: auto;
+      margin: 0;
+    }
+  }
+
   main {
     clear: both;
     float: left;
@@ -14,18 +31,5 @@
     @include mq-until( $breakpoint-sm ) {
       float: none;
       width: auto;
-    }
-  }
-
-  .sidebar {
-    width: 280px;
-    float: right;
-    margin-left: 10px;
-
-    @include mq-until( $breakpoint-sm ) {
-      clear: both;
-      float: none;
-      width: auto;
-      margin: 0;
     }
   }

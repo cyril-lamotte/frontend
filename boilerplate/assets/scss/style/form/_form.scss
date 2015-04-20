@@ -1,0 +1,106 @@
+/* =============================================================================
+   Forms
+============================================================================= */
+
+@import "style/form/form-reset";
+
+
+/* -----------------------------------------------------------------------------
+   Theme
+----------------------------------------------------------------------------- */
+
+$form-border: 1px solid $grey-1;
+$form-border-radius: 3px;
+$form-bg: #fff;
+$form-color: $grey-1;
+$form-field-padding: 5px 10px;
+
+
+// Disabled
+$form-disabled-bg: $grey-4;
+$form-disabled-color: $grey-3;
+
+
+// Vars for cb/radio
+// Label
+$cb-label-padding-left: 20px;
+
+// Box
+$cb-box-bg: $form-bg;
+$cb-box-bg-hover: darken($form-bg, 10%);
+$cb-box-border: $form-border;
+$cb-box-size: 16px;
+
+// Check
+$cb-check-bg: $form-color;
+$cb-check-bg-hover: darken($form-color, 10%);
+$cb-check-color: $form-color;
+$cb-check-size: 12px;
+
+// Disabled
+$cb-label-disabled: $form-disabled-color;
+$cb-box-bg-disabled: $form-disabled-bg;
+$cb-check-bg-disabled: $form-disabled-bg;
+$cb-check-color-disabled: $form-disabled-color;
+
+
+
+
+/* -----------------------------------------------------------------------------
+   Formats
+----------------------------------------------------------------------------- */
+
+%format-full { width: 100%; }
+
+.format-x { width: 30px !important; }
+.format-xx { width: 40px !important; }
+.format-xxxx { width: 60px !important; }
+.format-date { width: 80px !important; }
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+   Layout
+----------------------------------------------------------------------------- */
+
+.form-row {
+  clear: left;
+  margin-bottom: 1em;
+}
+
+.form-actions {
+  clear: both;
+}
+
+
+
+/* -----------------------------------------------------------------------------
+   Labels
+----------------------------------------------------------------------------- */
+
+label {
+  @include label-block;
+  // @include label-start;
+  // @include label-inline;
+
+
+  input[type="checkbox"] + &,
+  input[type="radio"] + & {
+    @include label-inline;
+  }
+}
+
+
+
+/* -----------------------------------------------------------------------------
+   Components
+----------------------------------------------------------------------------- */
+
+@import "style/form/form-text";
+@import "style/form/form-checkbox";
+@import "style/form/form-radio";
+@import "style/form/form-select";
+
+

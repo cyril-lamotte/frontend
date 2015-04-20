@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[@include reset-box-model;]]></content>
     <tabTrigger>reset-box-model</tabTrigger>
-		<scope>source.sass</scope>
+		<scope>source.scss</scope>
     <description>Mixin reset-box-model</description>
 </snippet>

@@ -1,4 +1,6 @@
-  </section>
+  	</section>
+
+	</div><!--/sg-main-->
 
 </div><!--/sg-wrapper-->
 
@@ -13,12 +15,10 @@
 /* Execute code when the DOM is fully loaded */
 $(document).ready(function() {
 
-  $('.codeBlock').before('<button type="button" class="sg-btn" arial-label="Show code" title="Show code"><span>Show code</span></button>');
+  $('.codeBlock').before('<button type="button" class="sg-btn" arial-label="Afficher le code HTML" title="Afficher le code HTML"><span>Afficher le code HTML</span></button>');
 
   $('.codeExample button.sg-btn').click(function (event) {
-
     $(this).next().slideToggle('fast');
-
   });
 
 }); // /ready

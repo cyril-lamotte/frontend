@@ -1,0 +1,75 @@
+// =============================================================================
+// Flexbox
+// =============================================================================
+
+
+@mixin flex-col {
+
+  // Flexbox 3 versions
+  // > http://caniuse.com/#feat=flexbox
+  // > Not working on IE9 (but there is no mobile device on IE9 right ?)
+
+  // Version 1 : Firefox <= 21, Safari <= 6, Safari iOS <= 6.1, Android Browser <= 4.3
+  @include flexbox((
+    display: box,
+    box-orient: vertical
+  ), $version: 1);
+
+
+  // Version 2 : IE10
+  @include flexbox((
+    display: flexbox,
+    flex-direction: column
+  ), $version: 2);
+
+
+  // Version 3 : IE11, Chrome, FF, Safari 6.1, Safari iOS 7.1, Android Browser 4.4
+  @include flexbox((
+    display: flex,
+    flex-direction: column
+  ));
+
+}
+
+@mixin flex-order($order) {
+
+  @include flexbox((
+    box-ordinal-group: $order
+  ), $version: 1);
+
+  @include flexbox((
+    flex-order: $order
+  ), $version: 2);
+
+  @include flexbox((
+    order: $order
+  ), $version: 3);
+
+}
+
+/* -----------------------------------------------------------------------------
+   Flex helpers
+----------------------------------------------------------------------------- */
+
+// Usage :
+// <div class="flex-wrapper">
+//   <div data-flexbox-pos-xs="2"></div>
+//   <div data-flexbox-pos-xs="1"></div>
+// </div><!--/flex-wrapper-->
+
+
+@include mq-until( $breakpoint-sm ) {
+
+  .flex-wrapper {
+    @include flex-col;
+  }
+
+  @for $i from 1 through 5 {
+
+    div[data-flexbox-pos-xs="#{$i}"] {
+      @include flex-order($i);
+    }
+
+  }
+
+}

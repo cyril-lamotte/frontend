@@ -14,11 +14,11 @@
   <link rel="stylesheet" href="../assets/css/style.css" />
   <link rel="stylesheet" href="../assets/css/print.css" media="print" />
 
+  <!--Google Font Open Sans-->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700">
+
   <!--Styleguide CSS-->
   <link rel="stylesheet" href="styleguide.css" />
-
-  <!-- Modernizr http://modernizr.com/docs/#installing -->
-  <script src="../assets/js/lib/modernizr.js"></script>
 
   <!-- Modernizr http://modernizr.com/docs/#installing -->
   <script src="../assets/js/lib/modernizr.js"></script>
@@ -35,46 +35,80 @@
     <nav class="sg-nav">
       <ul>
       
-        <li><a href="boutons.html">Boutons</a></li>
+        <li><a href="alignements.html">Alignements</a></li>
+      
+        <li><a href="couleurs.html">Couleurs</a></li>
       
         <li><a href="styles.html">Styles</a></li>
       
         <li><a href="blocs.html">Blocs</a></li>
       
-        <li><a href="couleurs.html">Couleurs</a></li>
-      
-        <li><a href="fonts.html">Fonts</a></li>
+        <li><a href="boutons.html">Boutons</a></li>
       
         <li><a href="formulaires.html">Formulaires</a></li>
       
+        <li><a href="liens.html">Liens</a></li>
+      
+        <li><a href="fonts.html">Fonts</a></li>
+      
+        <li><a href="grille.html">Grille</a></li>
+      
+        <li><a href="textes.html">Textes</a></li>
+      
         <li><a href="navigation.html">Navigation</a></li>
+      
+        <li><a href="tableaux.html">Tableaux</a></li>
+      
+        <li><a href="index.html"></a></li>
       
       </ul>
     </nav>
 
-    <h2 class="sg-title">Couleurs</h2>
+    <div class="sg-main">
 
-    <section class="sg-content">
-      <nav class="sg-nav-2">
-        <ul>
-        
-          <li><a href="#colors">Couleurs</a></li>
-        
-          <li><a href="#gris">Gris</a></li>
-        
-        </ul>
-      </nav>
-<h1 id="colors" class="styleguide">Couleurs</h1>
+      <h2 class="sg-title">Couleurs</h2>
+
+      <section class="sg-content">
+        <nav class="sg-nav-2">
+          <ul>
+          
+            <li><a href="#1-colors">Couleurs</a></li>
+          
+            <li><a href="#1b-colors">Texte courant</a></li>
+          
+            <li><a href="#2-colors-greys">Gris</a></li>
+          
+            <li><a href="#3-colors-error">Erreur</a></li>
+          
+          </ul>
+        </nav>
+<h1 id="1-colors" class="styleguide">Couleurs</h1>
 
 <div class="sg-color-wrapper">
-  <span class="sg-color" style="background: #f00
+  <span class="sg-color" style="background: #0066ff
 ;"></span>
-  <span class="sg-color-code">#f00
+  <span class="sg-color-code">#0066ff
 </span>
   <span class="sg-color-name"></span>
-</div>
 
-<h1 id="gris" class="styleguide">Gris</h1>
+
+  <span class="sg-colorname">$brand
+</span>
+</div><!--/sg-color-wrapper-->
+
+<div class="sg-color-wrapper">
+  <span class="sg-color" style="background: #0088ff
+;"></span>
+  <span class="sg-color-code">#0088ff
+</span>
+  <span class="sg-color-name"></span>
+
+
+  <span class="sg-colorname">$brand-highlight
+</span>
+</div><!--/sg-color-wrapper-->
+
+<h1 id="1b-colors" class="styleguide">Texte courant</h1>
 
 <div class="sg-color-wrapper">
   <span class="sg-color" style="background: #333
@@ -82,8 +116,66 @@
   <span class="sg-color-code">#333
 </span>
   <span class="sg-color-name"></span>
-</div>
-  </section>
+
+
+  <span class="sg-colorname">$base-color
+</span>
+</div><!--/sg-color-wrapper-->
+
+<h1 id="2-colors-greys" class="styleguide">Gris</h1>
+
+<div class="sg-color-wrapper">
+  <span class="sg-color" style="background: #eee
+;"></span>
+  <span class="sg-color-code">#eee
+</span>
+  <span class="sg-color-name"></span>
+
+
+  <span class="sg-colorname">$grey-1
+</span>
+</div><!--/sg-color-wrapper-->
+
+<div class="sg-color-wrapper">
+  <span class="sg-color" style="background: #aaa
+;"></span>
+  <span class="sg-color-code">#aaa
+</span>
+  <span class="sg-color-name"></span>
+
+
+  <span class="sg-colorname">$grey-1
+</span>
+</div><!--/sg-color-wrapper-->
+
+<div class="sg-color-wrapper">
+  <span class="sg-color" style="background: #555
+;"></span>
+  <span class="sg-color-code">#555
+</span>
+  <span class="sg-color-name"></span>
+
+
+  <span class="sg-colorname">$grey-3
+</span>
+</div><!--/sg-color-wrapper-->
+
+<h1 id="3-colors-error" class="styleguide">Erreur</h1>
+
+<div class="sg-color-wrapper">
+  <span class="sg-color" style="background: #ff4444
+;"></span>
+  <span class="sg-color-code">#ff4444
+</span>
+  <span class="sg-color-name"></span>
+
+
+  <span class="sg-colorname">$error-color
+</span>
+</div><!--/sg-color-wrapper-->
+  	</section>
+
+	</div><!--/sg-main-->
 
 </div><!--/sg-wrapper-->
 
@@ -98,12 +190,10 @@
 /* Execute code when the DOM is fully loaded */
 $(document).ready(function() {
 
-  $('.codeBlock').before('<button type="button" class="sg-btn" arial-label="Show code" title="Show code"><span>Show code</span></button>');
+  $('.codeBlock').before('<button type="button" class="sg-btn" arial-label="Afficher le code HTML" title="Afficher le code HTML"><span>Afficher le code HTML</span></button>');
 
   $('.codeExample button.sg-btn').click(function (event) {
-
     $(this).next().slideToggle('fast');
-
   });
 
 }); // /ready

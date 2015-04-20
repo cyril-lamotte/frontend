@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[@include pie-clearfix;]]></content>
+    <tabTrigger>clearix</tabTrigger>
+		<scope>source.scss</scope>
+    <description>Compass cleafix</description>
+</snippet>

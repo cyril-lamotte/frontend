@@ -1,0 +1,190 @@
+/* =============================================================================
+   Links
+============================================================================= */
+
+// Links underlined on hover/focus/active states
+@mixin underlineOnHover {
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active { text-decoration: underline; }
+}
+
+
+// Links underlined
+@mixin underline {
+  text-decoration: underline;
+
+  &:hover,
+  &:focus,
+  &:active { text-decoration: none; }
+}
+
+
+// Add hover/Focus style
+@mixin hover() {
+  &:hover,
+  &:focus,
+  &:active {
+    @content;
+  }
+}
+
+// Add focus style
+@mixin focus() {
+  &:focus,
+  &:active {
+    @content;
+  }
+}
+
+
+
+/* -----------------------------------------------------------------------------
+   Default link's style
+----------------------------------------------------------------------------- */
+
+a {
+  color: $base-color;
+  @include underlineOnHover;
+
+  &:focus img {
+    outline: 1px dashed $brand;
+  }
+}
+
+
+
+/* -----------------------------------------------------------------------------
+   Cliquable area
+----------------------------------------------------------------------------- */
+
+%global-link {
+  cursor: pointer;
+}
+
+
+
+/* -----------------------------------------------------------------------------
+   External link
+----------------------------------------------------------------------------- */
+
+/*doc
+---
+title: Lien externe
+name: external
+category: Liens
+---
+```html_example
+<a href="#" class="external-link">Lorem ipsum</a>
+```
+*/
+
+a[target="_blank"],
+.external-link {
+
+  &:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    //@include sprites-sprite("external");
+  }
+
+}
+
+
+
+/* -----------------------------------------------------------------------------
+   More
+----------------------------------------------------------------------------- */
+
+/*doc
+---
+title: En savoir plus
+name: more
+category: Liens
+---
+```html_example
+<div class="more-wrapper">
+  <a href="#" class="more">Lorem ipsum</a>
+</div>
+```
+*/
+
+.more-wrapper {
+  clear: both;
+  padding: 10px 0;
+}
+
+  .more {
+    @include underline;
+    //background: image-url('arrow-e-more.png') right center no-repeat;
+    font-weight: bold;
+    padding: 2px 25px 2px 0;
+    border: none;
+  }
+
+
+
+/* -----------------------------------------------------------------------------
+   Tags
+----------------------------------------------------------------------------- */
+
+/*doc
+---
+title: Tags
+name: tags
+category: Liens
+---
+```html_example
+<div class="tags-wrapper">
+  <a href="#" class="tag tag-blue">Lorem ipsum</a>
+  <a href="#" class="tag tag-yellow">Lorem ipsum</a>
+  <a href="#" class="tag tag-green">Lorem ipsum</a>
+</div>
+```
+*/
+
+.tags-wrapper {
+}
+
+.tag {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 5px;
+  color: #010101;
+  padding: 0px 8px;
+  margin-right: 4px;
+  background: $grey-1;
+
+  @include hover {
+    text-decoration: none
+  }
+}
+
+
+.tag-blue {
+  background-color: lightblue;
+
+  @include hover {
+    background-color: lighten(lightblue, 10%);
+  }
+}
+
+.tag-yellow {
+  background-color: lightyellow;
+
+  @include hover {
+    background-color: lighten(lightyellow, 20%);
+  }
+}
+
+.tag-green {
+  background-color: lightgreen;
+
+  @include hover {
+    background-color: lighten(lightgreen, 20%);
+  }
+}

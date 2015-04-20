@@ -1,0 +1,8 @@
+// =============================================================================
+//   Box sizing
+// =============================================================================
+
+// Apply a natural box layout model to all elements (Only IE8+)
+*, *:before, *:after {
+  @include box-sizing(border-box);
+}

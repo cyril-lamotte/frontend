@@ -23,27 +23,6 @@ Compatibilité : IE9+ (affichage standard pour <= IE8)
 
 */
 
-// Label
-$cb-label-padding-left: 20px;
-$cb-label-disabled: $form-disabled-text;
-
-// Box
-$cb-box-background: #f7f7f7;
-$cb-box-background-hover: #ddd;
-$cb-box-background-disabled: $form-disabled-bg;
-$cb-box-border: $form-border-color;
-$cb-box-size: 16px;
-
-
-// Check
-$cb-check-background: #656565;
-$cb-check-background-hover: #555;
-$cb-check-background-disabled: #777;
-$cb-check-color: #656565;
-$cb-check-color-disabled: $form-disabled-text;
-$cb-check-size: 12px;
-
-
 input[type="checkbox"]:not(:checked),
 input[type="checkbox"]:checked {
 
@@ -65,8 +44,8 @@ input[type="checkbox"]:checked {
       top: 0;
       width: $cb-box-size;
       height: $cb-box-size;
-      border: 1px solid $cb-box-border;
-      background: $cb-box-background;
+      border: $cb-box-border;
+      background: $cb-box-bg;
       border-radius: $form-border-radius;
       @include box-shadow(rgba(0, 0, 0, 0.2) 0px 1px 2px);
     }
@@ -75,11 +54,11 @@ input[type="checkbox"]:checked {
     &:hover {
 
       &:before {
-        background-color: $cb-box-background-hover;
+        background-color: $cb-box-bg-hover;
       }
 
       &:after {
-        background-color: $cb-check-background-hover;
+        background-color: $cb-check-bg-hover;
       }
 
     }
@@ -111,11 +90,11 @@ input[type="checkbox"]:checked {
     + label {
 
       &:before {
-        background-color:$cb-box-background-hover;
+        background-color:$cb-box-bg-hover;
       }
 
       &:after {
-        background-color: $cb-check-background-hover;
+        background-color: $cb-check-bg-hover;
       }
     }
 
@@ -131,10 +110,12 @@ input[type="checkbox"]:not(:checked) + label:after {
   display: none;
 }
 
+
 // Checked
 input[type="checkbox"]:checked + label:after {
   display: block;
 }
+
 
 // Disabled
 input[type="checkbox"][disabled]:not(:checked),
@@ -144,16 +125,17 @@ input[type="checkbox"][disabled]:checked {
     color: $cb-label-disabled;
 
     &:before {
-      background-color: $cb-box-background-disabled;
+      background-color: $cb-box-bg-disabled;
     }
 
     &:after {
       color: $cb-check-color-disabled;
-      background-color: $cb-check-background-disabled;
+      background-color: $cb-check-bg-disabled;
     }
   }
 
 }
+
 
 
 /*doc
@@ -213,142 +195,6 @@ input[type="checkbox"]:checked + label.label-hidden {
 
   span {
     @extend .visually-hidden;
-  }
-
-}
-
-
-
-
-
-/* =============================================================================
-   Radio
-============================================================================= */
-
-/*doc
----
-title: Radio
-name: form-radio
-category: Formulaires
----
-```html_example
-<input type="radio" id="rad-1" name="rad" value="">
-<label for="rad-1">Option 1</label>
-
-<input type="radio" id="rad-2" name="rad" value="" checked>
-<label for="rad-2">Option 2</label>
-
-<input type="radio" id="rad-3" name="rad-3" value="" checked disabled>
-<label for="rad-3">Désactivée</label>
-```
-
-Compatibilité : IE9+ (affichage standard pour <= IE8)
-
-*/
-
-input[type="radio"]:not(:checked),
-input[type="radio"]:checked {
-
-  // Hide standard input
-  position: absolute;
-  left: -9999px;
-
-  // Label
-  + label {
-    position: relative;
-    padding-left: $cb-label-padding-left;
-    padding-top: 2px;
-
-    // Box
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: $cb-box-size;
-      height: $cb-box-size;
-      border: 1px solid $cb-box-border;
-      background: $cb-box-background;
-      border-radius: 50%;
-      @include box-shadow(rgba(0, 0, 0, 0.2) 0px 1px 2px);
-    }
-
-    // Hover
-    &:hover {
-
-      &:before {
-        background-color: $cb-box-background-hover;
-      }
-
-      &:after {
-        background-color: $cb-check-background-hover;
-      }
-
-    }
-
-
-    // Check
-    &:after {
-      content: '';
-      position: absolute;
-      width: $cb-check-size;
-      height: $cb-check-size;
-      top: 2px;
-      left: 2px;
-      color: $cb-check-color;
-      background: $cb-check-background;
-      border-radius: 50%;
-    }
-
-  }
-
-
-  // Focus
-  &:focus {
-
-    + label {
-
-      &:before {
-        background-color:$cb-box-background-hover;
-      }
-
-      &:after {
-        background-color: $cb-check-background-hover;
-      }
-    }
-
-  }
-
-
-}
-
-
-
-// Not checked
-input[type="radio"]:not(:checked) + label:after {
-  display: none;
-}
-
-// Checked
-input[type="radio"]:checked + label:after {
-  display: block;
-}
-
-// Disabled
-input[type="radio"][disabled]:not(:checked),
-input[type="radio"][disabled]:checked {
-
-  + label {
-    color: $cb-label-disabled;
-
-    &:before {
-      background-color: $cb-box-background-disabled;
-    }
-
-    &:after {
-      color: $cb-check-color-disabled;
-      background-color: $cb-check-background-disabled;
-    }
   }
 
 }

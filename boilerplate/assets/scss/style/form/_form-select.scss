@@ -1,5 +1,5 @@
 /* =============================================================================
-   Custom select
+   Select
 ============================================================================= */
 
 // Usage : https://github.com/cyril-lamotte/frontend/wiki/Custom-select
@@ -12,7 +12,8 @@ category: Formulaires
 ---
 ```html_example
 <div class="form-row">
-  <select class="custom">
+  <label for="select-1">Label</label>
+  <select id="select-1" class="form-input custom">
     <option>Option 1</option>
     <option>Option 2</option>
     <option>Option 3</option>
@@ -20,8 +21,18 @@ category: Formulaires
 </div>
 
 <div class="form-row">
-  <select class="custom" disabled>
-    <option>Disabled</option>
+  <label for="select-2" class="label-inline">Label en ligne</label>
+  <select id="select-2" class="form-input custom">
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option>Option 3</option>
+  </select>
+</div>
+
+<div class="form-row">
+  <label for="select-3">Label </label>
+  <select id="select-3" class="form-input custom" disabled>
+    <option>Désactivée</option>
     <option>Option 2</option>
     <option>Option 3</option>
   </select>
@@ -31,6 +42,38 @@ category: Formulaires
 
 /* -----------------------------------------------------------------------------
    Core
+----------------------------------------------------------------------------- */
+
+select {
+
+}
+
+
+
+/* -----------------------------------------------------------------------------
+   Inline
+----------------------------------------------------------------------------- */
+
+.label-inline + select {
+  width: auto;
+}
+
+
+
+/* -----------------------------------------------------------------------------
+   Disabled
+----------------------------------------------------------------------------- */
+
+select:disabled {
+  background: $form-disabled-bg;
+  color: $form-disabled-color;
+}
+
+
+
+
+/* -----------------------------------------------------------------------------
+   Custom
 ----------------------------------------------------------------------------- */
 
 $select-height: 41px;

@@ -14,11 +14,11 @@
   <link rel="stylesheet" href="../assets/css/style.css" />
   <link rel="stylesheet" href="../assets/css/print.css" media="print" />
 
+  <!--Google Font Open Sans-->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700">
+
   <!--Styleguide CSS-->
   <link rel="stylesheet" href="styleguide.css" />
-
-  <!-- Modernizr http://modernizr.com/docs/#installing -->
-  <script src="../assets/js/lib/modernizr.js"></script>
 
   <!-- Modernizr http://modernizr.com/docs/#installing -->
   <script src="../assets/js/lib/modernizr.js"></script>
@@ -35,33 +35,47 @@
     <nav class="sg-nav">
       <ul>
       
-        <li><a href="boutons.html">Boutons</a></li>
+        <li><a href="alignements.html">Alignements</a></li>
+      
+        <li><a href="couleurs.html">Couleurs</a></li>
       
         <li><a href="styles.html">Styles</a></li>
       
         <li><a href="blocs.html">Blocs</a></li>
       
-        <li><a href="couleurs.html">Couleurs</a></li>
-      
-        <li><a href="fonts.html">Fonts</a></li>
+        <li><a href="boutons.html">Boutons</a></li>
       
         <li><a href="formulaires.html">Formulaires</a></li>
       
+        <li><a href="liens.html">Liens</a></li>
+      
+        <li><a href="fonts.html">Fonts</a></li>
+      
+        <li><a href="grille.html">Grille</a></li>
+      
+        <li><a href="textes.html">Textes</a></li>
+      
         <li><a href="navigation.html">Navigation</a></li>
+      
+        <li><a href="tableaux.html">Tableaux</a></li>
+      
+        <li><a href="index.html"></a></li>
       
       </ul>
     </nav>
 
-    <h2 class="sg-title">Navigation</h2>
+    <div class="sg-main">
 
-    <section class="sg-content">
-      <nav class="sg-nav-2">
-        <ul>
-        
-          <li><a href="#nav-breadcrumb">Fil d&#39;Ariane</a></li>
-        
-        </ul>
-      </nav>
+      <h2 class="sg-title">Navigation</h2>
+
+      <section class="sg-content">
+        <nav class="sg-nav-2">
+          <ul>
+          
+            <li><a href="#nav-breadcrumb">Fil d&#39;Ariane</a></li>
+          
+          </ul>
+        </nav>
 <h1 id="nav-breadcrumb" class="styleguide">Fil d&#39;Ariane</h1>
 <div class="codeExample">
   <div class="exampleOutput">
@@ -80,7 +94,9 @@
     </div>
   </div>
 </div>
-  </section>
+  	</section>
+
+	</div><!--/sg-main-->
 
 </div><!--/sg-wrapper-->
 
@@ -95,12 +111,10 @@
 /* Execute code when the DOM is fully loaded */
 $(document).ready(function() {
 
-  $('.codeBlock').before('<button type="button" class="sg-btn" arial-label="Show code" title="Show code"><span>Show code</span></button>');
+  $('.codeBlock').before('<button type="button" class="sg-btn" arial-label="Afficher le code HTML" title="Afficher le code HTML"><span>Afficher le code HTML</span></button>');
 
   $('.codeExample button.sg-btn').click(function (event) {
-
     $(this).next().slideToggle('fast');
-
   });
 
 }); // /ready

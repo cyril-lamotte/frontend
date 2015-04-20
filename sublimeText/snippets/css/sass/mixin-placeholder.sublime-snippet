@@ -4,6 +4,6 @@
 }
 ]]></content>
     <tabTrigger>placeholder</tabTrigger>
-		<scope>source.sass</scope>
+		<scope>source.scss</scope>
     <description>Mixin placeholder</description>
 </snippet>

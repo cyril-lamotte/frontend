@@ -3,6 +3,6 @@
   $0
 }]]></content>
     <tabTrigger>mq:u</tabTrigger>
-    <scope>source.sass</scope>
+    <scope>source.scss</scope>
     <description>Mixin Media-querie Until</description>
 </snippet>

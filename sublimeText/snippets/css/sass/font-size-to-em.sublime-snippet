@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[font-size: em(${1:14}px);]]></content>
     <tabTrigger>em</tabTrigger>
-		<scope>source.sass</scope>
+		<scope>source.scss</scope>
     <description>Mixin em()</description>
 </snippet>
