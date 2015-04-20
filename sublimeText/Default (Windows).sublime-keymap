@@ -7,7 +7,7 @@
 	{ "keys": ["ctrl+alt+p"], "command": "insert_snippet", "args": { "contents": "<p>$SELECTION</p>" } },
 	{ "keys": ["ctrl+alt+l"], "command": "insert_snippet", "args": { "contents": "<li>$SELECTION</li>" } },
 
-  { "keys": ["alt+f12"],
+  { "keys": ["f12"],
       "command": "side_bar_open_in_browser",
       "args":{"paths":[], "type":"testing", "browser":""}
   },

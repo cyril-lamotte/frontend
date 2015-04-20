@@ -18,7 +18,7 @@
 		".eot"
 	],
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
 	"detect_slow_plugins": false,
 	"draw_minimap_border": true,
 	"ensure_newline_at_eof_on_save": true,
@@ -39,14 +39,11 @@
 		".sass-cache",
 		"node_modules"
 	],
-	"font_size": 9,
+	"font_size": 10,
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Vintage",
-		"Goto-CSS-Declaration",
-		"WordHighlight",
-		"Alignment"
+		"Vintage"
 	],
 	"rulers":
 	[
