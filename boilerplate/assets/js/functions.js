@@ -575,7 +575,7 @@ $.fn.equalize = function() {
 
       // Apply minHeight
       $.each(arrayLines[offsetLabel], function(i, el) {
-        $(el).css("minHeight", minHeight+1);
+        $(el).css("minHeight", minHeight);
       });
     }
 

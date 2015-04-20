@@ -2,7 +2,7 @@
 @media print {
 
   * {
-    background: transparent !important;
+    background-image: none !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -13,15 +13,6 @@
     font-family: serif;
     font-size: 12pt;
     background-color: #fff !important;
-  }
-
-
-  .print {
-    display: block;
-  }
-
-  .no-print {
-    display: none;
   }
 
   /* no orphans, no widows */

@@ -5,7 +5,7 @@
 /*doc
 ---
 title: Checkbox
-name: form-checkbox
+name: checkbox-1
 category: Formulaires
 ---
 ```html_example
@@ -15,11 +15,8 @@ category: Formulaires
 <input type="checkbox" id="cb-2" name="cb-2" value="2" checked>
 <label for="cb-2">Option 2</label>
 
-<input type="checkbox" id="cb-dis" name="cb-dis" value="" disabled>
+<input type="checkbox" id="cb-dis" name="cb-dis" value="" checked disabled>
 <label for="cb-dis">Désactivée</label>
-
-<input type="checkbox" id="cb-3" name="cb-3" value="3">
-<label for="cb-3"><span class="visually-hidden">Label masqué</span></label>
 ```
 
 Compatibilité : IE9+ (affichage standard pour <= IE8)
@@ -27,24 +24,24 @@ Compatibilité : IE9+ (affichage standard pour <= IE8)
 */
 
 // Label
-$cb-label-padding-left: 18px;
-$cb-label-disabled: #555;
+$cb-label-padding-left: 20px;
+$cb-label-disabled: $form-disabled-text;
 
 // Box
-$cb-box-background: #fff;
-$cb-box-background-hover: #f3f3f3;
-$cb-box-background-disabled: #aaa;
-$cb-box-border: #000;
-$cb-box-size: 14px;
+$cb-box-background: #f7f7f7;
+$cb-box-background-hover: #ddd;
+$cb-box-background-disabled: $form-disabled-bg;
+$cb-box-border: $form-border-color;
+$cb-box-size: 16px;
 
 
 // Check
-$cb-check-background: #000;
+$cb-check-background: #656565;
 $cb-check-background-hover: #555;
 $cb-check-background-disabled: #777;
-$cb-check-color: #000;
-$cb-check-color-disabled: #333;
-$cb-check-size: 8px;
+$cb-check-color: #656565;
+$cb-check-color-disabled: $form-disabled-text;
+$cb-check-size: 12px;
 
 
 input[type="checkbox"]:not(:checked),
@@ -58,7 +55,7 @@ input[type="checkbox"]:checked {
   + label {
     position: relative;
     padding-left: $cb-label-padding-left;
-    padding-top: 0;
+    padding-top: 2px;
 
     // Box
     &:before {
@@ -70,6 +67,8 @@ input[type="checkbox"]:checked {
       height: $cb-box-size;
       border: 1px solid $cb-box-border;
       background: $cb-box-background;
+      border-radius: $form-border-radius;
+      @include box-shadow(rgba(0, 0, 0, 0.2) 0px 1px 2px);
     }
 
     // Hover
@@ -89,16 +88,18 @@ input[type="checkbox"]:checked {
     // Check
     &:after {
       content: '';
-      //content: '\2713';
-      position: absolute;
       width: $cb-check-size;
       height: $cb-check-size;
-      top: 3px;
-      left: 3px;
-      font-size: 12px;
+      background: $cb-check-color;;
+      //content: '\2713';
+      //color: $cb-check-color;
+
+      position: absolute;
+      top: 2px;
+      left: 2px;
       line-height: 1.2;
-      color: $cb-check-color;
-      background: $cb-check-background;
+
+      border-radius: $form-border-radius;
     }
 
   }
@@ -155,6 +156,70 @@ input[type="checkbox"][disabled]:checked {
 }
 
 
+/*doc
+---
+title: Checkbox à droite
+name: checkbox-2
+category: Formulaires
+---
+```html_example
+<input type="checkbox" id="cb-right-1" name="cb-right" value="" checked>
+<label for="cb-right-1" class="checkbox-right">Checkbox à droite</label>
+
+<input type="checkbox" id="cb-right-2" name="cb-right" value="">
+<label for="cb-right-2" class="checkbox-right">Checkbox à droite</label>
+```
+*/
+
+input[type="checkbox"]:not(:checked) + label.checkbox-right,
+input[type="checkbox"]:checked + label.checkbox-right {
+  padding-left: 0;
+  padding-right: $cb-label-padding-left;
+
+  // Box
+  &:before {
+    left: auto;
+    right: 0;
+  }
+
+  // Check
+  &:after {
+    left: auto;
+    right: 2px;
+  }
+
+}
+
+
+
+/*doc
+---
+title: Checkbox sans label visible
+name: checkbox-3
+category: Formulaires
+---
+```html_example
+<input type="checkbox" id="cb-no-label-1" name="cb-no-label-1" value="3" checked>
+<label for="cb-no-label-1" class="label-hidden"><span>Label masqué</span></label>
+
+<input type="checkbox" id="cb-no-label-2" name="cb-no-label-2" value="3">
+<label for="cb-no-label-2" class="label-hidden"><span>Label masqué</span></label>
+```
+*/
+
+input[type="checkbox"]:not(:checked) + label.label-hidden,
+input[type="checkbox"]:checked + label.label-hidden {
+  margin-right: 0;
+
+  span {
+    @extend .visually-hidden;
+  }
+
+}
+
+
+
+
 
 /* =============================================================================
    Radio
@@ -173,11 +238,11 @@ category: Formulaires
 <input type="radio" id="rad-2" name="rad" value="" checked>
 <label for="rad-2">Option 2</label>
 
-<input type="radio" id="rad-3" name="rad-3" value="" disabled>
+<input type="radio" id="rad-3" name="rad-3" value="" checked disabled>
 <label for="rad-3">Désactivée</label>
 ```
 
-Compatibilité des styles : IE9+
+Compatibilité : IE9+ (affichage standard pour <= IE8)
 
 */
 
@@ -192,7 +257,7 @@ input[type="radio"]:checked {
   + label {
     position: relative;
     padding-left: $cb-label-padding-left;
-    padding-top: 0;
+    padding-top: 2px;
 
     // Box
     &:before {
@@ -205,6 +270,7 @@ input[type="radio"]:checked {
       border: 1px solid $cb-box-border;
       background: $cb-box-background;
       border-radius: 50%;
+      @include box-shadow(rgba(0, 0, 0, 0.2) 0px 1px 2px);
     }
 
     // Hover
@@ -224,14 +290,11 @@ input[type="radio"]:checked {
     // Check
     &:after {
       content: '';
-      //content: '\2713';
       position: absolute;
       width: $cb-check-size;
       height: $cb-check-size;
-      top: 3px;
-      left: 3px;
-      font-size: 12px;
-      line-height: 1.2;
+      top: 2px;
+      left: 2px;
       color: $cb-check-color;
       background: $cb-check-background;
       border-radius: 50%;
