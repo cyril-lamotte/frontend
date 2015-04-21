@@ -2,3 +2,15 @@
    Search results
 ============================================================================= */
 
+.search-result-item {
+  @extend %media;
+
+  figure {
+    @extend %media-pict;
+  }
+
+  .search-result-content {
+    @extend %media-content;
+  }
+}
+

@@ -2,25 +2,17 @@
    Media
 ============================================================================= */
 
-.media {
+%media {
   @include pie-clearfix;
   margin: 1em 0;
   clear: both;
-}
-
-.media-wrapper {
-  margin: 0 0 1em;
-
-  > .media:first-child {
-    margin-top: 0;
-  }
 }
 
 
 
 /* media-pict : Image & infos */
 
-.media-pict {
+%media-pict {
   float: left;
   margin: 0 23px 5px 0;
   width: 100px;
@@ -31,9 +23,8 @@
     margin-left: auto !important;
     width: auto;
   }
-}
 
-  .media-pict a {
+  a {
     display: block;
 
     img {
@@ -46,20 +37,20 @@
       font-weight: bold;
     }
   }
+}
 
-.media-source {}
+
 
 /* media-content : Description */
 
-.media-content {
+%media-content {
   overflow: hidden;
 }
 
-  .media-title {}
-  .media-date {}
-  .media-text {
+%media-text {
 
-    p:first-child {
-      margin-top: 0;
-    }
+  p:first-child {
+    margin-top: 0;
   }
+
+}
