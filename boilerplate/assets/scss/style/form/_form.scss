@@ -66,6 +66,7 @@ $cb-check-color-disabled: $form-disabled-color;
 ----------------------------------------------------------------------------- */
 
 .form-row {
+  position: relative;
   clear: left;
   margin-bottom: 1em;
 }
@@ -91,6 +92,27 @@ label {
     @include label-inline;
   }
 }
+
+
+/* -----------------------------------------------------------------------------
+   Moving label
+----------------------------------------------------------------------------- */
+
+.moving-label {
+  position: absolute;
+  padding: 0 5px;
+  cursor: text;
+  line-height: 1.2;
+  top: 7px;
+  left: 5px;
+  @include transition(all 300ms);
+}
+
+.moving-label-focus {
+  background: #fff;
+  top: -7px;
+}
+
 
 
 

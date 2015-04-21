@@ -9,8 +9,14 @@ name: form-text
 category: Formulaires
 ---
 ```html_example
-<label for="text">Label</label>
-<input type="text" id="text" value="" class="form-input" placeholder="Aide à la saisie">
+<div class="form-row">
+	<label for="txt-1">Label</label>
+	<input type="text" name="txt-1" id="txt-1" value="" class="form-input" placeholder="Aide à la saisie">
+</div>
+<div class="form-row">
+	<label for="txt-2" class="moving-label">Label mouvant</label>
+	<input type="text" name="txt-2" id="txt-2" value="" class="form-input">
+</div>
 ```
 */
 

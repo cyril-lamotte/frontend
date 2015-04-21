@@ -246,14 +246,26 @@
 <h1 id="form-text" class="styleguide">Zone de saisie</h1>
 <div class="codeExample">
   <div class="exampleOutput">
-    <label for="text">Label</label>
-<input type="text" id="text" value="" class="form-input" placeholder="Aide à la saisie">
+    <div class="form-row">
+    <label for="txt-1">Label</label>
+    <input type="text" name="txt-1" id="txt-1" value="" class="form-input" placeholder="Aide à la saisie">
+</div>
+<div class="form-row">
+    <label for="txt-2" class="moving-label">Label mouvant</label>
+    <input type="text" name="txt-2" id="txt-2" value="test" class="form-input">
+</div>
 
   </div>
   <div class="codeBlock">
     <div class="highlight">
-      <pre><span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"text"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"text"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"form-input"</span> <span class="na">placeholder=</span><span class="s">"Aide à la saisie"</span><span class="nt">&gt;</span></pre>
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"txt-1"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"txt-1"</span> <span class="na">id=</span><span class="s">"txt-1"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"form-input"</span> <span class="na">placeholder=</span><span class="s">"Aide à la saisie"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"txt-2"</span> <span class="na">class=</span><span class="s">"moving-label"</span><span class="nt">&gt;</span>Label mouvant<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"txt-2"</span> <span class="na">id=</span><span class="s">"txt-2"</span> <span class="na">value=</span><span class="s">"test"</span> <span class="na">class=</span><span class="s">"form-input"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
     </div>
   </div>
 </div>
