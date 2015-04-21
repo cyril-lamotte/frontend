@@ -2,25 +2,48 @@
    Article
 ============================================================================= */
 
-
-/* -----------------------------------------------------------------------------
-   CMS content
------------------------------------------------------------------------------ */
-
-.article {
-
 /*doc
 ---
-title: H1
-name: 1-title
-category: Styles
+title: Article
+name: article
+category: Textes
 ---
 ```html_example
 <div class="article">
-  <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</h1>
+  <h1>[H1] Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</h1>
+  <div class="chapeau">[chapeau] Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</div>
+
+  <h2>[H2] Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</h2>
+  <p>[p ]Lorem ipsum <strong>[strong] dolor sit amet</strong>, consectetur <em>[em] adipisicing elit</em>. Iure perferendis obcaecati, quisquam, voluptatem error eligendi rerum accusantium, animi at vel iste, ipsum excepturi dolore dolorum asperiores nulla corrupti molestiae id modi dolores amet laborum. Perspiciatis magnam mollitia vero nemo quae.</p>
+  <p>[p] Lorem ipsum dolor sit amet, <a href="#">[a] consectetur adipisicing elit</a>. Iure perferendis obcaecati, quisquam, voluptatem error eligendi rerum accusantium, animi at vel iste, ipsum excepturi dolore dolorum asperiores nulla corrupti molestiae id modi dolores amet laborum. Perspiciatis magnam mollitia vero nemo quae.</p>
+
+  <h3>[H3] Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</h3>
+  <p>[p] Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure perferendis obcaecati, quisquam, voluptatem error eligendi rerum accusantium, animi at vel iste, ipsum excepturi dolore dolorum asperiores nulla corrupti molestiae id modi dolores amet laborum. Perspiciatis magnam mollitia vero nemo quae.</p>
+
+  <h4>[H4] Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</h4>
+  <p>[p] Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure perferendis obcaecati, quisquam, voluptatem error eligendi rerum accusantium, animi at vel iste, ipsum excepturi dolore dolorum asperiores nulla corrupti molestiae id modi dolores amet laborum. Perspiciatis magnam mollitia vero nemo quae.</p>
+
+  <h5>[H5] Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</h5>
+  <ul>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</li>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</li>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</li>
+  </ul>
+
+  <h6>[H6] Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</h6>
+  <p>[p] Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure perferendis obcaecati, quisquam, voluptatem error eligendi rerum accusantium, animi at vel iste, ipsum excepturi dolore dolorum asperiores nulla corrupti molestiae id modi dolores amet laborum. Perspiciatis magnam mollitia vero nemo quae.</p>
+  <ol>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</li>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</li>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</li>
+  </ol>
+
+
 </div>
 ```
 */
+
+.article {
 
   // Headings
   h1 {
@@ -33,41 +56,11 @@ category: Styles
     }
   }
 
-
-
-/*doc
----
-title: H2
-name: 2-title
-category: Styles
----
-```html_example
-<div class="article">
-  <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</h2>
-</div>
-```
-*/
-
   h2 {
     font-size: em(14px);
     font-weight: bold;
     margin: 1em 0 0.5em;
   }
-
-
-
-/*doc
----
-title: H3
-name: 3-title
-category: Styles
----
-```html_example
-<div class="article">
-  <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</h3>
-</div>
-```
-*/
 
   h3 {
     font-size: em(13px);
@@ -75,90 +68,35 @@ category: Styles
     margin: 1em 0 0.5em;
   }
 
-
-
-/*doc
----
-title: H4
-name: 4-title
-category: Styles
----
-```html_example
-<div class="article">
-  <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</h4>
-</div>
-```
-*/
-
   h4 {
     font-size: em(12px);
-    font-weight: normal;
+    font-weight: bold;
     margin: 1em 0 0.5em;
   }
-
-
-
-/*doc
----
-title: H5
-name: 5-title
-category: Styles
----
-```html_example
-<div class="article">
-  <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</h5>
-</div>
-```
-*/
 
   h5 {
     font-size: em(12px);
-    font-weight: normal;
-    font-variant: small-caps;
-    margin: 1em 0 0.5em;
+    font-weight: bold;
+    margin: 1em 0 0.5em 1em;
   }
-
-
-
-
-/*doc
----
-title: H6
-name: 6-title
-category: Styles
----
-```html_example
-<div class="article">
-  <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</h6>
-</div>
-```
-*/
 
   h6 {
     font-size: em(11px);
     text-transform: uppercase;
     font-weight: normal;
-    margin: 1em 0 0.5em;
+    margin: 1em 0 0.5em 1em;
   }
 
-
-
-/*doc
----
-title: Paragraphe
-name: 7-p
-category: Styles
----
-```html_example
-<div class="article">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</p>
-</div>
-```
-*/
 
   // Text
   p {}
 
+  .chapeau {
+    font-weight: bold;
+  }
+
+
+  // No margin-top on the first <p>
   p:first-child,
   h1 + p,
   h2 + p,
@@ -202,26 +140,6 @@ category: Styles
 
     }
   }
-
-
-
-/*doc
----
-title: Chapeau
-name: 8-chapeau
-category: Styles
----
-```html_example
-<div class="article">
-  <div class="chapeau">Lorem ipsum dolor sit amet, consectetur adipisicing elitem pariatur</div>
-</div>
-```
-*/
-
-  .chapeau {
-    font-weight: bold;
-  }
-
 
 
 } // /article

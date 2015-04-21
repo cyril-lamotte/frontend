@@ -133,7 +133,7 @@ h1.sg-title {
 }
 
 h2.sg-title {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   margin: 0;
@@ -144,6 +144,7 @@ h2.sg-title {
   color: #000;
   padding: 10px 20px;
   background: #fafafa;
+  z-index: 5;
 }
 
 .sg-content > h1 {
@@ -183,7 +184,7 @@ h2.sg-title {
   height: 100px;
   width: 100px;
   margin: 0 auto 10px;
-  border-radius: 0 100% 0 0;
+  border-radius: 10px;
   box-shadow: 1px 1px 5px #ccc;
 }
 .sg-color-code {
