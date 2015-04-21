@@ -1,0 +1,68 @@
+/* =============================================================================
+   Tags
+============================================================================= */
+
+/*doc
+---
+title: Tags
+name: tags
+category: Liens
+---
+```html_example
+<div class="tags-wrapper">
+  <a href="#" class="tag tag-blue">Lorem ipsum</a>
+  <a href="#" class="tag tag-yellow">Lorem ipsum</a>
+  <a href="#" class="tag tag-green">Lorem ipsum</a>
+  <span class="tag">Drôme <a href="#remove">X</a></span>
+</div>
+```
+*/
+
+.tags-wrapper {
+}
+
+.tag {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 5px;
+  color: #010101;
+  padding: 0px 8px;
+  margin-right: 4px;
+  background: $grey-1;
+
+  @include hover {
+    background-color: $grey-2;
+    text-decoration: none
+  }
+
+  a {
+    margin-left: 1em;
+  }
+}
+
+
+
+
+.tag-blue {
+  background-color: lightblue;
+
+  @include hover {
+    background-color: lighten(lightblue, 10%);
+  }
+}
+
+.tag-yellow {
+  background-color: lightyellow;
+
+  @include hover {
+    background-color: lighten(lightyellow, 20%);
+  }
+}
+
+.tag-green {
+  background-color: lightgreen;
+
+  @include hover {
+    background-color: lighten(lightgreen, 20%);
+  }
+}

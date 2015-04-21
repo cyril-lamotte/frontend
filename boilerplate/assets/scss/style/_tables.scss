@@ -42,7 +42,7 @@ category: Tableaux
   </tbody>
   <tfoot>
     <tr>
-      <td colspan="3" class="align-right">TOTAL : 462,50&nbsp;&euro;</td>
+      <td colspan="3" class="align-right">TOTAL : 100.00&nbsp;&euro;</td>
     </tr>
   </tfoot>
 </table>
@@ -53,7 +53,7 @@ category: Tableaux
   border-collapse: collapse;
   font-size: 14px;
   width: 100%;
-  border: 1px solid $grey-1;
+  border: 1px solid $grey-2;
   border-bottom: 2px solid $brand;
   background: #fff;
 
@@ -64,43 +64,18 @@ category: Tableaux
 
   th {
     position: relative;
-    background: $brand;
-    color: #fff;
+    background: $grey-4;
     font-weight: normal;
     text-align: left;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 5px;
-      bottom: 5px;
-      left: 0;
-      width: 1px;
-      background-color: #fff;
-    }
-
-  }
-
-  tr:first-child th:first-child:before {
-    display: none;
   }
 
   tr {
     border-bottom: 1px solid $grey-1;
   }
 
-  .highlight {
-    td {
-      background-color: #fffcdd;
-    }
-  }
-
-  .text-grey {
-    color: #8a8879;
-  }
-
+  // hover
   tr:hover td {
-    background: lighten($brand, 50%);
+    background: $grey-4;
   }
 
 
@@ -108,17 +83,9 @@ category: Tableaux
 
     tr:nth-child(2n+1),
     tr {
-      background: $brand;
-      color: #fff;
+      background: $grey-4;
     }
 
-    tr:hover td {
-      background: $brand-highlight;
-    }
-  }
-
-  .no-wrap {
-    white-space: nowrap;
   }
 
 }
@@ -180,7 +147,6 @@ category: Tableaux
 .table-sort-asc,
 .table-sort-desc {
   display: block;
-  color: #fff;
 
   &:after {
     content: '';

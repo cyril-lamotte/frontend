@@ -78,7 +78,7 @@ category: Couleurs
 ---
 
 ```color_example
-#eee
+#ccc
 ```
 ```colorname_example
 $grey-1
@@ -89,21 +89,28 @@ $grey-1
 #aaa
 ```
 ```colorname_example
-$grey-1
+$grey-2
 ```
 
 ```color_example
-#555
+#aaa
 ```
 ```colorname_example
 $grey-3
+```
+
+```color_example
+#eee
+```
+```colorname_example
+$grey-4
 ```
 
 */
 
 $grey-1: #ccc;
 $grey-2: #aaa;
-$grey-3: #aaa;
+$grey-3: #ddd;
 $grey-4: #eee;
 
 
