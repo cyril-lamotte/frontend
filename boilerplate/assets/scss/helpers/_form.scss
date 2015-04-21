@@ -28,13 +28,22 @@
   width: auto;
 }
 
+
 // Position : Left
 @mixin label-start {
   float: left;
   width: $offset-width;
   margin-right: $spacing-default;
   text-align: right;
+  padding-top: $spacing-sm;
+
+  + input,
+  + select,
+  + textarea {
+    width: auto;
+  }
 }
+
 
 // Position : nearby
 @mixin label-inline {
@@ -43,12 +52,39 @@
   width: auto;
   margin-right: 1em;
   text-align: left;
+
+  + input,
+  + select,
+  + textarea {
+    width: auto;
+  }
 }
 
 
 .label-inline { @include label-inline; }
 .label-block { @include label-block; }
 .label-start { @include label-start; }
+
+
+%form-label-start,
+.form-label-start {
+
+  .label,
+  label {
+    @include label-start;
+  }
+
+}
+
+%fieldset-hidden,
+.fieldset-hidden {
+  border: 0;
+  padding: 0;
+
+  legend {
+    @extend .visually-hidden;
+  }
+}
 
 
 
