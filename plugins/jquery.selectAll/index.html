@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]>    <html lang="fr" class="ie7 lte-ie8"><![endif]-->
+<!--[if IE 8]>        <html lang="fr" class="ie8 lte-ie8"><![endif]-->
+<!--[if IE 9]>        <html lang="fr" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="fr"><!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+
+  <title>Select All</title>
+
+</head>
+
+<body>
+
+<h1>Select All</h1>
+
+<form action="">
+
+  <input type="checkbox" id="select-all"> <label for="select-all">Tout sélectionner</label>
+
+  <input type="checkbox" id="cb-1"> <label for="cb-1">1</label>
+  <input type="checkbox" id="cb-2"> <label for="cb-2">2</label>
+  <input type="checkbox" id="cb-3"> <label for="cb-3">3</label>
+  <input type="checkbox" id="cb-4"> <label for="cb-4">4</label>
+
+</form>
+
+<!-- Scripts at the bottom for better performances -->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="jquery.selectAll.js"></script>
+<script>
+
+(function ($) {
+
+/* Execute code when the DOM is fully loaded */
+$(document).ready(function() {
+
+  // Select all
+  $('#select-all').selectAll();
+
+}); // /ready
+
+
+})(jQuery);
+
+</script>
+
+</body>
+</html>
