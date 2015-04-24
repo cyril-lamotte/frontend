@@ -67,7 +67,7 @@ $(document).ready(function() {
 ### 4. Options
 
 Options                   | Type            | Description                      | Default
---------------------------------------------|-------|------- ------------------|-------------------------------
+--------------------------|-----------------|----------------------------------|--------------------------------------------------------
 prefix                    | string          | prefix for cla                   | 'pop-panel-'
 idPopTitle                | string          | Accessibility feature : An HTML id, text for labelling pop, if null, the trigger text is used  | null
 closeTrigger              | CSS selector    | A click on it will close the pop | null
