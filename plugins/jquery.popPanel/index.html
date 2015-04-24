@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]>    <html lang="fr" class="ie7 lte-ie8"><![endif]-->
+<!--[if IE 8]>        <html lang="fr" class="ie8 lte-ie8"><![endif]-->
+<!--[if IE 9]>        <html lang="fr" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="fr"><!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+
+  <title>PopPanel</title>
+
+  <style>
+
+/* =============================================================================
+   Pop panel
+============================================================================= */
+
+button[data-pop-panel-id] {
+  display: none;
+}
+
+.js button[data-pop-panel-id] {
+  display: inline-block;
+}
+
+.js .pop-panel {
+  position: absolute;
+  display: none;
+  z-index: 9;
+}
+
+.js .pop-panel--is-closed {
+  display: none;
+}
+
+.js .pop-panel--is-opened {
+  display: block;
+}
+
+.pop-panel--close-trigger {
+  display: none;
+}
+
+.js .pop-panel--close-trigger {
+  display: inline-block;
+}
+
+  </style>
+
+  <!-- Modernizr http://modernizr.com/docs/#installing -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+</head>
+
+<body>
+
+<h1>PopPanel</h1>
+
+
+<!--Markup-->
+
+<button id="pop-trigger" data-pop-panel-id="demo-1">Trigger</button>
+<div id="demo-1" class="pop-panel">
+
+  <button type="button" class="pop-panel--close-trigger">Fermer le panneau</button>
+
+  <h2 id="demo-1-title">Pop</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos porro facere necessitatibus nisi accusantium nobis error molestiae distinctio officiis. Debitis?</p>
+
+</div><!--/pop-panel-->
+
+<!--/Markup-->
+
+
+
+<button id="pop-trigger-2" data-pop-panel-id="demo-2">Trigger 2</button>
+<div id="demo-2" class="pop-panel">
+
+  <button type="button" class="pop-panel--close-trigger">Fermer le panneau</button>
+
+  <h2 id="demo-2-title">Pop</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos porro facere necessitatibus nisi accusantium nobis error molestiae distinctio officiis. Debitis?</p>
+
+</div><!--/pop-panel-->
+
+
+
+
+<!-- Scripts at the bottom for better performances -->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="../external/jquery.ui.position/position.min.js"></script>
+<script src="jquery.popPanel.js"></script>
+<script>
+
+(function ($) {
+
+/* Execute code when the DOM is fully loaded */
+$(document).ready(function() {
+
+  // Pop
+  $('#pop-trigger').popPanel({
+    closeTrigger: 'button.pop-panel--close-trigger'
+  });
+
+  $('#pop-trigger-2').popPanel({
+    closeTrigger: 'button.pop-panel--close-trigger'
+  });
+
+  // Public method for closing
+  //$('#pop-trigger').data('popPanel').close();
+
+}); // /ready
+
+
+})(jQuery);
+
+</script>
+
+</body>
+</html>

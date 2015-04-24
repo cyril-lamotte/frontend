@@ -2,16 +2,42 @@
    Pop panel
 ============================================================================= */
 
-.pop-panel {
-  position: absolute;
+// Trigger is hidden without JS
+button[data-pop-panel-id] {
   display: none;
-  z-index: 9;
+
+  .js & {
+    display: inline-block;
+  }
 }
 
-.pop-panel--is-closed {
-  display: none;
+.js {
+
+  .pop-panel {
+    position: absolute;
+    display: none;
+    z-index: 9;
+  }
+
+  .pop-panel--is-closed {
+    display: none;
+  }
+
+  .pop-panel--is-opened {
+    display: block;
+  }
+
 }
 
-.pop-panel--is-opened {
-	display: block;
+
+/* -----------------------------------------------------------------------------
+   Close trigger
+----------------------------------------------------------------------------- */
+
+.pop-panel--close-trigger {
+  display: none;
+
+  .js & {
+    display: inline-block;
+  }
 }

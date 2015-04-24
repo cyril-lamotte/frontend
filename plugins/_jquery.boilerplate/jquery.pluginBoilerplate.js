@@ -1,7 +1,7 @@
 (function( $ ){
 
   /**
-  * Plugin jQuery [pluginName] v1.0.0 (06/2013)
+  * Plugin jQuery [pluginName] v1.0.0 (06/2015)
   *
   */
 
@@ -36,20 +36,21 @@
       // Lancer une temporisation         window.setTimeout('$(".element").data("pluginName").myFonction()', 1000);
 
 
-      // Attacher les évènements
-      // setEvents();
+
+      // Attach events
+      //attachEvents();
 
     };
 
 
-    // Attacher les évènements
-    var setEvents = function() {
+    // Attach events
+    var attachEvents = function() {
 
     };
 
 
-    // Fonction publique
-    // Appel : $('.element').data('pluginName').myFonction()
+    // Public function
+    // Call : $('.element').data('pluginName').myFonction()
     plugin.myFonction = function() {
 
     };
