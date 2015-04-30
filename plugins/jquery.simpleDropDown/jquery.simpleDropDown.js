@@ -1,12 +1,12 @@
 (function( $ ){
 
   /**
-  * Plugin jQuery simpleDropDown v1.4.0
+  * Plugin jQuery simpleDropDown v1.4.1
   */
 
   $.simpleDropDown = function(element, options) {
 
-    // Options par défaut
+    // Defaults options
     var defaults = {
       prefix: 'sdd-',
       delay: 500,
@@ -28,11 +28,12 @@
 
     plugin.init = function() {
 
-      // Ecrasement avec les options utilisateur
+      // Merge user's options
       plugin.settings = $.extend({}, defaults, options);
 
       // Merge position object
-      plugin.settings.position = $.extend({}, defaults.position, options.position);
+      if( options )
+        plugin.settings.position = $.extend({}, defaults.position, options.position);
 
       plugin.settings.$menu = window.axsddMenu = $element;
       plugin.settings.$activeSubmenu = null;
@@ -40,8 +41,8 @@
       // Initialiser le marqueur de survol
       setFlag(false);
 
-      // Définir les évènements
-      setEvents();
+      // Attach events
+      attachEvents();
 
     };
 
@@ -102,7 +103,7 @@
     };
 
 
-    var setEvents = function() {
+    var attachEvents = function() {
 
       // Placer un marqueur au survol des sous-menus
       plugin.settings.$menu

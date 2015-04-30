@@ -1,11 +1,4 @@
-# jQuery Menu Level
-
-Multi-level navigation
-
-
-## Features
-
-* IE8+ compliant
+# jQuery simple Drow Down
 
 
 ## Installation
@@ -13,19 +6,43 @@ Multi-level navigation
 ### 1. Join plugin
 
 ```html
-<script src="assets/js/plugins/jquery.menu-level.js"></script>
+<script src="assets/js/jQuery/jquery.min.js"></script>
+<script src="assets/js/plugins/position.min.js"></script>
+<script src="assets/js/plugins/jquery.simpleDropDown.js"></script>
 ```
+
+
+### 2. Markup
+
+```html
+<ul class="nav">
+  <li><a href="#">Lorem ipsum</a></li>
+  <li><a href="#">Lorem ipsum</a></li>
+  <li>
+    <a href="#">Lorem ipsum</a>
+    <div class="sdd-sub-nav">
+      <ul>
+        <li><a href="#">Lorem ipsum</a></li>
+        <li><a href="#">Lorem ipsum</a></li>
+        <li><a href="#">Lorem ipsum</a></li>
+      </ul>
+    </div>
+  </li>
+</ul>
+```
+
+
 
 ### 2. JavaScript
 
 ```js
-$('.menu-wrapper').menuLevel();
+$('ul.nav').simpleDropDown();
 ```
+
+
 
 ### 3. Options
 
 Options | Type  | Description                    | Default
 --------|-------|--------------------------------|--------
-files   | Array | Images paths                   | null
-logs    | Bool  | If true, shows logs in console | false
 
