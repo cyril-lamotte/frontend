@@ -1,0 +1,59 @@
+﻿
+/* =============================================================================
+   Jouve Grid for CKEditor
+============================================================================= */
+
+/* -----------------------------------------------------------------------------
+   Clearfix
+----------------------------------------------------------------------------- */
+
+.jouve-grid:before,
+.jouve-grid:after {
+    content: " ";
+    display: table;
+}
+
+.jouve-grid:after {
+    clear: both;
+}
+
+.jouve-grid {
+    *zoom: 1;
+}
+
+
+
+/* -----------------------------------------------------------------------------
+   Core
+----------------------------------------------------------------------------- */
+
+.jouve-grid {
+  width: auto;
+  margin: 1em 0;
+}
+
+.jouve-grid-item {
+  float: left;
+  outline: 1px dashed #ccc;
+  min-height: 60px;
+
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.jouve-grid-2 .jouve-grid-item {
+  width: 50%;
+}
+
+.jouve-grid-3 .jouve-grid-item {
+  width: 33.333%;
+}
+
+.jouve-grid-4 .jouve-grid-item {
+  width: 25%;
+}
+
+.jouve-grid-5 .jouve-grid-item {
+  width: 20%;
+}

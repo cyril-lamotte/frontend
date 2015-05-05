@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]>    <html lang="fr" class="ie7 lte-ie8"><![endif]-->
+<!--[if IE 8]>        <html lang="fr" class="ie8 lte-ie8"><![endif]-->
+<!--[if IE 9]>        <html lang="fr" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="fr"><!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+
+  <title>CKEditor</title>
+
+</head>
+
+<body>
+
+<textarea cols="80" id="editor1" name="editor1" rows="30">
+<div class="jouve-grid jouve-grid-4">
+  <div class="jouve-grid-item jouve-grid-item-1">Case 1</div>
+  <div class="jouve-grid-item jouve-grid-item-2">Case 2</div>
+  <div class="jouve-grid-item jouve-grid-item-3">Case 3</div>
+  <div class="jouve-grid-item jouve-grid-item-4">Case 4</div>
+</div>
+<p>Grille</p>
+
+</textarea>
+
+
+<!-- Scripts at the bottom for better performances -->
+<script src="../boilerplate/assets/js/lib/jquery.min.js"></script>
+<script src="lib/ckeditor/ckeditor.js"></script>
+<script>
+  CKEDITOR.replace( 'editor1', {
+    extraPlugins: 'jouve-grid'
+  });
+</script>
+
+</body>
+</html>
