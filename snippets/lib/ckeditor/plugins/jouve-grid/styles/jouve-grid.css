@@ -42,18 +42,70 @@
           box-sizing: border-box;
 }
 
-.jouve-grid-2 .jouve-grid-item {
+/* 2 */
+.jouve-grid-2 > .jouve-grid-item {
   width: 50%;
 }
 
-.jouve-grid-3 .jouve-grid-item {
+.jouve-grid-2 > .jouve-grid-item:nth-child(2n+1) {
+  clear: both;
+}
+
+.jouve-grid-2 > .jouve-grid-item:first-child,
+.jouve-grid-2 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item,
+.jouve-grid-2 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
+.jouve-grid-2 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
+.jouve-grid-2 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item
+{clear: both;}
+
+
+/* 3 */
+.jouve-grid-3 > .jouve-grid-item {
   width: 33.333%;
 }
 
-.jouve-grid-4 .jouve-grid-item {
+.jouve-grid-3 > .jouve-grid-item:nth-child(3n+1) {
+  clear: both;
+}
+
+.jouve-grid-3 > .jouve-grid-item:first-child,
+.jouve-grid-3 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
+.jouve-grid-3 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
+.jouve-grid-3 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
+.jouve-grid-3 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item
+{clear: both;}
+
+
+/* 4 */
+.jouve-grid-4 > .jouve-grid-item {
   width: 25%;
 }
 
-.jouve-grid-5 .jouve-grid-item {
+.jouve-grid-4 > .jouve-grid-item:nth-child(4n+1) {
+  clear: both;
+}
+
+.jouve-grid-4 > .jouve-grid-item:first-child,
+.jouve-grid-4 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
+.jouve-grid-4 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
+.jouve-grid-4 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
+.jouve-grid-4 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item
+{clear: both;}
+
+
+
+/* 5 */
+.jouve-grid-5 > .jouve-grid-item {
   width: 20%;
 }
+
+.jouve-grid-5 > .jouve-grid-item:nth-child(5n+1) {
+  clear: both;
+}
+
+.jouve-grid-5 > .jouve-grid-item:first-child,
+.jouve-grid-5 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
+.jouve-grid-5 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
+.jouve-grid-5 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item
+.jouve-grid-5 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item
+{clear: both;}

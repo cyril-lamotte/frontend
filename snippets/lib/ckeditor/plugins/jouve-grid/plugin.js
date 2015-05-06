@@ -1,12 +1,21 @@
-﻿CKEDITOR.plugins.add( 'jouve-grid', {
+﻿
+
+CKEDITOR.plugins.add( 'jouve-grid', {
     lang: 'fr',
     requires: 'widget',
     icons: 'jouve-grid',
+
     init: function( editor ) {
 
       // Get locale
       var lang = editor.lang['jouve-grid'];
       commonLang = editor.lang.common;
+
+      editor.ui.addButton('jouve-grid', {
+          label: lang.insertGrid,
+          command : 'jouve-grid',
+          icon : this.path +'icons/jouve-grid.png',
+      });
 
       // Add CSS
       editor.addContentsCss( this.path + 'styles/jouve-grid.css' );
@@ -14,7 +23,12 @@
       // Add dialog
       CKEDITOR.dialog.add( 'jouve-grid', this.path + 'dialogs/jouve-grid.js' );
 
+
       editor.widgets.add( 'jouve-grid', {
+          defaults: {
+            colsCount: 2,
+            rowsCount: 1
+          },
           button: lang.insertGrid,
 
           allowedContent:
@@ -36,13 +50,16 @@
           dialog: 'jouve-grid',
 
 
-
           init: function() {
 
-            // Default values
-            var colsCount = 2;
-            var rowsCount = 2;
+            // Block double click
+            this.on( 'doubleclick', function( evt ) {
+                this.dialog = '';
+            }, null, null, 5 );
 
+            // Default values
+            var colsCount = this.defaults.colsCount;
+            var rowsCount = this.defaults.rowsCount;
 
             // Get HTML settings
             for(var c = 1; c <= 10; c++) {
@@ -75,13 +92,11 @@
 
           data: function() {
 
-            console.log('=== Data ===');
-
             var cellList = this.element.getChildren();
             var current_cells_count = this.element.getChildCount();
             var new_cells_count = this.data.colsCount * this.data.rowsCount; // Calculate the number of cells to create
 
-            console.log('current:', current_cells_count, 'Voulu:', new_cells_count);
+            //console.log('current:', current_cells_count, 'Voulu:', new_cells_count);
 
 
             // Remove old classes

@@ -4,7 +4,8 @@
   var lang = editor.lang['jouve-grid'];
   commonLang = editor.lang.common;
 
-  return {
+
+  var dialogDefinition = {
     title: lang.insertGrid,
     minWidth: 200,
     minHeight: 100,
@@ -34,7 +35,7 @@
             type: 'select',
             label: lang.rows,
             items: [
-              [ '1', 2],
+              [ '1', 1],
               [ '2', 2],
               [ '3', 3],
               [ '4', 4],
@@ -53,4 +54,6 @@
   };
 
 
-} );
+  return dialogDefinition;
+
+});
