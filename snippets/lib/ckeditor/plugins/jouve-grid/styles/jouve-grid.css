@@ -51,11 +51,11 @@
   clear: both;
 }
 
-.jouve-grid-2 > .jouve-grid-item:first-child,
-.jouve-grid-2 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item,
-.jouve-grid-2 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
-.jouve-grid-2 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
-.jouve-grid-2 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item
+.lte-ie8 .jouve-grid-2 > .jouve-grid-item:first-child,
+.lte-ie8 .jouve-grid-2 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item,
+.lte-ie8 .jouve-grid-2 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
+.lte-ie8 .jouve-grid-2 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
+.lte-ie8 .jouve-grid-2 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item
 {clear: both;}
 
 
@@ -68,11 +68,11 @@
   clear: both;
 }
 
-.jouve-grid-3 > .jouve-grid-item:first-child,
-.jouve-grid-3 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
-.jouve-grid-3 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
-.jouve-grid-3 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
-.jouve-grid-3 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item
+.lte-ie8 .jouve-grid-3 > .jouve-grid-item:first-child,
+.lte-ie8 .jouve-grid-3 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
+.lte-ie8 .jouve-grid-3 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
+.lte-ie8 .jouve-grid-3 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
+.lte-ie8 .jouve-grid-3 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item
 {clear: both;}
 
 
@@ -85,11 +85,11 @@
   clear: both;
 }
 
-.jouve-grid-4 > .jouve-grid-item:first-child,
-.jouve-grid-4 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
-.jouve-grid-4 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
-.jouve-grid-4 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
-.jouve-grid-4 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item
+.lte-ie8 .jouve-grid-4 > .jouve-grid-item:first-child,
+.lte-ie8 .jouve-grid-4 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
+.lte-ie8 .jouve-grid-4 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
+.lte-ie8 .jouve-grid-4 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
+.lte-ie8 .jouve-grid-4 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item
 {clear: both;}
 
 
@@ -103,9 +103,28 @@
   clear: both;
 }
 
-.jouve-grid-5 > .jouve-grid-item:first-child,
-.jouve-grid-5 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
-.jouve-grid-5 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
-.jouve-grid-5 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item
-.jouve-grid-5 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item
+.lte-ie8 .jouve-grid-5 > .jouve-grid-item:first-child,
+.lte-ie8 .jouve-grid-5 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
+.lte-ie8 .jouve-grid-5 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item,
+.lte-ie8 .jouve-grid-5 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item
+.lte-ie8 .jouve-grid-5 > .jouve-grid-item:first-child + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item + .jouve-grid-item
 {clear: both;}
+
+
+
+/* -----------------------------------------------------------------------------
+   Jouve Grid > Responsive
+----------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 767px) {
+
+  .jouve-grid .jouve-grid-item {
+    width: auto;
+    float: none;
+  }
+
+  .jouve-grid .jouve-grid-item {
+    min-height: 0 !important;
+  }
+
+}
