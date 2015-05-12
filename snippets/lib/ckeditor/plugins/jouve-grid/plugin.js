@@ -1,6 +1,4 @@
-﻿
-
-CKEDITOR.plugins.add( 'jouve-grid', {
+﻿CKEDITOR.plugins.add( 'jouve-grid', {
     lang: 'fr',
     requires: 'widget',
     icons: 'jouve-grid',
@@ -14,7 +12,7 @@ CKEDITOR.plugins.add( 'jouve-grid', {
       editor.ui.addButton('jouve-grid', {
           label: lang.insertGrid,
           command : 'jouve-grid',
-          icon : this.path +'icons/jouve-grid.png',
+          icon : this.path +'icons/jouve-grid.png'
       });
 
       // Add CSS
@@ -27,12 +25,14 @@ CKEDITOR.plugins.add( 'jouve-grid', {
       editor.widgets.add( 'jouve-grid', {
           defaults: {
             colsCount: 2,
-            rowsCount: 1
+            rowsCount: 1,
+            padding: false
           },
           button: lang.insertGrid,
 
           allowedContent:
-            'div(!jouve-grid, jouve-grid-1, jouve-grid-2, jouve-grid-3, jouve-grid-4, jouve-grid-5);' +
+            'div(!jouve-grid, jouve-grid-1, jouve-grid-2, jouve-grid-3, jouve-grid-4, jouve-grid-5, jouve-grid-6, jouve-grid-padding);' +
+            'div(!jouve-grid-item-content);' +
             'div(!jouve-grid-item);',
           requiredContent: 'div(jouve-grid);',
 
@@ -60,6 +60,7 @@ CKEDITOR.plugins.add( 'jouve-grid', {
             // Default values
             var colsCount = this.defaults.colsCount;
             var rowsCount = this.defaults.rowsCount;
+            var padding   = this.defaults.padding;
 
             // Get HTML settings
             for(var c = 1; c <= 10; c++) {
@@ -81,6 +82,7 @@ CKEDITOR.plugins.add( 'jouve-grid', {
 
 
 
+            this.setData( 'padding', padding );
             this.setData( 'colsCount', colsCount );
             this.setData( 'rowsCount', rowsCount );
 
@@ -96,17 +98,21 @@ CKEDITOR.plugins.add( 'jouve-grid', {
             var current_cells_count = this.element.getChildCount();
             var new_cells_count = this.data.colsCount * this.data.rowsCount; // Calculate the number of cells to create
 
-            //console.log('current:', current_cells_count, 'Voulu:', new_cells_count);
-
-
             // Remove old classes
             for(var old_c = 1; old_c <= 10; old_c++) {
               this.element.removeClass( 'jouve-grid-'+ old_c );
             }
 
+
+
             // Add cols number class
-            if ( this.data.colsCount )
+            if ( this.data.colsCount ) {
               this.element.addClass( 'jouve-grid-' + this.data.colsCount );
+
+              // Add padding class
+              if( this.data.padding )
+                this.element.addClass( 'jouve-grid-padding' );
+            }
 
 
 
@@ -114,8 +120,7 @@ CKEDITOR.plugins.add( 'jouve-grid', {
             if(current_cells_count <= new_cells_count) {
 
               for(var i = 1 + current_cells_count; i <= new_cells_count; i++) {
-                //console.log('Create:', i);
-                this.element.appendHtml('<div class="jouve-grid-item"></div>');
+                this.element.appendHtml('<div class="jouve-grid-item"><div class="jouve-grid-item-content"></div></div>');
 
                 // Update editables
                 this.createEditable(new_cells_count);
@@ -145,7 +150,7 @@ CKEDITOR.plugins.add( 'jouve-grid', {
 
             for (var i = 1; i <= cellsCount; i++) {
               this.initEditable('content_'+ i, {
-                selector: '.jouve-grid > div:nth-child('+ i +')'
+                selector: '.jouve-grid > div:nth-child('+ i +') > div'
               });
             }
 

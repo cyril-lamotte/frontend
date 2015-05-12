@@ -21,7 +21,8 @@
               [ '2', 2],
               [ '3', 3],
               [ '4', 4],
-              [ '5', 5]
+              [ '5', 5],
+              [ '6', 6]
             ],
             setup: function( widget ) {
               this.setValue( widget.data.colsCount );
@@ -46,6 +47,17 @@
             },
             commit: function( widget ) {
               widget.setData( 'rowsCount', this.getValue() );
+            }
+          },
+          {
+            id: 'padding',
+            type: 'checkbox',
+            label: lang.padding,
+            setup: function( widget ) {
+              this.setValue( widget.data.padding );
+            },
+            commit: function( widget ) {
+              widget.setData( 'padding', this.getValue() );
             }
           }
         ]
