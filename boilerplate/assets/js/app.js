@@ -32,14 +32,13 @@ var app = {
       return false;
 
     var params = url.split('&');
-
     var output_params = [];
 
     $.each(params, function(k, v) {
 
       var p = v.split('=');
-
       var obj = {};
+
       obj[p[0]] = p[1];
       output_params.push(obj);
 
