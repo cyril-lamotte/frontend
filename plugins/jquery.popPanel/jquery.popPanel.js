@@ -1,7 +1,7 @@
 (function( $ ){
 
   /**
-  * Plugin jQuery popPanel v1.1.0 (05/2015)
+  * Plugin jQuery popPanel v1.2.0 (05/2015)
   *
   */
 
@@ -82,6 +82,17 @@
       plugin.settings.trigger.click(function (event) {
 
         event.stopPropagation();
+
+
+        // Close all others pops
+        $('.'+ o.prefix +'-is-active').each(function(i, el) {
+
+          if( el !== o.trigger[0] ) {
+            $(this).data('popPanel').close();
+          }
+
+        });
+
 
         if( $(this).hasClass( plugin.settings.prefix +'-is-active' ) )
         {
