@@ -1,0 +1,58 @@
+/* =============================================================================
+   Sliding panel
+============================================================================= */
+
+/* -----------------------------------------------------------------------------
+   Sliding panel > Core
+----------------------------------------------------------------------------- */
+
+.sliding-panel--wrapper {
+  position: relative;
+
+  .sliding-panel--expanded & {
+    left: auto !important;
+  }
+}
+
+@include mq-until( $breakpoint-sm ) {
+
+  .sliding-panel {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    padding: 0;
+    width: 170px !important; // = panelOffset setting * 1
+    z-index: 9999;
+    overflow: auto;
+
+    // Right panel
+    right: 0;
+    margin-right: -170px; // = panelOffset setting * -1
+
+    // Left panel
+    //left: 0;
+    //margin-left: -170px; // = panelOffset setting * -1
+  }
+
+}
+
+
+.sliding-panel--overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9998;
+
+  .sliding-panel--expanded & {
+    display: block;
+  }
+}
+
+
+/* -----------------------------------------------------------------------------
+   Sliding panel > Theme
+----------------------------------------------------------------------------- */
