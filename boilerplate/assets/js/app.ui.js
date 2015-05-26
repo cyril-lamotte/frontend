@@ -12,7 +12,7 @@ app.ui.skipLinks = function() {
 
   $('#skip-links a').bind('focus blur', function() {
 
-    // tabindex="-1" for Chrome fix
+    // tabindex="-1" for Chrome anchors fix
     $( this.hash )
       .toggleClass('target')
       .attr('tabindex', '-1');
