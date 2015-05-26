@@ -13,7 +13,7 @@ var card = function() {
 
 	});
 
-}
+};
 
 
 /* Code exécuté au chargement de la page */

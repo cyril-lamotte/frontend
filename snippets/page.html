@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]>    <html lang="fr" class="ie7 lte-ie8"><![endif]-->
+<!--[if IE 8]>        <html lang="fr" class="ie8 lte-ie8"><![endif]-->
+<!--[if IE 9]>        <html lang="fr" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="fr"><!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+
+  <title>Page</title>
+
+
+  <style>
+
+.view {
+  width: 316px;
+  height: 216px;
+  margin: 10px;
+  position: relative;
+  border: 8px solid #fff;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+  background: #333;
+  -webkit-perspective: 500px;
+  -moz-perspective: 500px;
+  -o-perspective: 500px;
+  -ms-perspective: 500px;
+  perspective: 500px;
+}
+
+.view .slice{
+  width: 60px;
+  height: 100%;
+  z-index: 100;
+
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  -ms-transform-origin: left center;
+  transform-origin: left center;
+
+  -webkit-transition: -webkit-transform 150ms ease-in-out;
+  -moz-transition: -moz-transform 150ms ease-in-out;
+  -o-transition: -o-transform 150ms ease-in-out;
+  -ms-transition: -ms-transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out;
+
+}
+
+.view div.view-back{
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  background: #666;
+  z-index: 0;
+}
+
+.view-back span {
+  display: block;
+  float: right;
+  padding: 5px 20px 5px;
+  width: 100%;
+  text-align: right;
+  font-size: 16px;
+  color: rgba(255,255,255,0.6);
+}
+
+.view-back span:first-child {
+  padding-top: 20px;
+}
+
+.view-back a {
+  display: bock;
+  font-size: 18px;
+  color: rgba(255,255,255,0.4);
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  line-height: 22px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.view-back a:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.view-back span[data-icon]:before {
+    content: attr(data-icon);
+    font-family: 'icons';
+    color: #aaa;
+  color: rgba(255,255,255,0.2);
+  text-shadow: 0 0 1px rgba(255,255,255,0.2);
+  padding-right: 5px;
+}
+
+.view .s2,
+.view .s3,
+.view .s4,
+.view .s5 {
+  -webkit-transform: translate3d(60px,0,0);
+  -moz-transform: translate3d(60px,0,0);
+  -o-transform: translate3d(60px,0,0);
+  -ms-transform: translate3d(60px,0,0);
+  transform: translate3d(60px,0,0);
+}
+.view .s1 {
+  background-position: 0px 0px;
+}
+.view .s2 {
+  background-position: -60px 0px;
+}
+.view .s3 {
+  background-position: -120px 0px;
+}
+.view .s4 {
+  background-position: -180px 0px;
+}
+.view .s5 {
+  background-position: -240px 0px;
+}
+
+.view .overlay {
+  width: 60px;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: opacity 150ms ease-in-out;
+  -moz-transition: opacity 150ms ease-in-out;
+  -o-transition: opacity 150ms ease-in-out;
+  -ms-transition: opacity 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out;
+}
+
+.view:hover .overlay {
+  opacity: 1;
+}
+
+.view img {
+  position: absolute;
+  z-index: 0;
+  -webkit-transition: left 0.3s ease-in-out;
+  -o-transition: left 0.3s ease-in-out;
+  -moz-transition: left 0.3s ease-in-out;
+  -ms-transition: left 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out;
+}
+
+.view {
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -o-perspective: 800px;
+  -ms-perspective: 800px;
+  perspective: 800px;
+}
+.view:hover .s1{
+  -webkit-transition-delay: 200ms;
+  -moz-transition-delay: 200ms;
+  -o-transition-delay: 200ms;
+  -ms-transition-delay: 200ms;
+  transition-delay: 200ms;
+
+  -webkit-transform: rotate3d(0,1,0,-3deg);
+  -moz-transform: rotate3d(0,1,0,-3deg);
+  -o-transform: rotate3d(0,1,0,-3deg);
+  -ms-transform: rotate3d(0,1,0,-3deg);
+  transform: rotate3d(0,1,0,-3deg);
+}
+.view:hover .s2{
+  -webkit-transition-delay: 150ms;
+  -moz-transition-delay: 150ms;
+  -o-transition-delay: 150ms;
+  -ms-transition-delay: 150ms;
+  transition-delay: 150ms;
+
+  -webkit-transform: translate3d(59px,0,0) rotate3d(0,1,0,-10deg);
+  -moz-transform: translate3d(59px,0,0) rotate3d(0,1,0,-10deg);
+  -o-transform: translate3d(59px,0,0) rotate3d(0,1,0,-10deg);
+  -ms-transform: translate3d(59px,0,0) rotate3d(0,1,0,-10deg);
+  transform: translate3d(59px,0,0) rotate3d(0,1,0,-10deg);
+}
+.view:hover .s3{
+  -webkit-transition-delay: 100ms;
+  -moz-transition-delay: 100ms;
+  -o-transition-delay: 100ms;
+  -ms-transition-delay: 100ms;
+  transition-delay: 100ms;
+
+  -webkit-transform: translate3d(59px,0,0) rotate3d(0,1,0,-16deg);
+  -moz-transform: translate3d(59px,0,0) rotate3d(0,1,0,-16deg);
+  -o-transform: translate3d(59px,0,0) rotate3d(0,1,0,-16deg);
+  -ms-transform: translate3d(59px,0,0) rotate3d(0,1,0,-16deg);
+  transform: translate3d(59px,0,0) rotate3d(0,1,0,-16deg);
+}
+.view:hover .s4{
+  -webkit-transition-delay: 50ms;
+  -moz-transition-delay: 50ms;
+  -o-transition-delay: 50ms;
+  -ms-transition-delay: 50ms;
+  transition-delay: 50ms;
+
+  -webkit-transform: translate3d(59px,0,0) rotate3d(0,1,0,-30deg);
+  -moz-transform: translate3d(59px,0,0) rotate3d(0,1,0,-30deg);
+  -o-transform: translate3d(59px,0,0) rotate3d(0,1,0,-30deg);
+  -ms-transform: translate3d(59px,0,0) rotate3d(0,1,0,-30deg);
+  transform: translate3d(59px,0,0) rotate3d(0,1,0,-30deg);
+}
+.view:hover .s5{
+  -webkit-transform: translate3d(60px,0,0) rotate3d(0,1,0,-42deg);
+  -moz-transform: translate3d(60px,0,0) rotate3d(0,1,0,-42deg);
+  -o-transform: translate3d(60px,0,0) rotate3d(0,1,0,-42deg);
+  -ms-transform: translate3d(60px,0,0) rotate3d(0,1,0,-42deg);
+  transform: translate3d(60px,0,0) rotate3d(0,1,0,-42deg);
+}
+
+.view .s4 > .overlay {
+  background: -moz-linear-gradient(right, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 100%);
+  background: -webkit-linear-gradient(right, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
+  background: -o-linear-gradient(right, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
+  background: -ms-linear-gradient(right, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
+  background: linear-gradient(right, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
+}
+
+.view .s5 > .overlay {
+  background: -moz-linear-gradient(left, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 100%);
+  background: -webkit-linear-gradient(left, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
+  background: -o-linear-gradient(left, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
+  background: -ms-linear-gradient(left, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
+  background: linear-gradient(left, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
+}
+
+.view div.view-back{
+  background: #0a0a0a;
+  background: -moz-linear-gradient(left, #0a0a0a 0%, #666666 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#0a0a0a), color-stop(100%,#666666));
+  background: -webkit-linear-gradient(left, #0a0a0a 0%,#666666 100%);
+  background: -o-linear-gradient(left, #0a0a0a 0%,#666666 100%);
+  background: -ms-linear-gradient(left, #0a0a0a 0%,#666666 100%);
+  background: linear-gradient(left, #0a0a0a 0%,#666666 100%);
+}
+
+  </style>
+
+
+  <script src="../boilerplate/assets/js/lib/jquery.min.js"></script>
+  <script src="lib/modernizr.custom.69142.js"></script>
+
+</head>
+
+<body>
+
+
+<div id="grid" class="main">
+
+  <div class="view">
+
+    <div class="view-back">
+      <span data-icon="A">566</span>
+      <span data-icon="B">124</span>
+      <a href="http://www.flickr.com/photos/ag2r/5439506585/in/photostream">→</a>
+    </div>
+
+    <img src="img/macaw_400x264.jpg" alt="" />
+
+  </div>
+
+</div>
+
+<p class="copyright">Image courtesy of anankkml at FreeDigitalPhotos.net</p>
+
+
+<script>
+
+$.fn.hoverfold = function( args ) {
+
+  this.each( function() {
+
+    $( this ).children( '.view' ).each( function() {
+
+      var $item   = $( this ),
+        img   = $item.children( 'img' ).attr( 'src' ),
+        struct  = '<div class="slice s1">';
+          struct  +='<div class="slice s2">';
+            struct  +='<div class="slice s3">';
+              struct  +='<div class="slice s4">';
+                struct  +='<div class="slice s5">';
+                struct  +='</div>';
+              struct  +='</div>';
+            struct  +='</div>';
+          struct  +='</div>';
+        struct  +='</div>';
+
+      var $struct = $( struct );
+
+      $item.find( 'img' ).remove().end().append( $struct ).find( 'div.slice' ).css( 'background-image', 'url(' + img + ')' ).prepend( $( '<span class="overlay" ></span>' ) );
+
+    } );
+
+  });
+
+};
+
+$( '#grid' ).hoverfold();
+
+</script>
+
+</body>
+</html>
