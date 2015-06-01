@@ -11,6 +11,7 @@
   <title><?php print $head_title; ?></title>
 
   <?php print $styles; ?>
+  <?php print $scripts; ?>
 
   <script src="<?= path_to_theme(); ?>/assets/js/lib/modernizr.js"></script>
 
@@ -21,6 +22,5 @@
   <?php print $page; ?>
   <?php print $page_bottom; ?>
 
-  <?php print $scripts; ?>
 </body>
 </html>
