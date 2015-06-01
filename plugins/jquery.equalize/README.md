@@ -19,5 +19,9 @@ Equalize blocks height which have the same offsetTop.
 ### 2. JavaScript
 
 ```js
-$('.blocks').equalize();
+$(window).load(function() {
+
+  $('.blocks').equalize();
+
+});
 ```
