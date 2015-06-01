@@ -1,6 +1,6 @@
 # Skip links
 
-A block module that display skip links for accessibility
+A block module that display accessibility skip-links
 
 
 ## Features
