@@ -47,7 +47,19 @@ Toggle panel on trigger action.
 
 
 
-### 3. JavaScript
+### 3. CSS
+
+```css
+.pop-panel {
+	display: none;
+}
+
+.pop-panel--is-closed {
+  display: none;
+}
+```
+
+### 4. JavaScript
 
 ```js
 $(document).ready(function() {
@@ -64,7 +76,7 @@ $(document).ready(function() {
 ```
 
 
-### 4. Options
+### 5. Options
 
 Options                   | Type            | Description                      | Default
 --------------------------|-----------------|----------------------------------|--------------------------------------------------------

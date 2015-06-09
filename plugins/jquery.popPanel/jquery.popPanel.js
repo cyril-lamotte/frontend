@@ -85,9 +85,9 @@
 
 
         // Close all others pops
-        $('.'+ o.prefix +'-is-active').each(function(i, el) {
+        $('.'+ plugin.settings.prefix +'-is-active').each(function(i, el) {
 
-          if( el !== o.trigger[0] ) {
+          if( el !== plugin.settings.trigger[0] ) {
             $(this).data('popPanel').close();
           }
 
