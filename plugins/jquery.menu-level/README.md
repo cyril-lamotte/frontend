@@ -19,13 +19,12 @@ Multi-level navigation
 ### 2. JavaScript
 
 ```js
-$('.menu-wrapper').menuLevel();
+$('.menu-level-wrapper').menuLevel();
 ```
 
 ### 3. Options
 
-Options | Type  | Description                    | Default
---------|-------|--------------------------------|--------
-files   | Array | Images paths                   | null
-logs    | Bool  | If true, shows logs in console | false
+Options | Type   | Description                    | Default
+--------|--------|--------------------------------|--------
+prefix  | string | Classes prefix                 | 'menu-level-'
 

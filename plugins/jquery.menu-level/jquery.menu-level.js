@@ -28,21 +28,25 @@
       // Include user's options
       plugin.settings = $.extend({}, defaults, options);
 
-      // Accéder à l'élément jQuery :     $element
-      // Accéder à l'élément DOM :        element
-      // Accéder aux options :            plugin.settings.myOption
+      // Wrap all levels
+      // and add class on parents
+      $element
+        .find('ul')
+          .wrap('<div class="'+ plugin.settings.prefix +'-level"></div>')
+        .end()
+          .find('.'+ plugin.settings.prefix +'-level').prev('a')
+            .addClass(plugin.settings.prefix +'-parent');
 
-      // Exécuter une fonction interne    myFonction()
-      // Exécuter une fonction plublique  plugin.myFonction()
-
-      // Lancer une temporisation         window.setTimeout('$(".element").data("menuLevel").myFonction()', 1000);
-
+      // Create back button
+      $(element).find('> div > ul ul').before('<button type="button" class="'+ plugin.settings.prefix +'-back"><span>Retour</span></button>');
 
       // Links with sublevel
-      plugin.settings.$menuTriggers = $element.find('a:not(.'+ plugin.settings.prefix +'leaf)');
+      plugin.settings.$menuTriggers = $element.find('a.'+ plugin.settings.prefix +'-parent');
 
       // Hide sublevels
-      $element.find('> .menu-level .menu-level').addClass( plugin.settings.prefix + 'hidden');
+      $element.find('> .'+ plugin.settings.prefix +'-level .'+ plugin.settings.prefix +'-level').addClass( plugin.settings.prefix + '-hidden');
+
+
 
       // Attach events
       setEvents();
@@ -58,29 +62,26 @@
         event.preventDefault();
 
         // Show sublevel
-        $(this).next('.menu-level').removeClass('menu-level-hidden');
+        $(this).next('.'+ plugin.settings.prefix +'-level').removeClass( plugin.settings.prefix +'-hidden');
 
       });
 
 
       // Back
-      $element.find('button.menu-level-back').click(function (event) {
+      $element.find('button.'+ plugin.settings.prefix +'-back').click(function (event) {
 
         // Hide current level
-        $(this).parents('.menu-level').first().addClass('menu-level-hidden');
-
+        $(this).parents('.'+ plugin.settings.prefix +'-level').first().addClass( plugin.settings.prefix +'-hidden');
 
       });
 
-    };
+      // Display the first level
+      $element.bind('ml:goToFirstPanel', function() {
 
+        $('.'+ plugin.settings.prefix +'-level').addClass( plugin.settings.prefix +'-hidden')
+          .first().removeClass('menu-level-hidden');
 
-    // Public function
-    // Call : $('.element').data('menuLevel').goToFirstPanel()
-    plugin.goToFirstPanel = function() {
-
-      $('.menu-level').addClass('menu-level-hidden')
-        .first().removeClass('menu-level-hidden');
+      });
 
     };
 
