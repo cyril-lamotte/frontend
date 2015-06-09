@@ -10,7 +10,6 @@
    * @param {object} options.wrapper=$('.wrapper') - Site wrapper's jQuery object
    * @param {bool} options.overlay=false - If true, adds an overlay when panel is opened
    * @param {string} options.position='right' - Position of the panel
-   * @param {string} options.onShow='right' - Position of the panel
    * @param {function()} onShow - Fires when the panel is showed
    * @param {function()} onHide - Fires when the panel is hidden
    */
