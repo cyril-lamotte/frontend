@@ -190,7 +190,7 @@
 
   };
 
-  $.fn.simpleDropDownHide = function() {
+  $.fn.simpleDropDown = function() {
 
     if( ! axsddMenu.data('flag') )
     {
