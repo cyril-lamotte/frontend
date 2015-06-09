@@ -13,19 +13,20 @@ Multi-level navigation
 ### 1. Join plugin
 
 ```html
-<script src="assets/js/plugins/jquery.menu-level.js"></script>
+<script src="assets/js/plugins/jquery.slidingPanel.js"></script>
 ```
 
 ### 2. JavaScript
 
 ```js
-$('.menu-wrapper').menuLevel();
+$('#sliding-panel').slidingPanel({
+  trigger: $('#sliding-panel-trigger'),
+  wrapper: $('#site')
+});
 ```
 
 ### 3. Options
 
 Options | Type  | Description                    | Default
 --------|-------|--------------------------------|--------
-files   | Array | Images paths                   | null
-logs    | Bool  | If true, shows logs in console | false
-
+lorem   | Array | Images paths                   | null

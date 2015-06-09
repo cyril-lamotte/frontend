@@ -10,24 +10,23 @@
   position: relative;
 
   .sliding-panel--expanded & {
-    left: auto !important;
+    right: 0;
   }
 }
 
 @include mq-until( $breakpoint-sm ) {
 
-  .sliding-panel {
+  .sliding-panel--is-expanded {
     position: fixed;
     top: 0;
     bottom: 0;
     padding: 0;
-    width: 170px !important; // = panelOffset setting * 1
+    width: 170px; // = panelOffset setting * 1
     z-index: 9999;
     overflow: auto;
 
     // Right panel
     right: 0;
-    margin-right: -170px; // = panelOffset setting * -1
 
     // Left panel
     //left: 0;
