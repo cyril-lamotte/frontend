@@ -1,4 +1,4 @@
-# jQuery PopPanel
+# jQuery popPanel
 
 Toggle panel on trigger action.
 
