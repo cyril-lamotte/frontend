@@ -8,9 +8,15 @@
   <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
 
   <style>
+    * {
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+    }
     body { background: #f6f4f4; color: #888; font: 0.8em/1.3 "Trebuchet MS", Arial, Helvetica, sans-serif; margin: 0; padding: 0; }
     .wrapper { margin: 2em 4%; background-color: #fff; padding: 1.5em 1em; text-align: left; border-radius: 5px; }
-    .wrapper section {  padding: 0.2em; display: inline-block; vertical-align: top; min-width: 250px; padding-left: 0.5em; padding-right: 0.5em; }
+    .inner { max-width: 710px; margin: 0 auto; }
+    .wrapper section {  padding: 0.2em; display: inline-block; vertical-align: top; min-width: 320px; padding-left: 0.5em; padding-right: 0.5em; text-align: left; max-width: 320px; }
     h1 { font-size: 1.2em; color: #888; padding: 0.5em 1em; margin: 0 0 1em; font-weight: normal; letter-spacing: 2px; font-variant: small-caps; background: #F6F4F4; border-radius: 3px 3px 0 0; }
     h2 { font-size: 1.1em; color: #F77F00; padding: 0.5em; margin: 1em 0 0; font-weight: normal; border-radius: 3px; }
     ul { margin: 0 0 1em 0; list-style: none; padding: 0; }
@@ -22,13 +28,13 @@
     .links a:link, .links a:visited { background: #888; color: #fff; }
     .links a:hover, .links a:focus, .links a:active { background: #aaa; }
 
-    @media screen and (max-device-width: 992px), screen and (max-width: 992px) {
-      .wrapper > div { border: none; }
-      .wrapper > div > div { display: block; min-width: 0; }
+    @media screen and (max-width: 767px) {
+      .inner {
+        max-width: none;
+      }
+      .wrapper section { display: block; min-width: 0; max-width: none }
     }
   </style>
-
-
 
 </head>
 <body>
@@ -37,27 +43,31 @@
 
   <h1>[Projet]</h1>
 
-  <section>
+  <div class="inner">
 
-    <h2>Pages</h2>
+    <section>
 
-    <ul>
-      <li><a href="#">Accueil</a></li>
-    </ul>
+      <h2>Pages</h2>
 
-  </section>
+      <ul>
+        <li><a href="#">Accueil</a></li>
+      </ul>
+
+    </section>
 
 
-  <section>
+    <section>
 
-    <h2>Styleguide</h2>
+      <h2>Styleguide</h2>
 
-    <ul>
-      <li><a href="_styleguide/index.html">Styleguide</a></li>
-      <li><a href="_layout.html">Layout</a></li>
-    </ul>
+      <ul>
+        <li><a href="_styleguide/index.html">Styleguide</a></li>
+        <li><a href="_layout.html">Layout</a></li>
+      </ul>
 
-  </section>
+    </section>
+
+  </div><!--/inner-->
 
 </div><!--/wrapper-->
 
