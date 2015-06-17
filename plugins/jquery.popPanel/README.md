@@ -53,6 +53,7 @@ Toggle panel on trigger action.
 .pop-panel {
   position: absolute;
   display: none;
+  z-index: 10;
 }
 
 .pop-panel--is-closed {
