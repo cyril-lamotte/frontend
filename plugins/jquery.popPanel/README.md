@@ -72,7 +72,12 @@ $(document).ready(function() {
 
   $('#pop-trigger').popPanel({
     closeTrigger: 'button.pop-panel--close-trigger',
-    idPopTitle: 'demo-1-title'
+    idPopTitle: 'demo-1-title',
+  	position: {
+      my: 'left top',
+      at: 'left-50 bottom+10',
+      collision : 'flip'
+    }
   });
 
   // Public method for closing
