@@ -51,11 +51,16 @@ Toggle panel on trigger action.
 
 ```css
 .pop-panel {
-	display: none;
+  position: absolute;
+  display: none;
 }
 
 .pop-panel--is-closed {
   display: none;
+}
+
+.pop-panel--is-opened {
+  display: block;
 }
 ```
 
