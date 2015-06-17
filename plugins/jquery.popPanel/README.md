@@ -13,7 +13,7 @@ Toggle panel on trigger action.
 ## Features
 
 * Buttons are hidden if JavaScript is disabled
-* ARIA pattern :
+* ARIA
 * ESC key for closing, the focus returns on trigger
 
 
@@ -65,7 +65,7 @@ Toggle panel on trigger action.
 $(document).ready(function() {
 
   $('#pop-trigger').popPanel({
-    closeTrigger: 'button.pop-panel--close-trigger'
+    closeTrigger: 'button.pop-panel--close-trigger',
     idPopTitle: 'demo-1-title'
   });
 
