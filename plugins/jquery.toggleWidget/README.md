@@ -59,5 +59,5 @@ connect              | Bool   | If true, only one panel can be showed       | fa
 connectRelationClass | String | Class name of a common parent of the panels | ''
 slideMode            | String | 'toggle' / 'slide'                          | 'toggle'
 onShow()             | Method | Do stuff after showing                      | function() {}
-onHide()             | Method | Do stuff after hidgng                       | function() {}
+onHide()             | Method | Do stuff after hiding                       | function() {}
 
