@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]><html lang="fr" class="ie7 lte-ie8"><![endif]-->
+<!--[if IE 8]><html lang="fr" class="ie8 lte-ie8"><![endif]-->
+<!--[if IE 9]><html lang="fr" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="fr"><!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+
+  <title>Sliding Panel</title>
+
+  <style>
+
+  body {
+    margin: 0;
+  }
+
+/* -----------------------------------------------------------------------------
+   Sliding panel > Core
+----------------------------------------------------------------------------- */
+
+/* Site wrapper */
+.sliding-panel--wrapper {
+  position: relative;
+  background: #fff;
+  z-index: 2;
+  min-height: 2000px;
+  right: 0;
+
+  -webkit-transition: right 300ms;
+  -moz-transition: right 300ms;
+  -o-transition: right 300ms;
+  transition: right 300ms;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.sliding-panel--is-expanded .sliding-panel--wrapper {
+  /* Right panel */
+  right: 201px;
+
+  /* Left panel */
+  /*left: 200px;*/
+}
+
+
+/* Panel */
+.sliding-panel--panel {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding: 0;
+  width: 200px;
+  overflow: auto;
+  z-index: 1;
+
+  /* Right panel */
+  right: 0;
+
+  /* Left panel */
+  /*left: 0;*/
+}
+
+
+
+/* Overlay */
+.sliding-panel--overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fafafa;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 3;
+}
+
+.sliding-panel--is-expanded .sliding-panel--overlay {
+  display: block;
+}
+
+
+
+/* -----------------------------------------------------------------------------
+   Sliding panel > Theme
+----------------------------------------------------------------------------- */
+
+.sliding-panel--wrapper {
+  text-align: center;
+}
+
+.sliding-panel--panel {
+  text-align: center;
+  background: #f0f0f0;
+  border-left: 1px solid #ccc;
+}
+
+  </style>
+
+  <!-- Modernizr http://modernizr.com/docs/#installing -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+</head>
+
+<body>
+
+
+<!--Markup-->
+
+<div id="sliding-panel">
+  Sliding Panel
+
+  <button type="button">Close</button>
+
+</div><!--/sliding-panel-->
+
+
+<div id="wrapper">
+
+  <button type="button" id="trigger">☰ Menu</button>
+
+  <h1>Sliding panel</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias error tempora culpa sint, doloremque necessitatibus incidunt rerum sequi quod sit debitis, quis quaerat ut esse. Dolorum, hic mollitia. Necessitatibus optio illo voluptates! Alias doloremque animi corrupti consequuntur et deserunt earum cumque incidunt sint, esse numquam eaque, cupiditate consequatur? Enim consequuntur, id pariatur quaerat magni quod harum optio labore eaque illum praesentium ipsa voluptate hic, est doloremque. Facere consequatur, incidunt deserunt ullam dolorem enim excepturi, autem libero quidem, saepe, facilis. Cupiditate nobis est fuga tenetur, a quaerat. Deleniti quam fugiat nobis dolor provident consectetur ipsam minima reprehenderit, earum ipsum, reiciendis culpa!</p>
+</div>
+
+<!--/Markup-->
+
+
+<!-- Scripts at the bottom for better performances -->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="jquery.slidingPanel.js"></script>
+<script>
+
+(function ($) {
+
+/* Execute code when the DOM is fully loaded */
+$(document).ready(function() {
+
+  // Panel
+  $('#sliding-panel').slidingPanel();
+
+  $('#sliding-panel > button').click(function (event) {
+
+    // Close panel method
+    $('#sliding-panel').trigger('sp:hide');
+
+  });
+
+}); // /ready
+
+
+})(jQuery);
+
+</script>
+
+</body>
+</html>

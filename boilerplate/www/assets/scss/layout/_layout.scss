@@ -1,0 +1,47 @@
+/* =============================================================================
+   Layout
+============================================================================= */
+
+/* -----------------------------------------------------------------------------
+   Body
+----------------------------------------------------------------------------- */
+
+body {
+  background: #fff;
+  margin: 0;
+}
+
+
+
+
+.wrapper {
+  clear: both;
+}
+
+.page {
+  @include pie-clearfix;
+}
+
+  .sidebar {
+    width: 280px;
+    float: left;
+    margin-left: 1em;
+
+    @include mq-to( 'sm' ) {
+      clear: both;
+      float: none;
+      width: auto;
+      margin: 0;
+    }
+  }
+
+  main {
+    clear: both;
+    float: left;
+    width: 700px;
+
+    @include mq-to( 'sm' ) {
+      float: none;
+      width: auto;
+    }
+  }

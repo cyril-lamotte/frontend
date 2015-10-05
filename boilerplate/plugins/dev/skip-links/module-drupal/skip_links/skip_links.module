@@ -1,0 +1,154 @@
+<?php
+
+/**
+ * @file
+ * A block module that display skip links for accessibility
+ */
+
+
+/**
+ * Implements hook_help().
+ *
+ * Displays help and module information.
+ *
+ * @param path
+ *   Which path of the site we're using to display help
+ * @param arg
+ *   Array that holds the current path as returned from arg() function
+ */
+function skip_links_help($path, $arg) {
+
+  switch ($path) {
+    case "admin/help#skip_links":
+      return '<p>' . t("Skip links are an accessibility feature.") .'<br>'. t('Allows users to skip groups of links like menus/navigations and to go directly to defined contents.') . '</p>';
+      break;
+  }
+
+}
+
+
+
+
+
+/**
+ * Implements hook_block_info().
+ */
+function skip_links_block_info() {
+
+  $blocks['skip_links'] = array(
+    'info' => t('Skip links'),
+    'cache' => DRUPAL_CACHE_GLOBAL,
+    'region' => 'header'
+  );
+
+  return $blocks;
+}
+
+
+
+
+/**
+ * Implements hook_block_view().
+ */
+function skip_links_block_view($delta = '') {
+
+  switch ($delta) {
+    case 'skip_links':
+      //$block['content'] = theme('item_list', array('items' => skip_links_list() ) );
+      $block['content'] = theme('ul', array('items' => skip_links_list() ) );
+  }
+
+  // Add JS
+  drupal_add_js( drupal_get_path('module', 'skip_links') .'/skip-links.js', array(
+    'scope' => 'footer',
+    'group' => '100'
+  ));
+
+  return $block;
+}
+
+
+
+/**
+ * Theme hook. Register skip_links theming functions.
+ */
+function skip_links_theme() {
+
+  $path = drupal_get_path('module', 'skip_links');
+
+  return array(
+    'block__skip_links' => array(
+      'template' => 'block--skip-links',
+      'variables' => array('content' => null),
+      'path' => $path . '\templates'
+    ),
+    'ul' => array(
+      'render element' => 'element',
+      'variables' => array('items' => null)
+    )
+  );
+
+}
+
+
+function theme_ul($variables) {
+
+  $items = $variables['items'];
+  $output = '';
+
+  if ( ! empty($items)) {
+
+    $output .= '<ul>';
+    foreach ($items as $item) {
+      $output .= sprintf('<li>%s</li>', $item);
+    }
+    $output .= '</ul>';
+
+  }
+
+  return $output;
+
+}
+
+
+
+function skip_links_list() {
+
+  // Links
+  $anchors = array(
+    array(
+      'label' => t('Go to menu'),
+      'fragment' => 'a_nav'
+    ),
+    array(
+      'label' => t('Go to main content'),
+      'fragment' => 'a_content'
+    ),
+    array(
+      'label' => t('Go to search'),
+      'fragment' => 'a_search'
+    ),
+    array(
+      'label' => t('Accessibility'),
+      'path' => 'accessibility'
+    )
+  );
+
+  $items = array();
+  foreach ($anchors as $link) {
+
+    if( isset( $link['fragment'] ) )
+    {
+      // Anchor
+      $items[] = l( $link['label'], '', array('fragment' => $link['fragment'], 'external' => true));
+    }
+    else {
+      // Link
+      $items[] = l( $link['label'], $link['path'] );
+    }
+  }
+
+  return $items;
+
+}
+

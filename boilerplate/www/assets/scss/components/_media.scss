@@ -1,0 +1,56 @@
+/* =============================================================================
+   Media
+============================================================================= */
+
+%media {
+  @include pie-clearfix;
+  margin: 1em 0;
+  clear: both;
+}
+
+
+
+/* media-pict : Image & infos */
+
+%media-pict {
+  float: left;
+  margin: 0 23px 5px 0;
+  width: 100px;
+
+  @include mq-to( 'sm' ) {
+    float: none;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    width: auto;
+  }
+
+  a {
+    display: block;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    figcaption {
+      text-align: left;
+      font-weight: bold;
+    }
+  }
+}
+
+
+
+/* media-content : Description */
+
+%media-content {
+  overflow: hidden;
+}
+
+%media-text {
+
+  p:first-child {
+    margin-top: 0;
+  }
+
+}

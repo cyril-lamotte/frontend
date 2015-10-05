@@ -1,0 +1,48 @@
+// =============================================================================
+// Fonts
+// =============================================================================
+
+/* -----------------------------------------------------------------------------
+   Em mixin
+----------------------------------------------------------------------------- */
+
+@function em($target, $context: $base-font-size) {
+   @return $target / $context * 1em;
+}
+
+
+
+/* -----------------------------------------------------------------------------
+   @Font-face
+----------------------------------------------------------------------------- */
+
+//@include font-face("Open Sans", font-files("OpenSans/opensans-regular-webfont.woff2", "OpenSans/opensans-regular-webfont.woff", "OpenSans/opensans-regular-webfont.ttf"), "OpenSans/opensans-regular-webfont.eot", normal, normal);
+//@include font-face("Open Sans", font-files("OpenSans/opensans-bold-webfont.woff2", "OpenSans/opensans-bold-webfont.woff", "OpenSans/opensans-bold-webfont.ttf"), "OpenSans/opensans-bold-webfont.eot", bold, normal);
+//@include font-face("Open Sans", font-files("OpenSans/opensans-semibold-webfont.woff2", "OpenSans/opensans-semibold-webfont.woff", "OpenSans/opensans-semibold-webfont.ttf"), "OpenSans/opensans-semibold-webfont.eot", 600, normal);
+
+
+
+// -----------------------------------------------------------------------------
+// Fonts variables
+// -----------------------------------------------------------------------------
+
+$font-stack: ('Arial', 'Helvetica', sans-serif);
+$font-stack-alt: ('Open sans', 'Arial', 'Helvetica', sans-serif);
+
+// EM unit
+$base-font-size: 12px; // If 12px then 1em = 12px
+
+// REM unit
+//$base-font-size: 10px; // rem : 1.2rem = 12px / 2rem = 20px
+
+$base-line-height: 1.5;
+
+
+
+
+
+
+
+
+
+@import "fonts--hologram";
