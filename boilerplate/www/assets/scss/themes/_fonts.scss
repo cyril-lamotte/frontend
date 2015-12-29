@@ -7,7 +7,7 @@
 ----------------------------------------------------------------------------- */
 
 @function em($target, $context: $base-font-size) {
-   @return $target / $context * 1em;
+  @return $target / $context * 1em;
 }
 
 
@@ -36,13 +36,3 @@ $base-font-size: 12px; // If 12px then 1em = 12px
 //$base-font-size: 10px; // rem : 1.2rem = 12px / 2rem = 20px
 
 $base-line-height: 1.5;
-
-
-
-
-
-
-
-
-
-@import "fonts--hologram";

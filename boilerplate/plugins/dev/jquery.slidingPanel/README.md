@@ -20,6 +20,14 @@ Display a sliding panel
 <script src="assets/js/plugins/jquery.slidingPanel.js"></script>
 ```
 
+```html
+<button type="button" id="btn--burger" class="btn--burger" title="<?php print t('Open nav') ?>">Menu</button>
+<div id="sliding-panel">
+
+	// Content
+
+</div>
+```
 
 
 ### 2. JavaScript

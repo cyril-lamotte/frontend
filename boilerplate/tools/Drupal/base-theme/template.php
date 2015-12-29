@@ -3,7 +3,8 @@
 /**
  * Include common functions used through out theme.
  */
-include_once dirname(__FILE__) . '/theme/common.inc';
+require_once("templates/includes/menus.inc.php");
+require_once("templates/includes/solr.inc.php");
 
 
 

@@ -51,46 +51,47 @@ $susy: (
   )
 );
 
+//$susy--no-gutter: (
+//  gutters: 0
+//);
 
-// Usage :
-//
-// @include container;
-// @include span(5 of 12);
-// @include span(7 of 12 last);
-//
-// $susy-conf-2: (
-//   gutters: 1/4
-// );
-// @include layout($susy-conf-2);
 
-.row {
-  @include container;
-}
+/// Usage :
+///
+/// @include container;
+/// @include span(5 of 12);
+/// @include span(7 of 12 last);
+/// @include layout($susy--no-gutter);
 
 
 
-/* -----------------------------------------------------------------------------
-   Grid 2 col
-   item | item
------------------------------------------------------------------------------ */
-
-
-.container-2-col {
+/// Make equal size column
+/// @param {Int} $col-count - Column count default : 2
+///
+/// @example scss - Usage
+/// .foo {
+///   @include grid-equal-cols;
+/// }
+@mixin grid-equal-cols($col-count: 2) {
   @include container;
 
-  > .grid-item {
-    @include span(6 of 12);
+  $col-count-12: 12 / $col-count;
 
-    &:nth-child(2n) {
-      @include span(6 of 12 last);
+  > div {
+    @include span($col-count-12 of 12);
+
+    &:nth-child(#{$col-count}n) {
+      @include span($col-count-12 of 12 last);
     }
 
+    // To do : generate IE8 code
+
     // IE8
-    &:first-child {
-      + .grid-item,
-      + .grid-item + .grid-item + .grid-item,
-      + .grid-item + .grid-item + .grid-item  + .grid-item  + .grid-item {
-        @include span(6 of 12 last);
+    .ie8 &:first-child {
+      + div,
+      + div + div + div,
+      + div + div + div  + div  + div {
+        @include span($col-count-12 of 12 last);
       }
     }
 
@@ -115,7 +116,7 @@ $susy: (
     }
 
     // IE8
-    &:first-child {
+    .ie8 &:first-child {
       + .grid-item + .grid-item,
       + .grid-item + .grid-item + .grid-item + .grid-item + .grid-item,
       + .grid-item + .grid-item + .grid-item + .grid-item + .grid-item + .grid-item + .grid-item  + .grid-item {
@@ -144,7 +145,7 @@ $susy: (
     }
 
     // IE8
-    &:first-child {
+    .ie8 &:first-child {
       + .grid-item + .grid-item + .grid-item,
       + .grid-item + .grid-item + .grid-item + .grid-item + .grid-item + .grid-item {
         @include span(3 of 12 last);

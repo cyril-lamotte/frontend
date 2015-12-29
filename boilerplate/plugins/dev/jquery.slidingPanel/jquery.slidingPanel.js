@@ -17,7 +17,7 @@
 
     // Defaults options
     var defaults = {
-      prefix: 'sliding-panel-',
+      prefix: 'sp-',
       duration : 300,
       trigger: $('#trigger'),
       wrapper: $('#wrapper'),
@@ -34,7 +34,7 @@
 
 
 
-    /** plugins initialisation */
+    /** Plugin initialisation */
     plugin.init = function() {
 
       // Merge user's options
@@ -102,7 +102,7 @@
         .bind('touchstart', function(event) {
 
           event.preventDefault();
-          $panel.trigger('sp:hide');
+          $panel.trigger('hide.sp');
 
         });
 
@@ -147,7 +147,7 @@
       plugin.settings.trigger
         .removeClass(plugin.settings.prefix +'-trigger--is-active')
         .attr('aria-expanded', false)
-        .focus();
+        .trigger('focus-on-trigger.sp');
 
 
       $('body').removeClass(plugin.settings.prefix +'-is-expanded');
@@ -171,14 +171,25 @@
 
         // Close panel on click on active trigger
         if( $(this).hasClass( plugin.settings.prefix +'-trigger--is-active' ) ) {
-          $panel.trigger('sp:hide');
+          $panel.trigger('hide.sp');
         }
         else {
-          $panel.trigger('sp:show');
+          $panel.trigger('show.sp');
         }
 
-      });
+      }).bind('focus-on-trigger.sp', function () {
 
+        // Return focus to the trigger
+        timeoutID = window.setTimeout(function($trigger) {
+
+          // IE9 FIX
+          if($trigger !== undefined)
+            $trigger.focus();
+
+        }, plugin.settings.duration, plugin.settings.trigger);
+
+
+      });
 
     };
 
@@ -192,21 +203,21 @@
 
         // ESC
         if (event.keyCode == 27) {
-          $panel.trigger('sp:hide');
+          $panel.trigger('hide.sp');
         }
 
       }).click(function(event) {
-        $panel.trigger('sp:hide');
+        $panel.trigger('hide.sp');
       });
 
 
       // Hide on orientationchange & on desktop while resizing
       $(window)
-        .bind('orientationchange', function() { $panel.trigger('sp:hide'); })
+        .bind('orientationchange', function() { $panel.trigger('hide.sp'); })
         .resize(function() {
 
           if( Modernizr.mq('only screen and (min-width: 992px)') ) {
-            $panel.trigger('sp:hide');
+            $panel.trigger('hide.sp');
           }
 
         });
@@ -269,8 +280,8 @@
 
       // Listen custom events & stop propagation (avoid <body>'s behavior)
       $panel
-        .bind('sp:show', function() { showPanel(); })
-        .bind('sp:hide', function() { hidePanel(); })
+        .bind('show.sp', function() { showPanel(); })
+        .bind('hide.sp', function() { hidePanel(); })
         .click(function (event) { event.stopPropagation(); });
 
 
@@ -283,7 +294,7 @@
 
         // TAB
         if (event.keyCode == 9) {
-          $panel.trigger('sp:hide');
+          $panel.trigger('hide.sp');
         }
 
       });

@@ -1,5 +1,5 @@
 // =============================================================================
-//   Sprites
+// Sprites configuration
 // =============================================================================
 
 // Compass spriting configuration :
@@ -8,8 +8,10 @@
 // Sprite map config
 $sprites-sprite-base-class: '.sp';
 $sprites-sprite-dimensions: true;
-$sprites-layout: smart;
-$sprites-sort-by: width;
+$sprites-layout: 'smart'; // smart | vertical
+$sprites-sort-by: 'width';
+//$sprites-spacing: 4px; // Avoid sprite overflow's bug (in vertical mode)
+
 
 // Get sprites
 @import "sprites/*.png";
@@ -37,7 +39,7 @@ $sprites-sort-by: width;
 ///
 /// @example scss - Usage
 /// .foo {
-///   @include spriteAlignMiddle('mail') {
+///   @include spriteAlignMiddle('mail');
 /// }
 @mixin spriteAlignMiddle($sprite-name) {
   position: absolute;
@@ -60,7 +62,7 @@ $sprites-sort-by: width;
 ///
 /// @example scss - Usage
 /// .foo {
-///   @include spriteAlign('mail', 40, 40) {
+///   @include spriteAlign('mail', 40, 40);
 /// }
 @mixin spriteAlign($sprite-name, $x-offset, $y-offset, $direction: 'right') {
   @include sprites-sprite($sprite-name);
@@ -77,6 +79,28 @@ $sprites-sort-by: width;
   }
 
   top: $y-offset - sprites-sprite-height($sprite-name)/2;
+}
+
+
+
+/// Display a sprite for x2 dpi resolutions (retina)
+///
+/// @param {String} $sprite-name - Sprite's name
+///
+/// @example scss - Usage
+/// .foo {
+///   @include spriteHD('foo');
+/// }
+@mixin spriteHD($sprite-name) {
+  background-image: sprite-url($sprites-sprites);
+  width: sprites-sprite-width($sprite-name) / 2;
+  height: sprites-sprite-height($sprite-name) / 2;
+
+  $pos: sprite-position($sprites-sprites, $sprite-name);
+  background-position: nth($pos, 1)/2 nth($pos, 2)/2;
+  background-repeat: no-repeat;
+
+  background-size: ceil(image-width(sprite-path($sprites-sprites)))/2 auto;
 }
 
 

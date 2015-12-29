@@ -13,6 +13,7 @@
       idPopTitle: null,
       closeTrigger: null,
       selectorFocusableElements: 'a, button, input',
+      autoFocus: true,
       position: {
         my: 'left top',
         at: 'left bottom',
@@ -124,6 +125,7 @@
       });
 
 
+
       // Close with ESC key
       plugin.settings.pop.keydown(function(event) {
 
@@ -141,9 +143,15 @@
 
       });
 
+      plugin.settings.pop
+        .bind('pp:no-autofocus', function() { plugin.settings.autoFocus = false; });
 
       // Close on outside click
       $('html').click(function(event) {
+        close();
+      });
+
+      $(window).resize(function() {
         close();
       });
 
@@ -167,8 +175,12 @@
         .attr({
           'aria-hidden': false,
           'tabindex': 0
-        })
-        .focus();
+        });
+
+      // Move focus to panel
+      if( plugin.settings.autoFocus ) {
+        plugin.settings.pop.focus();
+      }
 
       // Trigger callback function
       plugin.settings.onOpen();

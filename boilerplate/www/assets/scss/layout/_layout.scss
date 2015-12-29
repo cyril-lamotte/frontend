@@ -2,6 +2,22 @@
    Layout
 ============================================================================= */
 
+// Site size
+$default-view-width: 1280px;
+
+/// Offset width (ex: Labels width)
+$offset-width: 150px;
+
+
+// Spacing
+$spacing-default: 15px;
+$spacing-lg: 20px;
+$spacing-md: 15px;
+$spacing-sm: 10px;
+$spacing-xs: 5px;
+
+
+
 /* -----------------------------------------------------------------------------
    Body
 ----------------------------------------------------------------------------- */
@@ -13,35 +29,37 @@ body {
 
 
 
+/* -----------------------------------------------------------------------------
+   Wrappers
+----------------------------------------------------------------------------- */
 
-.wrapper {
+// Does not allow overflow (usefull for sliding menu)
+.outer-wrap {
+  overflow: hidden;
+}
+
+.inner-wrap {
+  max-width: $default-view-width;
+}
+
+.wrap {
   clear: both;
 }
+
 
 .page {
   @include pie-clearfix;
 }
 
-  .sidebar {
-    width: 280px;
-    float: left;
-    margin-left: 1em;
+.sidebar {
+  width: 280px;
+  float: left;
+  margin-left: 1em;
 
-    @include mq-to( 'sm' ) {
-      clear: both;
-      float: none;
-      width: auto;
-      margin: 0;
-    }
-  }
-
-  main {
+  @include mq-to( 'sm' ) {
     clear: both;
-    float: left;
-    width: 700px;
-
-    @include mq-to( 'sm' ) {
-      float: none;
-      width: auto;
-    }
+    float: none;
+    width: auto;
+    margin: 0;
   }
+}

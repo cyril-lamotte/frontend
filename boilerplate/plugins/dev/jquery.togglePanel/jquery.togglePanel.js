@@ -1,193 +1,260 @@
 (function ($) {
 
   /**
-  * Plugin jQuery toggleWidget v1.0.0
-  *
-  */
-  $.toggleWidget = function (element, options) {
+   * Toggle panel with ARIA implementation
+   * @param {object} options - Settings
+   * @param {string} options.prefix='tgp-' - Classes prefix
+   * @param {object} options.panel=$('.sliding-panel') - Panel's jQuery object
+   * @param {object} options.wrapper=$('.wrapper') - Site wrapper's jQuery object
+   * @param {bool} options.selfClose='true' - Allow the trigger to close its panel
+   * @param {bool} options.returnFocus='true' - Return focus to the trigger after closing
+   * @param {function()} onShow - Fires when the panel is showed
+   * @param {function()} onHide - Fires when the panel is hidden
+   */
+  $.togglePanel = function (element, options) {
 
     // Default options
     var defaults = {
-      prefix : 'toggle-widget-',
-      activePanelClass: '-panel-active',
+      prefix : 'tgp-',
+      wrapper: false,
       connect: false,
-      connectRelationClass: '',
-      slideMode: 'slide',
+      panel: 'next',
+      mode: 'slide',
+      autoFocus: true,
+      selfClose: true,
+      returnFocus: true,
       onShow: function () {},
       onHide: function () {}
     };
 
-    var plugin = this;
+    var plugin = this,
+        $trigger = $(element);
 
     plugin.settings = {};
 
-    var $element = $(element);
 
-
-
-
+    /** plugins initialisation */
     plugin.init = function () {
 
-      // Merge with user's options
+      // Merge user's options
       plugin.settings = $.extend({}, defaults, options);
-      plugin.settings.$trigger = $element;
-
-      var panelID = plugin.settings.$trigger.data('toggle-widget-id');
-      plugin.settings.$panel = $('#' + panelID);
 
 
-      // Set trigger's attributes
-      plugin.settings.$trigger.attr({
-        'aria-expanded': false,
-        'aria-controls': panelID
+      // Get associated panel
+      if( plugin.settings.panel == 'next' ) {
+
+        // The panel is the next element or the parent's next element
+        if( $trigger.next().length )
+          plugin.settings.$panel = $trigger.next();
+        else {
+          plugin.settings.$panel = $trigger.parent().next();
+        }
+
+        // Add id attribute if not exist
+        if( ! plugin.settings.$panel.attr('id') )
+        {
+          // Generate unique id
+          var uniqueId = generateId();
+
+          plugin.settings.$panel.attr('id', 'tp-'+ uniqueId);
+        }
+      }
+      else if( plugin.settings.panel == 'id' ) {
+
+        if( ! $trigger.data('panel-id') )
+          throw new Error('Missing attribute "data-tgp-panel-id".');
+
+        plugin.settings.$panel = $('#'+ $trigger.data('tgp-panel-id'));
+      }
+
+      // Throw an error if there is no panel
+      if( ! plugin.settings.$panel.length ) {
+        throw new Error('No panel defined.');
+      }
+
+
+      initAttributes();
+
+      attachEvents();
+
+
+      // Open panels
+      if( $trigger.data('tgp-opened') )
+      {
+        plugin.settings.$panel
+          .trigger('tgp:no-autofocus')
+          .trigger('tgp:show');
+      }
+
+    };
+
+
+    /** Generate unique HTML id */
+    var generateId = function() {
+
+      var id = Math.random() + '';
+      id = id.substr(2, 9);
+
+      if( $('#'+ id ).length )
+        id = generateId();
+
+      return id;
+    };
+
+
+
+    /** Insert ARIA & classes attributes */
+    var initAttributes = function() {
+
+      // Add classes
+      $trigger.addClass( plugin.settings.prefix +'-trigger' );
+      plugin.settings.$panel.addClass( plugin.settings.prefix +'-panel ');
+
+      if( plugin.settings.wrapper.length )
+        plugin.settings.wrapper.addClass( plugin.settings.prefix +'-wrapper' );
+
+
+      // Add attributes
+      $trigger.attr({
+        'aria-expanded' : false,
+        'aria-controls' : plugin.settings.$panel.attr('id'),
       });
 
-      // Get id for labelling
-      plugin.settings.idWidgetTitle = plugin.settings.$trigger.attr('id');
-
-      // Set panel's attributes
       plugin.settings.$panel.attr({
-        'aria-hidden' : 'true',
-        'aria-labelledby' : plugin.settings.idWidgetTitle,
+        'tabindex' : '0',
+        'aria-hidden' : true,
         'role' : 'region',
-        'tabindex' : '-1'
-      }).addClass(plugin.settings.prefix + '-panel ' + plugin.settings.prefix + '-is-closed ');
-
-
-      // Listen events
-      setEvents();
+        'aria-labelledby' : $trigger.attr('id')
+      });
 
     };
 
 
-    // Listen widget events
-    var setEvents = function () {
+    /** Shows the panel */
+    var showPanel = function() {
 
-      // Toggle
-      plugin.settings.$trigger.click(function (event) {
-
-        event.preventDefault();
-
-        toggle();
-
-      });
+      // Active trigger
+      $trigger.addClass( plugin.settings.prefix +'-trigger--is-active' )
+        .attr('aria-expanded', true);
 
 
-      plugin.settings.$panel.click(function (event) {
+      // Show panel
+      plugin.settings.$panel
+        .attr('aria-hidden', 'false');
+
+
+      // Slide FX
+      if( plugin.settings.mode == 'slide' )
+      {
+        plugin.settings.$panel.slideDown('fast', function() {
+          $(this).addClass(plugin.settings.prefix + '-is-opened');
+        });
+      }
+
+
+      // Toggle FX
+      if( plugin.settings.mode == 'toggle' )
+      {
+        plugin.settings.$panel.addClass(plugin.settings.prefix + '-is-opened');
+      }
+
+
+      // Move focus to panel
+      if( plugin.settings.autoFocus ) {
+        plugin.settings.$panel.focus();
+      }
+
+
+      // Callback function
+      plugin.settings.onShow( plugin.settings.$panel, $trigger );
+
+    };
+
+
+
+    /** Hides the panel */
+    var hidePanel = function() {
+
+      if( ! $trigger.hasClass( plugin.settings.prefix +'-trigger--is-active' ) )
+        return;
+
+      // Move focus to trigger
+      $trigger
+        .removeClass(plugin.settings.prefix +'-trigger--is-active')
+        .attr('aria-expanded', false)
+        .focus();
+
+      // Return focus
+      if( plugin.settings.returnFocus === true)
+        $trigger.focus();
+
+
+      plugin.settings.$panel
+        .attr('aria-hidden', 'true');
+
+      // Slide FX
+      if( plugin.settings.mode == 'slide' )
+      {
+        plugin.settings.$panel.slideUp('fast', function() {
+          $(this).removeClass(plugin.settings.prefix + '-is-opened');
+        });
+      }
+
+
+      // Toggle FX
+      if( plugin.settings.mode == 'toggle' )
+      {
+        plugin.settings.$panel.removeClass(plugin.settings.prefix + '-is-opened');
+      }
+
+
+
+      // Callback function
+      plugin.settings.onHide( plugin.settings.$panel, $trigger );
+
+    };
+
+
+
+    /** Attach trigger events */
+    var attachTriggerEvents = function() {
+
+      $trigger.click(function (event) {
+
         event.stopPropagation();
-      });
 
-    };
-
-
-    // Expand panel on click
-    var toggle = function () {
-
-      return ( ! plugin.settings.$panel.is(':visible') ) ? show() : hide();
-
-    };
-
-
-    // Show panel
-    var show = function () {
-
-      // Widget are connected (only one opened)
-      if ( plugin.settings.connect ) {
-        hideAll();
-      }
-
-
-      // If slide-mode
-      if ( plugin.settings.slideMode == 'slide' ) {
-        plugin.settings.$panel.slideDown('fast', function () {
-
-          plugin.settings.$trigger
-            .attr('aria-expanded', true)
-            .addClass(plugin.settings.prefix +'-is-active');
-
-          plugin.settings.$panel
-            .removeClass( plugin.settings.prefix +'-is-closed')
-            .addClass( plugin.settings.prefix +'-is-opened')
-            .attr('aria-hidden', false)
-            .attr('tabindex', '0')
-            .focus();
-
-        });
-      }
-
-      plugin.settings.onShow(plugin.settings);
-
-    };
-
-
-
-    // Hide panel
-    var hide = function () {
-
-      // If slide-mode
-      if ( plugin.settings.slideMode == 'slide' ) {
-
-        plugin.settings.$panel.slideUp('fast', function () {
-
-          // Move focus on trigger
-          plugin.settings.$trigger
-            .attr('aria-expanded', false)
-            .removeClass( plugin.settings.prefix +'-is-active' )
-            .focus();
-
-          plugin.settings.$panel
-            .attr('aria-hidden', true)
-            .addClass( plugin.settings.prefix +'-is-closed' )
-            .removeClass( plugin.settings.prefix +'-is-opened');
-
-        });
-
-      }
-
-      plugin.settings.onHide(plugin.settings);
-
-    };
-
-
-    var keys = function () {
-
-      plugin.settings.$panel.keydown(function (event) {
-
-        // ESC
-        if (event.keyCode === 27) {
-          plugin.settings.$trigger
-            .removeClass(plugin.settings.prefix + '-is-active')
-            .attr('aria-expanded', false)
-            .focus();
-
-          plugin.settings.$panel
-            .addClass(plugin.settings.prefix + '-is-closed')
-            .removeClass(plugin.settings.prefix + '-is-opened')
-            .attr('aria-hidden', 'true');
-
+        // Close panel on click on active trigger
+        if( $(this).hasClass( plugin.settings.prefix +'-trigger--is-active' ) && plugin.settings.selfClose === true ) {
+          plugin.settings.$panel.trigger('tgp:hide');
+        }
+        else {
+          plugin.settings.$panel.trigger('tgp:show');
         }
 
       });
 
-
     };
 
-    // hide all widgets
-    var hideAll = function (except) {
-/*
-      $(plugin.settings.connectRelationClass).find('.'+ plugin.settings.activePanelClass)
-      .removeClass(plugin.settings.activePanelClass)
-      .attr('aria-hidden', true)
-      .each(function (i, el) {
 
-        var id = $(this).attr('id');
-        $('[data-toggle-widget-id='+ id +']')
-          .removeClass('toggle-widget-trigger-active')
-          .attr('aria-expanded', false);
 
+    /** Attach events */
+    var attachEvents = function () {
+
+      // Listen custom events & stop propagation (avoid <body>'s behavior)
+      plugin.settings.$panel
+        .bind('tgp:no-autofocus', function(event) { plugin.settings.autoFocus = false; event.stopPropagation(); })
+        .bind('tgp:show', function(event) { showPanel(); event.stopPropagation(); })
+        .bind('tgp:hide', function(event) { hidePanel();  event.stopPropagation();});
+
+      $(window).resize(function() {
+        plugin.settings.$panel.trigger('tgp:hide');
       });
-*/
+
+      attachTriggerEvents();
+
     };
+
+
 
     plugin.init();
 
@@ -195,14 +262,14 @@
 
 
 
-  $.fn.toggleWidget = function (options) {
+  $.fn.togglePanel = function (options) {
 
     return this.each(function () {
 
-      if (undefined === $(this).data('toggleWidget')) {
+      if (undefined === $(this).data('togglePanel')) {
 
-        var plugin = new $.toggleWidget(this, options);
-        $(this).data('toggleWidget', plugin);
+        var plugin = new $.togglePanel(this, options);
+        $(this).data('togglePanel', plugin);
 
       }
 
@@ -214,3 +281,4 @@
 
 
 })(jQuery);
+
