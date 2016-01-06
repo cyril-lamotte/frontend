@@ -26,7 +26,7 @@ Toggle panel on trigger action.
 ```html
 <script src="jquery.min.js"></script>
 <script src="jquery.ui.position/position.min.js"></script>
-<script src="assets/js/plugins/jquery.popPanel.js"></script>
+<script src="js/jquery.popPanel.js"></script>
 ```
 
 
