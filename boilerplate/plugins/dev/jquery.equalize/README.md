@@ -40,4 +40,6 @@ $('.box').trigger('destroy.equalize');
 
 ### 3. Events
 
+Name                 | Description
+---------------------|----------------------------------------
 destroy.equalize     | Delete min-height & remove class
