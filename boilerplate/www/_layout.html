@@ -5,28 +5,34 @@
 <!--[if gt IE 9]><!--><html lang="fr"><!--<![endif]-->
 <head>
 
+  <!-- Définir le mode de compatibilité Internet Explorer -->
   <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+
   <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1.0">
+
+  <!-- Définir le niveau de zoom -->
+  <meta name="viewport" content="device-width, initial-scale=1.0">
+
+  <!-- Ne pas autoriser la détection des numéro de téléphone -->
   <meta name="format-detection" content="telephone=no">
 
   <title>Layout</title>
 
-  <!--Google Font Open Sans-->
-  <!--link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700"-->
-
   <link rel="stylesheet" href="assets/css/style.css">
 
   <!-- Modernizr http://modernizr.com/docs/#installing -->
-  <script src="assets/js/lib/modernizr.js"></script>
+  <!--script src="assets/js/lib/modernizr.js"></script-->
 
 </head>
 
 <body>
 
+<div class="outer-wrap">
 <div class="wrapper">
 
-  <header class="header">
+
+
+  <header class="main-header">
 
     <h1 class="main-title">Titre du site</h1>
 
@@ -36,11 +42,16 @@
 
   </header>
 
+
+
+
   <nav id="a_nav">
     <ul>
       <li><a href="#">Accueil</a></li>
     </ul>
   </nav>
+
+
 
 
   <div class="page">
@@ -61,20 +72,20 @@
   </div><!--/page-->
 
 
-  <footer class="footer">
+  <footer class="main-footer">
 
     // Footer
 
   </footer>
 
 </div><!--/wrapper-->
+</div><!--/outer-wrap-->
 
 <!-- Scripts at the bottom for better performances -->
-<script src="assets/js/lib/jquery.min.js"></script>
-<!--script src="assets/js/plugins/plugin.min.js"></script-->
-<script src="assets/js/app.js"></script>
+<!--script src="assets/js/lib/jquery.min.js"></script-->
+<!--script src="assets/js/app.init.js"></script>
 <script src="assets/js/app.ui.js"></script>
-<script src="assets/js/domready.js"></script>
+<script src="assets/js/domready.js"></script-->
 
 </body>
 </html>

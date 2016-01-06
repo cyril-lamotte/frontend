@@ -3,10 +3,10 @@
  *
  */
 
+(function ($) {
 
 var app = {
   themeUrl: '',
-  ui: {},
 
   /**
    * Returns URL anchor
@@ -59,7 +59,7 @@ var app = {
      */
     Modernizr.load({
       test: Modernizr.input.placeholder,
-      nope: this.themeUrl + 'assets/js/plugins/jquery.placeholder.min.js',
+      nope: this.themeUrl + 'assets/js/plugins/contrib/jquery.placeholder.min.js',
       complete : function() {
 
         // Placeholder
@@ -73,4 +73,7 @@ var app = {
 };
 
 
+  window.app = app;
 
+
+})(jQuery);
