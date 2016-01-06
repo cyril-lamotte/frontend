@@ -16,12 +16,15 @@ Plugin jQuery - Afficher un élément aprés un évènement sur un autre éléme
 ### 1. Join plugin
 
 ```html
-<script src="assets/js/plugins/jquery.togglePanel.js"></script>
+<script src="js/jquery.togglePanel.js"></script>
 ```
 
 ```html
-<button type="button" id="trigger" data-tgp-panel-id="panel-1" data-tgp-opened="true">Show !</a>
-<div id="panel-1"></div>
+<button type="button" id="trigger">Toggle next element</button>
+<div id="panel-1" class="panel"></div>
+
+<button type="button" id="trigger" data-tgp-panel-id="panel-1" data-tgp-opened="true">Toggle id="panel-1"</button>
+<div id="panel-1" class="panel"></div>
 ```
 
 
@@ -41,6 +44,14 @@ $('#trigger').togglePanel({
 ### 3. CSS
 
 ```css
+.panel {
+  display: none;
+}
+
+.tgp--is-opened {
+  display: block;
+}
+
 
 ```
 
@@ -53,15 +64,20 @@ Name                 | Type   | Description                                     
 prefix               | String | Generated classes prefix                                | 'tgp-'
 panel                | String | the panel can be the next element or defined by its id  | 'id' / 'next' (default: 'next')
 mode                 | String | 'toggle' / 'slide'                                      | 'slide' / 'toggle' (default: 'slide')
+wrapper              | Object | Wrapper of connected panels                             | false
 connect              | Bool   | If true, only one panel can be shown                    | false
+selfClose            | Bool   | Allow the trigger to close its panel                    | true
 autoFocus            | Bool   | Focus is moved to panel at opening                      | true
+returnFocus          | Bool   | Return focus to the trigger after closing               | true
 onShow()             | Method | Do stuff after showing                                  | function() {}
 onHide()             | Method | Do stuff after hiding                                   | function() {}
 
 
+
+
 ### 5. Events
 
-tgp:no-autofocus     | Remove autofocus after initialisation
-tgp:show             | Show panel
-tgp:hide             | Hide panel
+no-autofocus.tgp     | Remove autofocus after initialisation
+show.tgp             | Show panel
+hide.tgp             | Hide panel
 

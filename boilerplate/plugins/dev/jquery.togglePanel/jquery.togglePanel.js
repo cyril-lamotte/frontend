@@ -1,16 +1,6 @@
 (function ($) {
 
-  /**
-   * Toggle panel with ARIA implementation
-   * @param {object} options - Settings
-   * @param {string} options.prefix='tgp-' - Classes prefix
-   * @param {object} options.panel=$('.sliding-panel') - Panel's jQuery object
-   * @param {object} options.wrapper=$('.wrapper') - Site wrapper's jQuery object
-   * @param {bool} options.selfClose='true' - Allow the trigger to close its panel
-   * @param {bool} options.returnFocus='true' - Return focus to the trigger after closing
-   * @param {function()} onShow - Fires when the panel is showed
-   * @param {function()} onHide - Fires when the panel is hidden
-   */
+
   $.togglePanel = function (element, options) {
 
     // Default options
@@ -61,7 +51,7 @@
       }
       else if( plugin.settings.panel == 'id' ) {
 
-        if( ! $trigger.data('panel-id') )
+        if( ! $trigger.data('tgp-panel-id') )
           throw new Error('Missing attribute "data-tgp-panel-id".');
 
         plugin.settings.$panel = $('#'+ $trigger.data('tgp-panel-id'));
@@ -82,8 +72,8 @@
       if( $trigger.data('tgp-opened') )
       {
         plugin.settings.$panel
-          .trigger('tgp:no-autofocus')
-          .trigger('tgp:show');
+          .trigger('no-autofocus.tgp')
+          .trigger('show.tgp');
       }
 
     };
@@ -225,10 +215,10 @@
 
         // Close panel on click on active trigger
         if( $(this).hasClass( plugin.settings.prefix +'-trigger--is-active' ) && plugin.settings.selfClose === true ) {
-          plugin.settings.$panel.trigger('tgp:hide');
+          plugin.settings.$panel.trigger('hide.tgp');
         }
         else {
-          plugin.settings.$panel.trigger('tgp:show');
+          plugin.settings.$panel.trigger('show.tgp');
         }
 
       });
@@ -242,12 +232,12 @@
 
       // Listen custom events & stop propagation (avoid <body>'s behavior)
       plugin.settings.$panel
-        .bind('tgp:no-autofocus', function(event) { plugin.settings.autoFocus = false; event.stopPropagation(); })
-        .bind('tgp:show', function(event) { showPanel(); event.stopPropagation(); })
-        .bind('tgp:hide', function(event) { hidePanel();  event.stopPropagation();});
+        .bind('no-autofocus.tgp', function(event) { plugin.settings.autoFocus = false; event.stopPropagation(); })
+        .bind('show.tgp', function(event) { showPanel(); event.stopPropagation(); })
+        .bind('hide.tgp', function(event) { hidePanel();  event.stopPropagation();});
 
       $(window).resize(function() {
-        plugin.settings.$panel.trigger('tgp:hide');
+        plugin.settings.$panel.trigger('hide.tgp');
       });
 
       attachTriggerEvents();
