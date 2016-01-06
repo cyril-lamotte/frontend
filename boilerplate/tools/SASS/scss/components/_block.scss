@@ -1,0 +1,19 @@
+/* =============================================================================
+   Block
+============================================================================= */
+
+/// Default block theme
+///
+/// @group theme
+/// @example scss Usage
+/// .foo {
+///   @include block-default;
+/// }
+@mixin block-default {
+  margin: 20px 0;
+}
+
+
+.block-module-name {
+  @include block-default;
+}

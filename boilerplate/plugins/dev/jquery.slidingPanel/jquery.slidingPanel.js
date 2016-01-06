@@ -72,7 +72,7 @@
       // Add attributes
       plugin.settings.trigger.attr({
         'aria-expanded' : false,
-        'aria-controls' : $panel.attr('id'),
+        'aria-controls' : $panel.attr('id')
       });
 
       $panel.attr({

@@ -73,7 +73,7 @@ $(document).ready(function() {
   $('#pop-trigger').popPanel({
     closeTrigger: 'button.pop-panel--close-trigger',
     idPopTitle: 'demo-1-title',
-  	position: {
+    position: {
       my: 'left top',
       at: 'left-50 bottom+10',
       collision : 'flip'

@@ -1,0 +1,113 @@
+/* =============================================================================
+   Button
+============================================================================= */
+
+/// Default button theme
+///
+/// @group theme
+/// @example scss Usage
+/// .foo {
+///   @include btn-default;
+/// }
+@mixin btn-default {
+  @include reset-box-model;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  text-align: left;
+  line-height: 1.2;
+  font-size: inherit;
+  font-family: inherit;
+  transition: all 300ms;
+
+  @include hover {
+    text-decoration: none;
+  }
+
+}
+
+
+
+/* -----------------------------------------------------------------------------
+   Helpers
+----------------------------------------------------------------------------- */
+
+/// Button wide
+///
+/// @group theme
+/// @example scss Usage
+/// .foo {
+///   @include btn--wide;
+/// }
+@mixin btn--wide {
+  display: block;
+  width: 100%;
+  float: none;
+}
+
+.btn-wide {
+  @include btn--wide;
+}
+
+
+
+/// Button bigger
+///
+/// @group theme
+/// @example scss Usage
+/// .foo {
+///   @include btn--bigger;
+/// }
+@mixin btn--bigger {
+ padding: 15px 25px;
+}
+
+.btn-bigger {
+  @include btn--bigger;
+}
+
+
+
+/// Button small
+///
+/// @group theme
+/// @example scss Usage
+/// .foo {
+///   @include btn--small;
+/// }
+@mixin btn--small {
+  padding: 2px 5px;
+  font-size: em(12px);
+}
+
+.btn-small {
+  @include btn--small;
+}
+
+
+
+
+/* -----------------------------------------------------------------------------
+   Styles
+----------------------------------------------------------------------------- */
+
+.btn {
+  @include btn-default;
+
+  @include hover {
+
+  }
+}
+
+
+
+/*.btn-x {
+  @include btn-default;
+  @include btn-bigger;
+
+  @include hover {
+
+  }
+}*/
+

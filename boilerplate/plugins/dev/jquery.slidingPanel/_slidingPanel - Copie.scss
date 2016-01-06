@@ -7,6 +7,8 @@
 ----------------------------------------------------------------------------- */
 
 $sp-panel-width: 80%;
+$sp-panel-width-xs: 100%;
+
 
 
 /* Site wrapper */
@@ -16,12 +18,19 @@ $sp-panel-width: 80%;
 
   .sp--is-expanded & {
     @include transform( translate3d($sp-panel-width, 0, 0) );
+
+    // xs : 100%
+    @include mq-to( 'sm' ) {
+      @include transform( translate3d($sp-panel-width-xs, 0, 0) );
+    }
+
   }
 
 }
 
 
 /* Panel */
+.side-menu,
 .sp--panel {
   position: fixed;
   top: 0;
@@ -34,6 +43,10 @@ $sp-panel-width: 80%;
 
   .no-csstransforms3d & {
     display: none;
+  }
+
+  @include mq-to( 'sm' ) {
+    width: $sp-panel-width-xs;
   }
 
   .sp--is-expanded & {

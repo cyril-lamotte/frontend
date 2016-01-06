@@ -1,0 +1,40 @@
+// =============================================================================
+// Colors
+// =============================================================================
+
+$red: #ff4444;
+
+$blue: #0066ff;
+$blue-light: tint($blue, 20%);
+$blue-dark: shade($blue, 20%);
+
+$grey: #333;
+//$green: #00ff00;
+//$orange: #ff6600;
+
+
+
+$grey-1: #ccc; // x
+$grey-2: #aaa;
+$grey-3: #ddd;
+$grey-4: #eee;
+
+
+
+
+/// Brand color
+/// @group theme
+$brand: $blue;
+
+/// Brand highlight
+/// @group theme
+$brand-highlight: tint($brand, 20%);
+
+/// Base color
+/// @group theme
+$base-color: $grey; // Text
+
+/// Error
+/// @group theme
+$error-color: $red;
+

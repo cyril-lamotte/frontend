@@ -1,0 +1,146 @@
+/* =============================================================================
+   Select
+============================================================================= */
+
+// Usage : https://github.com/cyril-lamotte/frontend/wiki/Custom-select
+
+/* -----------------------------------------------------------------------------
+   Core
+----------------------------------------------------------------------------- */
+
+select {
+
+}
+
+
+
+/* -----------------------------------------------------------------------------
+   Inline
+----------------------------------------------------------------------------- */
+
+.label-inline + select {
+  width: auto;
+}
+
+
+
+/* -----------------------------------------------------------------------------
+   Disabled
+----------------------------------------------------------------------------- */
+
+select:disabled {
+  background: $form-disabled-bg;
+  color: $form-disabled-color;
+}
+
+
+
+
+/* -----------------------------------------------------------------------------
+   Custom
+----------------------------------------------------------------------------- */
+
+$select-height: 41px;
+$select-arrow-width: 48px;
+
+.custom-select-container {
+  position: relative;
+  display: block;
+  min-width: 150px;
+}
+
+select.replaced {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: $select-height;
+  line-height: $select-height;
+  border: 0;
+  filter: alpha(opacity=0); /* Move to IE-specific CSS file if you want to. */
+  opacity: 0;
+  padding: 0;
+}
+
+span.custom-select {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left:0;
+  width: 100%;
+  line-height: $select-height;
+  z-index: 1;
+  cursor: default;
+}
+
+.custom-select {
+
+  > .custom-select-content {
+    display: block;
+    overflow: hidden;
+
+    > span {
+      display: block;
+      height: $select-height;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+}
+
+
+/* -----------------------------------------------------------------------------
+   Theme
+----------------------------------------------------------------------------- */
+
+.custom-select {
+
+  > .custom-select-arrow {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: -1px;
+    width: $select-arrow-width;
+    background: $brand;
+    text-align: center;
+
+    &:after {
+      // CSS Triangle
+      content: '';
+      position: absolute;
+      left: calc(50% - 8px);
+      top: calc(50% - 4px);
+      border: solid transparent;
+      height: 0;
+      width: 0;
+      border-top-color: #fff;
+      border-width: 8px;
+    }
+
+  }
+
+  &.active > .custom-select-arrow {
+    background-color: $brand-highlight;
+  }
+
+
+  > .custom-select-content {
+    padding: 0 $select-arrow-width+5 0 0;
+    border: 1px solid #ebe2da;
+    border-radius: 3px;
+    line-height: $select-height;
+    font-size: em(14px);
+    background: #fff;
+    transition: transform 300ms;
+
+    > span {
+      padding-left: 10px;
+    }
+  }
+
+  &.active > .custom-select-content {
+    background: #eee;
+  }
+
+}

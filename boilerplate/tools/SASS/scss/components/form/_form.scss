@@ -1,0 +1,129 @@
+/* =============================================================================
+   Forms
+============================================================================= */
+
+@import "components/form/form-helpers";
+@import "components/form/form-reset";
+
+
+/* -----------------------------------------------------------------------------
+   Forms theme
+----------------------------------------------------------------------------- */
+
+$form-border: 1px solid $grey-1;
+$form-border-radius: 3px;
+$form-bg: #fff;
+$form-color: $grey-1;
+$form-field-padding: 8px 5px;
+
+
+// Disabled
+$form-disabled-bg: $grey-4;
+$form-disabled-color: $grey-3;
+
+
+// Vars for cb/radio
+// Label
+$cb-label-padding-left: 20px;
+
+// Box
+$cb-box-bg: $form-bg;
+$cb-box-bg-hover: darken($form-bg, 10%);
+$cb-box-border: $form-border;
+$cb-box-size: 16px;
+
+// Check
+$cb-check-bg: $form-color;
+$cb-check-bg-hover: darken($form-color, 10%);
+$cb-check-color: $form-color;
+$cb-check-size: 12px;
+
+// Disabled
+$cb-label-disabled: $form-disabled-color;
+$cb-box-bg-disabled: $form-disabled-bg;
+$cb-check-bg-disabled: $form-disabled-bg;
+$cb-check-color-disabled: $form-disabled-color;
+
+
+
+
+/* -----------------------------------------------------------------------------
+   Formats
+----------------------------------------------------------------------------- */
+
+%format-full { width: 100%; }
+
+.format-x { width: 30px !important; }
+.format-xx { width: 40px !important; }
+.format-xxxx { width: 60px !important; }
+.format-date { width: 80px !important; }
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+   Layout
+----------------------------------------------------------------------------- */
+
+.form-row {
+  position: relative;
+  clear: left;
+  margin-bottom: 1em;
+}
+
+.form-actions {
+  clear: both;
+}
+
+
+
+/* -----------------------------------------------------------------------------
+   Labels
+----------------------------------------------------------------------------- */
+
+label {
+  @include label-block;
+  // @include label-start;
+  // @include label-inline;
+
+
+  input[type="checkbox"] + &,
+  input[type="radio"] + & {
+    @include label-inline;
+  }
+}
+
+
+/* -----------------------------------------------------------------------------
+   Moving label
+----------------------------------------------------------------------------- */
+
+.moving-label {
+  position: absolute;
+  padding: 0 5px;
+  cursor: text;
+  line-height: 1.2;
+  top: 7px;
+  left: 5px;
+  transition: all 300ms;
+}
+
+.moving-label-focus {
+  background: #fff;
+  top: -7px;
+}
+
+
+
+
+/* -----------------------------------------------------------------------------
+   Components
+----------------------------------------------------------------------------- */
+
+@import "components/form/form-text";
+@import "components/form/form-checkbox";
+@import "components/form/form-radio";
+@import "components/form/form-select";
+
+

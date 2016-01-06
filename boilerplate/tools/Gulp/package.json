@@ -1,0 +1,27 @@
+{
+  "name": "JMC",
+  "version": "1.0.0",
+  "description": "Site JMC",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.2.3",
+    "gulp": "^3.9.0",
+    "gulp-ignore": "^2.0.1",
+    "gulp-jshint": "^2.0.0",
+    "gulp-postcss": "^6.0.1",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7",
+    "jshint": "^2.8.0",
+    "jshint-stylish": "^2.1.0",
+    "node-sass": "^3.4.2",
+    "sassdoc": "^2.1.19",
+    "susy": "^2.2.9"
+  }
+}

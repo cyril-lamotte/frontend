@@ -1,0 +1,121 @@
+// =============================================================================
+//   Breakpoints
+// =============================================================================
+
+/// Breakpoints map - Based on Bootstrap reference
+/// * Phones portait < 480px
+/// * Phones < 768px
+/// * Tablets >= 768px
+/// * Desktops >= 992px
+/// * Large desktops >= 1200px
+///
+/// @link http://getbootstrap.com/css/#responsive-utilities Bootstrap breakpoints reference
+/// @group rwd
+$breakpoints: (
+  'xs': 480px,
+  'sm': 768px,
+  'md': 992px,
+  'lg': 1200px
+);
+
+
+
+// -----------------------------------------------------------------------------
+// Media Queries
+// -----------------------------------------------------------------------------
+
+/// Add a "max-width" mediaquerie
+///
+/// @name mq-to (max-width)
+/// @param {String} $breakpoint ['sm'] - Breakpoint
+/// @requires {Map} $breakpoints
+/// @group rwd
+@mixin mq-to($breakpoint: 'sm') {
+
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media only screen and (max-width: map-get($breakpoints, $breakpoint)-1 ) {
+      @content;
+    }
+  }
+
+  @else {
+		@warn "Please make sure `#{$breakpoint}` is defined in `$breakpoints` map.";
+  }
+
+}
+
+
+
+/// Add a "min-width" mediaquerie
+///
+/// @name mq-from (min-width)
+/// @param {String} $breakpoint ['sm'] - Breakpoint
+/// @requires {Map} $breakpoints
+/// @group rwd
+@mixin mq-from($breakpoint) {
+
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media only screen and (min-width: map-get($breakpoints, $breakpoint) ) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Please make sure `#{$breakpoint}` is defined in `$breakpoints` map.";
+  }
+}
+
+
+
+/// Add a "min-width" & "max-width" mediaquerie
+///
+/// @name mq-from-to (min-width & max-width)
+/// @param {String} $breakpoint-from ['xs'] - Starting breakpoint
+/// @param {String} $breakpoint-to [''] - Ending breakpoint
+/// @requires {Map} $breakpoints
+/// @group rwd
+@mixin mq-from-to($breakpoint-from: 'xs', $breakpoint-to: '') {
+
+  @if not map-has-key($breakpoints, $breakpoint-from) {
+    @warn "Please make sure `#{$breakpoint-from}` is defined in `$breakpoints` map.";
+  }
+
+  @if $breakpoint-from == 'xs' {
+
+
+    @media only screen and (max-width: map-get($breakpoints, $breakpoint-from)) {
+      @content;
+    }
+
+  }
+
+  @else {
+
+    @if $breakpoint-to != '' {
+
+      @if map-has-key($breakpoints, $breakpoint-to) {
+
+        @media only screen and (min-width: map-get($breakpoints, $breakpoint-from)) and (max-width: map-get($breakpoints, $breakpoint-to)-1 ) {
+          @content;
+        }
+
+      }
+      @else {
+        @warn "Please make sure `#{$breakpoint-to}` is defined in `$breakpoints` map.";
+      }
+
+
+    }
+
+    @else {
+
+      @media only screen and (min-width: map-get($breakpoints, $breakpoint-from)) {
+        @content;
+      }
+
+    }
+
+  }
+
+
+}

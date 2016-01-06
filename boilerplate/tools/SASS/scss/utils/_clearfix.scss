@@ -1,0 +1,17 @@
+// -----------------------------------------------------------------------------
+// Clearfix
+// -----------------------------------------------------------------------------
+
+/// Clearfix helper for clearing floats
+///
+/// @link http://nicolasgallagher.com/micro-clearfix-hack Adapted from: A new micro clearfix hack
+/// @group layout
+@mixin clearfix {
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+}
