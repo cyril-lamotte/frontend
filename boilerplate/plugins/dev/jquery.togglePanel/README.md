@@ -77,6 +77,8 @@ onHide()             | Method | Do stuff after hiding                           
 
 ### 5. Events
 
+Name                 | Description
+---------------------|----------------------------------------
 no-autofocus.tgp     | Remove autofocus after initialisation
 show.tgp             | Show panel
 hide.tgp             | Hide panel
