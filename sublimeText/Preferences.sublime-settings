@@ -18,6 +18,7 @@
 		".eot"
 	],
 	"bold_folder_labels": true,
+	"close_windows_when_empty": false,
 	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
 	"detect_slow_plugins": false,
 	"draw_minimap_border": true,

@@ -18,7 +18,9 @@
             "htmltidy": {
                 "@disable": false,
                 "args": [],
-                "excludes": [],
+                "excludes": [
+                    "*.php"
+                ],
                 "ignore_match": [
                     "missing <!DOCTYPE> declaration",
                     "inserting (?:implicit <body>|missing 'title' element)",

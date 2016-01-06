@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[@include clearfix;]]></content>
+    <tabTrigger>clearfix</tabTrigger>
+		<scope>source.scss</scope>
+    <description>Clearfix</description>
+</snippet>
