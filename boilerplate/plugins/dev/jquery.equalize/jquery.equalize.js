@@ -28,7 +28,7 @@
 
         // Apply minHeight
         $.each(arrayLines[offsetLabel], function(i, el) {
-          $(el).css("minHeight", minHeight).addClass('equalized');
+          $(el).css('minHeight', minHeight).addClass('equalized');
         });
       }
 

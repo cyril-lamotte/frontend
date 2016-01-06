@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]><html lang="fr" class="ie7 lte-ie8"><![endif]-->
+<!--[if IE 8]><html lang="fr" class="ie8 lte-ie8"><![endif]-->
+<!--[if IE 9]><html lang="fr" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="fr"><!--<![endif]-->
+<head>
+
+  <!-- Définir le mode de compatibilité Internet Explorer -->
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+
+  <meta charset="utf-8">
+
+  <!-- Définir le niveau de zoom -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Ne pas autoriser la détection des numéro de téléphone -->
+  <meta name="format-detection" content="telephone=no">
+
+  <title>Equalize</title>
+
+
+  <style>
+
+    .box {
+      border: 1px solid #000;
+      margin: 10px;
+      width: 200px;
+      float: left;
+    }
+
+
+  </style>
+
+</head>
+
+<body>
+
+<div class="outer-wrap">
+<div class="wrapper">
+
+
+
+  <header class="main-header">
+
+    <h1 class="main-title">Equalize</h1>
+
+  </header>
+
+
+  <div class="page">
+
+    <main id="a_content">
+
+      <div class="box">Lorem ipsum dolor sit amet.</div>
+      <div class="box">Lorem ipsum dolor<br>sit amet.</div>
+      <div class="box">Lorem ipsum dolor sit amet.</div>
+      <div class="box">Lorem ipsum dolor sit amet.</div>
+      <div class="box">Lorem ipsum dolor<br>sit amet.</div>
+      <div class="box">Lorem ipsum dolor sit amet.</div>
+      <div class="box">Lorem ipsum dolor<br>sit amet.</div>
+      <div class="box">Lorem ipsum dolor sit amet.</div>
+      <div class="box">Lorem ipsum dolor sit amet.</div>
+      <div class="box">Lorem ipsum dolor<br><br><br>sit amet.</div>
+      <div class="box">Lorem ipsum dolor sit amet.</div>
+
+    </main>
+
+  </div><!--/page-->
+
+
+</div><!--/wrapper-->
+</div><!--/outer-wrap-->
+
+<!-- Scripts at the bottom for better performances -->
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="jquery.equalize.js"></script>
+<script>
+
+(function ($) {
+
+/* Execute code when the DOM is fully loaded */
+$(document).ready(function() {
+
+  // Pop
+  $('.box').equalize();
+
+}); // /ready
+
+
+})(jQuery);
+
+</script>
+
+</body>
+</html>

@@ -6,6 +6,7 @@ Equalize blocks height which have the same offsetTop.
 ## Features
 
 * IE8+ compliant
+* Class equalized is added after equalizing
 
 
 ## Installation
@@ -13,7 +14,7 @@ Equalize blocks height which have the same offsetTop.
 ### 1. Join plugin
 
 ```html
-<script src="assets/js/plugins/jquery.equalize.js"></script>
+<script src="js/jquery.equalize.js"></script>
 ```
 
 ### 2. JavaScript
