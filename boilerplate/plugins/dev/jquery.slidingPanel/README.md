@@ -15,7 +15,7 @@ Display a sliding panel
 ### 1. Join plugin & stylesheet
 
 ```html
-<script src="assets/js/plugins/jquery.slidingPanel.js"></script>
+<script src="js/jquery.slidingPanel.js"></script>
 ```
 
 
