@@ -2,6 +2,9 @@
 
 Equalize blocks height which have the same offsetTop.
 
+> `box-sizing` must be `border-box`
+
+http://caniuse.com/#search=box-sizing : Caution with IE because of `box-sizing` bug
 
 ## Features
 
@@ -17,12 +20,24 @@ Equalize blocks height which have the same offsetTop.
 <script src="js/jquery.equalize.js"></script>
 ```
 
+
+
 ### 2. JavaScript
 
 ```js
 $(window).load(function() {
-
-  $('.blocks').equalize();
-
+  $('.box').equalize();
 });
 ```
+
+```js
+// Destroy
+$('.box').trigger('destroy.equalize');
+```
+
+
+
+
+### 3. Events
+
+destroy.equalize     | Delete min-height & remove class

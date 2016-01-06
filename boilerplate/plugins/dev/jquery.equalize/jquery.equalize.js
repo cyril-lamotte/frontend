@@ -1,8 +1,8 @@
 (function( $ ){
 
   /**
-  * Plugin jQuery equalize v1.1.0 (10/2015)
-  *
+  * Plugin jQuery equalize v1.2.0
+  * @link https://github.com/cyril-lamotte/frontend/tree/master/boilerplate/plugins/dev/jquery.equalize
   */
 
   $.fn.equalize = function() {

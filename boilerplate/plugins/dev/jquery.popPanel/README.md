@@ -98,3 +98,4 @@ selectorFocusableElements | CSS selector    | List of focusable elements       |
 position                  | Position object | (See jQuery UI position documentation)[http://api.jqueryui.com/position/] | { my: 'left top', at: 'left bottom', collision : 'flip' }
 onOpen                    | Callback method | Triggers on pop opening          | function() {}
 onClose                   | Callback method | Triggers on pop closing          | function() {}
+

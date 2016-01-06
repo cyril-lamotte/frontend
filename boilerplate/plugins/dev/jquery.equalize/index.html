@@ -21,6 +21,10 @@
 
   <style>
 
+    * {
+      box-sizing: border-box;
+    }
+
     .box {
       border: 1px solid #000;
       margin: 10px;
@@ -63,7 +67,14 @@
       <div class="box">Lorem ipsum dolor<br><br><br>sit amet.</div>
       <div class="box">Lorem ipsum dolor sit amet.</div>
 
+      <div style="clear: both;">
+        <button id="destroy" type="button">Destroy</button>
+        <button id="enable" type="button">Enable</button>
+      </div>
+
     </main>
+
+
 
   </div><!--/page-->
 
@@ -82,7 +93,18 @@
 $(document).ready(function() {
 
   // Pop
-  $('.box').equalize();
+  //$('.box').equalize();
+
+
+  $('#destroy').click(function (event) {
+    $('.box').trigger('destroy.equalize');
+  });
+
+
+  $('#enable').click(function (event) {
+    $('.box').equalize();
+  });
+
 
 }); // /ready
 
