@@ -1,0 +1,37 @@
+/* =============================================================================
+   Form text
+============================================================================= */
+
+$input-styles: (
+  'padding': $form-field-padding,
+  'border': $form-border,
+  'border-radius': $form-border-radius,
+  'color': $base-color
+);
+
+
+
+/// Input theme
+///
+/// @group theme
+@mixin input($styles) {
+  width: 100%;
+  max-width: 100%;
+  padding: map-get($styles, 'padding');
+  border: map-get($styles, 'border');
+  color: map-get($styles, 'color');
+  border-radius: map-get($styles, 'border-radius');
+}
+
+/// Input theme sm
+///
+/// @group theme
+@mixin inputSM() {
+
+  @include mq-to( 'sm' ) {
+    padding: 10px;
+    font-size: em(14px);
+  }
+}
+
+

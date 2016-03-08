@@ -2,129 +2,17 @@
 // Utilities
 // -----------------------------------------------------------------------------
 
+@import 'utils/clearfix';
+@import "utils/breakpoints";
+@import 'utils/grid';
+//@import "utils/sprites";
 
-/// Resets margins / borders / paddings
-///
-/// @group utils
-/// @example scss - Usage
-/// .foo {
-///   @include reset-box-model;
-/// }
-@mixin reset-box-model {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
+// Reset
+@import 'utils/normalize';
+@import "utils/box-sizing";
 
+// Generic & reusable
+@import 'utils/display';
+@import 'utils/alignments';
+@import 'utils/image';
 
-
-/// Reset list's default styles
-///
-/// @group utils
-/// @example scss - Usage
-/// .foo {
-///   @include reset-list;
-/// }
-@mixin reset-list {
-  list-style: none;
-  @include reset-box-model;
-}
-
-
-
-/// Hidden except for screen-readers
-///
-/// @group utils
-/// @link https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html Yahoo! method
-///
-/// @example scss - Usage
-/// .foo {
-///   @include hide-text;
-/// }
-@mixin hide-text {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px); // IE6, IE7
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
-}
-
-
-
-
-
-/// Add hover/focus style
-///
-/// @group utils
-///
-/// @example scss - Usage
-/// .foo {
-///   @include hover {
-///     [....]
-///   }
-/// }
-@mixin hover() {
-  &:hover,
-  &:focus,
-  &:active {
-    @content;
-  }
-}
-
-
-/// Add Focus style
-///
-/// @group utils
-///
-/// @example scss - Usage
-/// .foo {
-///   @include focus {
-///     [....]
-///   }
-/// }
-@mixin focus() {
-  &:focus,
-  &:active {
-    @content;
-  }
-}
-
-
-
-
-
-/// Links underlined
-/// @group utils
-///
-/// @example scss - Usage
-/// .foo {
-///   @include underline;
-/// }
-@mixin underline {
-  text-decoration: underline;
-
-  @include hover {
-    text-decoration: none;
-  }
-
-}
-
-
-
-/// Links underlined on hover/focus/active states
-/// @group utils
-///
-/// @example scss - Usage
-/// .foo {
-///   @include underlineOnHover;
-/// }
-@mixin underlineOnHover {
-  text-decoration: none;
-
-  @include hover {
-    text-decoration: underline;
-  }
-}

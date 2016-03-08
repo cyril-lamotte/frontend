@@ -46,6 +46,7 @@ $susy: (
 
 
 
+
 /// Make equal size columns
 ///
 /// @param {Int} $col-count [2] - Column count
@@ -60,120 +61,19 @@ $susy: (
 /// .foo {
 ///   @include grid-equal-cols(4);
 /// }
-@mixin grid-equal-cols($col-count: 2, $breakpoint-from: 'md', $breakpoint-to: '', $override: '') {
+@mixin grid-equal-cols($col-count: 2, $override: '') {
   @include container;
 
   $col-count-12: 12 / $col-count;
 
-  @include mq-from-to( $breakpoint-from, $breakpoint-to ) {
+  > * {
+    @include span($override $col-count-12 of 12);
 
-    > div {
-      @include gutters(0);
-      @include span($override $col-count-12 of 12);
-
-      &:nth-child(#{$col-count}n) {
-        @include span($override $col-count-12 of 12 last);
-      }
-
-    }
-
-
-  }
-
-
-  // For non-responsive browsers (with no support of nth-child), use desktop layout
-  @if ($breakpoint-from == 'md') {
-
-    .ie8 & {
-
-      > div {
-
-        @include span($col-count-12 of 12);
-
-        &:first-child {
-
-          #{nth-childX($col-count, 10)} {
-            @include span($col-count-12 of 12 last);
-          }
-
-        }
-      }
-
+    &:nth-child(#{$col-count}n) {
+      @include span($override $col-count-12 of 12 last);
     }
 
   }
+
 
 }
-
-
-/// Generate `nth-child` selector for non-reponsive browsers
-/// @param {Int} $col-count - Column count
-/// @param {Int} $nb - Depth
-/// @group layout
-@function nth-childX($col-count, $nb) {
-
-  $lines: '';
-  $list-item: '';
-
-  @for $i from 1 through $nb {
-
-    $first: false;
-
-    @if( $i == 1) {
-      $first: true;
-    }
-
-    // col-count * + div
-    $nth-selector: nth-child($col-count, $first);
-
-    @if($first) {
-      $list-item: $nth-selector;
-    }
-
-    @if($i > 1) {
-      $list-item: $list-item + $nth-selector;
-    }
-
-
-    $line: $list-item;
-
-    // Add comma if not last line
-    @if( $i != $nb ) {
-      $line: $line + ', ';
-    }
-
-    //@debug 'LINE-----' $i $line;
-    $lines: $lines + $line;
-
-  }
-
-  //@debug 'FINAL-----' $lines;
-
-  @return $lines;
-
-}
-
-
-/// Generate `nth-child` selector for non-reponsive browsers
-/// @param {Int} $n - Depth
-/// @param {Bool} $first - First item
-/// @group layout
-@function nth-child($n, $first: false) {
-  $nth-child: '';
-
-  $j: 1;
-
-  @if($first) {
-    $j: 2;
-  }
-
-  @for $i from $j through $n {
-    $nth-child: $nth-child + ' + div';
-  }
-
-  @return $nth-child;
-}
-
-
-
-

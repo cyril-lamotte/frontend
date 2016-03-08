@@ -10,13 +10,3 @@ img {
   max-width: 100%; /* [1] */
   font-style: italic; /* [2] */
 }
-
-// Responsives images
-.img-responsive,
-%img-responsive {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-

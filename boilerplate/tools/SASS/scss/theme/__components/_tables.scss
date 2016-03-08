@@ -1,0 +1,47 @@
+/* =============================================================================
+   Tables
+============================================================================= */
+
+@mixin table {
+  border-collapse: collapse;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid $grey-2;
+  border-bottom: 2px solid $brand;
+  background: #fff;
+
+  th,
+  td {
+    padding: 10px 18px;
+  }
+
+  th {
+    position: relative;
+    background: $grey-4;
+    font-weight: normal;
+    text-align: left;
+  }
+
+  tr {
+    border-bottom: 1px solid $grey-1;
+  }
+
+  // hover
+  tr:hover td {
+    background: $grey-4;
+  }
+
+
+  tfoot {
+
+    tr:nth-child(2n+1),
+    tr {
+      background: $grey-4;
+    }
+
+  }
+
+}
+
+
+

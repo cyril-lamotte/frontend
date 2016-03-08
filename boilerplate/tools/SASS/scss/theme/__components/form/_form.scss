@@ -1,0 +1,71 @@
+/* =============================================================================
+   Forms
+============================================================================= */
+
+/* -----------------------------------------------------------------------------
+   Forms theme
+----------------------------------------------------------------------------- */
+
+$form-border: 1px solid $grey-1;
+$form-border-radius: 5px;
+$form-bg: #fff;
+$form-color: #333;
+$form-field-padding: 15px 20px;
+
+
+// Disabled
+$form-disabled-bg: #ccc;
+$form-disabled-color: #aaa;
+
+
+// Label for cb/radio
+$inputs-label-padding-left: 20px;
+$inputs-label-padding-top: 2px;
+
+
+
+// Disabled
+
+
+
+
+@import "components/form/form-helpers";
+@import "components/form/form-reset";
+
+@import "components/form/form-text";
+@import "components/form/form-checkbox";
+//@import "components/form/form-radio";
+@import "components/form/form-select";
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+   Formats
+----------------------------------------------------------------------------- */
+
+%format-full { width: 100%; }
+
+.format-x { width: 30px !important; }
+.format-xx { width: 40px !important; }
+.format-xxxx { width: 60px !important; }
+.format-date { width: 80px !important; }
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+   Layout
+----------------------------------------------------------------------------- */
+
+@mixin form-row {
+  position: relative;
+  clear: left;
+  margin-bottom: 1em;
+}
+
+
+
+

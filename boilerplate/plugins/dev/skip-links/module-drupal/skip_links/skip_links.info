@@ -1,4 +1,0 @@
-name = Skip links
-description = Accessibilité : liens d'évitement
-core=7.x
-version = "7.x-1.0"

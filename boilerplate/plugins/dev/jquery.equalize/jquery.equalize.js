@@ -13,7 +13,7 @@
     $(this).each(function(i, el) {
 
       var offsetTop = $(el).offset().top;
-      var offsetLabel = 'offset-'+ offsetTop;
+      var offsetLabel = 'offset-'+ Math.ceil(offsetTop);
 
       // Create table
       if( ! arrayLines[offsetLabel] ) {
@@ -31,6 +31,7 @@
           $(el).css('minHeight', minHeight).addClass('equalized');
         });
       }
+
 
     });
 

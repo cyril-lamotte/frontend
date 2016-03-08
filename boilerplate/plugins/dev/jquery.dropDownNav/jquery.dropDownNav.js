@@ -58,6 +58,8 @@
       // Save subs
       plugin.settings.$subs = $nav.find('.'+ plugin.settings.prefix +'-sub');
 
+      plugin.settings.hoverTimer = null;
+
       // Initialiser le marqueur de survol
       setFlag(false);
 
@@ -74,24 +76,33 @@
       plugin.settings.$level1
         .bind('show.ddn', function() { show( $(this) ); })
         .bind('hide.ddn', function() { hide( $(this) ); })
-        .bind('mouseenter focus', function(event) {
+        .bind('mouseenter.ddn focus.ddn', function(event) {
+
+          clearTimeout(plugin.settings.hoverTimer);
 
           // Hide all
           plugin.settings.$level1.trigger('hide.ddn');
 
 
           // Show
-          if( $(this).hasClass(plugin.settings.prefix +'-parent') )
-            $(this).trigger('show.ddn');
+          if( $(this).hasClass(plugin.settings.prefix +'-parent') ) {
+
+            var $level1 = $(this);
+
+            plugin.settings.hoverTimer = setTimeout(function() {
+              $level1.trigger('show.ddn');
+            }, 300);
+
+          }
 
         })
-        .click(function (event) {
-          event.preventDefault();
+        .bind('mouseout', function() {
+          clearTimeout(plugin.settings.hoverTimer);
         });
 
 
       // Hide subs if mouseleave links
-      plugin.settings.$level1.bind('mouseleave', function() {
+      plugin.settings.$level1.bind('mouseleave.ddn', function() {
 
         hideWithTimeout($('.'+ plugin.settings.prefix +'-opened').next() );
 
@@ -113,11 +124,26 @@
         });
 
 
-      $('body').click(function (event) {
+      $('body').on('click.ddn', function (event) {
 
         plugin.settings.$parents.trigger('hide.ddn');
 
       });
+
+
+      $nav.bind('destroy.ddn', function() {
+
+        plugin.settings.$level1.unbind('.ddn');
+
+        $nav
+        .removeClass('ddn--nav')
+        .find('.ddn--parent').removeClass('ddn--parent')
+        .end()
+        .find('.ddn--sub').removeClass('ddn--sub').removeAttr('style');
+
+      });
+
+
 
     };
 

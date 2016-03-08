@@ -56,6 +56,11 @@
 
         plugin.settings.$panel = $('#'+ $trigger.data('tgp-panel-id'));
       }
+      else if( plugin.settings.panel ) {
+
+        plugin.settings.$panel = $trigger.parent().parent().next(plugin.settings.panel);
+
+      }
 
       // Throw an error if there is no panel
       if( ! plugin.settings.$panel.length ) {
@@ -171,8 +176,7 @@
       // Move focus to trigger
       $trigger
         .removeClass(plugin.settings.prefix +'-trigger--is-active')
-        .attr('aria-expanded', false)
-        .focus();
+        .attr('aria-expanded', false);
 
       // Return focus
       if( plugin.settings.returnFocus === true)
@@ -211,6 +215,7 @@
 
       $trigger.click(function (event) {
 
+        event.preventDefault();
         event.stopPropagation();
 
         // Close panel on click on active trigger
@@ -218,7 +223,16 @@
           plugin.settings.$panel.trigger('hide.tgp');
         }
         else {
+
+
+          // If panels are connected, close all
+          if( plugin.settings.connect ) {
+            plugin.settings.wrapper.find('.'+ plugin.settings.prefix + '-panel')
+            .trigger('hide.tgp');
+          }
+
           plugin.settings.$panel.trigger('show.tgp');
+
         }
 
       });

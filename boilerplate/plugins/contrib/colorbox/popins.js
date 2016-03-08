@@ -9,7 +9,7 @@ app.ui.popins = function () {
 
   // Default inline-popin config
   var cfgPopinDefault = {
-    iframe: true,
+    inline: true,
     innerWidth: '80%',
     innerHeight: '90%',
     opacity: 0.8,

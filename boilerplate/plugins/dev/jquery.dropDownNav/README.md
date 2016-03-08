@@ -6,9 +6,8 @@
 ### 1. Join plugin
 
 ```html
-<script src="assets/js/jQuery/jquery.min.js"></script>
-<script src="assets/js/plugins/position.min.js"></script>
-<script src="assets/js/plugins/jquery.simpleDropDown.js"></script>
+<script src="assets/js/contrib/position.min.js"></script>
+<script src="assets/js/plugins/jquery.dropDownNav.js"></script>
 ```
 
 
@@ -20,7 +19,7 @@
   <li><a href="#">Lorem ipsum</a></li>
   <li>
     <a href="#">Lorem ipsum</a>
-    <div class="sdd-sub-nav">
+    <div class="sub-nav">
       <ul>
         <li><a href="#">Lorem ipsum</a></li>
         <li><a href="#">Lorem ipsum</a></li>
@@ -32,11 +31,15 @@
 ```
 
 
+.sub-nav {
+  display: none;
+}
+
 
 ### 2. JavaScript
 
 ```js
-$('ul.nav').simpleDropDown();
+$('ul.nav').dropDownNav();
 ```
 
 
