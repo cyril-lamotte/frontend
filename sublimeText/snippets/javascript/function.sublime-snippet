@@ -1,0 +1,17 @@
+<snippet>
+    <content><![CDATA[/**
+ * Description
+ *
+ * @param {Object} name - Description
+ * @param {Type} name[].name - Description
+ * @returns {Type} Description
+ */
+app.ui.$0 = function() {
+
+};
+
+]]></content>
+    <tabTrigger>function</tabTrigger>
+    <scope>source.js</scope>
+    <description>function app.ui</description>
+</snippet>
