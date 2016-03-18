@@ -2,10 +2,19 @@
 // Checkbox
 // -----------------------------------------------------------------------------
 
+input[type="checkbox"] {
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  width: 13px;
+  height: 13px;
+}
+
+
 $cb-styles: (
-  'box-bg': $form-bg,
-  'box-bg-hover': darken($form-bg, 5%),
-  'box-border': $form-border,
+  'box-bg': #fff,
+  'box-bg-hover': #ddd,
+  'box-border': #ccc,
   'box-size': 16px,
   'box-radius': 0,
   'box-shadow': none,
@@ -17,8 +26,8 @@ $cb-styles: (
   'check-top': 2px,
   'check-left': 2px,
 
-  'label-padding-left': $inputs-label-padding-left,
-  'label-padding-top': $inputs-label-padding-top
+  'label-padding-left': 20px,
+  'label-padding-top': 2px
 );
 
 
@@ -27,7 +36,7 @@ $cb-styles: (
 /// Checkbox theme
 ///
 /// @group theme
-@mixin checkbox($styles) {
+@mixin checkbox($styles: $cb-styles) {
 
   &:not(:checked),
   &:checked {

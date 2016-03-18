@@ -4,18 +4,22 @@
 
 
 $select-styles: (
-  'padding': $form-field-padding,
-  'border': $form-border,
-  'border-radius': $form-border-radius,
+  'padding': 5px 10px,
+  'border': 1px solid #ccc,
+  'border-radius': 0,
   'color': $base-color
 );
 
 
 
-/// Input theme
+/// Select theme
 ///
 /// @group theme
-@mixin select($styles) {
+/// @example scss
+/// .foo {
+///   @include select;
+/// }
+@mixin select($styles: $select-styles) {
   width: 100%;
   max-width: 100%;
   appearance: none;
@@ -23,35 +27,22 @@ $select-styles: (
   border: map-get($styles, 'border');
   color: map-get($styles, 'color');
   border-radius: map-get($styles, 'border-radius');
-  background: url('../img/select-arrows') 95% 50% no-repeat;
+  //background: url('../img/select-arrows') 95% 50% no-repeat;
 }
 
 
 
-// Usage : https://github.com/cyril-lamotte/frontend/wiki/Custom-select
-
-/* -----------------------------------------------------------------------------
-   Inline
------------------------------------------------------------------------------ */
-
-.label-inline + select {
-  width: auto;
+/// Select disabled theme
+///
+/// @group theme
+/// @example scss
+/// .foo {
+///   @include select-disabled;
+/// }
+@mixin select-disabled() {
+  background: #aaa;
+  color: #555;
 }
-
-
-
-/* -----------------------------------------------------------------------------
-   Disabled
------------------------------------------------------------------------------ */
-
-select:disabled {
-  background: $form-disabled-bg;
-  color: $form-disabled-color;
-}
-
-
-
-
 
 
 
@@ -59,6 +50,7 @@ select:disabled {
 /* -----------------------------------------------------------------------------
    Custom
 ----------------------------------------------------------------------------- */
+// Usage : https://github.com/cyril-lamotte/frontend/wiki/Custom-select
 
 $select-height: 41px;
 $select-arrow-width: 48px;

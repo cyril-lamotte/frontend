@@ -3,56 +3,13 @@
 ============================================================================= */
 
 /* -----------------------------------------------------------------------------
-   Forms theme
+   Forms components
 ----------------------------------------------------------------------------- */
 
-$form-border: 1px solid $grey-1;
-$form-border-radius: 5px;
-$form-bg: #fff;
-$form-color: #333;
-$form-field-padding: 15px 20px;
-
-
-// Disabled
-$form-disabled-bg: #ccc;
-$form-disabled-color: #aaa;
-
-
-// Label for cb/radio
-$inputs-label-padding-left: 20px;
-$inputs-label-padding-top: 2px;
-
-
-
-// Disabled
-
-
-
-
-@import "components/form/form-helpers";
-@import "components/form/form-reset";
-
-@import "components/form/form-text";
-@import "components/form/form-checkbox";
-//@import "components/form/form-radio";
-@import "components/form/form-select";
-
-
-
-
-
-/* -----------------------------------------------------------------------------
-   Formats
------------------------------------------------------------------------------ */
-
-%format-full { width: 100%; }
-
-.format-x { width: 30px !important; }
-.format-xx { width: 40px !important; }
-.format-xxxx { width: 60px !important; }
-.format-date { width: 80px !important; }
-
-
+@import "theme/__components/form/form-text";
+@import "theme/__components/form/form-checkbox";
+@import "theme/__components/form/form-radio";
+@import "theme/__components/form/form-select";
 
 
 
@@ -60,6 +17,15 @@ $inputs-label-padding-top: 2px;
    Layout
 ----------------------------------------------------------------------------- */
 
+/// Form row spacing
+///
+/// @group form
+///
+///
+/// @example scss
+/// .foo {
+///   @include form-row;
+/// }
 @mixin form-row {
   position: relative;
   clear: left;
@@ -67,5 +33,21 @@ $inputs-label-padding-top: 2px;
 }
 
 
+
+/// Label above
+///
+/// @group form
+///
+///
+/// @example scss
+/// .foo {
+///   @include label-block;
+/// }
+@mixin label-block {
+  display: block;
+  float: none;
+  text-align: left;
+  width: auto;
+}
 
 

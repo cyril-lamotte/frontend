@@ -2,36 +2,85 @@
    Form text
 ============================================================================= */
 
+
+/* -----------------------------------------------------------------------------
+   Placeholder
+----------------------------------------------------------------------------- */
+
+@mixin input-placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+
+input,
+textarea {
+  @include input-placeholder {
+    opacity: 1;
+    font-style: italic;
+  }
+}
+
+
+/* -----------------------------------------------------------------------------
+   Theme
+----------------------------------------------------------------------------- */
+
 $input-styles: (
-  'padding': $form-field-padding,
-  'border': $form-border,
-  'border-radius': $form-border-radius,
+  'padding': 5px 10px,
+  'border': 1px solid #ccc,
+  'border-radius': 0,
   'color': $base-color
 );
-
-
 
 /// Input theme
 ///
 /// @group theme
-@mixin input($styles) {
+///
+/// @example scss
+/// .foo {
+///   @include input;
+/// }
+@mixin input($styles: $input-styles) {
+  margin: 0;
+  appearance: none;
   width: 100%;
   max-width: 100%;
   padding: map-get($styles, 'padding');
   border: map-get($styles, 'border');
   color: map-get($styles, 'color');
   border-radius: map-get($styles, 'border-radius');
-}
-
-/// Input theme sm
-///
-/// @group theme
-@mixin inputSM() {
+  vertical-align: middle;
+  font-family: inherit;
+  font-size: inherit;
 
   @include mq-to( 'sm' ) {
-    padding: 10px;
-    font-size: em(14px);
+
   }
 }
 
 
+
+@mixin textarea($styles: $input-styles) {
+  min-height: 5em;
+  overflow: auto; // Removes default vertical scrollbar on empty textarea in IE6/7/8/9
+  vertical-align: top;
+  font-family: inherit;
+  font-size: inherit;
+  resize: vertical;
+  margin: 0;
+  appearance: none;
+  width: 100%;
+  max-width: 100%;
+  padding: map-get($styles, 'padding');
+  border: map-get($styles, 'border');
+  color: map-get($styles, 'color');
+  border-radius: map-get($styles, 'border-radius');
+
+  @include mq-to( 'sm' ) {
+
+  }
+}

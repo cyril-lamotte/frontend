@@ -1,51 +1,105 @@
 <?php
 
+// Alter basic HTML
+require_once('templates/includes/html.inc.php');
+
+// Menu
+require_once('templates/includes/menus.inc.php');
+
+// Solr search template functions
+require_once('templates/includes/solr.inc.php');
+
+// Forms
+require_once('templates/includes/forms.inc.php');
+
+// Fields
+require_once('templates/includes/fields.inc.php');
+
+
+
+
 /**
- * Include common functions used through out theme.
- */
-require_once("templates/includes/menus.inc.php");
-require_once("templates/includes/solr.inc.php");
+  * Themes listing
+  * <?php print theme('template-name'); ?>
+  */
+function mytheme_theme($existing, $type, $theme, $path) {
 
+  return array(
 
+    'header' => array(
+      'template'  => 'templates/header',
+      'variables' => array('home')
+    ),
 
+    'menu-principal' => array(
+      'template'  => 'templates/menu-principal',
+      'variables' => array()
+    ),
 
+    'footer' => array(
+      'template'  => 'templates/footer',
+      'variables' => array()
+    ),
 
-function mytheme_preprocess_html(&$vars) {
+    'back-to-top' => array(
+      'template'  => 'templates/back-to-top',
+      'variables' => array()
+    ),
 
-  // Add viewport metatag
-  $viewport = array(
-   '#tag' => 'meta',
-   '#attributes' => array(
-     'name' => 'viewport',
-     'content' => 'initial-scale=1.0',
-   )
+    'home-maquette' => array(
+      'template'  => 'templates/home-maquette',
+      'variables' => array()
+    ),
+
+    'print' => array(
+      'template'  => 'templates/print',
+      'variables' => array()
+    ),
+
+    'search_form' => array(
+      'render element' => 'form',
+      'template'  => '/templates/search/search-form',
+    ),
+
+    'apachesolr_search_custom_page_search_form' => array(
+      'render element' => 'form',
+      'template'  => '/templates/search/search-form',
+    ),
+
+    'user_login' => array(
+      'render element' => 'form',
+      'template'  => '/templates/login/login-form',
+    ),
+
+    'user_register_form' => array(
+      'render element' => 'form',
+      'template'  => '/templates/login/user-register-form',
+    ),
+
+    'user_pass' => array(
+      'render element' => 'form',
+      'template'  => '/templates/login/user-pass-form',
+    ),
+
   );
-
-  drupal_add_html_head($viewport, 'viewport');
-
-
-  // Add format-detection metatag
-  $viewport = array(
-   '#tag' => 'meta',
-   '#attributes' => array(
-     'name' => 'format-detection',
-     'content' => 'telephone=no',
-   )
-  );
-
-  drupal_add_html_head($viewport, 'format-detection');
-
-
-  // Add externals CSS
-  //drupal_add_css('http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700', array('type' => 'external'));
 
 }
 
 
-/**
- * Declare various hook_*_alter() hooks.
- *
- * hook_*_alter() implementations must live (via include) inside this file so
- * they are properly detected when drupal_alter() is invoked.
- */
-mytheme_include('mytheme', 'theme/alter.inc');
+
+
+function mytheme_preprocess_page(&$vars) {
+
+  // 404
+  $header = drupal_get_http_header("status");
+  if( $header == "404 Not Found" ) {
+    $vars['theme_hook_suggestions'][] = 'page__error';
+  }
+
+  // 403
+  if($header == "403 Forbidden") {
+    $vars['theme_hook_suggestions'][] = 'page__error';
+  }
+
+}
+

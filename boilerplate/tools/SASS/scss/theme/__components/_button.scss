@@ -9,8 +9,10 @@
 /// .foo {
 ///   @include btn-default;
 /// }
-@mixin btn-default {
+@mixin btn--default {
   @include reset-box-model;
+  -webkit-appearance: button; // Clickable input types in iOS
+  overflow: visible; // Corrects inner spacing displayed oddly in IE7
   position: relative;
   display: inline-block;
   vertical-align: middle;

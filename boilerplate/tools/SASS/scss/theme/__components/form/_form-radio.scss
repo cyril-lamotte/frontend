@@ -1,131 +1,180 @@
-/* =============================================================================
-   Radio
-============================================================================= */
+// -----------------------------------------------------------------------------
+// Checkbox
+// -----------------------------------------------------------------------------
 
-/*doc
----
-title: Radio
-name: form-radio
-category: Formulaires
----
-```html_example
-<input type="radio" id="rad-1" name="rad" value="">
-<label for="rad-1">Option 1</label>
+input[type="radio"] {
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  width: 13px;
+  height: 13px;
+}
 
-<input type="radio" id="rad-2" name="rad" value="" checked>
-<label for="rad-2">Option 2</label>
 
-<input type="radio" id="rad-3" name="rad-3" value="" checked disabled>
-<label for="rad-3">Désactivée</label>
-```
+$radio-styles: (
+  'box-bg': #fff,
+  'box-bg-hover': #ddd,
+  'box-border': #ccc,
+  'box-size': 16px,
+  'box-radius': 0,
+  'box-shadow': none,
 
-Compatibilité : IE9+ (affichage standard pour <= IE8)
+  'check-bg': $brand,
+  'check-bg-hover': darken($brand, 5%),
+  'check-color': $brand,
+  'check-size': 12px,
+  'check-top': 2px,
+  'check-left': 2px,
 
-*/
+  'label-padding-left': 20px,
+  'label-padding-top': 2px
+);
 
-input[type="radio"]:not(:checked),
-input[type="radio"]:checked {
 
-  // Hide standard input
-  position: absolute;
-  left: -9999px;
 
-  // Label
-  + label {
-    position: relative;
-    padding-left: $cb-label-padding-left;
-    padding-top: 2px;
+
+/// Checkbox theme
+///
+/// @group theme
+@mixin radio($styles: $cb-styles) {
+
+  &:not(:checked),
+  &:checked {
+
+    // Hide standard input
+    position: absolute;
+    left: -9999px;
+
+    // Label
+    + label {
+      position: relative;
+      padding-left: map-get($styles, 'label-padding-left');
+      padding-top: map-get($styles, 'label-padding-top');
+
+      // Box
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: map-get($styles, 'box-size');
+        height: map-get($styles, 'box-size');
+        border: map-get($styles, 'box-border');
+        background: map-get($styles, 'box-bg');
+        border-radius: map-get($styles, 'box-radius');
+        box-shadow: map-get($styles, 'box-shadow');
+      }
+
+      // Hover
+      &:hover {
+
+        &:before {
+          background-color: map-get($styles, 'box-bg-hover');
+        }
+
+        &:after {
+          background-color: map-get($styles, 'check-bg-hover');
+        }
+
+      }
+
+
+      // Check
+      &:after {
+        content: '';
+        width: map-get($styles, 'check-size');
+        height: map-get($styles, 'check-size');
+        background: map-get($styles, 'check-color');
+        //content: '\2713';
+        //color: map-get($styles, '')check-color;
+
+        position: absolute;
+        top: map-get($styles, 'check-top');
+        left: map-get($styles, 'check-left');
+        line-height: 1.2;
+
+        border-radius: map-get($styles, 'box-radius');
+      }
+
+    }
+
+
+    // Focus
+    &:focus {
+
+      + label {
+
+        &:before {
+          background-color: map-get($styles, 'box-bg-hover');
+        }
+
+        &:after {
+          background-color: map-get($styles, 'check-bg-hover');
+        }
+      }
+
+    }
+
+  }
+
+
+
+
+
+  // Not checked
+  &:not(:checked) + label:after {
+    display: none;
+  }
+
+
+  // Checked
+  &:checked + label:after {
+    display: block;
+  }
+
+
+
+  // Disabled
+  &[disabled]:not(:checked),
+  &[disabled]:checked {
+
+    + label {
+      color: map-get($styles, 'label-disabled');
+
+      &:before {
+        background-color: map-get($styles, 'box-bg-disabled');
+      }
+
+      &:after {
+        color: map-get($styles, 'check-color-disabled');
+        background-color: map-get($styles, 'check-bg-disabled');
+      }
+    }
+
+  }
+
+
+  // radio à droite
+  &:not(:checked) + label.radio-right,
+  &:checked + label.radio-right {
+    padding-left: 0;
+    padding-right: map-get($styles, 'label-padding-left');
 
     // Box
     &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: $cb-box-size;
-      height: $cb-box-size;
-      border: $cb-box-border;
-      background: $cb-box-bg;
-      border-radius: 50%;
-      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+      left: auto;
+      right: 0;
     }
-
-    // Hover
-    &:hover {
-
-      &:before {
-        background-color: $cb-box-bg-hover;
-      }
-
-      &:after {
-        background-color: $cb-check-bg-hover;
-      }
-
-    }
-
 
     // Check
     &:after {
-      content: '';
-      position: absolute;
-      width: $cb-check-size;
-      height: $cb-check-size;
-      top: 2px;
-      left: 2px;
-      color: $cb-check-color;
-      background: $cb-check-bg;
-      border-radius: 50%;
+      left: auto;
+      right: 2px;
     }
 
   }
 
 
-  // Focus
-  &:focus {
-
-    + label {
-
-      &:before {
-        background-color:$cb-box-bg-hover;
-      }
-
-      &:after {
-        background-color: $cb-check-bg-hover;
-      }
-    }
-
-  }
+} // /@mixin radio
 
 
-}
-
-
-
-// Not checked
-input[type="radio"]:not(:checked) + label:after {
-  display: none;
-}
-
-// Checked
-input[type="radio"]:checked + label:after {
-  display: block;
-}
-
-// Disabled
-input[type="radio"][disabled]:not(:checked),
-input[type="radio"][disabled]:checked {
-
-  + label {
-    color: $cb-label-disabled;
-
-    &:before {
-      background-color: $cb-box-bg-disabled;
-    }
-
-    &:after {
-      color: $cb-check-color-disabled;
-      background-color: $cb-check-bg-disabled;
-    }
-  }
-
-}

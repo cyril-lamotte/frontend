@@ -7,9 +7,9 @@
 /// @group theme
 /// @example scss Usage
 /// .foo {
-///   @include article;
+///   @include text-content;
 /// }
-@mixin article {
+@mixin text-content {
 
   // Headings
   h1 {

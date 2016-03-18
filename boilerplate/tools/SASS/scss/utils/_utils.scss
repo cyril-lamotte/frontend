@@ -5,13 +5,13 @@
 @import 'utils/clearfix';
 @import "utils/breakpoints";
 @import 'utils/grid';
-//@import "utils/sprites";
 
 // Reset
 @import 'utils/normalize';
 @import "utils/box-sizing";
 
 // Generic & reusable
+@import 'utils/basics';
 @import 'utils/display';
 @import 'utils/alignments';
 @import 'utils/image';
