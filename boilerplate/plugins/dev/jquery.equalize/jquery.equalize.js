@@ -1,7 +1,7 @@
 (function( $ ){
 
   /**
-  * Plugin jQuery equalize v1.3.0
+  * Plugin jQuery equalize v1.3.1
   * @link https://github.com/cyril-lamotte/frontend/tree/master/boilerplate/plugins/dev/jquery.equalize
   */
 
@@ -47,7 +47,7 @@
 
         // Apply minHeight
         $.each(arrayLines[offsetLabelRounded], function(i, el) {
-          $(el).css('minHeight', minHeight+1).addClass('equalized');
+          $(el).css('minHeight', minHeight+1).addClass('is-equalized');
         });
 
       }
@@ -60,7 +60,7 @@
     $(this).bind('destroy.equalize', function() {
 
       $(this)
-        .removeClass('equalized')
+        .removeClass('is-equalized')
         .removeAttr('style');
 
     });
