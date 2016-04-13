@@ -60,7 +60,7 @@
     $(this).bind('destroy.equalize', function() {
 
       $(this)
-        .removeClass('is-equalized')
+        .removeClass('is-equalized equalize--new-line')
         .removeAttr('style');
 
     });

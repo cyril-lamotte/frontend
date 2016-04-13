@@ -31,7 +31,10 @@ Equalize blocks height which have the same offsetTop.
 
 ```js
 $(window).load(function() {
+
+	// Equalize blocks height
   $('.box').equalize();
+
 });
 ```
 
@@ -47,4 +50,4 @@ $('.box').trigger('destroy.equalize');
 
 Name                 | Description
 ---------------------|----------------------------------------
-destroy.equalize     | Delete min-height & remove class
+destroy.equalize     | Delete min-height & remove classes
