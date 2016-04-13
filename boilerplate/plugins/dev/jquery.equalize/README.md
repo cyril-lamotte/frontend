@@ -2,14 +2,19 @@
 
 Equalize blocks height which have the same offsetTop.
 
+## Requirements
+
 > `box-sizing` must be `border-box`
 
-http://caniuse.com/#search=box-sizing : Caution with IE because of `box-sizing` bug
+[Caution with IE because of `box-sizing` bug - Caniuse.com](http://caniuse.com/#search=box-sizing)
+
 
 ## Features
 
 * IE8+ compliant
-* Class equalized is added after equalizing
+* Class `is-equalized` is added after equalizing
+* Class `equalize--new-line` is added after to the first element on each processed line.
+* 2px range to avoid subpixels bug
 
 
 ## Installation
