@@ -6,7 +6,7 @@ Equalize blocks height which have the same offsetTop.
 
 > `box-sizing` must be `border-box`
 
-[Caution with IE because of `box-sizing` bug - Caniuse.com](http://caniuse.com/#search=box-sizing)
+:warning: [Caution with IE because of `box-sizing` bug - Caniuse.com](http://caniuse.com/#search=box-sizing)
 
 
 ## Features
