@@ -87,3 +87,24 @@
 
 
 } // /article
+
+
+
+/// Delete margin of text
+/// @group utils
+///
+/// @example scss - Usage
+/// .text {
+///   @include text-wrap;
+/// }
+@mixin text-wrap {
+
+  *:first-child {
+    margin-top: 0;
+  }
+
+  *:last-child {
+    margin-bottom: 0;
+  }
+
+}

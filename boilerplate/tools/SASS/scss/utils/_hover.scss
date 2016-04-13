@@ -1,0 +1,76 @@
+// -----------------------------------------------------------------------------
+// Hover
+// -----------------------------------------------------------------------------
+
+/// Add hover/focus style
+///
+/// @group utils
+///
+/// @example scss - Usage
+/// .foo {
+///   @include hover {
+///     [....]
+///   }
+/// }
+@mixin hover() {
+  &:hover,
+  &:focus,
+  &:active {
+    @content;
+  }
+}
+
+
+/// Add Focus style
+///
+/// @group utils
+///
+/// @example scss - Usage
+/// .foo {
+///   @include focus {
+///     [....]
+///   }
+/// }
+@mixin focus() {
+  &:focus,
+  &:active {
+    @content;
+  }
+}
+
+
+
+
+
+/// Links underlined
+/// @group utils
+///
+/// @example scss - Usage
+/// .foo {
+///   @include underline;
+/// }
+@mixin underline {
+  text-decoration: underline;
+
+  @include hover {
+    text-decoration: none;
+  }
+
+}
+
+
+
+/// Links underlined on hover/focus/active states
+/// @group utils
+///
+/// @example scss - Usage
+/// .foo {
+///   @include underlineOnHover;
+/// }
+@mixin underlineOnHover {
+  text-decoration: none;
+
+  @include hover {
+    text-decoration: underline;
+  }
+}

@@ -11,7 +11,7 @@
 /// }
 @mixin btn--default {
   @include reset-box-model;
-  -webkit-appearance: button; // Clickable input types in iOS
+  //-webkit-appearance: button; // Clickable input types in iOS
   overflow: visible; // Corrects inner spacing displayed oddly in IE7
   position: relative;
   display: inline-block;
@@ -81,8 +81,15 @@
    Styles
 ----------------------------------------------------------------------------- */
 
+/// Button primary
+///
+/// @group theme
+/// @example scss Usage
+/// button, a {
+///   @include btn;
+/// }
 @mixin btn {
-  @include btn-default;
+  @include btn--default;
 
   @include hover {
 

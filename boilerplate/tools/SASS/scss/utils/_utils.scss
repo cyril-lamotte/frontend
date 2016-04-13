@@ -11,7 +11,8 @@
 @import "utils/box-sizing";
 
 // Generic & reusable
-@import 'utils/basics';
+@import 'utils/hover';
+@import 'utils/reset';
 @import 'utils/display';
 @import 'utils/alignments';
 @import 'utils/image';

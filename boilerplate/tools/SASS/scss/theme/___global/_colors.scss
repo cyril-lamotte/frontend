@@ -5,13 +5,11 @@
 $red: #ff4444;
 
 $blue: #0066ff;
-$blue-light: tint($blue, 20%);
-$blue-dark: shade($blue, 20%);
+//$blue-light: lighten($blue, 5%);
+//$blue-dark: darken($blue, 5%);
 
 $grey: #333;
-//$green: #00ff00;
-//$orange: #ff6600;
-
+$light-grey: #f4f4f4;
 
 
 $grey-1: #ccc; // x

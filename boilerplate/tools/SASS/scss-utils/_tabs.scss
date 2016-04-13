@@ -2,37 +2,37 @@
    Admin tabs
 ============================================================================= */
 
-ul.tabs {
-  margin: 1em 0 2em;
+/// Admin tabs
+///
+/// @group theme
+/// @example scss Usage
+/// .foo {
+///   @include admin-tabs;
+/// }
+@mixin admin-tabs {
 
   ul {
-    margin: 0;
-  }
+    background: #f0f0f0;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 1em 0 2em;
 
-  li {
-    display: inline;
-    margin: 0 0.1em 0 0;
-    padding: 0;
-    background: none;
-  }
+    li {
+      display: inline-block;
+      margin: 0 5px 0 0;
+      padding: 0;
+      background: none;
+    }
 
-  a:link,
-  a:visited {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 0.2em 0.8em;
-    color: #888;
-    text-decoration: none;
-    border-radius: 3px;
-    box-shadow: 0px 0px 3px #888;
+    a {
+      @include admin-link;
+    }
 
-    @include hover {
-      background: $brand;
-      border-color: $brand;
+    .active {
+      background: #333;
+      border-color: #333;
       color: #fff;
-      text-decoration: none;
-      box-shadow: 0px 0px 3px #024582;
     }
   }
-}
 
+}
