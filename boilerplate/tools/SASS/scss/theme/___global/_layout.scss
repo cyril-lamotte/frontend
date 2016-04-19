@@ -7,6 +7,22 @@
 $default-view-width: 1280px;
 
 
+/// Breakpoints map - Based on Bootstrap reference
+/// * Phones portait < 480px
+/// * Phones < 768px
+/// * Tablets >= 768px
+/// * Desktops >= 992px
+/// * Large desktops >= 1200px
+///
+/// @link http://getbootstrap.com/css/#responsive-utilities Bootstrap breakpoints reference
+/// @group rwd
+$breakpoints: (
+  'xs': 480px,
+  'sm': 768px,
+  'md': 992px,
+  'lg': $default-view-width
+);
+
 
 /* -----------------------------------------------------------------------------
    Body
