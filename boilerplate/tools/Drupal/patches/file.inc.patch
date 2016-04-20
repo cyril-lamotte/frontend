@@ -1,0 +1,13 @@
+Index: file.inc
+===================================================================
+--- file.inc	(revision 2606)
++++ file.inc	(working copy)
+@@ -2106,7 +2106,7 @@
+ function file_scan_directory($dir, $mask, $options = array(), $depth = 0) {
+   // Merge in defaults.
+   $options += array(
+-    'nomask' => '/(\.\.?|CVS)$/',
++    'nomask' => '/(\.\.?|CVS|node_modules)$/',
+     'callback' => 0,
+     'recurse' => TRUE,
+     'key' => 'uri',
