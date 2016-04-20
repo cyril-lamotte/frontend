@@ -4,7 +4,7 @@
 
 /// Site width
 /// @group theme
-$default-view-width: 1280px;
+$default-width: 1280px;
 
 
 /// Breakpoints map - Based on Bootstrap reference
@@ -20,7 +20,7 @@ $breakpoints: (
   'xs': 480px,
   'sm': 768px,
   'md': 992px,
-  'lg': $default-view-width
+  'lg': $default-width
 );
 
 
