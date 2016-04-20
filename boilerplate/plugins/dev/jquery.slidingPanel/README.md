@@ -57,6 +57,12 @@ $('#sliding-panel').slidingPanel({
   trigger: $('#btn--burger'),
   wrapper: $('#site')
 });
+
+
+// Close
+$('#sliding-panel button.btn--close').click(function (event) {
+  $('#sliding-panel').trigger('hide.sp')
+});
 ```
 
 
