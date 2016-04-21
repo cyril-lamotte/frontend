@@ -1,4 +1,7 @@
-/* quick print reset */
+/* =============================================================================
+   Print
+============================================================================= */
+
 @media print {
 
   * {
@@ -11,7 +14,7 @@
     width: auto !important;
     margin: auto !important;
     font-family: serif;
-    font-size: 12pt;
+    font-size: 10pt;
     background-color: #fff !important;
   }
 

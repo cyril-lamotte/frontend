@@ -1,25 +1,47 @@
 @charset 'utf-8';
 
 
+
+// -----------------------------------------------------------------------------
+// Mixins
+// -----------------------------------------------------------------------------
+
 @import 'utils/utils';
 @import 'theme/theme';
 
 
 
-
 /* -----------------------------------------------------------------------------
-   Pages
+   Reset
 ----------------------------------------------------------------------------- */
 
-@import 'pages/forms-default';
-@import 'pages/header';
-@import 'pages/footer';
-@import 'pages/nav';
-@import 'pages/breadcrumb';
+@import "utils/box-sizing";
+@import 'utils/normalize';
+@import 'utils/image';
 
 
-@import 'pages/home';
+
+/* -----------------------------------------------------------------------------
+   Helpers
+----------------------------------------------------------------------------- */
+
+@import 'utils/helpers';
+
+
+
+/* -----------------------------------------------------------------------------
+   Custom
+----------------------------------------------------------------------------- */
+
+@import 'custom/interactions';
+@import 'custom/basics';
+@import 'custom/layout';
+@import 'custom/forms-default';
+@import 'custom/header';
+@import 'custom/footer';
+@import 'custom/nav';
+@import 'custom/breadcrumb';
 
 
 // Print in last position
-@import 'pages/print';
+@import 'custom/print';

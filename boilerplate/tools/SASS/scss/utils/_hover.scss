@@ -7,7 +7,7 @@
 /// @group utils
 ///
 /// @example scss - Usage
-/// .foo {
+/// a {
 ///   @include hover {
 ///     [....]
 ///   }
@@ -26,7 +26,7 @@
 /// @group utils
 ///
 /// @example scss - Usage
-/// .foo {
+/// a {
 ///   @include focus {
 ///     [....]
 ///   }
@@ -46,7 +46,7 @@
 /// @group utils
 ///
 /// @example scss - Usage
-/// .foo {
+/// a {
 ///   @include underline;
 /// }
 @mixin underline {
@@ -64,7 +64,7 @@
 /// @group utils
 ///
 /// @example scss - Usage
-/// .foo {
+/// a {
 ///   @include underlineOnHover;
 /// }
 @mixin underlineOnHover {

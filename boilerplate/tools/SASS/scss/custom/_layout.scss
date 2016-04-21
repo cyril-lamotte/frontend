@@ -1,14 +1,13 @@
 /* =============================================================================
-   Forms
+   Layout
 ============================================================================= */
 
 /* -----------------------------------------------------------------------------
-   Forms components
+   Wrappers
 ----------------------------------------------------------------------------- */
 
-@import "theme/__components/form/form-layout";
-@import "theme/__components/form/form-text";
-@import "theme/__components/form/form-checkbox";
-@import "theme/__components/form/form-radio";
-@import "theme/__components/form/form-select";
-
+// Centered layout
+.wrapper {
+  max-width: $max-site-width;
+  margin: 0 auto;
+}

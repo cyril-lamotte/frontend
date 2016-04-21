@@ -1,12 +1,20 @@
-/* =============================================================================
-   Tables
-============================================================================= */
+// -----------------------------------------------------------------------------
+// Tables
+// -----------------------------------------------------------------------------
 
+/// Table
+///
+/// @group theme
+///
+/// @example scss Usage
+/// table {
+///   @include table;
+/// }
 @mixin table {
   border-collapse: collapse;
   font-size: 14px;
   width: 100%;
-  border: 1px solid $grey-2;
+  border: 1px solid $grey;
   border-bottom: 2px solid $brand;
   background: #fff;
 
@@ -17,18 +25,18 @@
 
   th {
     position: relative;
-    background: $grey-4;
+    background: $grey;
     font-weight: normal;
     text-align: left;
   }
 
   tr {
-    border-bottom: 1px solid $grey-1;
+    border-bottom: 1px solid $grey;
   }
 
   // hover
   tr:hover td {
-    background: $grey-4;
+    background: $grey;
   }
 
 
@@ -36,7 +44,7 @@
 
     tr:nth-child(2n+1),
     tr {
-      background: $grey-4;
+      background: $grey;
     }
 
   }

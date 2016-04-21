@@ -1,19 +1,19 @@
-/* =============================================================================
-   Article
-============================================================================= */
+// -----------------------------------------------------------------------------
+// Text content
+// -----------------------------------------------------------------------------
 
 /// WYSIWYG Content
 ///
 /// @group theme
 /// @example scss Usage
-/// .foo {
+/// article {
 ///   @include text-content;
 /// }
 @mixin text-content {
 
   // Headings
   h1 {
-    font-size: em(16px);
+    font-size: 1.6rem;
     font-weight: bold;
     margin: 1em 0 0.5em;
 
@@ -23,43 +23,36 @@
   }
 
   h2 {
-    font-size: em(14px);
+    font-size: 1.4rem;
     font-weight: bold;
     margin: 1em 0 0.5em;
   }
 
   h3 {
-    font-size: em(13px);
+    font-size: 1.3rem;
     font-weight: bold;
     margin: 1em 0 0.5em;
   }
 
   h4 {
-    font-size: em(12px);
+    font-size: 1.2rem;
     font-weight: bold;
     margin: 1em 0 0.5em;
   }
 
   h5 {
-    font-size: em(12px);
+    font-size: 1.2rem;
     font-weight: bold;
     margin: 1em 0 0.5em 1em;
   }
 
   h6 {
-    font-size: em(11px);
+    font-size: 1.1rem;
     text-transform: uppercase;
     font-weight: normal;
     margin: 1em 0 0.5em 1em;
   }
 
-
-  // Text
-  p {}
-
-  .chapeau {
-    font-weight: bold;
-  }
 
 
   // No margin-top on the first <p>
@@ -86,25 +79,13 @@
   }
 
 
-} // /article
-
-
-
-/// Delete margin of text
-/// @group utils
-///
-/// @example scss - Usage
-/// .text {
-///   @include text-wrap;
-/// }
-@mixin text-wrap {
-
-  *:first-child {
-    margin-top: 0;
+  // Tables
+  table {
+    @include table;
   }
 
-  *:last-child {
-    margin-bottom: 0;
-  }
 
 }
+
+
+

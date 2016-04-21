@@ -3,28 +3,24 @@
 // =============================================================================
 
 
-/* -----------------------------------------------------------------------------
-   Global
------------------------------------------------------------------------------ */
+// -----------------------------------------------------------------------------
+// Global
+// -----------------------------------------------------------------------------
 
+@import "theme/___global/variables";
 @import "theme/___global/colors";
 @import "theme/___global/fonts";
-@import "theme/___global/interactions";
-@import "theme/___global/layout";
-@import "theme/___global/basics";
 
 
-
-/* -----------------------------------------------------------------------------
-   Components
------------------------------------------------------------------------------ */
+// -----------------------------------------------------------------------------
+// Components
+// -----------------------------------------------------------------------------
 
 @import 'theme/__components/text-content';
-@import 'theme/__components/links';
-@import 'theme/__components/block';
+@import 'theme/__components/links-and-buttons';
+@import 'theme/__components/blocks';
 @import 'theme/__components/lists';
 @import 'theme/__components/texts';
-@import 'theme/__components/button';
 @import 'theme/__components/tables';
 @import 'theme/__components/media';
-@import 'theme/__components/form/form';
+@import 'theme/__components/forms/forms';

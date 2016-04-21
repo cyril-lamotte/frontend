@@ -58,7 +58,7 @@ $susy: (
 /// }
 ///
 /// @example scss - 4 columns
-/// .foo {
+/// div.row {
 ///   @include grid-equal-cols(4);
 /// }
 @mixin grid-equal-cols($col-count: 2, $override: '') {

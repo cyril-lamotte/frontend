@@ -1,10 +1,6 @@
-/* =============================================================================
-   Display
-============================================================================= */
-
-/* -----------------------------------------------------------------------------
-   Mixins
------------------------------------------------------------------------------ */
+// -----------------------------------------------------------------------------
+// Display
+// -----------------------------------------------------------------------------
 
 /// Hidden except for screen-readers
 ///
@@ -12,7 +8,7 @@
 /// @link https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html Yahoo! method
 ///
 /// @example scss - Usage
-/// .foo {
+/// span {
 ///   @include hide-text;
 /// }
 @mixin hide-text {
@@ -28,42 +24,21 @@
 
 
 
-/* -----------------------------------------------------------------------------
-   Display helpers
------------------------------------------------------------------------------ */
+/// Delete margin of text
+/// @group utils
+///
+/// @example scss - Usage
+/// .text {
+///   @include text-wrap;
+/// }
+@mixin text-wrap {
 
-.is-hidden { display: none; }
+  *:first-child {
+    margin-top: 0;
+  }
 
-.visually-hidden {
-  @include hide-text;
+  *:last-child {
+    margin-bottom: 0;
+  }
+
 }
-
-
-
-
-/* -----------------------------------------------------------------------------
-   Visibility classes
------------------------------------------------------------------------------ */
-
-.visible-xs { display: none !important; }
-.visible-sm { display: none !important; }
-.hidden-md { display: none !important; }
-.visible-md { display: inherit !important; }
-
-
-
-@media (min-width: map-get($breakpoints, 'sm')) and (max-width: map-get($breakpoints, 'md') - 1) {
-  .hidden-md { display: inherit !important; }
-  .visible-md { display: none !important ; }
-  .visible-sm { display: inherit !important; }
-  .hidden-sm { display: none !important; }
-}
-
-@media (max-width: map-get($breakpoints, 'sm') - 1) {
-  .hidden-md { display: inherit !important; }
-  .visible-md { display: none !important; }
-  .visible-xs { display: inherit !important; }
-  .hidden-xs { display: none !important; }
-}
-
-

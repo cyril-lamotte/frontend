@@ -1,11 +1,10 @@
-/* =============================================================================
-   Form text
-============================================================================= */
+// -----------------------------------------------------------------------------
+// Form text
+// -----------------------------------------------------------------------------
 
-
-/* -----------------------------------------------------------------------------
-   Placeholder
------------------------------------------------------------------------------ */
+// -----------------------------------------------------------------------------
+// Placeholder
+// -----------------------------------------------------------------------------
 
 @mixin input-placeholder {
   &.placeholder { @content; }
@@ -16,18 +15,10 @@
 }
 
 
-input,
-textarea {
-  @include input-placeholder {
-    opacity: 1;
-    font-style: italic;
-  }
-}
 
-
-/* -----------------------------------------------------------------------------
-   Theme
------------------------------------------------------------------------------ */
+// -----------------------------------------------------------------------------
+// Theme
+// -----------------------------------------------------------------------------
 
 $input-styles: (
   'padding': 5px 10px,
@@ -36,12 +27,13 @@ $input-styles: (
   'color': $base-color
 );
 
+
 /// Input theme
 ///
 /// @group theme
 ///
 /// @example scss
-/// .foo {
+/// input[type="text"] {
 ///   @include input;
 /// }
 @mixin input($styles: $input-styles) {
@@ -60,27 +52,28 @@ $input-styles: (
   @include mq-to( 'sm' ) {
 
   }
+
+  @include input-placeholder {
+    opacity: 1;
+    font-style: italic;
+  }
 }
 
 
 
+/// Input theme
+///
+/// @group theme
+///
+/// @example scss
+/// textarea {
+///   @include textarea;
+/// }
 @mixin textarea($styles: $input-styles) {
+  @include input($styles);
   min-height: 5em;
   overflow: auto; // Removes default vertical scrollbar on empty textarea in IE6/7/8/9
   vertical-align: top;
-  font-family: inherit;
-  font-size: inherit;
   resize: vertical;
-  margin: 0;
   appearance: none;
-  width: 100%;
-  max-width: 100%;
-  padding: map-get($styles, 'padding');
-  border: map-get($styles, 'border');
-  color: map-get($styles, 'color');
-  border-radius: map-get($styles, 'border-radius');
-
-  @include mq-to( 'sm' ) {
-
-  }
 }

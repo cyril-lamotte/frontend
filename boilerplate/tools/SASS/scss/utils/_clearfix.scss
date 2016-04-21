@@ -6,6 +6,10 @@
 ///
 /// @link http://nicolasgallagher.com/micro-clearfix-hack Adapted from: A new micro clearfix hack
 /// @group layout
+/// @example scss Usage
+/// div {
+///   @include clearfix;
+/// }
 @mixin clearfix {
 
   &:after {

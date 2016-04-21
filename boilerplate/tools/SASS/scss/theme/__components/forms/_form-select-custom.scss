@@ -1,55 +1,7 @@
-/* =============================================================================
-   Select
-============================================================================= */
+// -----------------------------------------------------------------------------
+// Custom select
+// -----------------------------------------------------------------------------
 
-
-$select-styles: (
-  'padding': 5px 10px,
-  'border': 1px solid #ccc,
-  'border-radius': 0,
-  'color': $base-color
-);
-
-
-
-/// Select theme
-///
-/// @group theme
-/// @example scss
-/// .foo {
-///   @include select;
-/// }
-@mixin select($styles: $select-styles) {
-  width: 100%;
-  max-width: 100%;
-  appearance: none;
-  padding: map-get($styles, 'padding');
-  border: map-get($styles, 'border');
-  color: map-get($styles, 'color');
-  border-radius: map-get($styles, 'border-radius');
-  //background: url('../img/select-arrows') 95% 50% no-repeat;
-}
-
-
-
-/// Select disabled theme
-///
-/// @group theme
-/// @example scss
-/// .foo {
-///   @include select-disabled;
-/// }
-@mixin select-disabled() {
-  background: #aaa;
-  color: #555;
-}
-
-
-
-
-/* -----------------------------------------------------------------------------
-   Custom
------------------------------------------------------------------------------ */
 // Usage : https://github.com/cyril-lamotte/frontend/wiki/Custom-select
 
 $select-height: 41px;

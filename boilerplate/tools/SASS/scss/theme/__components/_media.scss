@@ -1,6 +1,6 @@
-/* =============================================================================
-   Media
-============================================================================= */
+// -----------------------------------------------------------------------------
+// Media
+// -----------------------------------------------------------------------------
 
 /// Default media theme (image + text)
 ///
@@ -26,13 +26,11 @@
 /// }
 @mixin media-pict {
   float: left;
-  margin: 0 23px 5px 0;
-  width: 100px;
 
   @include mq-to( 'sm' ) {
     float: none;
-    margin-right: auto !important;
-    margin-left: auto !important;
+    margin-right: auto;
+    margin-left: auto;
     width: auto;
   }
 
@@ -44,26 +42,6 @@
       margin: 0 auto;
     }
 
-    figcaption {
-      text-align: left;
-      font-weight: bold;
-    }
   }
 }
 
-
-
-/// Media-text
-///
-/// @group theme
-/// @example scss Usage
-/// .foo {
-///   @include media-text;
-/// }
-@mixin media-text {
-
-  p:first-child {
-    margin-top: 0;
-  }
-
-}
