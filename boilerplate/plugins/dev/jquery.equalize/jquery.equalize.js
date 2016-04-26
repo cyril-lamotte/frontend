@@ -11,7 +11,6 @@
     var minHeight = 0;
     var arrayLines = [];
 
-
     $boxes.on('equalize.equalize', function() {
 
       $(this).each(function(i, el) {
@@ -73,10 +72,18 @@
 
     // Refresh on resize
     $(window).on('resize.equalize', function() {
-      $boxes.trigger('destroy.equalize');
-      $boxes.trigger('equalize.equalize');
-    });
 
+      // Do not trigger refresh if window is still resizing
+      window.clearTimeout(window.timeoutID);
+
+      window.timeoutID = window.setTimeout(function() {
+
+        $boxes.trigger('destroy.equalize');
+        $boxes.trigger('equalize.equalize');
+
+      }, 300);
+
+    });
 
     $boxes.trigger('equalize.equalize');
 
