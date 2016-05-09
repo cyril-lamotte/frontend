@@ -67,6 +67,65 @@ $('#sliding-panel button.btn--close').click(function (event) {
 
 
 
+```scss
+// Panel width
+$sp-panel-width: 200px;
+
+/* Site wrapper */
+.sp--wrapper {
+  left: 0;
+  transition: transform 500ms;
+
+  .sp--is-expanded & {
+    transform: translate3d($sp-panel-width, 0, 0);
+  }
+
+}
+
+
+/* Panel */
+.sp--panel {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  width: $sp-panel-width;
+  transform: translate3d(-100%, 0, 0);
+  backface-visibility: hidden;
+  transition: transform 500ms;
+
+  .no-csstransforms3d & {
+    display: none;
+  }
+
+  .sp--is-expanded & {
+    display: block;
+    z-index: 4;
+    //transform: translate3d(0, 0, 0); // If nav is outside the wrapper
+  }
+}
+
+
+/* Overlay */
+.sp--overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fafafa;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.sp--is-expanded .sp--overlay {
+  display: block;
+}
+```
+
+
 ### 3. Options
 
 Options | Type  | Description                    | Default
