@@ -2,6 +2,12 @@
 // Variables
 // -----------------------------------------------------------------------------
 
+
+/// Site width
+/// @group theme
+$max-site-width: 1200px;
+
+
 /// Breakpoints map - Based on Bootstrap reference
 /// * Phones portait < 480px
 /// * Phones < 768px
@@ -17,12 +23,4 @@ $breakpoints: (
   'md': 992px,
   'lg': $max-site-width
 );
-
-
-
-
-/// Site width
-/// @group theme
-$max-site-width: 1200px;
-
 

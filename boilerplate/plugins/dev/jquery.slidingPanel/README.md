@@ -39,10 +39,17 @@ Avoid scrollbar with a global wrapper
 
 
 ```html
-<button type="button" id="btn--burger" class="btn--burger" title="<?php print t('Open nav') ?>">Menu</button>
-<div id="sliding-panel" class="sp--panel">
 
-  // Content
+<div id="site">
+
+  <div id="sliding-panel" class="sp--panel">
+
+    // Content
+
+  </div>
+
+  <button type="button" id="burger" class="burger" title="<?php print t('Open nav'); ?>"><span class="burger__icon"></span> <span class="burger__text">Menu</span></button>
+
 
 </div>
 ```
@@ -50,18 +57,21 @@ Avoid scrollbar with a global wrapper
 
 
 
+
 ### 2. JavaScript
 
 ```js
-$('#sliding-panel').slidingPanel({
-  trigger: $('#btn--burger'),
+var $slidingPanel = $('#sliding-panel');
+
+// Enable panel
+$slidingPanel.slidingPanel({
+  trigger: $('#burger'),
   wrapper: $('#site')
 });
 
-
 // Close
-$('#sliding-panel button.btn--close').click(function (event) {
-  $('#sliding-panel').trigger('hide.sp')
+$slidingPanel.find('button.btn--close').click(function (event) {
+  $slidingPanel.trigger('hide.sp');
 });
 ```
 
