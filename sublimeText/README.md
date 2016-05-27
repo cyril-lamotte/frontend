@@ -49,6 +49,14 @@ Source : http://stackoverflow.com/questions/20540492/how-to-increase-number-of-r
 
 
 
+## Raccourcis
+
+Raccourcis                  | Actions
+----------------------------|--------
+CTRL (+ SHIFT) + Entrée     | Insérer une ligne avant/aprés
+CTRL + K, CTRL + V          | Afficher le presse-papier
+CTRL + SHIFT + K            | Effacer la ligne courante
+
 
 ## Raccourcis Emmet
 
