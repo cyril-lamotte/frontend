@@ -51,11 +51,16 @@ Source : http://stackoverflow.com/questions/20540492/how-to-increase-number-of-r
 
 ## Raccourcis
 
-Raccourcis                  | Actions
-----------------------------|--------
-CTRL (+ SHIFT) + Entrée     | Insérer une ligne avant/aprés
-CTRL + K, CTRL + V          | Afficher le presse-papier
-CTRL + SHIFT + K            | Effacer la ligne courante
+Raccourcis                   | Actions
+-----------------------------|--------
+CTRL (+ SHIFT) + Entrée      | Insérer une ligne avant/aprés
+CTRL + K, CTRL + V           | Afficher le presse-papier
+CTRL + SHIFT + K             | Effacer la ligne courante
+CTRL + SHIFT + BACKSPACE|DEL | Effacer avant|aprés le curseur
+CTRL + X                     | Couper la ligne
+CTRL + K, CTRL + U|L         | Uppercase|Lowercase
+CTRL + J                     | Join two lines
+F9                           | Trier
 
 
 ## Raccourcis Emmet
