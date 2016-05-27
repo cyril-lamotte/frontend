@@ -60,7 +60,7 @@ CTRL + SHIFT + BACKSPACE|DEL | Effacer avant|aprés le curseur
 CTRL + X                     | Couper la ligne
 CTRL + K, CTRL + U|L         | Uppercase|Lowercase
 CTRL + J                     | Join two lines
-F9                           | Trier
+F9                           | Trier la sélection
 
 
 ## Raccourcis Emmet
