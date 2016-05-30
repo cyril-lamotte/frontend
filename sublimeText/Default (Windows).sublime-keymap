@@ -1,12 +1,12 @@
 [
-	/*{ "keys": ["f5"], "command": "refresh_folder_list" },*/
+  { "keys": ["ctrl+f1"], "command": "insert_snippet", "args": {"name": "Packages/User/snippets/javascript/console.log.sublime-snippet"} },
 
-	{ "keys": ["ctrl+f1"], "command": "insert_snippet", "args": {"name": "Packages/User/snippets/javascript/console.log.sublime-snippet"} },
+  /* Default ST3 */
+  { "keys": ["ctrl+u"], "command": "soft_undo" },
+  { "keys": ["ctrl+shift+r"], "command": "goto_symbol_in_project" },
 
-	/* HTML */
-	{ "keys": ["ctrl+alt+l"], "command": "insert_snippet", "args": { "contents": "<li>$SELECTION</li>" } },
-
-  { "keys": ["f12"],
+  /* Open in browser */
+  { "keys": ["shift+f12"],
       "command": "side_bar_open_in_browser",
       "args":{"paths":[], "type":"testing", "browser":""}
   },

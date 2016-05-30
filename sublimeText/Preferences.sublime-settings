@@ -18,13 +18,13 @@
 		".eot"
 	],
 	"bold_folder_labels": true,
-	"draw_white_space": "selection",
-	"fade_fold_buttons": true,
 	"close_windows_when_empty": false,
 	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
 	"detect_slow_plugins": false,
 	"draw_minimap_border": true,
+	"draw_white_space": "selection",
 	"ensure_newline_at_eof_on_save": true,
+	"fade_fold_buttons": true,
 	"file_exclude_patterns":
 	[
 		"*.bat",
@@ -48,13 +48,18 @@
 	[
 		"Vintage"
 	],
+	"index_exclude_patterns":
+	[
+		"D:\\www\\mockups.local\\dgefp\\www\\sirp*",
+		"*.log"
+	],
 	"rulers":
 	[
 		80
 	],
 	"save_on_focus_lost": false,
 	"tab_size": 2,
-	"trim_trailing_white_space_on_save": true,
 	"translate_tabs_to_spaces": true,
-	"word_wrap": false,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": false
 }
