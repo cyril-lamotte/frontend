@@ -61,6 +61,8 @@ CTRL + X                     | Couper la ligne
 CTRL + K, CTRL + U|L         | Uppercase|Lowercase
 CTRL + J                     | Join two lines
 F9                           | Trier la sélection
+ALT + F3                     | Trouver toutes les occurences
+CTRL + F3                    | Trouver la prochaine occurence
 
 
 ## Raccourcis Emmet
