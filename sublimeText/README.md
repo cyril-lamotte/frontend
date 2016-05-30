@@ -68,11 +68,14 @@ Raccourcis                   | Actions
 F9                           | Trier la sélection
 ALT + F3                     | Trouver toutes les occurences
 CTRL + F3                    | Trouver la prochaine occurence
+CTRL + R                     | Chercher un symbole dans le fichier
+CTRL + SHIFT + R             | Chercher un symbole dans le projet
 CTRL + SHIFT + M             | Sélection entre accolade
 CTRL + M                     | Aller à l'accolade correspondante
 CTRL + SHIFT + SPACE         | Etendre la sélection
 ALT + -                      | Retour dans l'historique (position du curseur / sélection)
 ALT + +                      | Avancer dans l'historique (position du curseur / sélection)
+F12                          | Aller à la déclaration
 
 ## Raccourcis Emmet
 
@@ -83,4 +86,4 @@ CTRL + SHIFT + G            | Wrapper avec une expression
 CTRL + / & CTRL + SHIFT + / | Commenter la ligne / la balise courante
 CTRL + SHIFT + Y            | Calculer une expression mathématique
 CTRL + R                    | Répercuter les valeurs CSS sur les préfixes vendeur
-F12                         | Aller à la déclaration
+
