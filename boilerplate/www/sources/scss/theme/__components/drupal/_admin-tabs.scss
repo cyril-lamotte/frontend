@@ -1,0 +1,66 @@
+/* =============================================================================
+   Admin tabs
+============================================================================= */
+
+
+/// Admin tabs
+///
+/// @group theme
+/// @example scss Usage
+/// .foo {
+///   @include admin-tabs;
+/// }
+@mixin admin-tabs {
+
+  ul {
+    background: #f0f0f0;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 1em 0 2em;
+
+    li {
+      display: inline-block;
+      margin: 0 5px 0 0;
+      padding: 0;
+      background: none;
+    }
+
+    a {
+      @include admin-link;
+    }
+
+    .active {
+      background: #333;
+      border-color: #333;
+      color: #fff;
+    }
+  }
+
+}
+
+
+/// Admin links
+///
+/// @group theme
+/// @example scss Usage
+/// .foo {
+///   @include admin-link;
+/// }
+@mixin admin-link {
+  display: block;
+  background-color: #fff;
+  padding: 3px 10px;
+  color: #333;
+  border: 1px solid #d6d6d6;
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: normal;
+  font-size: 1em;
+
+  @include hover {
+    background: #333;
+    border-color: #333;
+    color: #fff;
+    text-decoration: none;
+  }
+}

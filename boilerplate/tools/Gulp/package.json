@@ -1,7 +1,7 @@
 {
-  "name": "JMC",
+  "name": "Projet",
   "version": "1.0.0",
-  "description": "Site JMC",
+  "description": "SASS",
   "main": "index.js",
   "private": true,
   "scripts": {
@@ -18,6 +18,7 @@
     "gulp-postcss": "^6.0.1",
     "gulp-sass": "^2.1.1",
     "gulp-sourcemaps": "^1.6.0",
+    "gulp-stylelint": "^2.0.2",
     "gulp-util": "^3.0.7",
     "gulp.spritesmith": "^6.0.1",
     "jsdoc": "^3.4.0",

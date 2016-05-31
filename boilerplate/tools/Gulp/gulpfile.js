@@ -4,19 +4,20 @@
 var gulp         = require('gulp'),
     gutil        = require('gulp-util'),
     sass         = require('gulp-sass'),
-    jshint       = require('gulp-jshint')
-    ignore       = require('gulp-ignore')
-    postcss      = require('gulp-postcss')
-    autoprefixer = require('autoprefixer')
-    sassdoc      = require('sassdoc')
-    sourcemaps   = require('gulp-sourcemaps')
-    livereload   = require('gulp-livereload')
+    jshint       = require('gulp-jshint'),
+    ignore       = require('gulp-ignore'),
+    postcss      = require('gulp-postcss'),
+    stylelint    = require('gulp-stylelint'),
+    autoprefixer = require('autoprefixer'),
+    sassdoc      = require('sassdoc'),
+    sourcemaps   = require('gulp-sourcemaps'),
+    livereload   = require('gulp-livereload'),
     spritesmith  = require('gulp.spritesmith');
 
 
 
 // Define the default task
-gulp.task('default', ['build-css', 'sassdoc', 'sprites', 'watch']);
+gulp.task('default', ['watch']);
 
 
 
@@ -50,6 +51,18 @@ function onError(err) {
 }
 
 
+
+gulp.task('lint-css', function lintCssTask() {
+
+  return gulp
+    .src('sources/scss/**/*.scss')
+    .pipe(stylelint({
+      syntax: 'scss',
+      reporters: [
+        {formatter: 'string', console: true}
+      ]
+    }));
+});
 
 
 
@@ -121,5 +134,6 @@ gulp.task('watch', function() {
   gulp.watch('sources/scss/**/*.scss', ['build-css', 'sassdoc']);
   gulp.watch('assets/js/**/*.js', ['jshint']);
   gulp.watch('sources/sprites/*.png', ['sprites']);
+  gulp.watch('assets/css/*.css', ['lint-css']);
 
 });
