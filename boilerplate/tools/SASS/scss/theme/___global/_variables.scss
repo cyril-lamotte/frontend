@@ -18,6 +18,7 @@ $max-site-width: 1200px;
 /// @link http://getbootstrap.com/css/#responsive-utilities Bootstrap breakpoints reference
 /// @group rwd
 $breakpoints: (
+  '0' : 0,
   'xs': 480px,
   'sm': 768px,
   'md': 992px,

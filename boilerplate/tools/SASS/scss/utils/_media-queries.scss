@@ -81,6 +81,23 @@ $breakpoints: '';
   @if not map-has-key($breakpoints, $breakpoint-to) {
     @warn "Please make sure `#{$breakpoint-from}` is defined in `$breakpoints` map.";
   }
+
+  @if $breakpoint-from == '' {
+
+    @media only screen and (max-width: map-get($breakpoints, $breakpoint-to)) {
+      @content;
+    }
+
+  }
+
+  @else if $breakpoint-to == '' {
+
+    @media only screen and (min-width: map-get($breakpoints, $breakpoint-from)) {
+      @content;
+    }
+
+  }
+
   @else {
 
     @media only screen and (min-width: map-get($breakpoints, $breakpoint-from)) and (max-width: map-get($breakpoints, $breakpoint-to)-1) {
