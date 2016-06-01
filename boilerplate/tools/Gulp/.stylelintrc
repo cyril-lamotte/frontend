@@ -10,14 +10,14 @@
     'number-no-trailing-zeros': true,
     'number-zero-length-no-unit': true,
 
-    'font-family-name-quotes': 'always-where-recommended',
-
     'declaration-bang-space-after': 'never',
     'declaration-bang-space-before': 'always',
     'declaration-colon-newline-after': 'always-multi-line',
     'declaration-colon-space-before': 'never',
     'declaration-colon-space-after': 'always',
-    'declaration-block-no-duplicate-properties': true,
+    'declaration-block-no-duplicate-properties': [true, {
+      "ignore" : ["consecutive-duplicates"]
+    }],
     'declaration-block-semicolon-space-before': 'never',
     'declaration-block-semicolon-newline-after': 'always-multi-line',
     'declaration-block-semicolon-newline-before': 'never-multi-line',
@@ -44,11 +44,10 @@
     'media-query-parentheses-space-inside': 'never',
 
     'no-extra-semicolons': true,
-    'no-indistinguishable-colors': true,
 
     'indentation': [2],
     'max-empty-lines': 3,
-    'unit-whitelist': ['em', 'rem', '%', 'px', 's', 'ms'],
+    'unit-whitelist': ['em', 'rem', '%', 'px', 's', 'ms', 'deg'],
 
     'value-no-vendor-prefix': true,
     'value-keyword-case': 'lower',

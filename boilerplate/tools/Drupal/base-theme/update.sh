@@ -12,6 +12,7 @@ echo "-------------------------"
 echo ""
 
 drush.bat en master -y
+drush en devel -y
 
 
 echo ""

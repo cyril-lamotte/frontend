@@ -1,6 +1,9 @@
 
 
 // Gulp packages
+
+try {
+
 var gulp         = require('gulp'),
     gutil        = require('gulp-util'),
     sass         = require('gulp-sass'),
@@ -14,7 +17,12 @@ var gulp         = require('gulp'),
     livereload   = require('gulp-livereload'),
     spritesmith  = require('gulp.spritesmith');
 
+} catch(err) {
 
+  gutil.log('\n\n-> Un ou plusieurs modules sont manquants, lancer la commande `npm install`\n');
+  return;
+
+}
 
 // Define the default task
 gulp.task('default', ['watch']);
