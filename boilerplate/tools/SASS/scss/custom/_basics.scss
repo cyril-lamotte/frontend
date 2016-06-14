@@ -39,9 +39,5 @@ body {
 a {
   color: $base-color;
   @include underlineOnHover;
-
-  &:focus img {
-    outline: 1px dashed $brand;
-  }
 }
 

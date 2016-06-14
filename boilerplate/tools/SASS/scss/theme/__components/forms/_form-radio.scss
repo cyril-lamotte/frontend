@@ -2,15 +2,6 @@
 // Checkbox
 // -----------------------------------------------------------------------------
 
-input[type="radio"] {
-  vertical-align: middle;
-  margin: 0;
-  padding: 0;
-  width: 13px;
-  height: 13px;
-}
-
-
 $radio-styles: (
   'box-bg': #fff,
   'box-bg-hover': #ddd,

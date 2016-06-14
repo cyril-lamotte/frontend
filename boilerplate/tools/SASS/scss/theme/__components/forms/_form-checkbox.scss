@@ -2,19 +2,10 @@
 // Checkbox
 // -----------------------------------------------------------------------------
 
-input[type="checkbox"] {
-  vertical-align: middle;
-  margin: 0;
-  padding: 0;
-  width: 13px;
-  height: 13px;
-}
-
-
 $cb-styles: (
   'box-bg': #fff,
   'box-bg-hover': #ddd,
-  'box-border': #ccc,
+  'box-border': 1px solid #ccc,
   'box-size': 16px,
   'box-radius': 0,
   'box-shadow': none,
