@@ -27,6 +27,11 @@ $select-styles: (
   color: map-get($styles, 'color');
   border-radius: map-get($styles, 'border-radius');
   //background: url('../img/select-arrows') 95% 50% no-repeat;
+
+  // Remove IE arrow
+  //&::-ms-expand {
+  //  display: none;
+  //}
 }
 
 
