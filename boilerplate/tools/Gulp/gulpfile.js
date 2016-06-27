@@ -25,7 +25,7 @@ var gulp         = require('gulp'),
 }
 
 // Define the default task
-gulp.task('default', ['watch']);
+gulp.task('default', ['build-css', 'sprites', 'watch']);
 
 
 
