@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+  <meta charset="utf-8">
+
+  <!-- Définir le niveau de zoom -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Back to top</title>
+
+  <style>
+
+    body {
+      font-size: 2em;
+    }
+
+    #top {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<div id="top">
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi voluptatum natus iste tenetur similique nisi nesciunt, ipsam veniam dolorem nam consequuntur, esse unde facilis facere expedita. Alias ipsum officia accusantium mollitia quo voluptatem, dolores doloribus quibusdam quae facere reiciendis dolore assumenda maiores nihil repellendus, aperiam sapiente omnis fugiat rem voluptate! Ratione reprehenderit ut totam voluptatibus laboriosam saepe deserunt obcaecati natus sequi nam necessitatibus eos, impedit dolores aut fugit, esse doloribus. Nisi cupiditate vitae impedit, perspiciatis quos voluptate atque, architecto nemo repellat ab sint, deleniti cumque ratione similique totam. Cumque aliquam corporis id. Quae suscipit vitae placeat nemo velit! Tempora culpa amet accusantium laborum expedita. Cumque repudiandae ipsam sit, obcaecati debitis, officiis quas odio repellendus a vitae esse commodi, dolorum. Recusandae, eius, qui! Provident ex laudantium eaque illum unde, soluta eius, magnam dolores quibusdam fuga, culpa minima ea accusamus. Impedit laborum quidem autem excepturi praesentium iste hic saepe doloribus ex vitae consequatur doloremque placeat odit recusandae dolorum qui eos vero facere, harum dolorem! Illum ullam, delectus. Architecto et repudiandae soluta totam quod distinctio ab labore libero praesentium nemo amet, voluptate perferendis, ea dicta. Numquam asperiores rem ipsam, necessitatibus magnam quidem pariatur ea eveniet dolore voluptate reiciendis veniam deleniti unde accusamus ipsum nam. Delectus magnam fugit rerum, excepturi nulla veniam reprehenderit ipsum culpa itaque incidunt consectetur, optio expedita, perspiciatis. Illum alias mollitia accusantium dolor molestias magni vel, aspernatur deleniti. Temporibus voluptatem quidem, eaque id iure, error quos facilis, veritatis iusto deserunt corrupti sit ipsum maxime perspiciatis rem autem, nihil neque magnam magni quaerat at in. Consectetur esse iure error, in, blanditiis unde, architecto modi non tempora quod labore iusto expedita maxime quo veniam! Temporibus esse voluptatem, sapiente. Illo nobis quisquam atque obcaecati molestiae laboriosam doloremque! Blanditiis, ullam nulla eveniet a voluptate, suscipit dolorem velit id enim accusantium dolores magni soluta hic. Impedit excepturi unde tempora suscipit facere, esse, quia, dolorem architecto ea reprehenderit iusto! Cum, fuga corporis adipisci at corrupti, mollitia. Eum fuga alias libero, quaerat accusamus doloribus voluptates adipisci aliquid. A beatae soluta officia. Illo modi eos, exercitationem inventore. Id deleniti dignissimos commodi eligendi animi, fugiat blanditiis, neque maxime dolorem pariatur ipsam inventore repellendus repellat dolor minima quibusdam, et. Cumque illo voluptates aliquid a odio, aperiam rem, maiores nisi suscipit, repudiandae, libero praesentium nam vel similique laudantium iure voluptatem quisquam voluptas officiis. Laudantium neque aperiam accusantium, inventore quam maxime eius dolore id voluptatem alias vero esse nulla quia non numquam amet eaque dolor distinctio. Dignissimos totam, natus accusamus dolorum quaerat odit dolore quae ea nulla sed sunt! Sequi eius quaerat repellat minus, facere iusto, debitis ipsa excepturi similique esse architecto soluta ex sint adipisci quam illum recusandae doloremque magni, praesentium repellendus corporis quisquam perferendis. Vel repellat asperiores at dignissimos doloremque adipisci maxime aliquam, eum impedit repudiandae fugiat odit excepturi obcaecati, deleniti porro, fugit error facilis dolor! Animi dolorem officia nobis nesciunt iste vitae unde quos nemo illum, delectus ullam ipsa, nisi nostrum facere dolores. Mollitia ad, harum. Autem, mollitia, natus! Quia excepturi in, maxime doloremque asperiores reprehenderit quod modi et voluptatibus?</p>
+
+
+  <!--Back to top button-->
+  <div id="back-to-top" class="back-to-top">
+    <a href="#top">Haut de page</a>
+  </div>
+
+</div>
+
+
+<!-- Scripts at the bottom for better performances -->
+<script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+
+<script>
+
+window.app = {
+ ui: {}
+};
+
+</script>
+
+<script src="back-to-top.js"></script>
+
+<script>
+$(document).ready(function() {
+
+  // Back to top link
+  app.ui.backToTop({
+    target: $('#back-to-top'),
+    threshold: 200
+  });
+
+});
+
+</script>
+
+
+
+</body>
+</html>
