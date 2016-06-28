@@ -5,7 +5,8 @@
 
 /// Site width
 /// @group theme
-$max-site-width: 1200px;
+$max-site-width-int: 1200;
+$max-site-width: $max-site-width-int * 1px; // = 1200px
 
 
 /// Breakpoints map - Based on Bootstrap reference
@@ -19,9 +20,9 @@ $max-site-width: 1200px;
 /// @group rwd
 $breakpoints: (
   '0' : 0,
-  'xs': 480px,
-  'sm': 768px,
-  'md': 992px,
-  'lg': $max-site-width
+  'xs': 480,
+  'sm': 768,
+  'md': 992,
+  'lg': $max-site-width-int
 );
 

@@ -24,7 +24,7 @@ $breakpoints: '';
 @mixin mq-to($breakpoint: 'sm') {
 
   @if map-has-key($breakpoints, $breakpoint) {
-    @media only screen and (max-width: map-get($breakpoints, $breakpoint)-1) {
+    @media only screen and (max-width: (map-get($breakpoints, $breakpoint)-1) /16 * 1em) {
       @content;
     }
   }
@@ -49,7 +49,7 @@ $breakpoints: '';
 @mixin mq-from($breakpoint) {
 
   @if map-has-key($breakpoints, $breakpoint) {
-    @media only screen and (min-width: map-get($breakpoints, $breakpoint)) {
+    @media only screen and (min-width: (map-get($breakpoints, $breakpoint)) /16 * 1em) {
       @content;
     }
   }
@@ -84,7 +84,7 @@ $breakpoints: '';
 
   @if $breakpoint-from == '' {
 
-    @media only screen and (max-width: map-get($breakpoints, $breakpoint-to)) {
+    @media only screen and (max-width: (map-get($breakpoints, $breakpoint-to))/16 * 1em ) {
       @content;
     }
 
@@ -92,7 +92,7 @@ $breakpoints: '';
 
   @else if $breakpoint-to == '' {
 
-    @media only screen and (min-width: map-get($breakpoints, $breakpoint-from)) {
+    @media only screen and (min-width: (map-get($breakpoints, $breakpoint-from)) /16 * 1em) {
       @content;
     }
 
@@ -100,7 +100,7 @@ $breakpoints: '';
 
   @else {
 
-    @media only screen and (min-width: map-get($breakpoints, $breakpoint-from)) and (max-width: map-get($breakpoints, $breakpoint-to)-1) {
+    @media only screen and (min-width: (map-get($breakpoints, $breakpoint-from)) /16 * 1em ) and (max-width: (map-get($breakpoints, $breakpoint-to)-1) /16 * 1em ) {
       @content;
     }
 
