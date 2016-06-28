@@ -5,7 +5,7 @@
 
 (function ($) {
 
-
+"use strict";
 
 /**
  * Returns URL anchor

@@ -54,6 +54,8 @@
 
 (function ($) {
 
+"use strict";
+
 app.responsive = {
   'screen' : null,
   'launchMap' : {

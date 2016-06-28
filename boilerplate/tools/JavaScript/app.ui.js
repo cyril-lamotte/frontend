@@ -5,4 +5,6 @@
 
 (function ($) {
 
+"use strict";
+
 })(jQuery);
