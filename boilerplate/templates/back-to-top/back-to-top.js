@@ -1,6 +1,3 @@
-
-
-
 /**
  * Display "Back to top" button when scrolling
  *
@@ -9,6 +6,8 @@
  * @param {int} options.threshold - Scrolltop before showing
  */
 app.ui.backToTop = function(options) {
+
+  "use strict";
 
   // Defaults options
   var defaults = {
@@ -53,6 +52,8 @@ app.ui.backToTop = function(options) {
  * targetID = "#anchor"
  */
 app.ui.scrollToTarget = function(options) {
+
+  "use strict";
 
   var defaults = {
     'targetID': null,
