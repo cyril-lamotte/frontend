@@ -36,13 +36,7 @@
 
 // Order of the includes matters, and it is: normal, bold, italic, bold+italic.
 
-@mixin font-face(
-  $name,
-  $font-files,
-  $eot: false,
-  $weight: false,
-  $style: false
-) {
+@mixin font-face($name, $font-files, $eot: false, $weight: false, $style: false) {
   $iefont: unquote("#{$eot}?#iefix");
   @font-face {
     font-family: quote($name); // stylelint-disable-line font-family-name-quotes

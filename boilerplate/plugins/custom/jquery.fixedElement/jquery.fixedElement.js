@@ -1,5 +1,7 @@
 (function ($) {
 
+  "use strict";
+
 
 /**
  * Targeted element will be fixed while scrolling
@@ -40,9 +42,8 @@ $.fn.fixedElement = function (options) {
   var defaultFixedOffset = $fixed.offset().top;
   var followOffset = 0;
   var fixedOffsetBottom = 0;
-  var FixedOffset = 0;
+  var fixedOffset = 0;
   var windowHeight = $(window).height();
-
 
   // Recalculate default position
   $fixed.bind('refresh.fixed', function() {
@@ -85,33 +86,42 @@ $.fn.fixedElement = function (options) {
     if ( scrollTop > defaultFixedOffset + settings.yOffset ) {
 
       // Fixed offset limit
-      if( settings.follow ) {
+      if ( settings.follow ) {
 
+        // Bottom of the followed object
         followOffset = settings.follow.offset().top + settings.follow[0].getBoundingClientRect().height;
+
+        // Current bottom of the fixed element
         fixedOffsetBottom = fixedOffset + $fixed[0].getBoundingClientRect().height;
 
 
-        if( $fixed.hasClass( settings.fixedClass +'--is-frozen' ) ) {
+        // Remove froze state
+        if ( $fixed.hasClass( settings.fixedClass +'--is-frozen' ) ) {
 
-          if(followOffset > scrollTop + windowHeight) {
+          if( fixedOffsetBottom > followOffset )
+            return;
+
+          if (((scrollTop - settings.yOffset) <= fixedOffset)) {
             $fixed.trigger('unfroze.fixed');
+            return;
           }
 
         }
 
-        // Froze if bottom of Element is beyond bottom of follow element
-        if( fixedOffsetBottom > followOffset )
+        // Froze if bottom of element is beyond bottom of followed element
+        if ( fixedOffsetBottom >= followOffset )
         {
           $fixed.trigger('froze.fixed', scrollTop);
+          console.log('froze');
+          return;
         }
         else {
-          $fixed.trigger('fix.fixed');
+
         }
 
       }
-      else {
-        $fixed.trigger('fix.fixed');
-      }
+
+      $fixed.trigger('fix.fixed');
 
     }
     else {
@@ -138,12 +148,11 @@ $.fn.fixedElement = function (options) {
     settings.$placeholder.height(fixedHeight);
 
     $fixed.addClass( settings.fixedClass );
-    settings.$placeholder.addClass(settings.fixedClass +'__placeholder--is-active');
+    settings.$placeholder.addClass( settings.fixedClass +'__placeholder--is-active');
 
     window.setTimeout(function() {
       $fixed.addClass(settings.fixedClass +'-anim');
     }, 0);
-
 
     settings.onFix();
 

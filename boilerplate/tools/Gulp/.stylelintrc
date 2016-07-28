@@ -8,7 +8,7 @@
 
     'number-leading-zero': 'always',
     'number-no-trailing-zeros': true,
-    'number-zero-length-no-unit': true,
+    'length-zero-no-unit': true,
 
     'declaration-bang-space-after': 'never',
     'declaration-bang-space-before': 'always',
@@ -41,12 +41,12 @@
 
     'media-feature-colon-space-after': 'always',
     'media-feature-colon-space-before': 'never',
-    'media-query-parentheses-space-inside': 'never',
+    'media-feature-parentheses-space-inside': 'never',
 
     'no-extra-semicolons': true,
 
-    'indentation': [2],
-    'max-empty-lines': 3,
+    'indentation': 2,
+    'max-empty-lines': 5,
     'unit-whitelist': ['em', 'rem', '%', 'px', 's', 'ms', 'deg'],
 
     'value-no-vendor-prefix': true,

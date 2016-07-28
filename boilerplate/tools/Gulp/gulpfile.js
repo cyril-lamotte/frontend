@@ -15,6 +15,7 @@ var gulp         = require('gulp'),
     sassdoc      = require('sassdoc'),
     sourcemaps   = require('gulp-sourcemaps'),
     livereload   = require('gulp-livereload'),
+    md5File      = require('md5-file'),
     spritesmith  = require('gulp.spritesmith');
 
 } catch(err) {
@@ -25,7 +26,7 @@ var gulp         = require('gulp'),
 }
 
 // Define the default task
-gulp.task('default', ['build-css', 'sprites', 'watch']);
+gulp.task('default', ['sprites', 'build-css', 'watch']);
 
 
 
@@ -36,7 +37,7 @@ gulp.task('default', ['build-css', 'sprites', 'watch']);
 // Compile SASS
 gulp.task('build-css', function() {
 
-  gutil.log('\n\n## Compiling CSS\n');
+  gutil.log('## Compiling CSS\n');
 
 
   return gulp.src('sources/scss/**/*.scss')
@@ -116,10 +117,14 @@ gulp.task('sassdoc', function() {
 
 gulp.task('sprites', function () {
 
+  var hash = '';
+  //hash = md5File.sync('assets/img/sprites.png');
+
   var spriteData = gulp.src('sources/sprites/*.png')
       .pipe(spritesmith({
         /* this whole image path is used in css background declarations */
         imgName: '../img/sprites.png',
+        imgPath: '../img/sprites.png?' + hash,
         //retinaImgName: '../img/sprite@2x.png',
         //retinaSrcFilter: ['sources/sprites/*@2x.png'],
         cssName: '_sprites.scss',

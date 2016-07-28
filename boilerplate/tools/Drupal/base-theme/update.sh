@@ -10,6 +10,8 @@ echo ""
 echo "Activation des modules..."
 echo "-------------------------"
 echo ""
+echo "drush.bat en master -y"
+echo "drush en devel -y"
 
 drush.bat en master -y
 drush en devel -y
@@ -19,6 +21,7 @@ echo ""
 echo "Application des features..."
 echo "---------------------------"
 echo ""
+echo "drush.bat fra -y"
 
 drush.bat fra -y
 

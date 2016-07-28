@@ -1,0 +1,4 @@
+# services.yml
+parameters:
+  twig.config:
+    debug: true
