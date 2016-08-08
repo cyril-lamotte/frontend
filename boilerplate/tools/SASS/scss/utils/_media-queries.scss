@@ -84,7 +84,7 @@ $breakpoints: '';
 
   @if $breakpoint-from == '' {
 
-    @media only screen and (max-width: (map-get($breakpoints, $breakpoint-to))/16 * 1em ) {
+    @media only screen and (max-width: (map-get($breakpoints, $breakpoint-to))/16 * 1em) {
       @content;
     }
 
@@ -100,7 +100,7 @@ $breakpoints: '';
 
   @else {
 
-    @media only screen and (min-width: (map-get($breakpoints, $breakpoint-from)) /16 * 1em ) and (max-width: (map-get($breakpoints, $breakpoint-to)-1) /16 * 1em ) {
+    @media only screen and (min-width: (map-get($breakpoints, $breakpoint-from)) /16 * 1em) and (max-width: (map-get($breakpoints, $breakpoint-to)-1) /16 * 1em) {
       @content;
     }
 
