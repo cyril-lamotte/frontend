@@ -7,10 +7,7 @@
 
 "use strict";
 
-window.app = {
-  themeUrl: {},
-  ui: {}
-};
+window.app = {};
 
 /* Execute code when the DOM is fully loaded */
 $(document).ready(function() {

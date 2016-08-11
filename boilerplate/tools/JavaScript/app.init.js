@@ -1,5 +1,0 @@
-
-window.app = {
-  themeUrl: {},
-  ui: {}
-};

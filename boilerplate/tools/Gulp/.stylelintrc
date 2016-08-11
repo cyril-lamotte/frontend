@@ -47,7 +47,7 @@
 
     'indentation': 2,
     'max-empty-lines': 5,
-    'unit-whitelist': ['em', 'rem', '%', 'px', 's', 'ms', 'deg'],
+    'unit-whitelist': ['em', 'rem', '%', 'px', 's', 'ms', 'deg', 'vh', 'vw', 'vmin', 'vmax'],
 
     'value-no-vendor-prefix': true,
     'value-keyword-case': 'lower',

@@ -5,15 +5,15 @@
 <!--[if gt IE 9]><!--><html lang="fr"><!--<![endif]-->
 <head>
 
-  <!-- Définir le mode de compatibilité Internet Explorer -->
+  <!-- Define Internet Explorer's compatibility mode  -->
   <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 
   <meta charset="utf-8">
 
-  <!-- Définir le niveau de zoom -->
+  <!-- Responsive markup -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Ne pas autoriser la détection des numéro de téléphone -->
+  <!-- Do not allow phone numbers to be detected -->
   <meta name="format-detection" content="telephone=no">
 
   <title>Layout</title>
@@ -43,8 +43,6 @@
   </header>
 
 
-
-
   <nav id="a_nav" role="navigation">
     <ul>
       <li><a href="#">Accueil</a></li>
@@ -52,15 +50,17 @@
   </nav>
 
 
-
-
   <div class="page">
 
-    <main id="a_content" role="main">
+    <div class="main-content">
 
-      // Content
+      <main id="a_content" role="main">
 
-    </main>
+        // Content
+
+      </main>
+
+    </div><!--/main-content-->
 
 
     <div class="sidebar" role="complementary">
@@ -82,10 +82,9 @@
 </div><!--/outer-wrap-->
 
 <!-- Scripts at the bottom for better performances -->
-<!--script src="assets/js/lib/jquery.min.js"></script-->
-<!--script src="assets/js/app.ui.js"></script>
-<script src="assets/js/app.ui.utils.js"></script>
-<script src="assets/js/app.domready.js"></script-->
+<!--script src="assets/js/lib/jquery.min.js"></script>
+<script src="assets/js/app.ui.js"></script>
+<script src="assets/js/app.js"></script-->
 
 </body>
 </html>
