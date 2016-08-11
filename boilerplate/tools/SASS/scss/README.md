@@ -1,4 +1,4 @@
-# Organisation du code SASS et bonnes pratiques
+# Organisation du code SASS
 
 ## Arborescence
 
@@ -58,3 +58,5 @@ Ce sont les styles globaux (reset, mise en page, images, formulaires...).
 # Changelog
 
 - 1.0.0 Refactoring
+
+
