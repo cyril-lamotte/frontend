@@ -1,0 +1,36 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+
+hostname="[projet].local"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+  config.vm.define "dev", primary: true do |node|
+    node.vm.box = "[projet]-dev"
+    node.vm.box_url = "file:///f:/vagrant-boxes/package.box"
+    node.vm.hostname = "#{hostname}"
+    node.vm.network :private_network, :auto_network => true
+    node.vm.network "forwarded_port", guest: 80, host: 8081
+  end
+
+  config.hostmanager.enabled = true
+  config.hostmanager.manage_host = true
+  config.hostmanager.ignore_private_ip = false
+  config.hostmanager.include_offline = true
+  config.vm.synced_folder ".", "/projet", disabled: false
+
+  config.vm.provider :virtualbox do |v|
+    v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    v.customize ["modifyvm", :id, "--memory", "2048"]
+  end
+
+  config.vm.provision "shell", inline: <<-SHELL
+    echo 'export VHOST=#{hostname}'  > /etc/profile.d/vhost.sh
+  SHELL
+
+  config.ssh.username="usergl"
+  config.ssh.password="0usergl0"
+end
