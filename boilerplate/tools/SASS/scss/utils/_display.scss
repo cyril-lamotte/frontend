@@ -44,19 +44,22 @@
 
 
 
-/// fullwidth
+/// full-width
 ///
 /// @group theme
 ///
 /// @example scss Usage
-/// .foo {
-///   @include fullwidth;
+/// div {
+///   @include full-width;
 /// }
-@mixin fullwidth {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+@mixin full-width {
+
+  @include mq-from( 'sm' ) {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
 }
