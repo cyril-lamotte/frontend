@@ -12,10 +12,10 @@ var gulp         = require('gulp'),
     postcss      = require('gulp-postcss'),
     stylelint    = require('gulp-stylelint'),
     autoprefixer = require('autoprefixer'),
-    sassdoc      = require('sassdoc'),
     sourcemaps   = require('gulp-sourcemaps'),
     livereload   = require('gulp-livereload'),
     md5File      = require('md5-file'),
+    aigis        = require('gulp-aigis'),
     spritesmith  = require('gulp.spritesmith');
 
 } catch(err) {
@@ -52,12 +52,18 @@ gulp.task('build-css', function() {
 });
 
 
-
+// Avoid crash on error
 function onError(err) {
 
   gutil.log(err.message);
   this.emit('end');
 }
+
+
+gulp.task('styleguide', function() {
+  return gulp.src('./sources/styleguide/aigis_config.yml')
+    .pipe(aigis());
+});
 
 
 
@@ -84,34 +90,6 @@ gulp.task('jshint', function() {
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'));
 });
-
-
-
-
-
-
-
-// Sassdoc
-gulp.task('sassdoc', function() {
-
-  var options = {
-    dest: './sources/sassdoc',
-    verbose: false,
-    groups: {
-      'undefined': 'Ungrouped',
-      theme: 'Thème',
-      rwd: 'Responsive Design',
-      layout: 'Mise en page',
-      utils: 'Utilitaire',
-      sprites: 'Sprites',
-    }
-  };
-
-  return gulp.src('sources/scss/**/*.scss')
-    .pipe(sassdoc(options));
-});
-
-
 
 
 
@@ -144,7 +122,7 @@ gulp.task('watch', function() {
 
   livereload.listen();
 
-  gulp.watch('sources/scss/**/*.scss', ['build-css', 'sassdoc']);
+  gulp.watch('sources/scss/**/*.scss', ['build-css', 'styleguide']);
   gulp.watch('assets/js/**/*.js', ['jshint']);
   gulp.watch('sources/sprites/*.png', ['sprites']);
   gulp.watch('assets/css/*.css', ['lint-css']);

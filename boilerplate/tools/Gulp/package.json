@@ -12,6 +12,7 @@
   "devDependencies": {
     "autoprefixer": "latest",
     "gulp": "latest",
+    "gulp-aigis": "latest",
     "gulp-ignore": "latest",
     "gulp-jshint": "latest",
     "gulp-livereload": "latest",
@@ -26,7 +27,6 @@
     "jshint-stylish": "latest",
     "md5-file": "latest",
     "node-sass": "latest",
-    "sassdoc": "latest",
     "susy": "latest"
   }
 }
