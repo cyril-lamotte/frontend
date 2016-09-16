@@ -1,0 +1,12 @@
+# .bashrc
+
+# System
+alias apache-restart="sudo httpd -k restart"
+
+
+# Sites
+alias site_name="cd /path; pwd;"
+
+
+# Commands
+apache-restart
