@@ -2,13 +2,14 @@
 // Links & Buttons
 // -----------------------------------------------------------------------------
 
-/// Default button theme
-///
-/// @group theme
-/// @example scss Usage
-/// a, button {
-///   @include btn-default;
-/// }
+/*
+S'applique pour sur nouveaux styles de bouton, permet d'appliquer les réglages
+de base.
+
+```sass
+@include btn-default;
+```
+*/
 @mixin btn--default {
   @include reset-box-model;
   //-webkit-appearance: button; // Clickable input types in iOS
@@ -34,41 +35,45 @@
 // Helpers
 // -----------------------------------------------------------------------------
 
-/// Button wide
-///
-/// @group theme
-/// @example scss Usage
-/// a, button {
-///   @include btn--wide;
-/// }
+/*
+---
+name: Modificateurs de boutons
+category: Boutons et liens
+tag:
+  - Modificateur
+  - a
+  - button
+  - input
+---
+
+Ajouter ces style pour obtenir des variantes de bouton.
+
+- **wide** : 100% de son conteneur
+- **large** : Plus gros
+- **small** : Plus petit
+
+```html
+<a href="#" class="btn btn--wide">Bouton large</a>
+<a href="#" class="btn btn--large">Bouton plus gros</a>
+<a href="#" class="btn btn--small">Bouton plus petit</a>
+```
+
+```sass
+@include btn--wide;
+@include btn--large;
+@include btn--small;
+```
+*/
 @mixin btn--wide {
   display: block;
   width: 100%;
   float: none;
 }
 
-
-
-/// Button bigger
-///
-/// @group theme
-/// @example scss Usage
-/// a, button {
-///   @include btn--bigger;
-/// }
-@mixin btn--bigger {
+@mixin btn--large {
   padding: 15px 25px;
 }
 
-
-
-/// Button small
-///
-/// @group theme
-/// @example scss Usage
-/// a, button {
-///   @include btn--small;
-/// }
 @mixin btn--small {
   padding: 2px 5px;
   font-size: em(12px);
@@ -80,13 +85,26 @@
 // Styles
 // -----------------------------------------------------------------------------
 
-/// Button primary
-///
-/// @group theme
-/// @example scss Usage
-/// a, button {
-///   @include btn;
-/// }
+/*
+---
+name: Bouton par défaut
+category: Boutons et liens
+tag:
+  - a
+  - button
+  - input
+---
+
+Appliquer ce style pour obtenir un bouton stylé.
+
+```html
+<a href="#" class="btn">Bouton basic</a>
+```
+
+```sass
+@include btn;
+```
+*/
 @mixin btn {
   @include btn--default;
 

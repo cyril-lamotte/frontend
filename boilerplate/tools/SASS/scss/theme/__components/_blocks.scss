@@ -2,13 +2,24 @@
 // Blocks
 // -----------------------------------------------------------------------------
 
-/// Default block theme
-///
-/// @group theme
-/// @example scss Usage
-/// div {
-///   @include block--default;
-/// }
+/*
+---
+name: Bloc de base
+category: Blocs
+tag:
+  - div
+---
+
+Style de bloc par défaut.
+
+```html
+<div class="block--default">Lorem ipsum</div>
+```
+
+```sass
+@include block--default;
+```
+*/
 @mixin block--default {
   margin: 20px 0;
 }
