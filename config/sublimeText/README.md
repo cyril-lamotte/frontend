@@ -47,7 +47,9 @@ Faire un clic droit dans la barre latérale, Project / Edit Preview URLs
 
 Source : http://stackoverflow.com/questions/20540492/how-to-increase-number-of-recent-files-in-sublime-text-3
 
+## Exclure un dossier de la recherche
 
+Ajouter cette notation dans la zone de recherche : `-*/assets/*`
 
 ## Raccourcis
 
