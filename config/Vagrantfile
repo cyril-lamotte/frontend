@@ -31,6 +31,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     echo 'export VHOST=#{hostname}'  > /etc/profile.d/vhost.sh
   SHELL
 
-  config.ssh.username="usergl"
-  config.ssh.password="0usergl0"
+  config.ssh.username="username"
+  config.ssh.password="password"
 end
