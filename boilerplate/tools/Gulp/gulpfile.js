@@ -13,7 +13,6 @@ var gulp         = require('gulp'),
     stylelint    = require('gulp-stylelint'),
     autoprefixer = require('autoprefixer'),
     sourcemaps   = require('gulp-sourcemaps'),
-    livereload   = require('gulp-livereload'),
     md5File      = require('md5-file'),
     aigis        = require('gulp-aigis'),
     spritesmith  = require('gulp.spritesmith');
@@ -29,16 +28,8 @@ var gulp         = require('gulp'),
 gulp.task('default', ['sprites', 'build-css', 'watch']);
 
 
-
-
-
-
-
 // Compile SASS
 gulp.task('build-css', function() {
-
-  gutil.log('## Compiling CSS\n');
-
 
   return gulp.src('sources/scss/**/*.scss')
     .pipe(sourcemaps.init())
@@ -46,15 +37,13 @@ gulp.task('build-css', function() {
     .on('error', onError)
     .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('assets/css'))
-    .pipe(livereload());
+    .pipe(gulp.dest('assets/css'));
 
 });
 
 
 // Avoid crash on error
 function onError(err) {
-
   gutil.log(err.message);
   this.emit('end');
 }
@@ -95,8 +84,12 @@ gulp.task('jshint', function() {
 
 gulp.task('sprites', function () {
 
+  var fs = require('fs');
   var hash = '';
-  //hash = md5File.sync('assets/img/sprites.png');
+
+  if (fs.existsSync('assets/img/sprites.png')) {
+    hash = md5File.sync('assets/img/sprites.png');
+  }
 
   var spriteData = gulp.src('sources/sprites/*.png')
       .pipe(spritesmith({
@@ -106,7 +99,8 @@ gulp.task('sprites', function () {
         //retinaImgName: '../img/sprite@2x.png',
         //retinaSrcFilter: ['sources/sprites/*@2x.png'],
         cssName: '_sprites.scss',
-        padding: 5
+        padding: 5,
+        cssOpts: {functions: false}
     }));
 
   spriteData.img.pipe(gulp.dest('assets/img'));
@@ -119,8 +113,6 @@ gulp.task('sprites', function () {
 
 // Watch
 gulp.task('watch', function() {
-
-  livereload.listen();
 
   gulp.watch('sources/scss/**/*.scss', ['build-css', 'styleguide']);
   gulp.watch('assets/js/**/*.js', ['jshint']);
