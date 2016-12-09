@@ -41,23 +41,13 @@
 
 <!-- Scripts at the bottom for better performances -->
 <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
-
-<script>
-
-window.app = {
- ui: {}
-};
-
-</script>
-
-<script src="back-to-top.js"></script>
+<script src="jquery.back-to-top.js"></script>
 
 <script>
 $(document).ready(function() {
 
   // Back to top link
-  app.ui.backToTop({
-    target: $('#back-to-top'),
+  $('#back-to-top').backToTop({
     threshold: 200
   });
 

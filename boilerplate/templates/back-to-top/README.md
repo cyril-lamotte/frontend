@@ -36,9 +36,9 @@
 $(document).ready(function() {
 
   // Back to top link
-  app.ui.backToTop({
-    target: $('#back-to-top'),
-    threshold: 200
+  $('#back-to-top').backToTop({
+    threshold: 200,
+    offset: 200
   });
 
 });
