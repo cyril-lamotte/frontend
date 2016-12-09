@@ -2,7 +2,6 @@
 
 ## Arborescence
 
-
 ### style.scss
 
 C'est le point d'entrée, `style.css` est généré à partir ce ce fichier.
@@ -14,23 +13,20 @@ Ce sont des mixins génériques réutilisées entre les projets, elles ne génè
 aucune ligne de code.
 
 
-
 ### theme/
 
-Ce sont les mixins spécifiques au projet, elles ne génèrent aucune ligne de
-code.
+Ce sont les mixins spécifiques au projet et les classes de base.
 
 
 #### theme/___global/
 
-Les varaibles globales du thème sont définie ici.
+Les variables globales du thème sont définie ici.
 
 
 #### theme/__components/
 
-Ces sont les différents composants / styles utilisé dans le projet.
-Tout est sous forme de mixins.
-
+Ces sont les différents composants / styles utilisés dans le projet.
+Tout est sous forme de mixins + classes de base.
 
 
 ### custom/
@@ -44,19 +40,16 @@ ou page possède son propre fichier dédié. Ils utilisent les mixins définies 
 
 Ce sont les styles globaux (reset, mise en page, images, formulaires...).
 
-- **normalize.scss** : Applique le reset de `github.com/necolas/normalize.css`
-- **box-sizing.scss** : Défini le modèle de boite CSS
-- **image.scss** : Rend les images responsive par défaut
-- **helpers.scss** : Fourni des classe d'affichage reponsive
-- **basics.scss** : Styles globaux (font-size / couleur des liens...)
-- **layout.scss** : Mise en page globale (wrapper / colonnes)
-- **forms-default.scss** : Apparence par défaut des composants de formulaire
-- **print.scss** : Styles globaux d'impression
 
+# Grilles
+
+Aucune grille par défaut n'est définie. Le module susy est utilisé pour créer
+des grille sur mesure au besoin.
 
 
 # Changelog
 
-- 1.0.0 Refactoring
+- 1.1.0 Update Sprites managment
+- 1.0.0
 
 
