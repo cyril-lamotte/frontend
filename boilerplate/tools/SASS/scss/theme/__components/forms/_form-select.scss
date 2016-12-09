@@ -7,12 +7,12 @@
   max-width: 100%;
   appearance: none;
   padding: 5px 10px;
-  border: 1px solid #ccc;
+  border: 1px solid $inputs-borders;
   border-radius: 0;
   color: $base-color;
   background-image: url('../img/select-arrows.png');
   background-repeat: no-repeat;
-  background-position: 97% 50%;
+  background-position: 95% 50%;
 
   // Remove IE arrows.
   &::-ms-expand {

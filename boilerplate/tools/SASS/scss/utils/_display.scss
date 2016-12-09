@@ -44,22 +44,37 @@
 
 
 
-/// full-width
-///
-/// @group theme
-///
-/// @example scss Usage
-/// div {
-///   @include full-width;
-/// }
+/// Spread block to window's edge
 @mixin full-width {
 
-  @include mq-from( 'sm' ) {
+  @include mq-from( 'lg' ) {
     position: relative;
-    width: 100vw;
+    width: 99.5vw;
     left: 50%;
     right: 50%;
     margin-left: -50vw;
-    margin-right: -50vw;
+  }
+}
+
+
+// Maintain ratio of iframes / objects...
+//
+// @param {Int} $ratio [9/16] - Ratio 16/9
+//
+// .foo {
+//   @include ratio-wrap(3/4);
+// }
+@mixin ratio-wrap($ratio: 9/16) {
+  position: relative;
+  padding-bottom: $ratio * 100%;
+  height: 0;
+
+  object,
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }

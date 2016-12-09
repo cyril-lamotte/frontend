@@ -19,6 +19,7 @@
 @mixin form__row--inline {
 
   input {
+    display: inline-block;
     width: auto;
   }
 }
@@ -42,6 +43,16 @@
 .label--block { @include label--block; }
 
 
+// Label inline.
+@mixin label--inline {
+  display: inline-block;
+  float: none;
+  text-align: left;
+  width: auto;
+  line-height: 1.5;
+}
+
+.label--inline { @include label--inline; }
 
 /* -----------------------------------------------------------------------------
    Fieldset
@@ -54,6 +65,16 @@
 
   legend {
     padding: 0 10px;
+  }
+}
+
+.fieldset--off {
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+
+  legend {
+    display: none;
   }
 }
 
@@ -73,3 +94,10 @@
 
 .input--wide { @include input--wide; }
 
+
+@mixin input--inline {
+  display: inline-block;
+  width: auto;
+}
+
+.input--inline { @include input--inline; }

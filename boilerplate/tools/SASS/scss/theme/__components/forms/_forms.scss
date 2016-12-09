@@ -27,6 +27,11 @@ category: Formulaires
 </div>
 
 <div class="form__row">
+  <label class="label--block">Date</label>
+  <input type="text" class="input--text input--wide icon--calendar" placeholder="Exemple">
+</div>
+
+<div class="form__row">
   <label class="label--block">Zone de texte multiligne</label>
   <textarea class="input--textarea input--wide" placeholder="Exemple"></textarea>
 </div>
