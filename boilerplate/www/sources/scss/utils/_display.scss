@@ -2,15 +2,13 @@
 // Display
 // -----------------------------------------------------------------------------
 
-/// Hidden except for screen-readers
-///
-/// @group utils
-/// @link https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html Yahoo! method
-///
-/// @example scss - Usage
-/// span {
-///   @include hide-text;
-/// }
+// Hidden except for screen-readers.
+//
+// @link https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html Yahoo! method
+//
+// span {
+//   @include hide-text;
+// }
 @mixin hide-text {
   position: absolute !important;
   clip: rect(1px, 1px, 1px, 1px);
@@ -23,13 +21,11 @@
 
 
 
-/// Delete margin of text
-/// @group utils
-///
-/// @example scss - Usage
-/// .text {
-///   @include text-wrap;
-/// }
+// Delete margin of text.
+//
+// .text {
+//   @include text-wrap;
+// }
 @mixin text-wrap {
 
   *:first-child {
@@ -43,8 +39,20 @@
 }
 
 
+// Add '...' after text.
+//
+// .text {
+//   @include text-overflow;
+// }
+@mixin text-overflow {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 
-/// Spread block to window's edge
+
+// Spread block to window's edge
 @mixin full-width {
 
   @include mq-from( 'lg' ) {
