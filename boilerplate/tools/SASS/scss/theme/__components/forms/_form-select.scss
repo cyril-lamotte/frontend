@@ -2,51 +2,29 @@
 // Select
 // -----------------------------------------------------------------------------
 
-$select-styles: (
-  'padding': 5px 10px,
-  'border': 1px solid #ccc,
-  'border-radius': 0,
-  'color': $base-color
-);
-
-
-
-/// Select theme
-///
-/// @group theme
-/// @example scss
-/// select {
-///   @include select;
-/// }
-@mixin select($styles: $select-styles) {
-  width: 100%;
+// Select theme.
+@mixin select {
   max-width: 100%;
   appearance: none;
-  padding: map-get($styles, 'padding');
-  border: map-get($styles, 'border');
-  color: map-get($styles, 'color');
-  border-radius: map-get($styles, 'border-radius');
-  //background: url('../img/select-arrows') 95% 50% no-repeat;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  color: $base-color;
+  background-image: url('../img/select-arrows.png');
+  background-repeat: no-repeat;
+  background-position: 97% 50%;
 
-  // Remove IE arrow
-  //&::-ms-expand {
-  //  display: none;
-  //}
+  // Remove IE arrows.
+  &::-ms-expand {
+    display: none;
+  }
 }
 
+.input--select { @include select; }
 
 
-/// Select disabled theme
-///
-/// @group theme
-/// @example scss
-/// select {
-///   @include select-disabled;
-/// }
-@mixin select-disabled() {
+// Select disabled theme.
+@mixin select-disabled {
   background: #aaa;
   color: #555;
 }
-
-
-//@import "theme/__components/forms/form-select-custom";

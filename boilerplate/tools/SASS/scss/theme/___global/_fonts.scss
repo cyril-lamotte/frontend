@@ -12,38 +12,45 @@
 //@include font-face('Open Sans', (url("../fonts/OpenSans/opensans-light-webfont.woff2"), url("../fonts/OpenSans/opensans-light-webfont.woff"), url("../fonts/OpenSans/opensans-light-webfont.ttf")), "../fonts/OpenSans/opensans-light-webfont.eot", 300, normal);
 
 
-
 // -----------------------------------------------------------------------------
 // Fonts variables
 // -----------------------------------------------------------------------------
 
-/// Font-stack map
-///
-/// @group theme
-/// @example scss - Usage
-///   font-family: $font-stack;
-$font-stack: ('Arial', 'Helvetica', sans-serif);
+/*
+---
+name: Open Sans
+category: Polices
+---
+
+```html
+<div class="font--default">Lorem ipsum</div>
+```
+
+```sass
+font-family: $font-stack;
+```
+*/
+$font-stack: ('Open Sans', arial, helvetica, sans-serif);
 
 
+/*
+---
+name: Arial
+category: Polices
+---
 
-/// Second font-stack map
-///
-/// @group theme
-/// @example scss - Usage
-///   font-family: $font-stack-alt;
-$font-stack-alt: ('Open sans', 'Arial', 'Helvetica', sans-serif);
+```html
+<div class="font--alt">Lorem ipsum</div>
+```
 
+```sass
+font-family: $font-stack-alt;
+```
+*/
+$font-stack-alt: (arial, helvetica, sans-serif);
 
-
-/// Base font-size
-///
-/// @group theme
-//$base-font-size: 12px; // em unit - If 12px then 1em = 12px
+// Base font-size (Use REM unit if IE9+)
 $base-font-size: 10px; // rem unit : 1.2rem = 12px / 2rem = 20px
 
-
-
-/// Base line-height
-///
-/// @group theme
+// Base line-height
 $base-line-height: 1.5;

@@ -1,0 +1,4 @@
+name=Project to delete
+description=delete a module
+core=7.x
+package=Project

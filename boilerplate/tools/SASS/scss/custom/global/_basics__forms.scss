@@ -1,0 +1,74 @@
+/* =============================================================================
+   Forms default
+============================================================================= */
+
+.form__row {
+  @include form-row;
+}
+
+.label--block {
+  @include label--block;
+}
+
+.input--text {
+  @include input;
+}
+
+.input--select {
+  @include select;
+}
+
+.input--checkbox {
+  @include checkbox;
+}
+
+.input--radio {
+  @include radio;
+}
+
+
+/* -----------------------------------------------------------------------------
+   Helpers
+----------------------------------------------------------------------------- */
+
+.input--wide {
+  @include input--wide;
+}
+
+
+/* -----------------------------------------------------------------------------
+   Default form
+----------------------------------------------------------------------------- */
+
+@mixin form {
+
+  label {
+    @extend .label--block;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    @extend .input--text;
+  }
+
+  .form-item {
+    @extend .form-row;
+  }
+
+  .form-submit {
+    @extend .btn;
+  }
+
+  input[type="radio"] {
+    @extend .input--radio;
+  }
+
+  input[type="checkbox"] {
+    @extend .input--checkbox;
+  }
+
+  select {
+    @extend .input--select;
+  }
+
+}

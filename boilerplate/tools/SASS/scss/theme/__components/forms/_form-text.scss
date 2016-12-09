@@ -15,39 +15,22 @@
 }
 
 
-
 // -----------------------------------------------------------------------------
 // Theme
 // -----------------------------------------------------------------------------
 
-$input-styles: (
-  'padding': 5px 10px,
-  'border': 1px solid #ccc,
-  'border-radius': 0,
-  'color': $base-color
-);
-
-
-/// Input theme
-///
-/// @group theme
-///
-/// @example scss
-/// input[type="text"] {
-///   @include input;
-/// }
-@mixin input($styles: $input-styles) {
+// Inputs theme
+@mixin input {
   margin: 0;
-  appearance: none;
-  width: 100%;
   max-width: 100%;
-  padding: map-get($styles, 'padding');
-  border: map-get($styles, 'border');
-  color: map-get($styles, 'color');
-  border-radius: map-get($styles, 'border-radius');
   vertical-align: middle;
   font-family: inherit;
   font-size: inherit;
+  appearance: none;
+  padding: 5px 10px;
+  border: 1px solid $inputs-borders;
+  border-radius: 0;
+  color: $base-color;
 
   @include input-placeholder {
     opacity: 1;
@@ -55,21 +38,18 @@ $input-styles: (
   }
 }
 
+.input--text { @include input; }
 
 
-/// Input theme
-///
-/// @group theme
-///
-/// @example scss
-/// textarea {
-///   @include textarea;
-/// }
-@mixin textarea($styles: $input-styles) {
-  @include input($styles);
+/// Textarea theme
+@mixin textarea {
+  @include input;
   min-height: 5em;
-  overflow: auto; // Removes default vertical scrollbar on empty textarea in IE6/7/8/9
+  overflow: auto; // Removes vertical scrollbar on empty textarea in IE6/7/8/9.
   vertical-align: top;
   resize: vertical;
-  appearance: none;
+}
+
+.input--textarea {
+  @include textarea;
 }

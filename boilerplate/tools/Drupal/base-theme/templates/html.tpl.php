@@ -14,15 +14,13 @@
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
 
   <div id="top" class="outer-wrap" >
-    <div id="inner-wrap" class="inner-wrap">
 
-      <?php print $page_top; ?>
-      <?php print $page; ?>
-      <?php print $page_bottom; ?>
+    <?php print $page_top; ?>
+    <?php print $page; ?>
+    <?php print $page_bottom; ?>
 
-      <?php print theme('back-to-top'); ?>
+    <?php print theme('back-to-top'); ?>
 
-    </div><!--/inner-wrap-->
   </div><!--/outer-wrap-->
 
 </body>

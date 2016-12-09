@@ -1,17 +1,23 @@
 
 # [Projet]
 
-## Périmètre de test navigateur
 
-- IE11+
+## Périmètre technique
+
+- Périmètre de test navigateur : [IE9+, Chrome+, Firefox+, Safari+, Edge+]
+- Accessibilité :                Oui / Non
 
 
 
 ## Périmètre de production
 
+N/A
+
 
 
 ## Documents
+
+N/A
 
 
 
@@ -19,7 +25,10 @@
 
 ### Compilation du SCSS
 
-> Nécessite `nodejs` installé
-> Nécessite `gulp` installé globalement avec `npm install --global gulp`
-> Lancer la commande `gulp` à partir de la racine du thème
+1. Nécessite `nodejs` installé (https://nodejs.org/en/)
+2. Nécessite `gulp` installé globalement avec `npm install --global gulp`
+3. Lancer la commande `npm install` à partir de la racine du thème pour
+   installer les dépendences
+4. Lancer la commande `gulp` à partir de la racine du thème
+
 

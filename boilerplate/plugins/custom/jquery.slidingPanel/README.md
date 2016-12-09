@@ -1,6 +1,6 @@
-# jQuery Menu Level
+# jQuery Sliding panel
 
-Display a sliding panel
+Display a sliding panel.
 
 
 
@@ -30,8 +30,8 @@ Avoid scrollbar with a global wrapper
 </div><!--/outer-wrap-->
 ```
 
-```css
-/* Avoid scrollbar with a global wrapper */
+```scss
+// Avoid scrollbar with a global wrapper
 .outer-wrap {
   overflow: hidden;
 }
@@ -43,13 +43,10 @@ Avoid scrollbar with a global wrapper
 <div id="site">
 
   <div id="sliding-panel" class="sp--panel">
-
     // Content
-
   </div>
 
   <button type="button" id="burger" class="burger" title="<?php print t('Open nav'); ?>"><span class="burger__icon"></span> <span class="burger__text">Menu</span></button>
-
 
 </div>
 ```

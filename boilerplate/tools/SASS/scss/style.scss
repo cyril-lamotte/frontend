@@ -1,22 +1,20 @@
 @charset 'utf-8';
 
-// @version 1.0.0
-// @date 11/08/2016
-
+// @version 1.1.0
+// @date 06/16/2016
 
 
 // -----------------------------------------------------------------------------
 // Mixins
 // -----------------------------------------------------------------------------
 
-// Includes all globals mixin & theme's mixins, these two lines don't generate
+// Includes all globals mixins & theme's mixins, these two lines don't generate
 // any CSS code.
-// If CSS need to be divided (ex: IE9 4096 bug), only these two files have to be
-// included in the new css.
+// If CSS needs to be divided (ex: IE9 4096 bug), only these two files have to
+// be included in the new css.
 
 @import 'utils/utils'; // Generics mixins, do not edit !
 @import 'theme/theme'; // All custom mixins
-
 
 
 /* -----------------------------------------------------------------------------
@@ -31,9 +29,10 @@
 @import 'custom/global/box-sizing';
 @import 'custom/global/image';
 @import 'custom/global/helpers';
-@import 'custom/global/basics';
 @import 'custom/global/layout';
-@import 'custom/global/forms-default';
+@import 'custom/global/basics';
+@import 'custom/global/basics__texts';
+@import 'custom/global/basics__forms';
 
 
 // Specifics styles

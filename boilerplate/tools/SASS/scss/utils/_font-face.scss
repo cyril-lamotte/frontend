@@ -2,16 +2,12 @@
 // Fonts
 // =============================================================================
 
-
-/// Convert `px` to `em`
-/// @param {px} $target - Targeted font-size
-/// @param {px} $context [$base-font-size] - Context font-size
-/// @group theme
+// Convert `px` to `em`
+// @param {px} $target - Targeted font-size
+// @param {px} $context [$base-font-size] - Context font-size
 @function em($target, $context: $base-font-size) {
   @return $target / $context * 1em;
 }
-
-
 
 // Cross-browser support for @font-face. Supports IE, Gecko, Webkit, Opera.
 //

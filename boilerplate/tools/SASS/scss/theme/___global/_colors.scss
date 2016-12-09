@@ -2,31 +2,41 @@
 // Colors
 // =============================================================================
 
-$red: #ff4444;
+// -----------------------------------------------------------------------------
+// Colors definition
+// -----------------------------------------------------------------------------
 
 $blue: #0066ff;
-//$blue-light: lighten($blue, 5%);
-//$blue-dark: darken($blue, 5%);
+
+$red: #ff4444;
+$orange: #ff6600;
+$green: #00ff00;
 
 $grey: #333;
-$light-grey: #f4f4f4;
-//$light-grey-1: #ccc; // Usage
+$grey--light: #f4f4f4; // [Usage]
 
 
+// -----------------------------------------------------------------------------
+// Colors abstraction
+// -----------------------------------------------------------------------------
 
-/// Brand color
-/// @group theme
+// Brand color.
 $brand: $blue;
-
-/// Brand highlight
-/// @group theme
 $brand-highlight: lighten($brand, 20%);
 
-/// Base color
-/// @group theme
-$base-color: $grey; // Text
+// Default text.
+$base-color: $grey;
 
-/// Error
-/// @group theme
-$error-color: $red;
+// States.
+$error: $red;
+$success: $green;
+$warning: $orange;
 
+// Blocks background.
+$light-bg: $grey--light;
+
+// Light borders.
+$light-border: $grey;
+
+// Forms
+$inputs-borders: $grey--medium;

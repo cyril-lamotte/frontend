@@ -2,37 +2,74 @@
 // Forms layout
 // -----------------------------------------------------------------------------
 
-/// Form row spacing
-///
-/// @group form
-///
-///
-/// @example scss
-/// div {
-///   @include form-row;
-/// }
-@mixin form-row {
+
+/* -----------------------------------------------------------------------------
+   Rows
+----------------------------------------------------------------------------- */
+
+@mixin form__row {
   position: relative;
   clear: left;
   margin-bottom: 15px;
 }
 
+.form__row { @include form__row; }
 
 
-/// Label above
-///
-/// @group form
-///
-///
-/// @example scss
-/// label {
-///   @include label-block;
-/// }
-@mixin label-block {
+@mixin form__row--inline {
+
+  input {
+    width: auto;
+  }
+}
+
+.form__row--inline { @include form__row--inline; }
+
+
+/* -----------------------------------------------------------------------------
+   Labels
+----------------------------------------------------------------------------- */
+
+// Label above.
+@mixin label--block {
   display: block;
   float: none;
   text-align: left;
   width: auto;
+  margin-bottom: 5px;
 }
 
+.label--block { @include label--block; }
+
+
+
+/* -----------------------------------------------------------------------------
+   Fieldset
+----------------------------------------------------------------------------- */
+
+@mixin fieldset {
+  @include reset-box-model;
+  border: 1px solid $inputs-borders;
+  padding: 10px;
+
+  legend {
+    padding: 0 10px;
+  }
+}
+
+.fieldset {
+  @include fieldset;
+}
+
+/* -----------------------------------------------------------------------------
+   Helpers
+----------------------------------------------------------------------------- */
+
+// 100% width field.
+@mixin input--wide {
+  display: block;
+  width: 100%;
+}
+
+.input--wide { @include input--wide; }
 

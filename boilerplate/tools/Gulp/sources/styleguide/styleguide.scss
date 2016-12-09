@@ -10,6 +10,7 @@
   line-height: 1.5;
   padding: 5px 10px;
   border-radius: 3px;
+  text-decoration: none;
 
   &:hover,
   &:focus,
@@ -73,6 +74,7 @@ body {
   padding: 2px 5px;
   margin-bottom: 10px;
   opacity: 0.5;
+  text-decoration: none;
 
   &:hover,
   &:focus {
@@ -116,6 +118,7 @@ body {
 
     a:link,
     a:visited {
+      text-decoration: none;
       display: block;
       color: #000;
       font-weight: bold;
@@ -193,11 +196,6 @@ body {
 
 .sg-tags {
   @include tags-list;
-}
-
-.sg-tags__item--Modificateur {
-  background-color: #f3f3ff;
-  color: #5a94eb;
 }
 
 
