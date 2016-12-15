@@ -5,6 +5,7 @@
 ## Périmètre technique
 
 - Périmètre de test navigateur : [IE9+, Chrome+, Firefox+, Safari+, Edge+]
+- Périmètre mobile :             [Android 4.0+, iOS 10+]
 - Accessibilité :                Oui / Non
 
 

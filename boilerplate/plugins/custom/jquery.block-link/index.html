@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+  <meta charset="utf-8">
+
+  <!-- Définir le niveau de zoom -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Block link</title>
+
+  <style>
+
+    .other-block,
+    .custom-block {
+      border: 1px solid #000;
+      padding: 10px;
+      max-width: 500px;
+      margin: 20px auto;
+    }
+
+    .block-link {
+      cursor: pointer;
+    }
+
+    .block-link:hover {
+      background: #f4f4f4;
+    }
+
+    .block-link--focus {
+      background: #f4f4f4;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<div class="custom-block">
+  <h2><a href="http://www.example.com">Titre du bloc avec un lien</a></h2>
+  <p>[Contenu du bloc, également cliquable, un clic déclenchera le lien du titre] Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas laboriosam ea nam atque reiciendis ut velit quod esse impedit eum.</p>
+</div>
+
+<div class="custom-block">
+  <h2><a href="http://www.example.com">Titre du bloc avec un lien</a></h2>
+  <p>[Contenu du bloc, également cliquable, un clic déclenchera le lien du titre] Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas laboriosam ea nam atque reiciendis ut velit quod esse impedit eum.</p>
+</div>
+
+<div class="custom-block">
+  <h2><a href="http://www.example.com" target="_blank" title="Titre (nouvelle fenêtre)">Titre du bloc avec un lien target="_blank"</a></h2>
+  <p>[Contenu du bloc, également cliquable, un clic déclenchera le lien du titre] Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas laboriosam ea nam atque reiciendis ut velit quod esse impedit eum.</p>
+</div>
+
+<div class="other-block">
+  <h3><a href="http://www.example.com" target="_blank" title="Titre (nouvelle fenêtre)">Titre du bloc avec un lien target="_blank"</a></h3>
+  <p>[Contenu du bloc, également cliquable, un clic déclenchera le lien du titre] Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas laboriosam ea nam atque reiciendis ut velit quod esse impedit eum.</p>
+</div>
+
+<div class="other-block">
+  <h3><a href="http://www.example.com" target="_blank" title="Titre (nouvelle fenêtre)">Titre du bloc avec un lien target="_blank"</a></h3>
+  <p>[Contenu du bloc, également cliquable, un clic déclenchera le lien du titre] Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas laboriosam ea nam atque reiciendis ut velit quod esse impedit eum.</p>
+</div>
+
+<!-- Scripts at the bottom for better performances -->
+<script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+<script src="jquery.block-link.js"></script>
+
+<script>
+$(document).ready(function() {
+
+  $('div.custom-block').blockLink({
+    blocks: 'div.custom-block',
+    target: 'h2 > a'
+  });
+
+
+  $('div.other-block').blockLink({
+    blocks: 'div.other-block',
+    target: 'h3 > a'
+  });
+
+});
+
+</script>
+
+</body>
+</html>

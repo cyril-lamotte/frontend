@@ -19,7 +19,9 @@ var gulp         = require('gulp'),
 
 } catch(err) {
 
-  gutil.log('\n\n-> Un ou plusieurs modules sont manquants, lancer la commande `npm install`\n');
+  gutil.log('>> Un ou plusieurs modules sont manquants, lancer la commande `npm install`');
+  gutil.log('>> ' + err.message);
+
   return;
 
 }
@@ -30,6 +32,9 @@ gulp.task('default', ['sprites', 'build-css', 'watch']);
 
 // Compile SASS
 gulp.task('build-css', function() {
+
+  gutil.log(' ');
+  gutil.log(' ');
 
   return gulp.src('sources/scss/**/*.scss')
     .pipe(sourcemaps.init())

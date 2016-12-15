@@ -25,12 +25,9 @@
 > [_back-to-top.scss](_back-to-top.scss)
 
 
-
 ## JavaScript
 
-> [back-to-top.js](back-to-top.js)
-
-
+> [jquery.back-to-top.js](jquery.back-to-top.js)
 
 ```js
 $(document).ready(function() {
