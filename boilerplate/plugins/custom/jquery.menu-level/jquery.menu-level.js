@@ -13,9 +13,7 @@
     var defaults = {
       prefix: 'mlvl-',
       sublevel: 'ul',
-      repeatParentInSub: true,
-      onShow: function() {},
-      onHide: function() {}
+      repeatParentInSub: true
     };
 
     var plugin = this,
@@ -37,7 +35,7 @@
         .find(plugin.settings.sublevel)
           .wrap('<div class="' + plugin.settings.prefix +'level"></div>')
         .end()
-          .find('.' + plugin.settings.prefix + 'level').prev('a')
+          .find('.' + plugin.settings.prefix + 'level').prev('a, span')
             .addClass(plugin.settings.prefix + 'parent');
 
       // Save levels
@@ -45,21 +43,24 @@
       plugin.settings.$subLevels = plugin.settings.$topLevel.find('.' + plugin.settings.prefix + 'level');
 
       // Links with sublevel
-      plugin.settings.$menuTriggers = $element.find('a.'+ plugin.settings.prefix +'parent');
+      plugin.settings.$menuTriggers = $element.find('a.'+ plugin.settings.prefix +'parent, span.'+ plugin.settings.prefix +'parent');
 
       // Create parent link
       if (plugin.settings.repeatParentInSub) {
 
         $.each(plugin.settings.$subLevels, function(i, el) {
           $(this).prev().clone().prependTo($(this)).removeClass('active '+ plugin.settings.prefix +'parent').addClass(plugin.settings.prefix +'parent-clone');
+          $(this).prepend('<button type="button" class="'+ plugin.settings.prefix +'-back"><span>'+ $(this).prev().text() +'</span></button>');
         });
 
       }
+      else {
 
-      // Create back button
-      plugin.settings.$subLevels.prepend('<button type="button" class="'+ plugin.settings.prefix +'-back"><span>Retour</span></button>');
+        $.each(plugin.settings.$subLevels, function(i, el) {
+          $(this).prepend('<button type="button" class="'+ plugin.settings.prefix +'-back"><span>'+ $(this).prev().text() +'</span></button>');
+        });
 
-
+      }
 
 
       // "Back" buttons
@@ -106,7 +107,6 @@
       });
 
     };
-
 
     plugin.init();
 

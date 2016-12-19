@@ -48,7 +48,7 @@ $('ul.nav').dropDownNav();
 
 
 
-### 3. Options
+### Options
 
 Options      | Type   | Description                    | Default
 -------------|--- ----|--------------------------------|---------------

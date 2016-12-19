@@ -5,26 +5,46 @@ Multi-level navigation
 
 ## Features
 
+* Mobile nav
 * IE8+ compliant
 
 
-## Installation
-
-### 1. Join plugin
+## Markup
 
 ```html
 <script src="assets/js/plugins/jquery.menu-level.js"></script>
 ```
 
-### 2. JavaScript
+```html
+<ul class="nav">
+  <li><a href="#">Lorem ipsum</a></li>
+  <li><a href="#">Lorem ipsum</a></li>
+  <li>
+    <a href="#">Lorem ipsum</a>
+    <ul>
+      <li><a href="#">Lorem ipsum</a></li>
+      <li><a href="#">Lorem ipsum</a></li>
+      <li><a href="#">Lorem ipsum</a></li>
+    </ul>
+  </li>
+</ul>
+```
+
+## Theme
+
+> [_menu-level.scss](_menu-level.scss)
+
+
+## JavaScript
 
 ```js
 $('.menu-level-wrapper').menuLevel();
 ```
 
-### 3. Options
+### Options
 
-Options | Type   | Description                    | Default
---------|--------|--------------------------------|--------
-prefix  | string | Classes prefix                 | 'menu-level-'
-
+Options            | Type   | Description                             | Default
+-------------------|--------|-----------------------------------------|--------
+prefix             | string | Classes prefix                          | 'mlvl-'
+sublevel           | string | CSS Selector for sublevel               | 'ul'
+repeatParentInSub  | bool   | Create a button to go back in sublevels | true

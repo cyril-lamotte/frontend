@@ -42,15 +42,9 @@
 
       initAttributes();
 
-
       // Save focusable Elements
       plugin.settings.focusableElements = $panel.find('a, button, input');
       plugin.panelWidth = $panel.outerWidth();
-
-      // Touch
-      /*plugin.moved = false;
-      plugin.startX = 0;
-      plugin.currentXtranslate = 0;*/
 
       createOverlay();
 
@@ -238,41 +232,6 @@
 
       });
 
-/*
-      // Show panel width touch swipe
-      plugin.settings.wrapper.bind('touchmove', function(event) {
-
-        var currentX = event.originalEvent.touches[0].clientX;
-        var currentY = event.originalEvent.touches[0].clientY;
-        var dif_x = currentX - plugin.startX;
-        var dif_y = currentY - plugin.startY;
-
-        var translateX = dif_x + plugin.currentXtranslate;
-
-        if( translateX > 0 )
-          translateX = 0;
-
-        if( translateX < -plugin.panelWidth )
-          translateX = -plugin.panelWidth;
-
-        if( Math.abs(dif_x) > 20 & Math.abs(dif_y) < 50 )
-        {
-          $(this)[0].style['-webkit-transform'] = 'translate3d(' + translateX + 'px, 0, 0)';
-
-          plugin.lastXtranslate = translateX;
-          plugin.moved = true;
-        }
-
-      });
-
-
-
-      // Save touchend X
-      plugin.settings.wrapper.bind('touchend', function(event) {
-        plugin.currentXtranslate = plugin.lastXtranslate;
-        plugin.moved = false;
-      });
-      */
     };
 
     /** Attach events */
