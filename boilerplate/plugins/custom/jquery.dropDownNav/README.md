@@ -1,17 +1,18 @@
 # jQuery simple Drow Down
 
+Menu déroulant.
 
-## Installation
+## Features
 
-### 1. Join plugin
+* Ouverture au clic ou au survol.
+
+
+## Markup
 
 ```html
 <script src="assets/js/contrib/position.min.js"></script>
 <script src="assets/js/plugins/jquery.dropDownNav.js"></script>
 ```
-
-
-### 2. Markup
 
 ```html
 <ul class="nav">
@@ -31,12 +32,15 @@
 ```
 
 
+## Theme
+
+```css
 .sub-nav {
   display: none;
 }
+```
 
-
-### 2. JavaScript
+## JavaScript
 
 ```js
 $('ul.nav').dropDownNav();
@@ -46,6 +50,12 @@ $('ul.nav').dropDownNav();
 
 ### 3. Options
 
-Options | Type  | Description                    | Default
---------|-------|--------------------------------|--------
-
+Options      | Type   | Description                    | Default
+-------------|--- ----|--------------------------------|---------------
+prefix       | string | Classes prefix                 | 'ddn-'
+event        | string | hover | click                  | 'hover'
+subSelector  | string | CSS Selector                   | '> li > div'
+delay        | int    | Closing delay (hover mode)     | 300
+position     | object | jquery ui position config      | { my: 'left top', at: 'left bottom' }
+onShow       | method | Triggered when sub is shown    | function() {}
+onHide       | method | Triggered when sub is hidden   | function() {}

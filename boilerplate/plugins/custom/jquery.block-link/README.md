@@ -32,7 +32,7 @@ Rendre un bloc cliquable sans balise <a>.
 ```js
 $(document).ready(function() {
 
-  // Block link
+  // Block link.
   $('div.custom-block').blockLink({
     blocks: 'div.custom-block',
     target: 'h2 > a'

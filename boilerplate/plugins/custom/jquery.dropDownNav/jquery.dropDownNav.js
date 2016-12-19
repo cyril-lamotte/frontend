@@ -10,8 +10,9 @@
     // Defaults options
     var defaults = {
       prefix: 'ddn-',
-      subSelector: '> li > ul',
-      delay: 500,
+      event: 'hover',
+      subSelector: '> li > div',
+      delay: 300,
       position: {
         my: 'left top',
         at: 'left bottom'
@@ -29,14 +30,14 @@
     /** Plugin initialisation */
     plugin.init = function() {
 
-      // Merge user's options
+      // Merge user's options.
       plugin.settings = $.extend({}, defaults, options);
 
-      // Merge position object
+      // Merge position object.
       if( options )
         plugin.settings.position = $.extend({}, defaults.position, options.position);
 
-      // If a custom "of" is provided, init a setting
+      // If a custom "of" is provided, init a setting.
       if( plugin.settings.position.of )
         plugin.settings.customPositionOf = true;
 
@@ -52,10 +53,13 @@
 
       plugin.settings.$level1 = $nav.find('> li > a, > li > span');
 
-      // Save parents
+      // Make level 1 focusable.
+      plugin.settings.$level1.attr('tabindex', 0);
+
+      // Save parents.
       plugin.settings.$parents = $nav.find('.'+ plugin.settings.prefix +'-parent');
 
-      // Save subs
+      // Save subs.
       plugin.settings.$subs = $nav.find('.'+ plugin.settings.prefix +'-sub');
 
       plugin.settings.hoverTimer = null;
@@ -73,61 +77,108 @@
     /** Attach global events */
     var attachEvents = function() {
 
+
       plugin.settings.$level1
         .bind('show.ddn', function() { show( $(this) ); })
-        .bind('hide.ddn', function() { hide( $(this) ); })
-        .bind('mouseenter.ddn focus.ddn', function(event) {
-
-          clearTimeout(plugin.settings.hoverTimer);
-
-          // Hide all
-          plugin.settings.$level1.trigger('hide.ddn');
+        .bind('hide.ddn', function() { hide( $(this) ); });
 
 
-          // Show
-          if( $(this).hasClass(plugin.settings.prefix +'-parent') ) {
+        if (plugin.settings.event == 'click') {
 
-            var $level1 = $(this);
+          plugin.settings.$level1
+            .bind('click.ddn keyup.ddn', function(event) {
 
-            plugin.settings.hoverTimer = setTimeout(function() {
-              $level1.trigger('show.ddn');
-            }, 300);
+              event.stopPropagation();
 
-          }
+              // Is "Enter key" pressed ?
+              if (event.type == 'keyup' ) {
+                if (event.keyCode != 13) {
+                  return;
+                }
+              }
 
-        })
-        .bind('mouseout', function() {
-          clearTimeout(plugin.settings.hoverTimer);
-        });
+              // If element has children..
+              if ($(this).hasClass(plugin.settings.prefix +'-parent')) {
+
+                var $level1 = $(this);
+
+                // Already opened, close sub.
+                if ($(this).hasClass(plugin.settings.prefix +'-opened')) {
+                    $level1.trigger('hide.ddn');
+                  return;
+                }
+
+                // Hide all.
+                plugin.settings.$level1.trigger('hide.ddn');
+
+                // Show
+                $level1.trigger('show.ddn');
+
+              }
+
+            });
+
+        }
+        else {
+
+          plugin.settings.$level1
+            .bind('mouseenter.ddn focus.ddn', function(event) {
+
+              clearTimeout(plugin.settings.hoverTimer);
+
+              // Hide all
+              plugin.settings.$level1.trigger('hide.ddn');
 
 
-      // Hide subs if mouseleave links
-      plugin.settings.$level1.bind('mouseleave.ddn', function() {
+              // Show
+              if( $(this).hasClass(plugin.settings.prefix +'-parent') ) {
 
-        hideWithTimeout($('.'+ plugin.settings.prefix +'-opened').next() );
+                var $level1 = $(this);
 
+                plugin.settings.hoverTimer = setTimeout(function() {
+                  $level1.trigger('show.ddn');
+                }, plugin.settings.delay);
+
+              }
+
+            })
+            .bind('mouseout', function() {
+              clearTimeout(plugin.settings.hoverTimer);
+            });
+
+          plugin.settings.$level1.find('span').bind('mouseenter.ddn', function(event) {
+            $(this).parent().trigger('mouseenter.ddn');
+          });
+
+          // Hide subs if mouseleave links.
+          plugin.settings.$level1.bind('mouseleave.ddn', function() {
+            hideWithTimeout($('.'+ plugin.settings.prefix +'-opened').next() );
+          });
+
+          plugin.settings.$subs
+            .hover(function() {
+              setFlag(true);
+            }, function() {
+              setFlag(false);
+
+              // Hide width timeout
+              hideWithTimeout( $(this) );
+
+            })
+            .click(function (event) {
+              event.stopPropagation();
+            });
+
+        }
+
+
+      $('body').on('click.ddn', function(event) {
+        plugin.settings.$parents.trigger('hide.ddn');
       });
 
-
-      plugin.settings.$subs
-        .hover(function() {
-          setFlag(true);
-        }, function() {
-          setFlag(false);
-
-          // Hide width timeout
-          hideWithTimeout( $(this) );
-
-        })
-        .click(function (event) {
-          event.stopPropagation();
-        });
-
-
-      $('body').on('click.ddn', function (event) {
-
-        plugin.settings.$parents.trigger('hide.ddn');
-
+      // Avoid closing on click on subs.
+      plugin.settings.$subs.on('click.ddn', function(event) {
+        event.stopPropagation();
       });
 
 
@@ -177,9 +228,9 @@
     var hide = function( $trigger ) {
 
       $trigger.removeClass(plugin.settings.prefix +'-opened');
-
+      $sub = $trigger.next();
       // Callback function
-      plugin.settings.onHide();
+      plugin.settings.onHide($sub);
 
     };
 
