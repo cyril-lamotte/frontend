@@ -22,7 +22,7 @@
       trigger: $('#trigger'),
       wrapper: $('#wrapper'),
       overlay: true,
-      position: 'right',
+      position: 'left',
       onShow: function() {},
       onHide: function() {}
     };
@@ -41,6 +41,7 @@
       plugin.settings = $.extend({}, defaults, options);
 
       initAttributes();
+
 
       // Save focusable Elements
       plugin.settings.focusableElements = $panel.find('a, button, input');
@@ -210,7 +211,7 @@
         .bind('orientationchange', function() { $panel.trigger('hide.sp'); })
         .resize(function() {
 
-          if( Modernizr.mq('only screen and (min-width: 992px)') ) {
+          if( screen.width > 992) {
             $panel.trigger('hide.sp');
           }
 
