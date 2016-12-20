@@ -3,16 +3,15 @@
  *
  */
 
-(function ($) {
+(function($) {
 
 "use strict";
 
 window.app = {};
 
 /* Execute code when the DOM is fully loaded */
-$(document).ready(function() {
+$(function() {
 
 }); // /ready
-
 
 })(jQuery);

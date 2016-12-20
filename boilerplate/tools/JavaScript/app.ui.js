@@ -3,7 +3,7 @@
  *
  */
 
-(function ($) {
+(function($) {
 
 "use strict";
 

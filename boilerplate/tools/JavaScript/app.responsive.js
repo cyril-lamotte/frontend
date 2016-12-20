@@ -52,7 +52,7 @@
 */
 
 
-(function ($) {
+(function($) {
 
 "use strict";
 
