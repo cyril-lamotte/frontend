@@ -5,11 +5,11 @@
 // The provided mixins are intended to be used with the array-like variables
 
 @mixin sprite-width($sprite) {
-  width: nth($sprite, 5)+1;
+  width: nth($sprite, 5);
 }
 
 @mixin sprite-height($sprite) {
-  height: nth($sprite, 6)+1;
+  height: nth($sprite, 6);
 }
 
 @mixin sprite-position($sprite) {

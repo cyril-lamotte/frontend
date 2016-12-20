@@ -13,6 +13,7 @@
     "autoprefixer": "latest",
     "gulp": "latest",
     "gulp-aigis": "latest",
+    "gulp-bless": "latest",
     "gulp-ignore": "latest",
     "gulp-jshint": "latest",
     "gulp-livereload": "latest",

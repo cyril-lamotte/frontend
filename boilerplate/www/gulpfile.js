@@ -1,21 +1,21 @@
 
-
 // Gulp packages
 
 try {
 
-var gulp         = require('gulp'),
-    gutil        = require('gulp-util'),
-    sass         = require('gulp-sass'),
-    jshint       = require('gulp-jshint'),
-    ignore       = require('gulp-ignore'),
-    postcss      = require('gulp-postcss'),
-    stylelint    = require('gulp-stylelint'),
-    autoprefixer = require('autoprefixer'),
-    sourcemaps   = require('gulp-sourcemaps'),
-    md5File      = require('md5-file'),
-    aigis        = require('gulp-aigis'),
-    spritesmith  = require('gulp.spritesmith');
+var gulp             = require('gulp'), // gulp core.
+    gutil            = require('gulp-util'), // Display logs in console.
+    sass             = require('gulp-sass'), // Compile SASS code.
+    jshint           = require('gulp-jshint'), // JS Code quality.
+    stylelint        = require('gulp-stylelint'), // CSS code quality.
+    ignore           = require('gulp-ignore'), // Exclude files.
+    postcss          = require('gulp-postcss'), // Post CSS features.
+    autoprefixer     = require('autoprefixer'), // Add browsers prefix.
+    sourcemaps       = require('gulp-sourcemaps'), // Generate SASS sourcemap.
+    md5File          = require('md5-file'), // Generate MD5 hash.
+    aigis            = require('gulp-aigis'), // Generate styleguide.
+    spritesmith      = require('gulp.spritesmith'), // Generate sprites.
+    bless            = require('gulp-bless'); // Detect number of CSS selector (to FIX IE9).
 
 } catch(err) {
 
@@ -42,7 +42,14 @@ gulp.task('build-css', function() {
     .on('error', onError)
     .pipe(postcss([ autoprefixer({ browsers: ['last 3 versions', '> 1%'] }) ]))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('assets/css'));
+    .pipe(gulp.dest('assets/css'))
+    .pipe(bless({
+      log: true,
+      imports: false,
+      suffix: '-part-'
+    }))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('assets/css/'));
 
 });
 
@@ -65,6 +72,7 @@ gulp.task('lint-css', function lintCssTask() {
 
   return gulp
     .src('sources/scss/**/*.scss')
+    .pipe(ignore.exclude('**/_sprites.scss'))
     .pipe(stylelint({
       syntax: 'scss',
       reporters: [
@@ -72,8 +80,6 @@ gulp.task('lint-css', function lintCssTask() {
       ]
     }));
 });
-
-
 
 
 // JS hint
@@ -84,7 +90,6 @@ gulp.task('jshint', function() {
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'));
 });
-
 
 
 gulp.task('sprites', function () {
@@ -109,9 +114,8 @@ gulp.task('sprites', function () {
     }));
 
   spriteData.img.pipe(gulp.dest('assets/img'));
-  spriteData.css.pipe(gulp.dest('sources/scss'));
+  spriteData.css.pipe(gulp.dest('sources/scss/theme/___global'));
 });
-
 
 
 
