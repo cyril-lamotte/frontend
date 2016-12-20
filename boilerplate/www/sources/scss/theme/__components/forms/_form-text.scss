@@ -50,6 +50,4 @@
   resize: vertical;
 }
 
-.input--textarea {
-  @include textarea;
-}
+.input--textarea { @include textarea; }
