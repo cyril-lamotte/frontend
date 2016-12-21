@@ -35,7 +35,7 @@ Avoid scrollbar with a global wrapper
 
 ```html
 
-<div id="site">
+<div id="wrapper">
 
   <div id="sliding-panel" class="sp--panel">
     // Content
@@ -55,7 +55,7 @@ var $slidingPanel = $('#sliding-panel');
 // Enable panel
 $slidingPanel.slidingPanel({
   trigger: $('#burger'),
-  wrapper: $('#site')
+  wrapper: $('#wrapper')
 });
 
 // Close
@@ -73,6 +73,13 @@ $slidingPanel.find('button.btn--close').click(function (event) {
 
 ## Options
 
-Options | Type  | Description                    | Default
---------|-------|--------------------------------|--------
-lorem   | Array | Images paths                   | null
+Options      | Type   | Description                    | Default
+-------------|--- ----|--------------------------------|---------------
+prefix       | string | Classes prefix                 | 'sp-'
+duration     | int    | Slide effect duration          | 300
+trigger      | jQuery | Button "Burger"                | $('#trigger')
+wrapper      | jQuery | Site wrapper                   | $('#wrapper')
+overlay      | bool   | Add overlay                    | true
+position     | string | Position of panel              | 'left'
+onShow       | method | Triggered when panel is shown  | function() {}
+onHide       | method | Triggered when panel is hidden | function() {}
