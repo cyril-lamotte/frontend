@@ -18,7 +18,7 @@
     background-color: #fff !important;
   }
 
-  /* no orphans, no widows */
+  // No orphans, no widows
   p,
   blockquote {
     orphans: 3;
@@ -41,6 +41,11 @@
   a {
     color: #000 !important;
     text-decoration: underline !important;
+  }
+
+  // Print abbr expansions.
+  abbr[title]:after {
+    content: " (" attr(title) ")";
   }
 
 }
