@@ -51,7 +51,7 @@ $('ul.nav').dropDownNav();
 ### Options
 
 Options      | Type   | Description                    | Default
--------------|--- ----|--------------------------------|---------------
+-------------|--------|--------------------------------|---------------
 prefix       | string | Classes prefix                 | 'ddn-'
 event        | string | hover | click                  | 'hover'
 subSelector  | string | CSS Selector                   | '> li > div'

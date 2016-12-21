@@ -74,7 +74,7 @@ $slidingPanel.find('button.btn--close').click(function (event) {
 ## Options
 
 Options      | Type   | Description                    | Default
--------------|--- ----|--------------------------------|---------------
+-------------|--------|--------------------------------|---------------
 prefix       | string | Classes prefix                 | 'sp-'
 duration     | int    | Slide effect duration          | 300
 trigger      | jQuery | Button "Burger"                | $('#trigger')
