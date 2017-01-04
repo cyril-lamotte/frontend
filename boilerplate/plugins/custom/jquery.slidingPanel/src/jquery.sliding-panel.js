@@ -1,28 +1,15 @@
 (function( $ ){
 
-  /**
-   * Toggle side panel for mobile navigation
-   * @param {object} options - Settings
-   * @param {string} options.prefix='sliding-panel-' - Classes prefix
-   * @param {int} options.duration=300 - Slide effect duration
-   * @param {object} options.trigger=$('#sliding-panel-trigger') - Trigger's jQuery object
-   * @param {object} options.panel=$('.sliding-panel') - Panel's jQuery object
-   * @param {object} options.wrapper=$('.wrapper') - Site wrapper's jQuery object
-   * @param {bool} options.overlay=false - If true, adds an overlay when panel is opened
-   * @param {string} options.position='right' - Position of the panel
-   * @param {function()} onShow - Fires when the panel is showed
-   * @param {function()} onHide - Fires when the panel is hidden
-   */
   $.slidingPanel = function(element, options) {
 
-    // Defaults options
+    // Defaults options.
     var defaults = {
       prefix: 'sp-',
       duration : 300,
-      trigger: $('#trigger'),
-      wrapper: $('#wrapper'),
+      trigger: '#trigger',
+      wrapper: false,
       overlay: true,
-      position: 'left',
+      close_button_text: 'Fermer',
       onShow: function() {},
       onHide: function() {}
     };
@@ -33,114 +20,133 @@
     plugin.settings = {};
 
 
-
     /** Plugin initialisation */
     plugin.init = function() {
 
       // Merge user's options
       plugin.settings = $.extend({}, defaults, options);
 
+      plugin.settings.$trigger = $(plugin.settings.trigger);
+
       initAttributes();
-
-
-      // Save focusable Elements
-      plugin.settings.focusableElements = $panel.find('a, button, input');
-      plugin.panelWidth = $panel.outerWidth();
-
+      createCloseButton();
       createOverlay();
+
+      // Save focusable Elements.
+      plugin.settings.focusableElements = $panel.find('a, button, input');
+      plugin.settings.focusableElements.attr('tabindex', '-1');
 
       attachEvents();
 
     };
 
 
-
-    /** Insert ARIA & classes attributes */
+    /** Insert ARIA & classes attributes. */
     var initAttributes = function() {
 
-      // Add classes
-      $panel.addClass( plugin.settings.prefix +'-panel' );
-      plugin.settings.wrapper.addClass( plugin.settings.prefix +'-wrapper' );
-      plugin.settings.trigger.addClass( plugin.settings.prefix +'-trigger' );
+      // Add classes.
+      $panel.addClass(plugin.settings.prefix +'-panel');
+
+      if (plugin.settings.wrapper)
+        $(plugin.settings.wrapper).addClass(plugin.settings.prefix +'-wrapper');
+
+      plugin.settings.$trigger.addClass(plugin.settings.prefix +'-trigger');
 
 
-      // Add attributes
-      plugin.settings.trigger.attr({
-        'aria-expanded' : false,
-        'aria-controls' : $panel.attr('id')
+      // Add trigger's attributes.
+      plugin.settings.$trigger.attr({
+        'aria-expanded': false,
+        'aria-controls': $panel.attr('id')
       });
 
+      // Add panel's attributes.
       $panel.attr({
-        'tabindex' : '0',
-        'aria-hidden' : true,
-        'role' : 'region',
-        'aria-labelledby' : plugin.settings.trigger.attr('id')
-      });
+        'tabindex': '-1',
+        'aria-hidden': true,
+        'role': 'region',
+        'aria-label': plugin.settings.panel_text
+      }).wrapInner('<div class="' + plugin.settings.prefix + '-panel__inner"></div>');
 
     };
 
+
+    /** Insert close button in panel. */
+    var createCloseButton = function() {
+
+      if (!plugin.settings.close_button_text)
+        return;
+
+      var $button = $('<button type="button" class="' + plugin.settings.prefix + '-close">' + plugin.settings.close_button_text + '</button>');
+
+      $button
+        .prependTo($panel.find('.sp--panel__inner'))
+        .on('click', function(event) {
+          $panel.trigger('hide.sp');
+        });
+
+      plugin.settings.$close_button = $button;
+
+    };
 
 
     /** Insert overlay in DOM */
     var createOverlay = function() {
 
-      // Create overlay
-      if( plugin.settings.overlay )
-      {
-        var $overlay = $('<div></div>');
+      if (!plugin.settings.overlay)
+        return;
 
-        $overlay.attr({
-          'id': plugin.settings.prefix +'-overlay',
-          'class': plugin.settings.prefix +'-overlay'
-        })
-        .appendTo(plugin.settings.wrapper)
-        .bind('touchstart', function(event) {
+      var $overlay = $('<div></div>');
 
-          event.preventDefault();
-          $panel.trigger('hide.sp');
+      $overlay.attr({
+        'id': plugin.settings.prefix +'-overlay',
+        'class': plugin.settings.prefix +'-overlay'
+      })
+      .insertAfter($panel)
+      .bind('touchstart', function(event) {
 
-        });
+        // Hide on touch.
+        event.preventDefault();
+        $panel.trigger('hide.sp');
 
-      }
+      });
 
     };
-
 
 
     /** Shows the panel */
     var showPanel = function() {
 
-      // Active trigger
-      plugin.settings.trigger.addClass( plugin.settings.prefix +'-trigger--is-active' )
+      // Active trigger.
+      plugin.settings.$trigger.addClass(plugin.settings.prefix +'-trigger--is-active')
         .attr('aria-expanded', true);
 
-
-      // Add 'is-expanded' class on body
+      // Add 'is-expanded' class on body.
       $('body').addClass(plugin.settings.prefix +'-is-expanded');
 
-      // Move focus to panel
       $panel
-        .attr('aria-hidden', 'false')
-        .focus();
+        .attr('aria-hidden', 'false');
 
+      // Move focus to first item.
+      plugin.settings.focusableElements.attr('tabindex', '0');
+      plugin.settings.focusableElements.first().focus();
 
-      // Callback function
+      // Callback function.
       plugin.settings.onShow();
 
     };
 
 
-
     /** Hides the panel */
     var hidePanel = function() {
 
-      if( ! plugin.settings.trigger.hasClass( plugin.settings.prefix +'-trigger--is-active' ) )
+      if( ! plugin.settings.$trigger.hasClass( plugin.settings.prefix +'-trigger--is-active' ) )
         return;
 
 
       // Move focus to trigger
-      plugin.settings.trigger
+      plugin.settings.$trigger
         .removeClass(plugin.settings.prefix +'-trigger--is-active')
+        .attr('tabindex', '0')
         .attr('aria-expanded', false)
         .trigger('focus-on-trigger.sp');
 
@@ -155,12 +161,10 @@
     };
 
 
-
-
     /** Attach trigger events */
     var attachTriggerEvents = function() {
 
-      plugin.settings.trigger.click(function (event) {
+      plugin.settings.$trigger.click(function (event) {
 
         event.stopPropagation();
 
@@ -181,7 +185,7 @@
           if($trigger !== undefined)
             $trigger.focus();
 
-        }, plugin.settings.duration, plugin.settings.trigger);
+        }, plugin.settings.duration, plugin.settings.$trigger);
 
 
       });
@@ -189,11 +193,10 @@
     };
 
 
-
     /** Attach global events */
     var attachGlobalEvents = function() {
 
-      // Hide panel width ESC key and clic outside
+      // Hide panel width ESC key and clic outside.
       $('body').keydown(function(event) {
 
         // ESC
@@ -205,8 +208,7 @@
         $panel.trigger('hide.sp');
       });
 
-
-      // Hide on orientationchange & on desktop while resizing
+      // Hide on orientationchange & on desktop while resizing.
       $(window)
         .bind('orientationchange', function() { $panel.trigger('hide.sp'); })
         .resize(function() {
@@ -217,15 +219,7 @@
 
         });
 
-
-      // Save touch start X
-      plugin.settings.wrapper.bind('touchstart', function(event) {
-        plugin.startX = event.originalEvent.touches[0].clientX;
-        plugin.startY = event.originalEvent.touches[0].clientY;
-      });
-
-
-      // Prevent windows move
+      // Prevent windows move.
       $(document).bind('touchmove', function(event) {
 
         if(plugin.moved)
@@ -234,6 +228,7 @@
       });
 
     };
+
 
     /** Attach events */
     var attachEvents = function() {
@@ -249,12 +244,14 @@
       attachGlobalEvents();
 
 
-      // Hide when last focusable element loose focus
+      // Move focus to first focusable element when last focusable element
+      // loose focus.
       plugin.settings.focusableElements.last().keydown(function(event) {
 
         // TAB
-        if (event.keyCode == 9) {
-          $panel.trigger('hide.sp');
+        if (event.keyCode == 9 && !event.shiftKey) {
+          event.preventDefault();
+          plugin.settings.focusableElements.first().focus();
         }
 
       });
@@ -264,7 +261,6 @@
     plugin.init();
 
   };
-
 
 
   $.fn.slidingPanel = function(options) {

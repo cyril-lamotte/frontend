@@ -1,0 +1,60 @@
+/* =============================================================================
+   Sliding panel
+============================================================================= */
+.sp--wrapper {
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out; }
+  .sp--is-expanded .sp--wrapper {
+    -webkit-transform: translate3d(320px, 0, 0);
+            transform: translate3d(320px, 0, 0); }
+
+.sp--panel {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 320px;
+  -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  background: #f4f4f4; }
+  .no-csstransforms3d .sp--panel {
+    display: none; }
+  .sp--is-expanded .sp--panel {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    z-index: 4; }
+
+.sp--panel__inner {
+  opacity: 0;
+  -webkit-transform: translate3d(-20px, 0, 0);
+          transform: translate3d(-20px, 0, 0);
+  -webkit-transition: all 1s;
+  transition: all 1s; }
+  .sp--is-expanded .sp--panel__inner {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
+
+.sp--overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fafafa;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  opacity: 0;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out; }
+  .sp--is-expanded .sp--overlay {
+    opacity: 1;
+    right: 0;
+    bottom: 0; }
