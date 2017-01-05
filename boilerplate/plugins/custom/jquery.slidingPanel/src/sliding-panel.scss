@@ -13,6 +13,7 @@ $sp-panel-duration: 500ms;
 // -----------------------------------------------------------------------------
 
 .sp--wrapper {
+  will-change: transform;
   transition: transform $sp-panel-duration ease-in-out;
 
   // Move site wrapper when nav is open.
@@ -34,10 +35,10 @@ $sp-panel-duration: 500ms;
   left: 0;
   width: $sp-panel-width;
   transform: translate3d(-100%, 0, 0);
+  background: #f4f4f4;
+  transition: transform $sp-panel-duration ease-in-out;
   will-change: transform;
   backface-visibility: hidden;
-  transition: transform $sp-panel-duration ease-in-out;
-  background: #f4f4f4;
 
   // IE9 with modernizr.
   .no-csstransforms3d & {
@@ -51,12 +52,11 @@ $sp-panel-duration: 500ms;
 }
 
 .sp--panel__inner {
-  opacity: 0;
   transform: translate3d(-20px, 0, 0);
   transition: all 1s;
+  will-change: transform;
 
   .sp--is-expanded & {
-    opacity: 1;
     transform: translate3d(0, 0, 0);
   }
 }
@@ -70,15 +70,18 @@ $sp-panel-duration: 500ms;
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   background: #fafafa;
   background: rgba(0, 0, 0, 0.2);
   z-index: 3;
   opacity: 0;
-  transition: all $sp-panel-duration ease-in-out;
+  transform: translate3d(-100%, 0, 0);
+  transition: opacity $sp-panel-duration ease-in-out;
+  will-change: transform, opacity;
 
   .sp--is-expanded & {
     opacity: 1;
-    right: 0;
-    bottom: 0;
+    transform: translate3d(0, 0, 0);
   }
 }

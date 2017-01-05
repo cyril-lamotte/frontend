@@ -5,7 +5,7 @@
     // Defaults options.
     var defaults = {
       prefix: 'sp-',
-      duration : 300,
+      duration : 800,
       trigger: '#trigger',
       wrapper: false,
       overlay: true,
@@ -128,7 +128,11 @@
 
       // Move focus to first item.
       plugin.settings.focusableElements.attr('tabindex', '0');
-      plugin.settings.focusableElements.first().focus();
+
+      requestAnimationFrame(giveFocus);
+      function giveFocus() {
+        plugin.settings.focusableElements.first().focus();
+      }
 
       // Callback function.
       plugin.settings.onShow();
