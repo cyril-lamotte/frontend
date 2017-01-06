@@ -40,25 +40,20 @@ $sp-panel-duration: 500ms;
   will-change: transform;
   backface-visibility: hidden;
 
-  // IE9 with modernizr.
-  .no-csstransforms3d & {
-    display: none;
-  }
-
   .sp--is-expanded & {
     transform: translate3d(0, 0, 0);
     z-index: 4;
   }
+
+  // <= IE9
+  .sp--no-transitions & {
+    display: none;
+  }
+
 }
 
-.sp--panel__inner {
-  transform: translate3d(-20px, 0, 0);
-  transition: all 1s;
-  will-change: transform;
-
-  .sp--is-expanded & {
-    transform: translate3d(0, 0, 0);
-  }
+.sp--no-transitions.sp--is-expanded .sp--panel {
+  display: block;
 }
 
 
@@ -67,7 +62,7 @@ $sp-panel-duration: 500ms;
 // -----------------------------------------------------------------------------
 
 .sp--overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -79,6 +74,11 @@ $sp-panel-duration: 500ms;
   transform: translate3d(-100%, 0, 0);
   transition: opacity $sp-panel-duration ease-in-out;
   will-change: transform, opacity;
+
+  // <= IE9
+  .sp--no-transitions & {
+    display: none;
+  }
 
   .sp--is-expanded & {
     opacity: 1;

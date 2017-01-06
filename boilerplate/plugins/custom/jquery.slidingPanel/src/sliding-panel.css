@@ -27,25 +27,18 @@
   will-change: transform;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden; }
-  .no-csstransforms3d .sp--panel {
-    display: none; }
   .sp--is-expanded .sp--panel {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
     z-index: 4; }
+  .sp--no-transitions .sp--panel {
+    display: none; }
 
-.sp--panel__inner {
-  -webkit-transform: translate3d(-20px, 0, 0);
-          transform: translate3d(-20px, 0, 0);
-  -webkit-transition: all 1s;
-  transition: all 1s;
-  will-change: transform; }
-  .sp--is-expanded .sp--panel__inner {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); }
+.sp--no-transitions.sp--is-expanded .sp--panel {
+  display: block; }
 
 .sp--overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -59,6 +52,8 @@
   -webkit-transition: opacity 500ms ease-in-out;
   transition: opacity 500ms ease-in-out;
   will-change: transform, opacity; }
+  .sp--no-transitions .sp--overlay {
+    display: none; }
   .sp--is-expanded .sp--overlay {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);

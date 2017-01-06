@@ -11,6 +11,8 @@ Show a side panel on click on the trigger. Useful for a mobile navigation.
 * ECHAP key to close
 * Tabulation stays in panel
 
+* Compatibilité IE9+
+
 
 ## Markup
 
@@ -78,7 +80,6 @@ $('#sliding-panel').slidingPanel({
 Options      | Type   | Description                    | Default
 -------------|--------|--------------------------------|---------------
 prefix       | string | Classes prefix                 | 'sp-'
-duration     | int    | Duration before moving focus back | 300
 trigger      | jQuery | "Burger" Button                | $('#trigger')
 wrapper      | jQuery | Site wrapper will move on opening | false
 overlay      | bool   | Add overlay                    | true
