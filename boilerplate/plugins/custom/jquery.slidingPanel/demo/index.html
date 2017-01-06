@@ -86,14 +86,14 @@ $(function() {
     trigger: '#burger',
     wrapper: '.wrapper',
     close_button_text: 'Fermer le menu',
-    panel_text: 'Menu latéral ouvert, pressez la touche ECHAP pour fermer le menu.',
+    panel_text: 'Menu latéral, pressez la touche ECHAP pour fermer le menu.',
     onShow: function() {
       // Update hidden text for a11y.
-      $('#burger').find('.burger__hidden-text').text('(fermer)');
+      $('#burger').find('.burger__hidden-text').text('(fermer le menu)');
     },
     onHide: function() {
       // Update hidden text for a11y.
-      $('#burger').find('.burger__hidden-text').text('(ouvrir)');
+      $('#burger').find('.burger__hidden-text').text('(ouvrir le menu)');
     }
   });
 

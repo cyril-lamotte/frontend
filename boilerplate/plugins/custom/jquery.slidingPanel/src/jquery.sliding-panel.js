@@ -36,7 +36,7 @@
       // Save focusable Elements.
       plugin.settings.focusableElements = $panel.find('a, button, input').attr('tabindex', '-1');
       plugin.settings.focusableElementsFirst = plugin.settings.focusableElements.first();
-
+      plugin.settings.focusableElementsLast = plugin.settings.focusableElements.last();
       attachEvents();
 
     };
@@ -75,9 +75,8 @@
 
       // Add panel's attributes.
       $panel.attr({
-        'tabindex': '-1',
         'aria-hidden': true,
-        'role': 'region',
+        'role': 'dialog',
         'aria-label': plugin.settings.panel_text
       }).wrapInner('<div class="' + plugin.settings.prefix + '-panel__inner"></div>');
 
@@ -293,12 +292,22 @@
 
       // Move focus to first focusable element when last focusable element
       // loose focus.
-      plugin.settings.focusableElements.last().keydown(function(event) {
+      plugin.settings.focusableElementsLast.keydown(function(event) {
 
         // TAB
         if (event.keyCode == 9 && !event.shiftKey) {
           event.preventDefault();
           plugin.settings.focusableElementsFirst.focus();
+        }
+
+      });
+
+      plugin.settings.focusableElementsFirst.keydown(function(event) {
+
+        // TAB
+        if (event.keyCode == 9 && event.shiftKey) {
+          event.preventDefault();
+          plugin.settings.focusableElementsLast.focus();
         }
 
       });
