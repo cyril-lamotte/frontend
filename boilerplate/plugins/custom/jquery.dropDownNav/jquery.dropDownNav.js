@@ -11,7 +11,7 @@
     var defaults = {
       prefix: 'ddn-',
       event: 'hover',
-      subSelector: '> li > div',
+      subSelector: '> li > ul',
       delay: 300,
       position: {
         my: 'left top',
@@ -76,7 +76,6 @@
 
     /** Attach global events */
     var attachEvents = function() {
-
 
       plugin.settings.$level1
         .bind('show.ddn', function() { show( $(this) ); })
@@ -195,30 +194,30 @@
       });
 
 
+      // Recalculate submenu position.
+      $nav.on('refreshSub.ddn', function() {
+        var $sub = plugin.settings.$subs.filter(':visible');
+        $sub.position(plugin.settings.position);
+      });
+
 
     };
-
-
 
 
     // Afficher le sous-menu
     var show = function( $trigger ) {
 
-      // Clear timeout
-      //try { clearTimeout(plugin.timeoutID); }
-      //catch(e) {}
-
       $trigger.addClass(plugin.settings.prefix +'-opened');
 
       $sub = $trigger.next();
 
-      // Positioning
+      // Positioning.
       if( ! plugin.settings.customPositionOf )
         plugin.settings.position.of = $trigger;
 
-      $sub.position( plugin.settings.position );
+      $sub.position(plugin.settings.position);
 
-      // Callback function
+      // Callback function.
       plugin.settings.onShow($sub);
 
     };
