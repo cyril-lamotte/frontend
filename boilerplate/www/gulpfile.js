@@ -1,9 +1,22 @@
+'use strict';
 
-// Gulp packages
+/**
+  * Usage :
+  *
+  * `gulp` : Lancer l'écoute des répertoire.
+  * `gulp archive` : Générer une archive du répertoire.
+  */
+
+
+/* =============================================================================
+   Configuration
+============================================================================= */
 
 try {
 
+// Packages
 var gulp             = require('gulp'), // gulp core.
+    $                = require('gulp-load-plugins')(), // Automatic plugins loads
     gutil            = require('gulp-util'), // Display logs in console.
     sass             = require('gulp-sass'), // Compile SASS code.
     jshint           = require('gulp-jshint'), // JS Code quality.
@@ -23,85 +36,75 @@ var gulp             = require('gulp'), // gulp core.
   gutil.log('>> ' + err.message);
 
   return;
-
 }
 
-// Define the default task
-gulp.task('default', ['sprites', 'build-css', 'watch']);
+
+// Project
+var project = {
+  namespace: 'mockup'
+}
+
+// Paths
+var paths = {
+  js: 'assets/js/',
+  css: 'assets/css/',
+  scss: 'sources/scss/',
+  img: 'assets/img/',
+  sprites: 'sources/sprites/'
+}
+
+// Errors managment
+var onError = function(err) {
+  gutil.log(err.message);
+  this.emit('end');
+}
 
 
-// Compile SASS
+/* =============================================================================
+   Build tasks
+============================================================================= */
+
+/**
+  * Build CSS
+  *
+  * Compilation SASS
+  * Génération des sourcemaps
+  * Autoprefixer
+  */
 gulp.task('build-css', function() {
 
-  gutil.log(' ');
-  gutil.log(' ');
+  console.log('');
+  console.log('');
 
-  return gulp.src('sources/scss/**/*.scss')
+  return gulp.src(paths.scss + '**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass())
     .on('error', onError)
     .pipe(postcss([ autoprefixer({ browsers: ['last 3 versions', '> 1%'] }) ]))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('assets/css'))
+    .pipe(gulp.dest(paths.css))
     .pipe(bless({
       log: true,
       imports: false,
       suffix: '-part-'
     }))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('assets/css/'));
+    .pipe(gulp.dest(paths.css));
 
 });
 
 
-// Avoid crash on error
-function onError(err) {
-  gutil.log(err.message);
-  this.emit('end');
-}
-
-
-gulp.task('styleguide', function() {
-  return gulp.src('./sources/styleguide/aigis_config.yml')
-    .pipe(aigis());
-});
-
-
-
-gulp.task('lint-css', function lintCssTask() {
-
-  return gulp
-    .src('sources/scss/**/*.scss')
-    .pipe(ignore.exclude('**/_sprites.scss'))
-    .pipe(stylelint({
-      syntax: 'scss',
-      reporters: [
-        {formatter: 'string', console: true}
-      ]
-    }));
-});
-
-
-// JS hint
-gulp.task('jshint', function() {
-  return gulp.src('assets/js/**/*.js')
-    .pipe(ignore.exclude('**/lib/*.js'))
-    .pipe(ignore.exclude('**/plugins/contrib/*.js'))
-    .pipe(jshint())
-    .pipe(jshint.reporter('jshint-stylish'));
-});
-
-
+// Build sprites.
 gulp.task('sprites', function () {
 
   var fs = require('fs');
   var hash = '';
 
-  if (fs.existsSync('assets/img/sprites.png')) {
-    hash = md5File.sync('assets/img/sprites.png');
+  if (fs.existsSync(paths.img + 'sprites.png')) {
+    hash = md5File.sync(paths.img + 'sprites.png');
   }
 
-  var spriteData = gulp.src('sources/sprites/*.png')
+  var spriteData = gulp.src(paths.sprites + '*.png')
       .pipe(spritesmith({
         /* this whole image path is used in css background declarations */
         imgName: '../img/sprites.png',
@@ -113,19 +116,81 @@ gulp.task('sprites', function () {
         cssOpts: {functions: false}
     }));
 
-  spriteData.img.pipe(gulp.dest('assets/img'));
-  spriteData.css.pipe(gulp.dest('sources/scss/theme/___global'));
+  spriteData.img.pipe(gulp.dest(paths.img));
+  spriteData.css.pipe(gulp.dest(paths.scss + 'theme/___global'));
 });
 
 
+// Build styleguide.
+gulp.task('styleguide', function() {
+  return gulp.src('./sources/styleguide/aigis_config.yml')
+    .pipe(aigis());
+});
 
 
-// Watch
+/* =============================================================================
+   Lint
+============================================================================= */
+
+// SCSS
+gulp.task('lint-css', function lintCssTask() {
+
+  return gulp
+    .src(paths.scss + '**/*.scss')
+    .pipe(ignore.exclude('**/_sprites.scss'))
+    .pipe(stylelint({
+      syntax: 'scss',
+      reporters: [
+        {formatter: 'string', console: true}
+      ]
+    }));
+});
+
+
+// JS
+gulp.task('jshint', function() {
+  return gulp.src(paths.js + '**/*.js')
+    .pipe(ignore.exclude('**/lib/*.js'))
+    .pipe(ignore.exclude('**/plugins/contrib/*.js'))
+    .pipe(jshint())
+    .pipe(jshint.reporter('jshint-stylish'));
+});
+
+
+/* =============================================================================
+   Others
+============================================================================= */
+
+// Build Zip
+gulp.task('archive', function () {
+
+  var now = new Date(),
+      date = now.getFullYear() + '-' + ('0' + (now.getMonth() + 1)).slice(-2) + '-' + ('0' + now.getDate()).slice(-2) + '__' + now.getHours() + 'h' + now.getMinutes(),
+      zipName = date + '__' + project.namespace + '.zip';
+
+  gutil.log(zipName);
+
+  return gulp.src(['./**/', '!./node_modules/**', '!./node_modules'])
+    .pipe($.zip(zipName))
+    .pipe(gulp.dest('./'));
+});
+
+
+/* =============================================================================
+   Defaut & watch
+============================================================================= */
+
+// Watch.
 gulp.task('watch', function() {
 
-  gulp.watch('sources/scss/**/*.scss', ['build-css', 'styleguide']);
-  gulp.watch('assets/js/**/*.js', ['jshint']);
-  gulp.watch('sources/sprites/*.png', ['sprites']);
-  gulp.watch('assets/css/*.css', ['lint-css']);
+  gulp.watch(paths.scss + '**/*.scss', ['build-css', 'styleguide']);
+  gulp.watch(paths.js + '**/*.js', ['jshint']);
+  gulp.watch(paths.sprites + '*.png', ['sprites']);
+  gulp.watch(paths.css + '*.css', ['lint-css']);
 
 });
+
+
+// Define the default task.
+gulp.task('default', ['sprites', 'build-css', 'watch']);
+
