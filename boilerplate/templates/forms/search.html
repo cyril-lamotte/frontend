@@ -1,44 +1,27 @@
 <!DOCTYPE html>
-<!--[if lte IE 7]>    <html lang="fr" class="ie7 lte-ie8"><![endif]-->
-<!--[if IE 8]>        <html lang="fr" class="ie8 lte-ie8"><![endif]-->
-<!--[if IE 9]>        <html lang="fr" class="ie9"><![endif]-->
-<!--[if gt IE 9]><!--><html lang="fr"><!--<![endif]-->
+<html lang="fr">
 <head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1.0">
-  <meta name="format-detection" content="telephone=no">
-  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
-
   <title>Search</title>
-
-  <link rel="stylesheet" href="../assets/css/normalize.css" />
-  <link rel="stylesheet" href="../assets/css/style.css" />
-  <link rel="stylesheet" href="../assets/css/print.css" media="print" />
-
 </head>
 
 <body>
 
-<div class="wrapper">
+<div class="search" role="search">
+  <form action="#" method="post">
 
-  <main id="a_content" role="main">
+    <div>
+      <label for="search">Rechercher</label>
+      <input type="text" name="search" id="search" placeholder="Mots-clés" value="" />
+      <button type="submit" title="Lancer la recherche" aria-label="Lancer la recherche">Ok</button>
+    </div>
 
-    <div class="search" role="search">
-      <form action="#" method="post">
+    <!--
+      A11y: Ok n'est pas assez explicite, préférer "Rechercher", sinon, utiliser
+      "aria-label" pour améliorer le libellé.
+    -->
 
-        <div>
-          <label for="search">Rechercher</label>
-          <input type="text" name="search" id="search" placeholder="Mots-clés" value="" />
-          <button type="submit" title="Lancer la recherche">Ok</button>
-        </div>
-
-      </form>
-    </div><!--/form-search-->
-
-  </main>
-
-</div><!--/wrapper-->
+  </form>
+</div><!--/form-search-->
 
 </body>
 </html>
