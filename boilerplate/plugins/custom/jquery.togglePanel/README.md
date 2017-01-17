@@ -32,10 +32,11 @@ Plugin jQuery - Afficher un élément aprés un évènement sur un autre éléme
 ### 2. JavaScript
 
 ```js
-// Display/Hide panels
+// Toggle panel.
 $('#trigger').togglePanel({
   panel: 'id',
-  autoFocus: false
+  autoFocus: false,
+  panelLabel: 'Recherche'
 });
 ```
 
@@ -63,6 +64,7 @@ Name                 | Type   | Description                                     
 ---------------------|--------|---------------------------------------------------------|-------------------
 prefix               | String | Generated classes prefix                                | 'tgp-'
 panel                | String | the panel can be the next element or defined by its id  | 'id' / 'next' (default: 'next')
+panelLabel           | String | Label for accessibility                                 | 'Panel'
 mode                 | String | 'toggle' / 'slide'                                      | 'slide' / 'toggle' (default: 'slide')
 wrapper              | Object | Wrapper of connected panels                             | false
 connect              | Bool   | If true, only one panel can be shown                    | false
