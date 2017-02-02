@@ -1,7 +1,7 @@
 (function( $ ){
 
   /**
-  * Plugin jQuery equalize v1.4.0
+  * Plugin jQuery equalize v1.5.0
   * @link https://github.com/cyril-lamotte/frontend/tree/master/boilerplate/plugins/dev/jquery.equalize
   */
 
@@ -9,65 +9,77 @@
 
     var $boxes = $(this);
     var minHeight = 0;
-    var arrayLines = [];
+    var offsetLines = [];
 
-    $boxes.on('equalize.equalize', function() {
+    $boxes
+      .on('equalize.equalize', function() {
 
-      $(this).each(function(i, el) {
+        // Enable equalizing.
 
-        var offsetTop = Math.round( $(el).offset().top );
-        var offsetLabel = 'offset-'+ offsetTop;
+        var $box = $(this);
+
+        // Get vertical position for box grouping.
+        var offsetTop = Math.round($box.offset().top);
+        var offsetLabel = 'offset-' + offsetTop;
         var offsetLabelRounded = null;
+        var offsetLabelPlus1 = 'offset-' + (offsetTop + 1);
+        var offsetLabelMinus1 = 'offset-' + (offsetTop - 1);
 
+        $box.attr('data-eq-offset', offsetTop);
 
-        // Create table
-        // 2px range
-        if( ! arrayLines[offsetLabel] && ! arrayLines['offset-'+ (offsetTop + 1)] && ! arrayLines['offset-'+ (offsetTop - 1)] ) {
-          arrayLines[offsetLabel] = Array();
-          arrayLines[offsetLabel].push(el);
+        // Create table of the boxes sorted by "offsetTop".
+        //
+        // All boxes with the same offsetTop (2px range) are pushed in an array cell.
 
-          // This offset doesn't exists, add a "new line" class
-          $(el).addClass('equalize--new-line');
+        // Determinate if a similar offsetTop already exists.
+        var exact = offsetLabel in offsetLines;
+        var plus1 = offsetLabelPlus1 in offsetLines;
+        var minus1 = offsetLabelMinus1 in offsetLines;
+
+        // None of the tree values exists, create new line.
+        if (!exact && !plus1 && !minus1) {
+          offsetLines[offsetLabel] = new Array();
+          offsetLines[offsetLabel].push(this);
         }
         else {
-
-          if( arrayLines[offsetLabel] ) {
+          // Value exists, so determinate
+          if (exact) {
             offsetLabelRounded = offsetLabel;
           }
-          else if( arrayLines['offset-'+ (offsetTop + 1)] ) {
-            offsetLabelRounded = 'offset-'+ (offsetTop + 1);
+          else if (plus1) {
+            offsetLabelRounded = offsetLabelPlus1;
           }
-          else if( arrayLines['offset-'+ (offsetTop - 1)] ) {
-            offsetLabelRounded = 'offset-'+ (offsetTop - 1);
+          else if (minus1) {
+            offsetLabelRounded = offsetLabelMinus1;
           }
 
+          offsetLines[offsetLabelRounded].push(this);
+
+          // Get max.
+          // We use getBoundingClientRect() to manage subpixels.
+          minHeight = Math.max(offsetLines[offsetLabelRounded][0].getBoundingClientRect().height, this.getBoundingClientRect().height);
 
 
-          arrayLines[offsetLabelRounded].push(el);
-          var length = arrayLines[offsetLabelRounded].length;
-
-          minHeight = Math.max(arrayLines[offsetLabelRounded][0].offsetHeight, this.offsetHeight);
-
-          // Apply minHeight
-          $.each(arrayLines[offsetLabelRounded], function(i, el) {
-            $(el).css('minHeight', minHeight+1).addClass('is-equalized');
+          // Apply minHeight.
+          $.each(offsetLines[offsetLabelRounded], function(i, box) {
+            $(box).css('minHeight', minHeight);
           });
 
         }
 
+        $box.addClass('is-equalized');
+
+      })
+      .on('destroy.equalize', function() {
+
+        // Destroy.
+
+        $(this)
+          .removeClass('is-equalized')
+          .removeAttr('style')
+          .removeAttr('data-eq-offset');
+
       });
-
-    });
-
-
-    // Destroy
-    $boxes.on('destroy.equalize', function() {
-
-      $(this)
-        .removeClass('is-equalized equalize--new-line')
-        .removeAttr('style');
-
-    });
 
 
     // Refresh on resize
@@ -78,20 +90,21 @@
 
       window.timeoutID = window.setTimeout(function() {
 
-        $boxes.trigger('destroy.equalize');
-        $boxes.trigger('equalize.equalize');
+        $boxes
+          .trigger('destroy.equalize')
+          .trigger('equalize.equalize');
 
       }, 300);
 
     });
 
+    // Browse all boxes.
     $boxes.trigger('equalize.equalize');
 
+    //console.log(offsetLines);
 
     return $(this);
 
   };
-
-
 
 })( jQuery );

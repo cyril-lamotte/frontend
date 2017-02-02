@@ -28,7 +28,7 @@
     .box {
       border: 1px solid #000;
       margin: 10px;
-      width: 200px;
+      width: 20%;
       float: left;
     }
 
@@ -83,7 +83,7 @@
 </div><!--/outer-wrap-->
 
 <!-- Scripts at the bottom for better performances -->
-<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
 <script src="jquery.equalize.js"></script>
 <script>
 
@@ -92,14 +92,11 @@
 /* Execute code when the DOM is fully loaded */
 $(document).ready(function() {
 
-  // Pop
   //$('.box').equalize();
-
 
   $('#destroy').click(function (event) {
     $('.box').trigger('destroy.equalize');
   });
-
 
   $('#enable').click(function (event) {
     $('.box').equalize();
