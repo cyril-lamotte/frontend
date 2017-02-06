@@ -7,4 +7,8 @@
 
 "use strict";
 
+//app.functionName = function() {
+//
+//}
+
 })(jQuery);
