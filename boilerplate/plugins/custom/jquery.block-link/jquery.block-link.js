@@ -34,8 +34,6 @@
 
     var attachEvents = function() {
 
-      console.log(plugin.settings.blocks);
-
       // Init blocks.
       $('body').on('mouseenter touchstart', plugin.settings.blocks, function (event) {
 
@@ -54,7 +52,7 @@
         .trigger('touchstart');
 
 
-      $('body').on('click', plugin.settings.target, function(event, eventType) {
+      $('body').on('click', plugin.settings.blocks + ' ' + plugin.settings.target, function(event, eventType) {
         event.stopPropagation();
 
         // Block was clicked.
@@ -98,7 +96,7 @@
       });
 
       // Do not propagate mouseup event (to avoid double tab with middle button).
-      $('body').on('mouseup', plugin.settings.target, function (event) {
+      $('body').on('mouseup', plugin.settings.blocks + ' ' + plugin.settings.target, function (event) {
         event.stopPropagation();
       });
 
