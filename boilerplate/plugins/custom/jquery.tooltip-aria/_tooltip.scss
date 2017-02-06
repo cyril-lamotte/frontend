@@ -1,0 +1,16 @@
+/* =============================================================================
+   Tooltip
+============================================================================= */
+
+.ta__tooltip[aria-hidden="true"] {
+  display: none;
+}
+
+.ta__tooltip {
+  position: absolute;
+  z-index: 10;
+  color: $red;
+  background-color: #fff;
+  padding: 2px 5px;
+}
+
