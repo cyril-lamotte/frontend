@@ -1,4 +1,4 @@
-# jQuery togglePanel
+# jQuery toggle-panel
 
 Plugin jQuery - Afficher un élément aprés un évènement sur un autre élément
 (Ex: Bouton qui affiche un div)
@@ -16,7 +16,7 @@ Plugin jQuery - Afficher un élément aprés un évènement sur un autre éléme
 ### 1. Join plugin
 
 ```html
-<script src="js/jquery.togglePanel.js"></script>
+<script src="js/jquery.toggle-panel"></script>
 ```
 
 ```html
@@ -52,8 +52,6 @@ $('#trigger').togglePanel({
 .tgp--is-opened {
   display: block;
 }
-
-
 ```
 
 
@@ -63,7 +61,7 @@ $('#trigger').togglePanel({
 Name                 | Type   | Description                                             | Default or options
 ---------------------|--------|---------------------------------------------------------|-------------------
 prefix               | String | Generated classes prefix                                | 'tgp-'
-panel                | String | the panel can be the next element or defined by its id  | 'id' / 'next' (default: 'next')
+panel                | String | the panel can be the next element or defined by its id  | 'id' / 'next' / 'function' (default: 'next')
 panelLabel           | String | Label for accessibility                                 | 'Panel'
 mode                 | String | 'toggle' / 'slide'                                      | 'slide' / 'toggle' (default: 'slide')
 wrapper              | Object | Wrapper of connected panels                             | false
@@ -72,9 +70,9 @@ selfClose            | Bool   | Allow the trigger to close its panel            
 autoFocus            | Bool   | Focus is moved to panel at opening                      | true
 returnFocus          | Bool   | Return focus to the trigger after closing               | true
 onShow()             | Method | Do stuff after showing                                  | function() {}
+onShowEnd() & onHideEnd | Method | Do stuff after sliding FX                            | function() {}
 onHide()             | Method | Do stuff after hiding                                   | function() {}
-
-
+findPanel()          | Method | If 'panel' setting = "function", this function will be called, must return a valid element (the content panel) | function() {}
 
 
 ### 5. Events
