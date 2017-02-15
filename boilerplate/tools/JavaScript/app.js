@@ -1,7 +1,7 @@
 /**
- * @file App initialisation & domready event
+ * @file App initialisation & domready event.
  *
- * Only the "app" variable is created in window's range.
+ * Only the "app" variable is exposed to window's context.
  */
 
 (function($) {
@@ -10,7 +10,7 @@
 
 window.app = {};
 
-// Execute code when the DOM is fully loaded
+// Execute code when the DOM is fully loaded.
 $(function() {
 
 

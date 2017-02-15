@@ -1,5 +1,5 @@
 /**
- * @file UI methods
+ * @file UI methods.
  *
  */
 
