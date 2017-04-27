@@ -6,19 +6,44 @@ Menu Preferences / Browse Packages...
 
 ## Packages Sublime Text
 
+### Améliorations
+
 Package                                                     | Description
 ------------------------------------------------------------|-------------------------------------
 [Package Control](http://wbond.net/sublime_packages/package_control/installation) | Gestion des packages
+[Project-Manager](https://github.com/randy3k/Project-Manager) | Gérer les projets
 [Open-Include](https://github.com/SublimeText/Open-Include) | Ouvrir un fichier depuis l'HTML avec `ALT+D`
 _SideBar Enhancement_                                       | Ajout de fonctionnalités dans la barre latérale
 _Emmet_                                                     | Écriture raccourcie ([Documentation](http://docs.emmet.io/), [Cheat-sheet](http://docs.emmet.io/cheat-sheet/))
-[Livestyle](http://livestyle.emmet.io/) | Styler en direct dans le navigateur
+[Livestyle](http://livestyle.emmet.io/)                     | Styler en direct dans le navigateur
+
+
+
+### Formatage et coloration syntaxique
+
+Package                                                     | Description
+------------------------------------------------------------|-------------------------------------
 [CSS Format](https://sublime.wbond.net/packages/CSS%20Format) | Formater le code CSS
-[Project-Manager](https://github.com/randy3k/Project-Manager) | Gérer les projets
 SCSS                                                        | Coloration syntaxique
+Angular                                                     | Coloration syntaxique
+
+
+
+### Workflow
+
+Package                                                     | Description
+------------------------------------------------------------|-------------------------------------
+[Gulp](https://github.com/NicoSantangelo/sublime-gulp)      | Lancer des tâches gulp depuis ST.
+
+
+### Lint
+
+Package                                                     | Description
+------------------------------------------------------------|-------------------------------------
 SublimeLinter-jshint                                        | Nécessite npm jshint
 SublimeLinter-csslint                                       | Nécessite npm csslint
 SublimeLinter-html-tidy                                     | Nécessite tidy.exe http://tidybatchfiles.info/  (+ dans le PATH Windows)
+
 
 
 
