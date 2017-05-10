@@ -32,7 +32,7 @@
 ```js
 $(document).ready(function() {
 
-  // Back to top link
+  // Back to top link.
   $('#back-to-top').backToTop({
     threshold: 200,
     offset: 200
