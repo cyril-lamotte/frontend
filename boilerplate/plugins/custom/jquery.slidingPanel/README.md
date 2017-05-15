@@ -70,8 +70,8 @@ $('#sliding-panel').slidingPanel({
 
 ## CSS
 
-* [CSS](sliding-panel.css)
-* [SCSS](sliding-panel.scss)
+* [CSS](src/sliding-panel.css)
+* [SCSS](src/sliding-panel.scss)
 
 
 
