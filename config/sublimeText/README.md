@@ -21,19 +21,24 @@ _Emmet_                                                     | Écriture raccourc
 
 ### Formatage et coloration syntaxique
 
-Package                                                     | Description
-------------------------------------------------------------|-------------------------------------
+Package                                                       | Description
+--------------------------------------------------------------|-------------------------------------
 [CSS Format](https://sublime.wbond.net/packages/CSS%20Format) | Formater le code CSS
-SCSS                                                        | Coloration syntaxique
-Angular                                                     | Coloration syntaxique
-
+[HTML Beautify](https://github.com/rareyman/HTMLBeautify)     | Formater le code HTML
+Syntax Highlighting for SASS                                  | Coloration syntaxique
+Twig                                                          | Coloration syntaxique
+TypeScript                                                    | Coloration syntaxique
+[AngularJS](https://github.com/angular-ui/AngularJS-sublime-package)  | Code completion, snippets...
+ApacheConf.tmLanguage                                         | Coloration syntaxique pour les fichiers de conf Apache
+Text Pastry                                                   | Insérer des suite de nombre automatiquement
 
 
 ### Workflow
 
 Package                                                     | Description
 ------------------------------------------------------------|-------------------------------------
-[Gulp](https://github.com/NicoSantangelo/sublime-gulp)      | Lancer des tâches gulp depuis ST.
+[Git](https://github.com/kemayo/sublime-text-git/wiki)      | Lancer des commande git depuis ST.
+[GitGutter](https://github.com/jisaacks/GitGutter)          | Affiche les informations git dans ST.
 
 
 ### Lint
