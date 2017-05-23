@@ -37,6 +37,7 @@ Menu déroulant.
 ```css
 .sub-nav {
   display: none;
+  position: absolute;
 }
 ```
 

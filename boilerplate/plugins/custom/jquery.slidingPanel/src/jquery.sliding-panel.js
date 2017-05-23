@@ -47,7 +47,8 @@
         var s = document.createElement('p').style, // 's' for style. better to create an element if body yet to exist
             v = ['ms','O','Moz','Webkit']; // 'v' for vendor
 
-        if( s['transition'] == '' ) return true; // check first for prefeixed-free support
+        if( s.transition === '' )
+          return true; // check first for prefeixed-free support
         while( v.length ) // now go over the list of vendor prefixes and check support until one is found
             if( v.pop() + 'Transition' in s )
                 return true;
@@ -246,7 +247,7 @@
       // Hide panel width ESC key and clic outside.
       $body.keydown(function(event) {
 
-        // ESC
+        // ESC.
         if (event.keyCode == 27) {
           $panel.trigger('hide.sp');
         }
@@ -291,7 +292,7 @@
       attachGlobalEvents();
 
       // Move focus to first focusable element when last focusable element
-      // loose focus.
+      // lose focus.
       plugin.settings.focusableElementsLast.keydown(function(event) {
 
         // TAB

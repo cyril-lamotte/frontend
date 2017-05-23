@@ -1,8 +1,3 @@
-/**
- * @file UI methods
- *
- */
-
 (function( $ ) {
 
   $.dropDownNav = function(element, options) {
@@ -11,7 +6,7 @@
     var defaults = {
       prefix: 'ddn-',
       event: 'hover',
-      subSelector: '> li > ul',
+      subSelector: '> li > div',
       delay: 300,
       position: {
         my: 'left top',
@@ -22,7 +17,8 @@
     };
 
     var plugin = this,
-        $nav = $(element);
+        $nav = $(element),
+        $body = $('body');
 
     plugin.settings = {};
 
@@ -53,9 +49,6 @@
 
       plugin.settings.$level1 = $nav.find('> li > a, > li > span');
 
-      // Make level 1 focusable.
-      plugin.settings.$level1.attr('tabindex', 0);
-
       // Save parents.
       plugin.settings.$parents = $nav.find('.'+ plugin.settings.prefix +'-parent');
 
@@ -63,6 +56,8 @@
       plugin.settings.$subs = $nav.find('.'+ plugin.settings.prefix +'-sub');
 
       plugin.settings.hoverTimer = null;
+
+      initAttributes();
 
       // Initialiser le marqueur de survol
       setFlag(false);
@@ -72,6 +67,21 @@
 
     };
 
+
+    var initAttributes = function() {
+
+      // Make level 1 focusable.
+      plugin.settings.$level1.attr({
+        'aria-expanded': false,
+        //'aria-controls': $panel.attr('id'),
+        'tabindex': 0
+      });
+
+      plugin.settings.$subs.attr({
+        'aria-hidden': true
+      });
+
+    };
 
 
     /** Attach global events */
@@ -96,7 +106,7 @@
                 }
               }
 
-              // If element has children..
+            // If element has children...
               if ($(this).hasClass(plugin.settings.prefix +'-parent')) {
 
                 var $level1 = $(this);
@@ -171,7 +181,14 @@
         }
 
 
-      $('body').on('click.ddn', function(event) {
+      $body.keydown(function(event) {
+
+        // ESC
+        if (event.keyCode == 27) {
+          plugin.settings.$parents.trigger('hide.ddn');
+        }
+
+      }).on('click.ddn', function(event) {
         plugin.settings.$parents.trigger('hide.ddn');
       });
 
@@ -204,12 +221,20 @@
     };
 
 
-    // Afficher le sous-menu
+    // Show sub.
     var show = function( $trigger ) {
 
-      $trigger.addClass(plugin.settings.prefix +'-opened');
+      $trigger
+        .addClass(plugin.settings.prefix +'-opened')
+        .attr({
+          'aria-expanded': true
+        });
 
       $sub = $trigger.next();
+
+      $sub.attr({
+        'aria-hidden': false
+      });
 
       // Positioning.
       if( ! plugin.settings.customPositionOf )
@@ -223,18 +248,33 @@
     };
 
 
-    // Masquer les sous-menu
+    // Hide subs.
     var hide = function( $trigger ) {
 
-      $trigger.removeClass(plugin.settings.prefix +'-opened');
+      if ($trigger.hasClass(plugin.settings.prefix +'-opened')) {
+        $trigger.focus();
+      }
+
+
+      $trigger
+        .removeClass(plugin.settings.prefix +'-opened')
+        .attr({
+          'aria-expanded': false
+        });
+
       $sub = $trigger.next();
-      // Callback function
+      $sub.attr({
+        'aria-hidden': true
+      });
+
+
+      // Callback function.
       plugin.settings.onHide($sub);
 
     };
 
 
-    // Masquer le sous-menu avec temporisation
+    // Hide sub with timeout.
     var hideWithTimeout = function( $sub ) {
 
       plugin.timeoutID = window.setTimeout(function() {
@@ -247,7 +287,7 @@
     };
 
 
-    // Définir le flag
+    // Set flag.
     var setFlag = function(flag) {
       $nav.data('flag', flag);
     };

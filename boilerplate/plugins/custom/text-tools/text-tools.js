@@ -1,31 +1,44 @@
+(function($) {
+
+"use strict";
 
 /**
- * Manages text size
- * @param {object} options.target - jQuery Object to follow
+ * Manages text size.
+ * @param {object} options.target - CSS selector
  */
-app.ui.textTools = function(target) {
+app.textTools = function(target) {
 
   var $target = $(target);
   var step = 2;
   var minSize = 10;
   var maxSize = 24;
+  var rem = 10;
 
-  $('button.js-text-plus').click(function (event) {
+  $('button[data-init="text-plus"]').click(function (event) {
 
     var currentSize = parseInt($target.css('fontSize'), 10);
 
-    if(currentSize < maxSize)
-    $target.css('fontSize', currentSize + step);
+    if (currentSize < maxSize)
+      $target.css('fontSize', (currentSize + step)/16 + 'rem');
 
   });
 
-  $('button.js-text-minus').click(function (event) {
+
+  $('button[data-init="text-default"]').click(function (event) {
+    $target.removeAttr('style');
+  });
+
+
+  $('button[data-init="text-minus"]').click(function (event) {
 
     var currentSize = parseInt($target.css('fontSize'), 10);
 
-    if(currentSize > minSize)
-      $target.css('fontSize', currentSize - step);
+    if (currentSize > minSize)
+      $target.css('fontSize', (currentSize - step)/16 + 'rem');
 
   });
 
 };
+
+
+})(jQuery);
