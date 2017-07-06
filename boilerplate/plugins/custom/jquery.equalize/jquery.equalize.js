@@ -27,8 +27,7 @@
 
         $box.attr('data-eq-offset', offsetTop);
 
-        // Create table of the boxes sorted by "offsetTop".
-        //
+        // Create array of boxes sorted by "offsetTop".
         // All boxes with the same offsetTop (2px range) are pushed in an array cell.
 
         // Determinate if a similar offsetTop already exists.
@@ -38,11 +37,11 @@
 
         // None of the tree values exists, create new line.
         if (!exact && !plus1 && !minus1) {
-          offsetLines[offsetLabel] = new Array();
+          offsetLines[offsetLabel] = [];
           offsetLines[offsetLabel].push(this);
         }
         else {
-          // Value exists, so determinate
+          // Value exists, so determinate.
           if (exact) {
             offsetLabelRounded = offsetLabel;
           }
@@ -82,10 +81,10 @@
       });
 
 
-    // Refresh on resize
+    // Refresh on resize.
     $(window).on('resize.equalize', function() {
 
-      // Do not trigger refresh if window is still resizing
+      // Do not trigger refresh if window is still resizing.
       window.clearTimeout(window.timeoutID);
 
       window.timeoutID = window.setTimeout(function() {

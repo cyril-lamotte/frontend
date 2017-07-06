@@ -141,7 +141,7 @@
       $body.addClass(plugin.settings.prefix + '-is-expanded');
 
       if ( ! plugin.settings.supportsTransitions) {
-        transitionend();
+        transitionend(false);
       }
 
     };
@@ -161,14 +161,19 @@
         .removeClass(plugin.settings.prefix + '-trigger--is-active');
 
       if ( ! plugin.settings.supportsTransitions) {
-        transitionend();
+        transitionend(false);
       }
 
     };
 
 
     /** Do DOM work after animation.  */
-    var transitionend = function() {
+    var transitionend = function(event) {
+
+      // Transition is on this panel.
+      if(event && event.eventPhase != 2) {
+        return false;
+      }
 
       // Panel is open.
       if ($body.hasClass(plugin.settings.prefix + '-is-expanded')) {
@@ -244,7 +249,7 @@
     /** Attach global events */
     var attachGlobalEvents = function() {
 
-      // Hide panel width ESC key and clic outside.
+      // Hide panel with ESC key and clic outside.
       $body.keydown(function(event) {
 
         // ESC.
@@ -252,8 +257,8 @@
           $panel.trigger('hide.sp');
         }
 
-      }).click(function(event) {
-        $panel.trigger('hide.sp');
+      }).on('click', function(event) {
+        //$panel.trigger('hide.sp'); // TO FIX : Remove because touch on large tablet.
       });
 
       // Hide on orientationchange & on desktop while resizing.
@@ -285,7 +290,7 @@
       $panel
         .on('show.sp', function() { showPanel(); })
         .on('hide.sp', function() { hidePanel(); })
-        .on('transitionend', function() { transitionend(); })
+        .on('transitionend', function(event) { transitionend(event); })
         .on('click', function (event) { event.stopPropagation(); });
 
       attachTriggerEvents();

@@ -50,14 +50,14 @@
 
         $.each(plugin.settings.$subLevels, function(i, el) {
           $(this).prev().clone().prependTo($(this)).removeClass('active '+ plugin.settings.prefix +'parent').addClass(plugin.settings.prefix +'parent-clone');
-          $(this).prepend('<button type="button" class="'+ plugin.settings.prefix +'-back"><span>'+ $(this).prev().text() +'</span></button>');
+          $(this).prepend('<button type="button" class="'+ plugin.settings.prefix +'-back"><span class="back-arrow"></span><span>'+ $(this).prev().text() +'</span></button>');
         });
 
       }
       else {
 
         $.each(plugin.settings.$subLevels, function(i, el) {
-          $(this).prepend('<button type="button" class="'+ plugin.settings.prefix +'-back"><span>'+ $(this).prev().text() +'</span></button>');
+          $(this).prepend('<button type="button" class="'+ plugin.settings.prefix +'-back"><span class="back-arrow"></span><span>'+ $(this).prev().text() +'</span></button>');
         });
 
       }

@@ -16,18 +16,20 @@ Multi-level navigation
 ```
 
 ```html
-<ul class="nav">
-  <li><a href="#">Lorem ipsum</a></li>
-  <li><a href="#">Lorem ipsum</a></li>
-  <li>
-    <a href="#">Lorem ipsum</a>
-    <ul>
-      <li><a href="#">Lorem ipsum</a></li>
-      <li><a href="#">Lorem ipsum</a></li>
-      <li><a href="#">Lorem ipsum</a></li>
-    </ul>
-  </li>
-</ul>
+<div class="menu-level-wrapper">
+  <ul class="nav">
+    <li><a href="#">Lorem ipsum</a></li>
+    <li><a href="#">Lorem ipsum</a></li>
+    <li>
+      <a href="#">Lorem ipsum</a>
+      <ul>
+        <li><a href="#">Lorem ipsum</a></li>
+        <li><a href="#">Lorem ipsum</a></li>
+        <li><a href="#">Lorem ipsum</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
 ```
 
 ## Theme
@@ -38,7 +40,9 @@ Multi-level navigation
 ## JavaScript
 
 ```js
-$('.menu-level-wrapper').menuLevel();
+$('.menu-level-wrapper').menuLevel({
+  'sublevel': 'ul > li > ul',
+});
 ```
 
 ### Options
