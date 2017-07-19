@@ -30,7 +30,7 @@ Equalize blocks height which have the same offsetTop.
 ### 2. JavaScript
 
 ```js
-$(window).load(function() {
+$(window).on('load', function() {
 
   // Equalize blocks height
   $('.box').equalize();

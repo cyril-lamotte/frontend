@@ -15,7 +15,7 @@
 ```html
 <!--Back to top button-->
 <div id="back-to-top" class="back-to-top">
-  <a href="#top">Haut de page</a>
+  <a href="#top"><span>Haut de page</span></a>
 </div>
 ```
 

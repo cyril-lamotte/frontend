@@ -7,19 +7,19 @@
   bottom: -1em;
   right: 1em;
   z-index: 10;
+  transition: 1s;
+  opacity: 0;
 
   @include mq-to( 'sm' ) {
     bottom: auto;
-    top: -1em;
-  }
-
-  .js & {
-    opacity: 0;
-    transition: 1s;
+    top: -4em;
   }
 
   > a {
+    position: relative;
     display: block;
+    width: 40px;
+    height: 40px;
     padding: 0.5em;
     text-align: center;
     text-decoration: none;
@@ -32,19 +32,35 @@
       padding: 10px 15px;
     }
 
-
+    &:after,
     &:before {
-      content: '';
-      @include sprite($page-up);
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 5px;
-      margin-bottom: 2px;
-
-      @include mq-to( 'sm' ) {
-        margin: 0;
-      }
+      bottom: 15px;
+      left: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
     }
+
+    &:after {
+      border-color: rgba(0, 0, 0, 0);
+      border-bottom-color: #000;
+      border-width: 10px;
+      margin-left: -10px;
+    }
+    &:before {
+      border-color: rgba(255, 255, 255, 0);
+      border-bottom-color: #fff;
+      border-width: 11px;
+      margin-left: -11px;
+    }
+
+    @include hover {
+      opacity: 1;
+    }
+
   }
 
   @include hover {
@@ -52,17 +68,15 @@
     bottom: 1em;
   }
 
-  span {
 
-    @include mq-to( 'sm' ) {
-      @include hide-text;
-    }
+  span {
+    @include hide-text;
   }
 
 }
 
 
-.js .back-to-top--is-visible {
+.back-to-top--is-visible {
   opacity: 1;
   bottom: 1em;
 

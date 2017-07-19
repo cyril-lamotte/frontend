@@ -14,7 +14,7 @@
     // Defaults options.
     var defaults = {
       threshold: 200,
-      visibleClass: 'back-to-top--visible',
+      visibleClass: 'back-to-top--is-visible',
       offset: 0,
       scrollDuration: 500
     };
