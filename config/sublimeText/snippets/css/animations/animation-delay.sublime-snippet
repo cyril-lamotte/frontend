@@ -1,6 +1,6 @@
 <snippet>
-    <content><![CDATA[-webkit-animation-delay: ${1:1s};]]></content>
+    <content><![CDATA[animation-delay: ${1:1s};]]></content>
     <tabTrigger>delay</tabTrigger>
-    <scope>source.css</scope>
+    <scope>source.css, source.scss</scope>
     <description>animation-delay</description>
 </snippet>

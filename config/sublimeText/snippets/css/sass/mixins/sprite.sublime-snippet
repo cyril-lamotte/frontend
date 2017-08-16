@@ -1,0 +1,6 @@
+<snippet>
+  <content><![CDATA[@include sprite(\$${1:sprite-name});]]></content>
+  <tabTrigger>sprite</tabTrigger>
+  <scope>source.scss</scope>
+  <description>Mixin sprite()</description>
+</snippet>

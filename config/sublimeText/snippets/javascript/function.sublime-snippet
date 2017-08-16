@@ -6,12 +6,12 @@
  * @param {Type} name[].name - Description
  * @returns {Type} Description
  */
-app.ui.$0 = function() {
+app.$0 = function() {
 
 };
 
 ]]></content>
     <tabTrigger>function</tabTrigger>
     <scope>source.js</scope>
-    <description>function app.ui</description>
+    <description>function app.</description>
 </snippet>

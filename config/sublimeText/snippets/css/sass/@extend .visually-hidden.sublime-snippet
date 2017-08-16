@@ -1,6 +1,0 @@
-<snippet>
-    <content><![CDATA[@extend .visually-hidden;]]></content>
-    <tabTrigger>visually-hidden</tabTrigger>
-		<scope>source.scss</scope>
-    <description>@extend .visually-hidden</description>
-</snippet>

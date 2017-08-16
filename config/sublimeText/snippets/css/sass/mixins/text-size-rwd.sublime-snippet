@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[@include text-size-rwd(1.4rem);]]></content>
+    <tabTrigger>text size RWD</tabTrigger>
+		<scope>source.scss</scope>
+    <description>Font-size responsive</description>
+</snippet>

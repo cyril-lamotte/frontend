@@ -1,6 +1,0 @@
-<snippet>
-    <content><![CDATA[@include transform(rotate(180deg));]]></content>
-    <tabTrigger>rotate</tabTrigger>
-    <scope>source.scss</scope>
-    <description>@include transform(rotate(180deg));</description>
-</snippet>

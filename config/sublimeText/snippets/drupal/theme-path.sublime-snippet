@@ -1,0 +1,6 @@
+<snippet>
+  <content><![CDATA[drupal_get_path('theme', 'my_theme');]]></content>
+  <tabTrigger>theme-path</tabTrigger>
+  <scope>source.php, text.html</scope>
+  <description>Theme path drupal</description>
+</snippet>

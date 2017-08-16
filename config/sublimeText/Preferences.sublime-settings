@@ -19,7 +19,7 @@
 	],
 	"bold_folder_labels": true,
 	"close_windows_when_empty": false,
-	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Blackboard (SL).tmTheme",
 	"detect_slow_plugins": false,
 	"draw_minimap_border": true,
 	"draw_white_space": "selection",
@@ -33,16 +33,19 @@
 		"*.otf",
 		"*.woff",
 		"*.woff2",
-		"*.svg"
+		"*.svg",
+		"*.lnk",
+		"assets/css/style.css"
 	],
 	"folder_exclude_patterns":
 	[
 		".svn",
 		".git",
 		".sass-cache",
-		"node_modules"
+		"node_modules",
+		"dist"
 	],
-	"font_size": 10,
+	"font_size": 9,
 	"highlight_line": true,
 	"ignored_packages":
 	[
@@ -50,7 +53,6 @@
 	],
 	"index_exclude_patterns":
 	[
-		"D:\\www\\mockups.local\\dgefp\\www\\sirp*",
 		"*.log"
 	],
 	"rulers":
@@ -58,6 +60,7 @@
 		80
 	],
 	"save_on_focus_lost": false,
+	"show_encoding": true,
 	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,

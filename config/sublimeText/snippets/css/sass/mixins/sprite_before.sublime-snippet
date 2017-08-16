@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[
+content: '';
+display: inline-block;
+vertical-align: middle;
+margin-right: 10px;
+@include sprite(\$$0);
+]]></content>
+    <tabTrigger>sprite() > before</tabTrigger>
+    <scope>source.scss</scope>
+    <description>sprite() > before</description>
+</snippet>

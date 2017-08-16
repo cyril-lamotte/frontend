@@ -1,6 +1,0 @@
-<snippet>
-    <content><![CDATA[@include sprites-sprite('icon-plus');]]></content>
-    <tabTrigger>sprite</tabTrigger>
-		<scope>source.scss</scope>
-    <description>Mixin sprite</description>
-</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[@include mq-to('lg') {
+  $0
+}]]></content>
+    <tabTrigger>mqto lg</tabTrigger>
+    <scope>source.scss</scope>
+    <description>Media-querie Large</description>
+</snippet>

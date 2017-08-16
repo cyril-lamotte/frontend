@@ -1,6 +1,0 @@
-<snippet>
-    <content><![CDATA[@include transition(all 300ms);]]></content>
-    <tabTrigger>transition</tabTrigger>
-    <scope>source.scss</scope>
-    <description>@include transition(all 300ms);</description>
-</snippet>

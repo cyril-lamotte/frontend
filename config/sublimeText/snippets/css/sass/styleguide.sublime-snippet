@@ -1,0 +1,19 @@
+<snippet>
+    <content><![CDATA[/*
+---
+name: Nom du style
+category: Catégorie
+---
+
+```html
+Lorem ipsum
+```
+
+```sass
+@include [mixin];
+```
+*/]]></content>
+    <tabTrigger>styleguide</tabTrigger>
+    <scope>source.scss</scope>
+    <description>Styleguide</description>
+</snippet>

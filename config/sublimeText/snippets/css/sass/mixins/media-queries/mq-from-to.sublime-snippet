@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[@include mq-from-to('md1', 'md2') {
+  $0
+}]]></content>
+    <tabTrigger>mq from - to</tabTrigger>
+    <scope>source.scss</scope>
+    <description>Media-querie from (x) to (x)</description>
+</snippet>

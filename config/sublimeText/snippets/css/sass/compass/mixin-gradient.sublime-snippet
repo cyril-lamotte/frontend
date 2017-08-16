@@ -1,6 +1,0 @@
-<snippet>
-    <content><![CDATA[@include background-image(linear-gradient(#000, #fff));]]></content>
-    <tabTrigger>gradient</tabTrigger>
-		<scope>source.scss</scope>
-    <description>Mixin compass gradient</description>
-</snippet>

@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[font-family: \$font-alt;]]></content>
-    <tabTrigger>font-alt</tabTrigger>
+    <tabTrigger>font alt</tabTrigger>
 		<scope>source.scss</scope>
     <description>font-familly - Alternative</description>
 </snippet>

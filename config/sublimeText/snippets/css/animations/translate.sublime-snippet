@@ -1,6 +1,6 @@
 <snippet>
-    <content><![CDATA[translate3d(${1:0}px, ${2:0}px, ${3:0}px)]]></content>
+    <content><![CDATA[translate3d(${1:0}, ${2:0}, ${3:0})]]></content>
     <tabTrigger>translate3d</tabTrigger>
-    <scope>source.css</scope>
+    <scope>source.css, source.scss</scope>
     <description>translate3d(x, y, z)</description>
 </snippet>

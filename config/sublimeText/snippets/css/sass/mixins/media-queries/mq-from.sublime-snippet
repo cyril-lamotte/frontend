@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[@include mq-from('sm') {
+  $0
+}]]></content>
+    <tabTrigger>mqfrom</tabTrigger>
+    <scope>source.scss</scope>
+    <description>Media-querie from</description>
+</snippet>

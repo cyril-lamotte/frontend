@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[// Get image
+$img = theme_image(array(
+  'path' => path_to_theme() .'/assets/img/image.png',
+  'alt'  => t('Lorem ipsum'),
+  'title'  => t('Lorem ipsum'),
+  'attributes'  => array()
+));]]></content>
+    <tabTrigger>image</tabTrigger>
+    <scope>source.php, text.html</scope>
+    <description>Image drupal</description>
+</snippet>
