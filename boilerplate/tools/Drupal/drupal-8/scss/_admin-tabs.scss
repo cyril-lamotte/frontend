@@ -1,0 +1,60 @@
+@mixin admin-tabs {
+  will-change: transform;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 1.2rem;
+
+  @include mq-to( 'md' ) {
+    display: none;
+  }
+
+  ul {
+    background: #f0f0f0;
+    padding: 10px;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      margin: 0 5px 0 0;
+      padding: 0;
+      background: none;
+    }
+
+    a {
+      @include admin-link;
+    }
+
+    .active {
+      background: #333;
+      border-color: #333;
+      color: #fff;
+    }
+  }
+
+}
+
+
+// Admin links
+@mixin admin-link {
+  display: block;
+  background-color: #fff;
+  padding: 3px 10px;
+  color: #333;
+  border: 1px solid #d6d6d6;
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: 400;
+  font-size: 1em;
+
+  @include hover {
+    background: #333;
+    border-color: #333;
+    color: #fff;
+    text-decoration: none;
+  }
+}
