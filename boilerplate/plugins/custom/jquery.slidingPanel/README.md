@@ -77,11 +77,11 @@ $('#sliding-panel').slidingPanel({
 
 ## Options
 
-Options      | Type   | Description                    | Default
--------------|--------|--------------------------------|---------------
-prefix       | string | Classes prefix                 | 'sp-'
-trigger      | jQuery | "Burger" Button                | $('#trigger')
+Options      | Type   | Description                       | Default
+-------------|--------|-----------------------------------|---------------
+prefix       | string | Classes prefix                    | 'sp-'
+trigger      | jQuery | "Burger" Button                   | $('#trigger')
 wrapper      | jQuery | Site wrapper will move on opening | false
-overlay      | bool   | Add overlay                    | true
-onShow       | method | Triggered when panel is shown  | function() {}
-onHide       | method | Triggered when panel is hidden | function() {}
+overlay      | bool   | Add overlay                       | true
+onShow       | method | Triggered when panel is shown     | function() {}
+onHide       | method | Triggered when panel is hidden    | function() {}
