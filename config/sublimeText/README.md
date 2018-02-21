@@ -15,8 +15,6 @@ Package                                                     | Description
 [Open-Include](https://github.com/SublimeText/Open-Include) | Ouvrir un fichier depuis l'HTML avec `ALT+D`
 _SideBar Enhancement_                                       | Ajout de fonctionnalités dans la barre latérale
 _Emmet_                                                     | Écriture raccourcie ([Documentation](http://docs.emmet.io/), [Cheat-sheet](http://docs.emmet.io/cheat-sheet/))
-[Livestyle](http://livestyle.emmet.io/)                     | Styler en direct dans le navigateur
-
 
 
 ### Formatage et coloration syntaxique
