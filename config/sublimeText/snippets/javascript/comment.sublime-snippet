@@ -1,8 +1,12 @@
 <snippet>
     <content><![CDATA[
-/* -----------------------------------------------------------------------------
-   $0
------------------------------------------------------------------------------ */]]></content>
+/**
+ * Description
+ *
+ * @param {Object} name - Description
+ * @param {Type} name[].name - Description
+ * @returns {Type} Description
+ */]]></content>
     <tabTrigger>comment</tabTrigger>
     <scope>source.js</scope>
     <description>Commentaires</description>

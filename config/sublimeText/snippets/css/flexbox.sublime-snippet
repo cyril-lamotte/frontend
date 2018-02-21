@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[display: flex;
+flex-flow: row nowrap;
+justify-content: space-between;
+align-items: center;
+align-content: flex-start;]]></content>
+    <tabTrigger>flex</tabTrigger>
+    <scope>source.css, source.scss</scope>
+    <description>Flexbox</description>
+</snippet>

@@ -1,5 +1,6 @@
 [
   { "keys": ["ctrl+f1"], "command": "insert_snippet", "args": {"name": "Packages/User/snippets/javascript/console.log.sublime-snippet"} },
+  { "keys": ["ctrl+shift+keypad_plus"], "command": "insert_snippet", "args": {"name": "Packages/User/snippets/html/comment.sublime-snippet"} },
 
   /* Default ST3 */
   { "keys": ["ctrl+u"], "command": "soft_undo" },
