@@ -58,7 +58,13 @@
         scrollDestination -= settings.offset;
 
       // Do scroll.
-      $('body, html').animate({ scrollTop: scrollDestination }, settings.scrollDuration);
+      $('body, html').animate({ scrollTop: scrollDestination }, {
+        'duration' : settings.scrollDuration,
+        'complete' : function() {
+          // Move focus.
+          $target.find('a:visible, button:visible').first().focus();
+        }
+      });
 
     });
 

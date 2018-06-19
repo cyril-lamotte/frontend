@@ -30,11 +30,11 @@
       plugin.settings = $.extend({}, defaults, options);
 
       // Merge position object.
-      if( options )
+      if (options)
         plugin.settings.position = $.extend({}, defaults.position, options.position);
 
       // If a custom "of" is provided, init a setting.
-      if( plugin.settings.position.of )
+      if (plugin.settings.position.of)
         plugin.settings.customPositionOf = true;
 
       $nav.addClass(plugin.settings.prefix + '-nav');
@@ -88,14 +88,14 @@
     var attachEvents = function() {
 
       plugin.settings.$level1
-        .bind('show.ddn', function() { show( $(this) ); })
-        .bind('hide.ddn', function() { hide( $(this) ); });
+        .on('show.ddn', function() { show($(this)); })
+        .on('hide.ddn', function() { hide($(this)); });
 
 
         if (plugin.settings.event == 'click') {
 
           plugin.settings.$level1
-            .bind('click.ddn keyup.ddn', function(event) {
+            .on('click.ddn keyup.ddn', function(event) {
 
               event.stopPropagation();
 
@@ -106,21 +106,21 @@
                 }
               }
 
-            // If element has children...
-              if ($(this).hasClass(plugin.settings.prefix +'-parent')) {
+              // If element has children...
+              if ($(this).hasClass(plugin.settings.prefix + '-parent')) {
 
                 var $level1 = $(this);
 
                 // Already opened, close sub.
-                if ($(this).hasClass(plugin.settings.prefix +'-opened')) {
-                    $level1.trigger('hide.ddn');
+                if ($(this).hasClass(plugin.settings.prefix + '-opened')) {
+                  $level1.trigger('hide.ddn');
                   return;
                 }
 
                 // Hide all.
                 plugin.settings.$level1.trigger('hide.ddn');
 
-                // Show
+                // Show.
                 $level1.trigger('show.ddn');
 
               }
@@ -131,11 +131,11 @@
         else {
 
           plugin.settings.$level1
-            .bind('mouseenter.ddn focus.ddn', function(event) {
+            .on('mouseenter.ddn focus.ddn', function(event) {
 
               clearTimeout(plugin.settings.hoverTimer);
 
-              // Hide all
+              // Hide all.
               plugin.settings.$level1.trigger('hide.ddn');
 
 
@@ -151,16 +151,16 @@
               }
 
             })
-            .bind('mouseout', function() {
+            .on('mouseout', function() {
               clearTimeout(plugin.settings.hoverTimer);
             });
 
-          plugin.settings.$level1.find('span').bind('mouseenter.ddn', function(event) {
+          plugin.settings.$level1.find('span').on('mouseenter.ddn', function(event) {
             $(this).parent().trigger('mouseenter.ddn');
           });
 
           // Hide subs if mouseleave links.
-          plugin.settings.$level1.bind('mouseleave.ddn', function() {
+          plugin.settings.$level1.on('mouseleave.ddn', function() {
             hideWithTimeout($('.'+ plugin.settings.prefix +'-opened').next() );
           });
 
@@ -198,15 +198,16 @@
       });
 
 
-      $nav.bind('destroy.ddn', function() {
+      $nav.on('destroy.ddn', function() {
 
-        plugin.settings.$level1.unbind('.ddn');
+        plugin.settings.$level1.off('.ddn');
 
         $nav
-        .removeClass('ddn--nav')
-        .find('.ddn--parent').removeClass('ddn--parent')
-        .end()
-        .find('.ddn--sub').removeClass('ddn--sub').removeAttr('style');
+          .removeData('dropDownNav')
+          .removeClass('ddn--nav')
+          .find('.ddn--parent').removeClass('ddn--parent')
+          .end()
+          .find('.ddn--sub').removeClass('ddn--sub').removeAttr('style');
 
       });
 
@@ -222,7 +223,7 @@
 
 
     // Show sub.
-    var show = function( $trigger ) {
+    var show = function ($trigger) {
 
       $trigger
         .addClass(plugin.settings.prefix +'-opened')
@@ -249,15 +250,14 @@
 
 
     // Hide subs.
-    var hide = function( $trigger ) {
+    var hide = function ($trigger) {
 
-      if ($trigger.hasClass(plugin.settings.prefix +'-opened')) {
-        $trigger.focus();
+      if ($trigger.hasClass(plugin.settings.prefix + '-opened')) {
+        //$trigger.focus();
       }
 
-
       $trigger
-        .removeClass(plugin.settings.prefix +'-opened')
+        .removeClass(plugin.settings.prefix + '-opened')
         .attr({
           'aria-expanded': false
         });
@@ -275,12 +275,13 @@
 
 
     // Hide sub with timeout.
-    var hideWithTimeout = function( $sub ) {
+    var hideWithTimeout = function ($sub) {
 
       plugin.timeoutID = window.setTimeout(function() {
 
-        if( ! $nav.data('flag') )
+        if (!$nav.data('flag')) {
           $sub.prev().trigger('hide.ddn');
+        }
 
       }, plugin.settings.delay);
 
@@ -288,7 +289,7 @@
 
 
     // Set flag.
-    var setFlag = function(flag) {
+    var setFlag = function (flag) {
       $nav.data('flag', flag);
     };
 
