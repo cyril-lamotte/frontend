@@ -71,7 +71,7 @@
     var initAttributes = function() {
 
       // Make level 1 focusable.
-      plugin.settings.$level1.attr({
+      plugin.settings.$parents.attr({
         'aria-expanded': false,
         //'aria-controls': $panel.attr('id'),
         'tabindex': 0
@@ -87,7 +87,7 @@
     /** Attach global events */
     var attachEvents = function() {
 
-      plugin.settings.$level1
+      plugin.settings.$parents
         .on('show.ddn', function() { show($(this)); })
         .on('hide.ddn', function() { hide($(this)); });
 
