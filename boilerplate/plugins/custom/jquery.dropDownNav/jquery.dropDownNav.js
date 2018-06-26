@@ -144,9 +144,14 @@
 
                 var $level1 = $(this);
 
+                var delay = plugin.settings.delay;
+                if (event.type == 'focus') {
+                  delay = 0;
+                }
+
                 plugin.settings.hoverTimer = setTimeout(function() {
                   $level1.trigger('show.ddn');
-                }, plugin.settings.delay);
+                }, delay);
 
               }
 
