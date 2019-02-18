@@ -34,10 +34,14 @@ Menu déroulant.
 
 ## Theme
 
-```css
+```scss
 .sub-nav {
   display: none;
   position: absolute;
+
+  .ddn--opened + & {
+    display: block;
+  }
 }
 ```
 

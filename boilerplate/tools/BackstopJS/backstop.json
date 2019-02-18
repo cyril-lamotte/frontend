@@ -1,0 +1,54 @@
+{
+  "id": "bs",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "label": "desktop",
+      "width": 1300,
+      "height": 768
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "01-home",
+      "cookiePath": "backstop/engine_scripts/cookies.json",
+      "url": "dist/index.html",
+      "referenceUrl": "",
+      "readyEvent": "",
+      "readySelector": "",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": "",
+      "selectors": [],
+      "selectorExpansion": true,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop/bitmaps_reference",
+    "bitmaps_test": "backstop/bitmaps_test",
+    "engine_scripts": "backstop/engine_scripts",
+    "html_report": "backstop/html_report",
+    "ci_report": "backstop/ci_report"
+  },
+  "report": ["browser"],
+  "engine": "chrome",
+  "engineFlags": [],
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}

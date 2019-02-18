@@ -7,14 +7,14 @@
   margin: 0;
   text-align: center;
   white-space: nowrap;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 
-  @include mq-to( 'md' ) {
+  @include mq-to('md') {
     display: none;
   }
 
   ul {
-    background: #f0f0f0;
+    background: rgba(#f0f0f0, 0.3);
     padding: 10px;
     margin: 0;
 
@@ -29,11 +29,26 @@
       @include admin-link;
     }
 
-    .active {
-      background: #333;
-      border-color: #333;
+    .is-active {
+      background: $brand;
+      border-color: $brand;
       color: #fff;
+
+      a {
+        background: none;
+        color: #fff;
+        border: none;
+
+        @include hover {
+          background: none;
+          color: #fff;
+          border: none;
+        }
+
+      }
+
     }
+
   }
 
 }
@@ -42,19 +57,19 @@
 // Admin links
 @mixin admin-link {
   display: block;
-  background-color: #fff;
+  background-color: $light-bg;
   padding: 3px 10px;
   color: #333;
-  border: 1px solid #d6d6d6;
   text-decoration: none;
-  border-radius: 3px;
+  border-radius: 0;
   font-weight: 400;
-  font-size: 1em;
+  font-size: 1.2rem;
+  text-transform: uppercase;
 
   @include hover {
     background: #333;
-    border-color: #333;
     color: #fff;
     text-decoration: none;
   }
+
 }

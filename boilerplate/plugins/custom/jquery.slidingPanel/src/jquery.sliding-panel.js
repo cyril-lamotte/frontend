@@ -171,7 +171,7 @@
     var transitionend = function(event) {
 
       // Transition is on this panel.
-      if(event && event.eventPhase != 2) {
+      if(event && event.eventPhase !== 2) {
         return false;
       }
 
@@ -253,7 +253,7 @@
       $body.keydown(function(event) {
 
         // ESC.
-        if (event.keyCode == 27) {
+        if (event.keyCode === 27) {
           $panel.trigger('hide.sp');
         }
 
@@ -301,7 +301,7 @@
       plugin.settings.focusableElementsLast.keydown(function(event) {
 
         // TAB
-        if (event.keyCode == 9 && !event.shiftKey) {
+        if (event.keyCode === 9 && !event.shiftKey) {
           event.preventDefault();
           plugin.settings.focusableElementsFirst.focus();
         }
@@ -311,7 +311,7 @@
       plugin.settings.focusableElementsFirst.keydown(function(event) {
 
         // TAB
-        if (event.keyCode == 9 && event.shiftKey) {
+        if (event.keyCode === 9 && event.shiftKey) {
           event.preventDefault();
           plugin.settings.focusableElementsLast.focus();
         }
